@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -923,12 +925,12 @@
 <h1 id="12">12. <span style="color: #365f91">خدمات الويب</span></h1>
 <p><a id="refheading10403911168783983"></a></p>
 <h2 id="121">12.1. <span style="color: #4f81bd">مقدمة</span></h2>
-<p>في الفصل السابق، قدمنا عدة تطبيقات خادم-عميل Tcp-Ip. وبما أن العميل والخادم يتبادلان سطور النص، فيمكن كتابتهما بأي لغة. ويحتاج العميل ببساطة إلى معرفة بروتوكول الحوار الذي يتوقعه الخادم.</p>
-<p>تعد خدمات الويب أيضًا تطبيقات خادم Tcp-Ip. وتتميز بالخصائص التالية:</p>
+<p>في الفصل السابق، قدمنا عدة تطبيقات خادم-عميل <bdi dir="ltr" class="odt-ltr-term">Tcp-Ip.</bdi> وبما أن العميل والخادم يتبادلان سطور النص، فيمكن كتابتهما بأي لغة. ويحتاج العميل ببساطة إلى معرفة بروتوكول الحوار الذي يتوقعه الخادم.</p>
+<p>تعد خدمات الويب أيضًا تطبيقات خادم <bdi dir="ltr" class="odt-ltr-term">Tcp-Ip.</bdi> وتتميز بالخصائص التالية:</p>
 <ul>
-  <li>يتم استضافتها بواسطة خوادم الويب، وبروتوكول التبادل بين العميل والخادم هو HTTP (بروتوكول نقل النص التشعبي)، وهو بروتوكول فوق TCP-IP.
+  <li>يتم استضافتها بواسطة خوادم الويب، وبروتوكول التبادل بين العميل والخادم هو <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> (بروتوكول نقل النص التشعبي)، وهو بروتوكول فوق <bdi dir="ltr" class="odt-ltr-term">TCP-IP.</bdi>
   </li>
-  <li>تتمتع خدمة الويب ببروتوكول حوار قياسي، بغض النظر عن الخدمة المقدمة. تقدم خدمة الويب خدمات متنوعة S1، S2، ..، Sn. يتوقع كل منها معلمات مقدمة من العميل، ويعيد نتيجة إلى العميل. بالنسبة لكل خدمة، يحتاج العميل إلى معرفة:
+  <li>تتمتع خدمة الويب ببروتوكول حوار قياسي، بغض النظر عن الخدمة المقدمة. تقدم خدمة الويب خدمات متنوعة <bdi dir="ltr" class="odt-ltr-term">S1</bdi>، <bdi dir="ltr" class="odt-ltr-term">S2</bdi>، ..، <bdi dir="ltr" class="odt-ltr-term">Sn.</bdi> يتوقع كل منها معلمات مقدمة من العميل، ويعيد نتيجة إلى العميل. بالنسبة لكل خدمة، يحتاج العميل إلى معرفة:
     <ul>
       <li>الاسم الدقيق للقسم إذا
       </li>
@@ -946,11 +948,11 @@
   </li>
   <li>يمكن نمذجة خدمة الويب ككائن بعيد. ثم تصبح الخدمات المقدمة طرقًا لهذا الكائن. يمكن للعميل الوصول إلى هذا الكائن البعيد كما لو كان محليًا. هذا يخفي طبقة اتصال الشبكة بالكامل ويسمح لك ببناء عميل مستقل عن هذه الطبقة. إذا تغيرت طبقة الشبكة، فلن يحتاج العميل إلى التعديل.
   </li>
-  <li>كما هو الحال مع تطبيقات الخادم-العميل Tcp-Ip التي تم عرضها في الفصل السابق، يمكن كتابة العميل والخادم بأي لغة. يتبادلان سطورًا من النص. تتكون هذه من جزأين:
+  <li>كما هو الحال مع تطبيقات الخادم-العميل <bdi dir="ltr" class="odt-ltr-term">Tcp-Ip</bdi> التي تم عرضها في الفصل السابق، يمكن كتابة العميل والخادم بأي لغة. يتبادلان سطورًا من النص. تتكون هذه من جزأين:
     <ul>
-      <li>الرؤوس المطلوبة لبروتوكول HTTP
+      <li>الرؤوس المطلوبة لبروتوكول <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi>
       </li>
-      <li>نص الرسالة. بالنسبة للاستجابة من الخادم إلى العميل، تكون هذه الاستجابة بتنسيق XML (لغة الترميز القابلة للتوسيع). بالنسبة للطلب من العميل إلى الخادم، يمكن أن يتخذ نص الرسالة عدة أشكال، بما في ذلك XML. قد يكون لطلب XML الخاص بالعميل تنسيق خاص يسمى SOAP (بروتوكول الوصول البسيط إلى الكائنات). في هذه الحالة، تتبع استجابة الخادم أيضًا تنسيق SOAP.
+      <li>نص الرسالة. بالنسبة للاستجابة من الخادم إلى العميل، تكون هذه الاستجابة بتنسيق <bdi dir="ltr" class="odt-ltr-term">XML</bdi> (لغة الترميز القابلة للتوسيع). بالنسبة للطلب من العميل إلى الخادم، يمكن أن يتخذ نص الرسالة عدة أشكال، بما في ذلك <bdi dir="ltr" class="odt-ltr-term">XML.</bdi> قد يكون لطلب <bdi dir="ltr" class="odt-ltr-term">XML</bdi> الخاص بالعميل تنسيق خاص يسمى <bdi dir="ltr" class="odt-ltr-term">SOAP</bdi> (بروتوكول الوصول البسيط إلى الكائنات). في هذه الحالة، تتبع استجابة الخادم أيضًا تنسيق <bdi dir="ltr" class="odt-ltr-term">SOAP.</bdi>
       </li>
     </ul>
   </li>
@@ -959,16 +961,16 @@
 <p>فيما يلي بنية تطبيق العميل/الخادم القائم على خدمة الويب:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007A70000012D7EBF84DB.png" width="686" height="105" style="display:inline-block; margin:4px;width:18.14cm;height:2.787cm;" class="odt-zoomable" data-zoom-src="images/10000000000007A70000012D7EBF84DB.png" /></td></tr></table>
 
-<p>هذا امتداد للبنية ثلاثية الطبقات، التي تضاف إليها فئات اتصال شبكية متخصصة. لقد صادفنا بالفعل بنية مشابهة مع تطبيق العميل/الخادم الرسومي لـ Windows Tcp d&#x27;impôts في الفقرة<a href="#impotsv8-architecture"><u><span style="color: #0563c1"> 11.9.1</span></u></a>.</p>
+<p>هذا امتداد للبنية ثلاثية الطبقات، التي تضاف إليها فئات اتصال شبكية متخصصة. لقد صادفنا بالفعل بنية مشابهة مع تطبيق العميل/الخادم الرسومي لـ <bdi dir="ltr" class="odt-ltr-term">Windows Tcp d</bdi>&#x27;<bdi dir="ltr" class="odt-ltr-term">impôts</bdi> في الفقرة<a href="#impotsv8-architecture"><u><span style="color: #0563c1"> 11.9.1</span></u></a>.</p>
 <p>دعونا نوضح هذه المبادئ العامة بمثال أول.</p>
 <p><a id="refheading10403931168783983"></a></p>
-<h2 id="122-visual-web-developer">12.2. <span style="color: #4f81bd">خدمة ويب أولى باستخدام Visual Web Developer</span></h2>
+<h2 id="122-visual-web-developer">12.2. <span style="color: #4f81bd">خدمة ويب أولى باستخدام <bdi dir="ltr" class="odt-ltr-term">Visual Web Developer</bdi></span></h2>
 <p>سنقوم بإنشاء أول تطبيق عميل/خادم بالبنية المبسطة التالية:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005440000011A4DD9063A.png" width="607" height="127" style="display:inline-block; margin:4px;width:16.05cm;height:3.358cm;" class="odt-zoomable" data-zoom-src="images/10000000000005440000011A4DD9063A.png" /></td></tr></table>
 
 <p><a id="refheading10403951168783983"></a></p>
 <h3 id="1221">12.2.1. <span style="color: #4f81bd">جانب الخادم</span></h3>
-<p>لقد أشرنا إلى أن خدمة الويب يتم استضافتها بواسطة خادم ويب. تندرج كتابة خدمة الويب ضمن الإطار العام لبرمجة الويب من جانب الخادم. لقد سبق لنا أن كتبنا عملاء ويب، وهو ما يعد أيضًا برمجة ويب، ولكن هذه المرة من جانب العميل. غالبًا ما يشير مصطلح برمجة الويب إلى البرمجة من جانب الخادم بدلاً من البرمجة من جانب العميل. لتطوير خدمات الويب أو، بشكل أعم، تطبيقات الويب، لا يعد Visual C# الأداة المناسبة. سنستخدم Visual Developer، أحد إصدارات Express من Visual Studio 2008 المتاحة للتنزيل [2] على [1]: [http://msdn.microsoft.com/en-fr/express/future/bb421473(en-us).aspx] (مايو 2008):</p>
+<p>لقد أشرنا إلى أن خدمة الويب يتم استضافتها بواسطة خادم ويب. تندرج كتابة خدمة الويب ضمن الإطار العام لبرمجة الويب من جانب الخادم. لقد سبق لنا أن كتبنا عملاء ويب، وهو ما يعد أيضًا برمجة ويب، ولكن هذه المرة من جانب العميل. غالبًا ما يشير مصطلح برمجة الويب إلى البرمجة من جانب الخادم بدلاً من البرمجة من جانب العميل. لتطوير خدمات الويب أو، بشكل أعم، تطبيقات الويب، لا يعد <bdi dir="ltr" class="odt-ltr-term">Visual C#</bdi> الأداة المناسبة. سنستخدم <bdi dir="ltr" class="odt-ltr-term">Visual Developer</bdi>، أحد إصدارات <bdi dir="ltr" class="odt-ltr-term">Express</bdi> من <bdi dir="ltr" class="odt-ltr-term">Visual Studio</bdi> 2008 المتاحة للتنزيل [2] على [1]: [<bdi dir="ltr" class="odt-ltr-term">http://msdn.microsoft.com/en-fr/express/future/bb421473</bdi>(<bdi dir="ltr" class="odt-ltr-term">en-us</bdi>).<bdi dir="ltr" class="odt-ltr-term">aspx</bdi>] (مايو 2008):</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007AF000001CEFC4455AF.png" width="590" height="139" style="display:inline-block; margin:4px;width:15.61cm;height:3.665cm;" class="odt-zoomable" data-zoom-src="images/10000000000007AF000001CEFC4455AF.png" /></td></tr></table>
 
 <ul>
@@ -976,19 +978,19 @@
   </li>
   <li>[2]: علامة التبويب &quot;التنزيلات&quot;
   </li>
-  <li>[3] : تنزيل Visual Developer 2008
+  <li>[3] : تنزيل <bdi dir="ltr" class="odt-ltr-term">Visual Developer</bdi> 2008
   </li>
 </ul>
 
-<p>لإنشاء خدمة ويب أولية، اتبع الخطوات التالية بعد تشغيل Visual Developer :</p>
+<p>لإنشاء خدمة ويب أولية، اتبع الخطوات التالية بعد تشغيل <bdi dir="ltr" class="odt-ltr-term">Visual Developer</bdi> :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000075C000002787C127EDF.png" width="565" height="190" style="display:inline-block; margin:4px;width:14.951cm;height:5.015cm;" class="odt-zoomable" data-zoom-src="images/100000000000075C000002787C127EDF.png" /></td></tr></table>
 
 <ul>
   <li>[1]: اختر الخيار &quot;<b>ملف / موقع ويب جديد&quot;</b>
   </li>
-  <li>[2]: اختر <b>خدمة ويب ASP.NET</b>
+  <li>[2]: اختر <b>خدمة ويب <bdi dir="ltr" class="odt-ltr-term">ASP.NET</bdi></b>
   </li>
-  <li>[3]: اختر لغة التطوير: <b>C#</b>
+  <li>[3]: اختر لغة التطوير: <b><bdi dir="ltr" class="odt-ltr-term">C#</bdi></b>
   </li>
   <li>[4]: حدد المجلد الذي تريد إنشاء المشروع فيه
   </li>
@@ -997,40 +999,40 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003970000019C40A47B78.png" width="276" height="124" style="display:inline-block; margin:4px;width:7.29cm;height:3.268cm;" class="odt-zoomable" data-zoom-src="images/10000000000003970000019C40A47B78.png" /></td></tr></table>
 
 <ul>
-  <li>[5]: المشروع الذي تم إنشاؤه في Visual Web Developer
+  <li>[5]: المشروع الذي تم إنشاؤه في <bdi dir="ltr" class="odt-ltr-term">Visual Web Developer</bdi>
   </li>
   <li>[6]: مجلد المشروع على القرص
   </li>
 </ul>
 
-<p>يتم تنظيم تطبيق الويب على النحو التالي في Web Developer :</p>
+<p>يتم تنظيم تطبيق الويب على النحو التالي في <bdi dir="ltr" class="odt-ltr-term">Web Developer</bdi> :</p>
 <ul>
-  <li>جذر يحتوي على مستندات موقع الويب (صفحات الويب الثابتة Html، والصور، وصفحات الويب الديناميكية .aspx، وخدمات الويب .asmx، ...). كما يتضمن الملف [web.config]، وهو ملف التكوين لتطبيق الويب. وهو يؤدي نفس دور الملف [App.config] لتطبيقات Windows ويتم تنظيمه بنفس الطريقة.
+  <li>جذر يحتوي على مستندات موقع الويب (صفحات الويب الثابتة <bdi dir="ltr" class="odt-ltr-term">Html</bdi>، والصور، وصفحات الويب الديناميكية .<bdi dir="ltr" class="odt-ltr-term">aspx</bdi>، وخدمات الويب .<bdi dir="ltr" class="odt-ltr-term">asmx</bdi>، ...). كما يتضمن الملف [<bdi dir="ltr" class="odt-ltr-term">web.config</bdi>]، وهو ملف التكوين لتطبيق الويب. وهو يؤدي نفس دور الملف [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] لتطبيقات <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> ويتم تنظيمه بنفس الطريقة.
   </li>
-  <li>مجلد [App_Code] يحتوي على الفئات والواجهات من موقع الويب للتجميع.
+  <li>مجلد [<bdi dir="ltr" class="odt-ltr-term">App_Code</bdi>] يحتوي على الفئات والواجهات من موقع الويب للتجميع.
   </li>
-  <li>مجلد [App_Data] لوضع البيانات التي تستخدمها فئات [App_Code]. على سبيل المثال، قد يحتوي هذا المجلد على قاعدة بيانات SQL Server *.mdf.
+  <li>مجلد [<bdi dir="ltr" class="odt-ltr-term">App_Data</bdi>] لوضع البيانات التي تستخدمها فئات [<bdi dir="ltr" class="odt-ltr-term">App_Code</bdi>]. على سبيل المثال، قد يحتوي هذا المجلد على قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi> *.<bdi dir="ltr" class="odt-ltr-term">mdf.</bdi>
   </li>
 </ul>
 
-<p>[Service.asmx] هو خدمة الويب التي طلبنا إنشاؤها. وهو يحتوي فقط على السطر التالي:</p>
+<p>[<bdi dir="ltr" class="odt-ltr-term">Service.asmx</bdi>] هو خدمة الويب التي طلبنا إنشاؤها. وهو يحتوي فقط على السطر التالي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;%<span style="color:#0000ff">@</span> <span style="color:#a31515">WebService</span> <span style="color:#ff0000">Language</span><span style="color:#0000ff">=&quot;C#&quot;</span> <span style="color:#ff0000">CodeBehind</span><span style="color:#0000ff">=&quot;~/App_Code/Service.cs&quot;</span> <span style="color:#ff0000">Class</span><span style="color:#0000ff">=&quot;Service&quot;</span> %&gt;</span></span>
 </code></pre></div>
 
-<p>الرمز المصدري أعلاه مخصص لخادم الويب الذي سيستضيف التطبيق. في وضع الإنتاج، يكون هذا الخادم عادةً IIS (Internet Information Server)، خادم الويب الخاص بشركة Microsoft. يقوم Visual Web Developer بتضمين خادم ويب خفيف الوزن للاستخدام في وضع التطوير. التوجيه السابق يخبر خادم الويب:</p>
+<p>الرمز المصدري أعلاه مخصص لخادم الويب الذي سيستضيف التطبيق. في وضع الإنتاج، يكون هذا الخادم عادةً <bdi dir="ltr" class="odt-ltr-term">IIS</bdi> (<bdi dir="ltr" class="odt-ltr-term">Internet Information Server</bdi>)، خادم الويب الخاص بشركة <bdi dir="ltr" class="odt-ltr-term">Microsoft.</bdi> يقوم <bdi dir="ltr" class="odt-ltr-term">Visual Web Developer</bdi> بتضمين خادم ويب خفيف الوزن للاستخدام في وضع التطوير. التوجيه السابق يخبر خادم الويب:</p>
 <ul>
-  <li>[Service.asmx] هي خدمة ويب (التوجيه <i>WebService</i>)
+  <li>[<bdi dir="ltr" class="odt-ltr-term">Service.asmx</bdi>] هي خدمة ويب (التوجيه <i><bdi dir="ltr" class="odt-ltr-term">WebService</bdi></i>)
   </li>
-  <li>مكتوبة بلغة C# (السمة <i>Language</i>)
+  <li>مكتوبة بلغة <bdi dir="ltr" class="odt-ltr-term">C#</bdi> (السمة <i><bdi dir="ltr" class="odt-ltr-term">Language</bdi></i>)
   </li>
-  <li>وأن كود C# الخاص بخدمة الويب موجود في [~/App_Code/Service.cs] (السمة <i>CodeBehind</i>). وهذا هو المكان الذي سيتوجه إليه خادم الويب لتجميعه.
+  <li>وأن كود <bdi dir="ltr" class="odt-ltr-term">C#</bdi> الخاص بخدمة الويب موجود في [~/<bdi dir="ltr" class="odt-ltr-term">App_Code/Service.cs</bdi>] (السمة <i><bdi dir="ltr" class="odt-ltr-term">CodeBehind</bdi></i>). وهذا هو المكان الذي سيتوجه إليه خادم الويب لتجميعه.
   </li>
-  <li>أن الفئة التي تُنفِّذ خدمة الويب تُسمَّى <i>Service </i>(السمة <i>Class</i>)
+  <li>أن الفئة التي تُنفِّذ خدمة الويب تُسمَّى <i><bdi dir="ltr" class="odt-ltr-term">Service</bdi> </i>(السمة <i><bdi dir="ltr" class="odt-ltr-term">Class</bdi></i>)
   </li>
 </ul>
 
-<p>فيما يلي كود C# [Service.cs] لخدمة الويب التي تم إنشاؤها بواسطة Visual Developer:</p>
+<p>فيما يلي كود <bdi dir="ltr" class="odt-ltr-term">C#</bdi> [<bdi dir="ltr" class="odt-ltr-term">Service.cs</bdi>] لخدمة الويب التي تم إنشاؤها بواسطة <bdi dir="ltr" class="odt-ltr-term">Visual Developer:</bdi></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System.Web.Services;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1054,19 +1056,19 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>تشبه فئة <em>Service</em> فئة C# الكلاسيكية، ولكن مع بعض النقاط التي يجب ملاحظتها:</p>
+<p>تشبه فئة <em><bdi dir="ltr" class="odt-ltr-term">Service</bdi></em> فئة <bdi dir="ltr" class="odt-ltr-term">C#</bdi> الكلاسيكية، ولكن مع بعض النقاط التي يجب ملاحظتها:</p>
 <ul>
-  <li>السطر 7: الفئة مشتقة من <i>WebService </i>المحددة في <i>System.Web.Services</i>. هذا التوريث ليس إلزاميًا دائمًا. في هذا المثال على وجه الخصوص، يمكن الاستغناء عنه.
+  <li>السطر 7: الفئة مشتقة من <i><bdi dir="ltr" class="odt-ltr-term">WebService</bdi> </i>المحددة في <i><bdi dir="ltr" class="odt-ltr-term">System.Web.Services</bdi></i>. هذا التوريث ليس إلزاميًا دائمًا. في هذا المثال على وجه الخصوص، يمكن الاستغناء عنه.
   </li>
-  <li>السطر 3: تسبق الفئة نفسها سمة <b>[WebService(Namespace=&quot;http://tempuri.org/&quot;)] </b>تهدف إلى إعطاء مساحة اسم لخدمة الويب. يمنح مورد الفئة مساحة اسم لفئاته من أجل إعطائها اسمًا فريدًا وتجنب التعارض مع فئات من موردين آخرين قد تحمل الاسم نفسه. وينطبق الأمر نفسه على خدمات الويب. يجب تحديد كل خدمة ويب باسم فريد، وهو هنا<b> http://tempuri.org/</b>. يمكن أن يكون هذا الاسم أي شيء. ولا يجب أن يكون عنوان Uri Http.
+  <li>السطر 3: تسبق الفئة نفسها سمة <b>[<bdi dir="ltr" class="odt-ltr-term">WebService</bdi>(<bdi dir="ltr" class="odt-ltr-term">Namespace</bdi>=&quot;<bdi dir="ltr" class="odt-ltr-term">http://tempuri.org/</bdi>&quot;)] </b>تهدف إلى إعطاء مساحة اسم لخدمة الويب. يمنح مورد الفئة مساحة اسم لفئاته من أجل إعطائها اسمًا فريدًا وتجنب التعارض مع فئات من موردين آخرين قد تحمل الاسم نفسه. وينطبق الأمر نفسه على خدمات الويب. يجب تحديد كل خدمة ويب باسم فريد، وهو هنا<b> <bdi dir="ltr" class="odt-ltr-term">http://tempuri.org/</bdi></b>. يمكن أن يكون هذا الاسم أي شيء. ولا يجب أن يكون عنوان <bdi dir="ltr" class="odt-ltr-term">Uri Http.</bdi>
   </li>
-  <li>السطر 15: تسبق الطريقة <i>HelloWorld </i>علامة <b>[WebMethod] </b>التي تخبر المُجمِّع أن الطريقة يجب أن تكون مرئية للعملاء البعيدين لخدمة الويب. الطريقة التي لا تسبقها هذه السمة لا تكون مرئية لعملاء خدمة الويب. قد تكون هذه طريقة داخلية تستخدمها طرق أخرى، ولكنها غير مخصصة للنشر.
+  <li>السطر 15: تسبق الطريقة <i><bdi dir="ltr" class="odt-ltr-term">HelloWorld</bdi> </i>علامة <b>[<bdi dir="ltr" class="odt-ltr-term">WebMethod</bdi>] </b>التي تخبر المُجمِّع أن الطريقة يجب أن تكون مرئية للعملاء البعيدين لخدمة الويب. الطريقة التي لا تسبقها هذه السمة لا تكون مرئية لعملاء خدمة الويب. قد تكون هذه طريقة داخلية تستخدمها طرق أخرى، ولكنها غير مخصصة للنشر.
   </li>
-  <li>السطر 9: منشئ الخدمة web. إنه عديم الفائدة في تطبيقنا.
+  <li>السطر 9: منشئ الخدمة <bdi dir="ltr" class="odt-ltr-term">web.</bdi> إنه عديم الفائدة في تطبيقنا.
   </li>
 </ul>
 
-<p>يتم تحويل فئة [Service.cs] التي تم إنشاؤها على النحو التالي:</p>
+<p>يتم تحويل فئة [<bdi dir="ltr" class="odt-ltr-term">Service.cs</bdi>] التي تم إنشاؤها على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System.Web.Services;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1082,7 +1084,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>ملف التكوين [web.config] الذي تم إنشاؤه لتطبيق الويب هو كما يلي:</p>
+<p>ملف التكوين [<bdi dir="ltr" class="odt-ltr-term">web.config</bdi>] الذي تم إنشاؤه لتطبيق الويب هو كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;?</span><span style="color:#a31515">xml</span><span style="color:#0000ff"> </span><span style="color:#ff0000">version</span><span style="color:#0000ff">=</span>&quot;<span style="color:#0000ff">1.0</span>&quot;<span style="color:#0000ff">?&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;!-- </span></span></span>
@@ -1109,24 +1111,24 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#a31515">configuration</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p>يبلغ طول الملف 140 سطراً. وهو معقد ولن نعلق عليه. سنبقيه كما هو. أعلاه توجد العناصر &lt;<em>configuration</em>&gt; و&lt;<em>configSections</em>&gt; و&lt;<em>sectionGroup</em>&gt; و&lt;<em>appSettings</em>&gt; و&lt;<em>connectionString</em>&gt; التي صادفناها في ملف [App.config] لتطبيقات Windows.</p>
+<p>يبلغ طول الملف 140 سطراً. وهو معقد ولن نعلق عليه. سنبقيه كما هو. أعلاه توجد العناصر &lt;<em><bdi dir="ltr" class="odt-ltr-term">configuration</bdi></em>&gt; و&lt;<em><bdi dir="ltr" class="odt-ltr-term">configSections</bdi></em>&gt; و&lt;<em><bdi dir="ltr" class="odt-ltr-term">sectionGroup</bdi></em>&gt; و&lt;<em><bdi dir="ltr" class="odt-ltr-term">appSettings</bdi></em>&gt; و&lt;<em><bdi dir="ltr" class="odt-ltr-term">connectionString</bdi></em>&gt; التي صادفناها في ملف [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] لتطبيقات <bdi dir="ltr" class="odt-ltr-term">Windows.</bdi></p>
 <p>لدينا خدمة ويب جاهزة للتشغيل يمكن تشغيلها:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007660000016ED2EF0BBA.png" width="568" height="110" style="display:inline-block; margin:4px;width:15.03cm;height:2.903cm;" class="odt-zoomable" data-zoom-src="images/10000000000007660000016ED2EF0BBA.png" /></td></tr></table>
 
 <ul>
-  <li>[1،2]: انقر بزر الماوس الأيمن على [Service.asmx] واطلب عرض الصفحة في متصفح
+  <li>[1،2]: انقر بزر الماوس الأيمن على [<bdi dir="ltr" class="odt-ltr-term">Service.asmx</bdi>] واطلب عرض الصفحة في متصفح
   </li>
-  <li>[3]: يقوم Visual Web Developer بتشغيل خادم الويب المدمج الخاص به ووضع أيقونته في الزاوية اليمنى السفلية من شريط المهام. يتم تشغيل خادم الويب على منفذ عشوائي، هنا 1906. عنوان Uri المعروض /WsHello هو اسم موقع الويب [4].
+  <li>[3]: يقوم <bdi dir="ltr" class="odt-ltr-term">Visual Web Developer</bdi> بتشغيل خادم الويب المدمج الخاص به ووضع أيقونته في الزاوية اليمنى السفلية من شريط المهام. يتم تشغيل خادم الويب على منفذ عشوائي، هنا 1906. عنوان <bdi dir="ltr" class="odt-ltr-term">Uri</bdi> المعروض /<bdi dir="ltr" class="odt-ltr-term">WsHello</bdi> هو اسم موقع الويب [4].
   </li>
 </ul>
 
-<p>كما قام Visual Web Developer بتشغيل متصفح لعرض الصفحة المطلوبة، وهي [Service.asmx]:</p>
+<p>كما قام <bdi dir="ltr" class="odt-ltr-term">Visual Web Developer</bdi> بتشغيل متصفح لعرض الصفحة المطلوبة، وهي [<bdi dir="ltr" class="odt-ltr-term">Service.asmx</bdi>]:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000037400000240C63BD81F.png" width="265" height="173" style="display:inline-block; margin:4px;width:7.02cm;height:4.574cm;" class="odt-zoomable" data-zoom-src="images/100000000000037400000240C63BD81F.png" /></td></tr></table>
 
 <ul>
-  <li>في [1]، عنوان Uri للصفحة. نجد عنوان Uri للموقع [http://localhost:1906/WsHello] متبوعًا بعنوان الصفحة /Service.asmx.
+  <li>في [1]، عنوان <bdi dir="ltr" class="odt-ltr-term">Uri</bdi> للصفحة. نجد عنوان <bdi dir="ltr" class="odt-ltr-term">Uri</bdi> للموقع [<bdi dir="ltr" class="odt-ltr-term">http://localhost:1906/WsHello</bdi>] متبوعًا بعنوان الصفحة /<bdi dir="ltr" class="odt-ltr-term">Service.asmx.</bdi>
   </li>
-  <li>في [2]، أبلغت اللاحقة .asmx خادم الويب أن هذه ليست صفحة ويب عادية (اللاحقة .aspx) تؤدي إلى صفحة Html، بل صفحة خدمة ويب. ثم يقوم تلقائيًا بإنشاء صفحة ويب تحتوي على رابط لكل طريقة من طرق خدمة الويب مع السمة [WebMethod]. تتيح لك هذه الروابط اختبار الطرق.
+  <li>في [2]، أبلغت اللاحقة .<bdi dir="ltr" class="odt-ltr-term">asmx</bdi> خادم الويب أن هذه ليست صفحة ويب عادية (اللاحقة .<bdi dir="ltr" class="odt-ltr-term">aspx</bdi>) تؤدي إلى صفحة <bdi dir="ltr" class="odt-ltr-term">Html</bdi>، بل صفحة خدمة ويب. ثم يقوم تلقائيًا بإنشاء صفحة ويب تحتوي على رابط لكل طريقة من طرق خدمة الويب مع السمة [<bdi dir="ltr" class="odt-ltr-term">WebMethod</bdi>]. تتيح لك هذه الروابط اختبار الطرق.
   </li>
 </ul>
 
@@ -1134,9 +1136,9 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000054A000003A056D62805.png" width="406" height="278" style="display:inline-block; margin:4px;width:10.749cm;height:7.368cm;" class="odt-zoomable" data-zoom-src="images/100000000000054A000003A056D62805.png" /></td></tr></table>
 
 <ul>
-  <li>في [1]، لاحظ عنوان Uri [http://localhost:1906/WsHello/Service.asmx?op=DisBonjourALaDame] للصفحة الجديدة. هذا هو عنوان Uri لخدمة الويب، مع معلمة واحدة op=<i>M</i>، حيث <i>M </i>هو اسم إحدى طرق خدمة الويب.
+  <li>في [1]، لاحظ عنوان <bdi dir="ltr" class="odt-ltr-term">Uri</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://localhost:1906/WsHello/Service.asmx</bdi>?<bdi dir="ltr" class="odt-ltr-term">op</bdi>=<bdi dir="ltr" class="odt-ltr-term">DisBonjourALaDame</bdi>] للصفحة الجديدة. هذا هو عنوان <bdi dir="ltr" class="odt-ltr-term">Uri</bdi> لخدمة الويب، مع معلمة واحدة <bdi dir="ltr" class="odt-ltr-term">op</bdi>=<i><bdi dir="ltr" class="odt-ltr-term">M</bdi></i>، حيث <i><bdi dir="ltr" class="odt-ltr-term">M</bdi> </i>هو اسم إحدى طرق خدمة الويب.
   </li>
-  <li>تذكر توقيع طريقة [DisBonjourALaDame]:
+  <li>تذكر توقيع طريقة [<bdi dir="ltr" class="odt-ltr-term">DisBonjourALaDame</bdi>]:
   </li>
 </ul>
 
@@ -1144,19 +1146,19 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">public</span> <span style="color:#0000ff">string</span> DisBonjourALaDame(<span style="color:#0000ff">string</span> nomDeLaDame) ;</span></span>
 </code></pre></div>
 
-<p>تقبل هذه الطريقة معلمة من نوع <em>string</em> وتُرجع <em>سلسلة</em> أيضًا. تتيح لنا الصفحة تنفيذ الطريقة [DisBonjourALaDame]: في [2] نحدد قيمة المعلمة <em>nomDeLaDame</em> وفي [3] نطلب تنفيذ الطريقة. نحصل على النتيجة التالية:</p>
+<p>تقبل هذه الطريقة معلمة من نوع <em><bdi dir="ltr" class="odt-ltr-term">string</bdi></em> وتُرجع <em>سلسلة</em> أيضًا. تتيح لنا الصفحة تنفيذ الطريقة [<bdi dir="ltr" class="odt-ltr-term">DisBonjourALaDame</bdi>]: في [2] نحدد قيمة المعلمة <em><bdi dir="ltr" class="odt-ltr-term">nomDeLaDame</bdi></em> وفي [3] نطلب تنفيذ الطريقة. نحصل على النتيجة التالية:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000775000001889E5F6AC1.png" width="573" height="118" style="display:inline-block; margin:4px;width:15.15cm;height:3.112cm;" class="odt-zoomable" data-zoom-src="images/1000000000000775000001889E5F6AC1.png" /></td></tr></table>
 
 <ul>
-  <li>في [1]، لاحظ أن عنوان Uri في الاستجابة ليس مطابقًا للعنوان الموجود في الطلب. فقد تغير.
+  <li>في [1]، لاحظ أن عنوان <bdi dir="ltr" class="odt-ltr-term">Uri</bdi> في الاستجابة ليس مطابقًا للعنوان الموجود في الطلب. فقد تغير.
   </li>
-  <li>في [2]، استجابة الخادم web. يرجى ملاحظة النقاط التالية:
+  <li>في [2]، استجابة الخادم <bdi dir="ltr" class="odt-ltr-term">web.</bdi> يرجى ملاحظة النقاط التالية:
     <ul>
-      <li>إنها إجابة XML، وليست HTML
+      <li>إنها إجابة <bdi dir="ltr" class="odt-ltr-term">XML</bdi>، وليست <bdi dir="ltr" class="odt-ltr-term">HTML</bdi>
       </li>
-      <li>نتيجة طريقة [DisBonjourALaDame] مغلفة في علامة &lt;string&gt; تمثل نوعها.
+      <li>نتيجة طريقة [<bdi dir="ltr" class="odt-ltr-term">DisBonjourALaDame</bdi>] مغلفة في علامة &lt;<bdi dir="ltr" class="odt-ltr-term">string</bdi>&gt; تمثل نوعها.
       </li>
-      <li>تحتوي علامة &lt;string&gt; على سمة <i>xmlns </i>(<i>مساحة اسم xml</i>)، وهي مساحة الاسم التي أعطيناها لخدمة الويب الخاصة بنا (السطر 1 أدناه).
+      <li>تحتوي علامة &lt;<bdi dir="ltr" class="odt-ltr-term">string</bdi>&gt; على سمة <i><bdi dir="ltr" class="odt-ltr-term">xmlns</bdi> </i>(<i>مساحة اسم <bdi dir="ltr" class="odt-ltr-term">xml</bdi></i>)، وهي مساحة الاسم التي أعطيناها لخدمة الويب الخاصة بنا (السطر 1 أدناه).
       </li>
     </ul>
   </li>
@@ -1168,7 +1170,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">public</span> <span style="color:#0000ff">class</span> <span style="color:#2b91af">Service</span> : System.Web.Services.<span style="color:#2b91af">WebService</span></span></span>
 </code></pre></div>
 
-<p>لمعرفة كيفية قيام متصفح الويب بإرسال طلبه، انظر إلى كود HTML في نموذج الاختبار:</p>
+<p>لمعرفة كيفية قيام متصفح الويب بإرسال طلبه، انظر إلى كود <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> في نموذج الاختبار:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -1226,18 +1228,18 @@
 <a id="__codelineno-0-28" name="__codelineno-0-28"></a>...
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>السطر 11: سيتم إرسال قيم النموذج (العلامة <b>form</b>) (السمة <b>method</b>) إلى عنوان URL [ http://localhost:1906/WsHello/Service.asmx/DisBonjourALaDame] (السمة <b>action</b>).
+  <li>السطر 11: سيتم إرسال قيم النموذج (العلامة <b><bdi dir="ltr" class="odt-ltr-term">form</bdi></b>) (السمة <b><bdi dir="ltr" class="odt-ltr-term">method</bdi></b>) إلى عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [ <bdi dir="ltr" class="odt-ltr-term">http://localhost:1906/WsHello/Service.asmx/DisBonjourALaDame</bdi>] (السمة <b><bdi dir="ltr" class="odt-ltr-term">action</bdi></b>).
   </li>
-  <li>السطر 19: يُسمى حقل الإدخال <i>nomDeLaDame </i>(السمة <b>name</b>).
+  <li>السطر 19: يُسمى حقل الإدخال <i><bdi dir="ltr" class="odt-ltr-term">nomDeLaDame</bdi> </i>(السمة <b><bdi dir="ltr" class="odt-ltr-term">name</bdi></b>).
   </li>
 </ul>
 
-<p>وقد أتاح لنا طلب تشغيل خدمة الويب [/Service.asmx] اختبار أساليبها واكتساب فهم أولي للتبادلات بين العميل والخادم.</p>
+<p>وقد أتاح لنا طلب تشغيل خدمة الويب [/<bdi dir="ltr" class="odt-ltr-term">Service.asmx</bdi>] اختبار أساليبها واكتساب فهم أولي للتبادلات بين العميل والخادم.</p>
 <p><a id="refheading10403971168783983"></a></p>
 <h3 id="1222">12.2.2. <span style="color: #4f81bd">قسم العملاء</span></h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000054600000123739A93BD.png" width="405" height="87" style="display:inline-block; margin:4px;width:10.719cm;height:2.311cm;" class="odt-zoomable" data-zoom-src="images/100000000000054600000123739A93BD.png" /></td></tr></table>
 
-<p>من الممكن تنفيذ عميل خدمة الويب البعيدة المذكور أعلاه باستخدام عميل Tcp-Ip أساسي. على سبيل المثال، إليك حوار العميل/الخادم الذي تم إنشاؤه باستخدام عميل <em>putty</em> متصل بخدمة الويب البعيدة (localhost,1906) :</p>
+<p>من الممكن تنفيذ عميل خدمة الويب البعيدة المذكور أعلاه باستخدام عميل <bdi dir="ltr" class="odt-ltr-term">Tcp-Ip</bdi> أساسي. على سبيل المثال، إليك حوار العميل/الخادم الذي تم إنشاؤه باستخدام عميل <em><bdi dir="ltr" class="odt-ltr-term">putty</bdi></em> متصل بخدمة الويب البعيدة (<bdi dir="ltr" class="odt-ltr-term">localhost</bdi>,1906) :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
@@ -1283,30 +1285,30 @@
 <a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="nt">&lt;string</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://st.istia.univ-angers.fr&quot;</span><span class="nt">&gt;</span>Bonjour<span class="w"> </span>Mme<span class="w"> </span>Carla<span class="w"> </span>Bruni<span class="nt">&lt;/string&gt;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>الأسطر 1-5: رسائل أرسلها العميل <i>putty</i>
+  <li>الأسطر 1-5: رسائل أرسلها العميل <i><bdi dir="ltr" class="odt-ltr-term">putty</bdi></i>
   </li>
-  <li>السطر 1: أمر POST
+  <li>السطر 1: أمر <bdi dir="ltr" class="odt-ltr-term">POST</bdi>
   </li>
-  <li>الأسطر 6-10: استجابة الخادم. هذا يعني أن العميل يمكنه إرسال قيم POST.
+  <li>الأسطر 6-10: استجابة الخادم. هذا يعني أن العميل يمكنه إرسال قيم <bdi dir="ltr" class="odt-ltr-term">POST.</bdi>
   </li>
-  <li>السطر 11: القيم المرسلة في النموذج <i>param1=val1&amp;param2=val2&amp; </i>.... يجب أن تكون بعض الأحرف من الأحرف المقبولة في عنوان URL. وهذا ما كنا نسميه سابقًا عنوان URL مشفر. هنا يحتوي النموذج على معلمة واحدة باسم <i>nomDeLaDame</i>. يبلغ إجمالي عدد أحرف القيمة المرسلة 23 حرفًا. يجب الإعلان عن هذا الحجم في رأس Http في السطر 4.
+  <li>السطر 11: القيم المرسلة في النموذج <i><bdi dir="ltr" class="odt-ltr-term">param1</bdi>=<bdi dir="ltr" class="odt-ltr-term">val1</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">param2</bdi>=<bdi dir="ltr" class="odt-ltr-term">val2</bdi>&amp; </i>.... يجب أن تكون بعض الأحرف من الأحرف المقبولة في عنوان <bdi dir="ltr" class="odt-ltr-term">URL.</bdi> وهذا ما كنا نسميه سابقًا عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> مشفر. هنا يحتوي النموذج على معلمة واحدة باسم <i><bdi dir="ltr" class="odt-ltr-term">nomDeLaDame</bdi></i>. يبلغ إجمالي عدد أحرف القيمة المرسلة 23 حرفًا. يجب الإعلان عن هذا الحجم في رأس <bdi dir="ltr" class="odt-ltr-term">Http</bdi> في السطر 4.
   </li>
   <li>الأسطر 12-22: استجابة الخادم
   </li>
-  <li>السطر 22: نتيجة طريقة الويب [DisBonjourALaDame].
+  <li>السطر 22: نتيجة طريقة الويب [<bdi dir="ltr" class="odt-ltr-term">DisBonjourALaDame</bdi>].
   </li>
 </ul>
 
-<p>باستخدام Visual C#، يمكنك استخدام معالج لإنشاء عميل لخدمة ويب بعيدة. وهذا ما سنراه الآن.</p>
+<p>باستخدام <bdi dir="ltr" class="odt-ltr-term">Visual C#</bdi>، يمكنك استخدام معالج لإنشاء عميل لخدمة ويب بعيدة. وهذا ما سنراه الآن.</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051E00000120F136B490.png" width="393" height="86" style="display:inline-block; margin:4px;width:10.4cm;height:2.286cm;" class="odt-zoomable" data-zoom-src="images/100000000000051E00000120F136B490.png" /></td></tr></table>
 
-<p>يتم تنفيذ الطبقة [1] أعلاه بواسطة مشروع Visual Studio C# من نوع <em>تطبيق Windows</em> ويسمى <strong>ClientWsHello</strong> :</p>
+<p>يتم تنفيذ الطبقة [1] أعلاه بواسطة مشروع <bdi dir="ltr" class="odt-ltr-term">Visual Studio C#</bdi> من نوع <em>تطبيق <bdi dir="ltr" class="odt-ltr-term">Windows</bdi></em> ويسمى <strong><bdi dir="ltr" class="odt-ltr-term">ClientWsHello</bdi></strong> :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000077C000001E4DFAAB31D.png" width="575" height="145" style="display:inline-block; margin:4px;width:15.21cm;height:3.842cm;" class="odt-zoomable" data-zoom-src="images/100000000000077C000001E4DFAAB31D.png" /></td></tr></table>
 
 <ul>
-  <li>في [1]، <i>ClientWsHello </i>في Visual C#
+  <li>في [1]، <i><bdi dir="ltr" class="odt-ltr-term">ClientWsHello</bdi> </i>في <bdi dir="ltr" class="odt-ltr-term">Visual C#</bdi>
   </li>
-  <li>في [2]، سيكون مساحة الاسم الافتراضية للمشروع هي <i>Customer </i>(انقر بزر الماوس الأيمن على المشروع / خصائص / التطبيق). ستُستخدم مساحة الاسم هذه لإنشاء مساحة اسم العميل التي سيتم إنشاؤها.
+  <li>في [2]، سيكون مساحة الاسم الافتراضية للمشروع هي <i><bdi dir="ltr" class="odt-ltr-term">Customer</bdi> </i>(انقر بزر الماوس الأيمن على المشروع / خصائص / التطبيق). ستُستخدم مساحة الاسم هذه لإنشاء مساحة اسم العميل التي سيتم إنشاؤها.
   </li>
   <li>في [3]، انقر بزر الماوس الأيمن على المشروع لإضافة مرجع إلى خدمة ويب بعيدة
   </li>
@@ -1315,21 +1317,21 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007B90000033E9820176E.png" width="593" height="249" style="display:inline-block; margin:4px;width:15.69cm;height:6.586cm;" class="odt-zoomable" data-zoom-src="images/10000000000007B90000033E9820176E.png" /></td></tr></table>
 
 <ul>
-  <li>في [4]، قم بتعيين عنوان Uri لخدمة الويب التي تم إنشاؤها مسبقًا
+  <li>في [4]، قم بتعيين عنوان <bdi dir="ltr" class="odt-ltr-term">Uri</bdi> لخدمة الويب التي تم إنشاؤها مسبقًا
   </li>
-  <li>في [4b]، قم بتوصيل Visual C# بخدمة الويب المحددة في [4]. سيقوم Visual C# باسترداد وصف خدمة الويب واستخدامه لإنشاء عميل.
+  <li>في [4b]، قم بتوصيل <bdi dir="ltr" class="odt-ltr-term">Visual C#</bdi> بخدمة الويب المحددة في [4]. سيقوم <bdi dir="ltr" class="odt-ltr-term">Visual C#</bdi> باسترداد وصف خدمة الويب واستخدامه لإنشاء عميل.
   </li>
-  <li>في [5]، بمجرد استرداد وصف خدمة الويب، يمكن لـ Visual C# عرض أساليبها العامة
+  <li>في [5]، بمجرد استرداد وصف خدمة الويب، يمكن لـ <bdi dir="ltr" class="odt-ltr-term">Visual C#</bdi> عرض أساليبها العامة
   </li>
-  <li>في [6]، حدد مساحة اسم للعميل المراد إنشاؤه. سيتم إضافة هذه إلى مساحة الاسم المحددة في [2]. وبهذه الطريقة، ستكون مساحة اسم العميل هي <i>Client.WsHello</i>.
+  <li>في [6]، حدد مساحة اسم للعميل المراد إنشاؤه. سيتم إضافة هذه إلى مساحة الاسم المحددة في [2]. وبهذه الطريقة، ستكون مساحة اسم العميل هي <i><bdi dir="ltr" class="odt-ltr-term">Client.WsHello</bdi></i>.
   </li>
   <li>في [6b] للتحقق من صحة المعالج.
   </li>
-  <li>في [7]، تظهر الإشارة إلى خدمة الويب <i>WsHello </i>في المشروع. بالإضافة إلى ذلك، تم إنشاء ملف تكوين [app.config].
+  <li>في [7]، تظهر الإشارة إلى خدمة الويب <i><bdi dir="ltr" class="odt-ltr-term">WsHello</bdi> </i>في المشروع. بالإضافة إلى ذلك، تم إنشاء ملف تكوين [<bdi dir="ltr" class="odt-ltr-term">app.config</bdi>].
   </li>
   <li>في [8]، اعرض جميع ملفات المشروع.
   </li>
-  <li>في [9]، تحتوي الإشارة إلى خدمة الويب <i>WsHello </i>على ملفات متنوعة لن نتطرق إليها هنا. ومع ذلك، سنلقي نظرة على ملف [Reference.cs]، وهو كود C# للعميل الذي تم إنشاؤه:
+  <li>في [9]، تحتوي الإشارة إلى خدمة الويب <i><bdi dir="ltr" class="odt-ltr-term">WsHello</bdi> </i>على ملفات متنوعة لن نتطرق إليها هنا. ومع ذلك، سنلقي نظرة على ملف [<bdi dir="ltr" class="odt-ltr-term">Reference.cs</bdi>]، وهو كود <bdi dir="ltr" class="odt-ltr-term">C#</bdi> للعميل الذي تم إنشاؤه:
   </li>
 </ul>
 
@@ -1353,22 +1355,22 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 1: مساحة اسم العميل التي تم إنشاؤها هي <i>Client.WsHello</i>. إذا كنت ترغب في تغيير مساحة الاسم هذه، فهذا هو المكان المناسب للقيام بذلك.
+  <li>السطر 1: مساحة اسم العميل التي تم إنشاؤها هي <i><bdi dir="ltr" class="odt-ltr-term">Client.WsHello</bdi></i>. إذا كنت ترغب في تغيير مساحة الاسم هذه، فهذا هو المكان المناسب للقيام بذلك.
   </li>
-  <li>السطر 3: الفئة <i>ServiceSoapClient </i>هي فئة العميل التي تم إنشاؤها. وهي فئة وكيلة بمعنى أنها ستخفي عن تطبيق Windows حقيقة استخدام خدمة ويب بعيدة. سيستخدم تطبيق Windows <i>WsHello </i>عبر الفئة المحلية <i>Client.WsHello.ServiceSoapClient</i>. لإنشاء مثيل للعميل، استخدم المنشئ في السطر 5:
+  <li>السطر 3: الفئة <i><bdi dir="ltr" class="odt-ltr-term">ServiceSoapClient</bdi> </i>هي فئة العميل التي تم إنشاؤها. وهي فئة وكيلة بمعنى أنها ستخفي عن تطبيق <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> حقيقة استخدام خدمة ويب بعيدة. سيستخدم تطبيق <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> <i><bdi dir="ltr" class="odt-ltr-term">WsHello</bdi> </i>عبر الفئة المحلية <i><bdi dir="ltr" class="odt-ltr-term">Client.WsHello.ServiceSoapClient</bdi></i>. لإنشاء مثيل للعميل، استخدم المنشئ في السطر 5:
   </li>
 </ul>
 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Client.WsHello.ServiceSoapClient client=new Client.WsHello.ServiceSoapClient();
 </code></pre></div>
 <ul>
-  <li>السطر 8: الطريقة <i>DisBonjourALaDame </i>هي النظير من جانب العميل لخدمة الويب <i>DisBonjourALaDame</i>.  سيستخدم تطبيق Windows الطريقة البعيدة <i>DisBonjourALaDame </i>عبر الطريقة المحلية <i>Client.WsHello.ServiceSoapClient.DisBonjourALaDame </i>بالشكل التالي:
+  <li>السطر 8: الطريقة <i><bdi dir="ltr" class="odt-ltr-term">DisBonjourALaDame</bdi> </i>هي النظير من جانب العميل لخدمة الويب <i><bdi dir="ltr" class="odt-ltr-term">DisBonjourALaDame</bdi></i>.  سيستخدم تطبيق <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> الطريقة البعيدة <i><bdi dir="ltr" class="odt-ltr-term">DisBonjourALaDame</bdi> </i>عبر الطريقة المحلية <i><bdi dir="ltr" class="odt-ltr-term">Client.WsHello.ServiceSoapClient.DisBonjourALaDame</bdi> </i>بالشكل التالي:
   </li>
 </ul>
 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>string bonjour=client.DisBonjourALaDame(&quot;Carla Bruni&quot;);
 </code></pre></div>
-<p>ملف [app.config] الذي تم إنشاؤه هو كما يلي:</p>
+<p>ملف [<bdi dir="ltr" class="odt-ltr-term">app.config</bdi>] الذي تم إنشاؤه هو كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;?</span><span style="color:#a31515">xml</span><span style="color:#0000ff"> </span><span style="color:#ff0000">version</span><span style="color:#0000ff">=</span>&quot;<span style="color:#0000ff">1.0</span>&quot;<span style="color:#0000ff"> </span><span style="color:#ff0000">encoding</span><span style="color:#0000ff">=</span>&quot;<span style="color:#0000ff">utf-8</span>&quot;<span style="color:#0000ff"> ?&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#a31515">configuration</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -1383,16 +1385,16 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#a31515">configuration</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p>من هذا الملف، سنحتفظ فقط بالسطر 8، الذي يحتوي على عنوان Uri لخدمة الويب. إذا تغير عنوان Uri هذا، فلن تكون هناك حاجة لإعادة بناء عميل Windows. ما عليك سوى تغيير عنوان Uri في ملف [app.config].</p>
-<p>لنعد إلى بنية تطبيق Windows الذي نريد إنشاؤه:</p>
+<p>من هذا الملف، سنحتفظ فقط بالسطر 8، الذي يحتوي على عنوان <bdi dir="ltr" class="odt-ltr-term">Uri</bdi> لخدمة الويب. إذا تغير عنوان <bdi dir="ltr" class="odt-ltr-term">Uri</bdi> هذا، فلن تكون هناك حاجة لإعادة بناء عميل <bdi dir="ltr" class="odt-ltr-term">Windows.</bdi> ما عليك سوى تغيير عنوان <bdi dir="ltr" class="odt-ltr-term">Uri</bdi> في ملف [<bdi dir="ltr" class="odt-ltr-term">app.config</bdi>].</p>
+<p>لنعد إلى بنية تطبيق <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> الذي نريد إنشاؤه:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000053F00000126B9D8FD59.png" width="403" height="88" style="display:inline-block; margin:4px;width:10.659cm;height:2.334cm;" class="odt-zoomable" data-zoom-src="images/100000000000053F00000126B9D8FD59.png" /></td></tr></table>
 
-<p>لقد قمنا ببناء طبقة [client] لخدمة الويب. وستكون طبقة [ui] كما يلي:</p>
+<p>لقد قمنا ببناء طبقة [<bdi dir="ltr" class="odt-ltr-term">client</bdi>] لخدمة الويب. وستكون طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] كما يلي:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000027B00000161BF8B69A6.png" width="190" height="106" style="display:inline-block; margin:4px;width:5.039cm;height:2.801cm;" class="odt-zoomable" data-zoom-src="images/100000000000027B00000161BF8B69A6.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>رقم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>النوع</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الاسم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">1</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع نص</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">textBoxNomDame</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">اسم السيدة</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">2</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">زر</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">زر التحية</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">للاتصال بخدمة الويب <i>WsHello </i>عن بُعد واستدعاء طريقة <i>DisBonjourALaDame</i>.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">3</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تسمية</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تسمية Bonjour</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">النتيجة التي تعيدها خدمة الويب</div></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>رقم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>النوع</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الاسم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">1</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع نص</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">textBoxNomDame</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">اسم السيدة</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">2</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">زر</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">زر التحية</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">للاتصال بخدمة الويب <i><bdi dir="ltr" class="odt-ltr-term">WsHello</bdi> </i>عن بُعد واستدعاء طريقة <i><bdi dir="ltr" class="odt-ltr-term">DisBonjourALaDame</bdi></i>.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">3</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تسمية</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تسمية <bdi dir="ltr" class="odt-ltr-term">Bonjour</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">النتيجة التي تعيدها خدمة الويب</div></td></tr></table>
 
-<p>رمز النموذج [Form1.cs] هو كما يلي:</p>
+<p>رمز النموذج [<bdi dir="ltr" class="odt-ltr-term">Form1.cs</bdi>] هو كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System.Windows.Forms;</span></span>
@@ -1417,7 +1419,7 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 15: يتم إنشاء مثيل لعميل خدمة الويب. وهو من النوع <i>Client.WsHello.ServiceSoapClient</i>. وقد تم تعريف مساحة الاسم <i>Client.WsHello </i>في السطر 3. يتم استدعاء الدالة المحلية <i>ServiceSoapClient().DisBonjourALaDame</i>. ونعلم أنها تستدعي الدالة البعيدة التي تحمل الاسم نفسه في خدمة الويب.
+  <li>السطر 15: يتم إنشاء مثيل لعميل خدمة الويب. وهو من النوع <i><bdi dir="ltr" class="odt-ltr-term">Client.WsHello.ServiceSoapClient</bdi></i>. وقد تم تعريف مساحة الاسم <i><bdi dir="ltr" class="odt-ltr-term">Client.WsHello</bdi> </i>في السطر 3. يتم استدعاء الدالة المحلية <i><bdi dir="ltr" class="odt-ltr-term">ServiceSoapClient</bdi>().<bdi dir="ltr" class="odt-ltr-term">DisBonjourALaDame</bdi></i>. ونعلم أنها تستدعي الدالة البعيدة التي تحمل الاسم نفسه في خدمة الويب.
   </li>
 </ul>
 
@@ -1428,13 +1430,13 @@
 
 <p>قدمت خدمة الويب السابقة طريقة واحدة. ونحن ننظر في خدمة ويب ستقدم 4 عمليات حسابية:</p>
 <ol>
-  <li>ajouter(a,b) التي ستعطي a+b
+  <li><bdi dir="ltr" class="odt-ltr-term">ajouter</bdi>(<bdi dir="ltr" class="odt-ltr-term">a</bdi>,<bdi dir="ltr" class="odt-ltr-term">b</bdi>) التي ستعطي <bdi dir="ltr" class="odt-ltr-term">a+b</bdi>
   </li>
-  <li>soustraire(a,b) التي ستُنتج a-b
+  <li><bdi dir="ltr" class="odt-ltr-term">soustraire</bdi>(<bdi dir="ltr" class="odt-ltr-term">a</bdi>,<bdi dir="ltr" class="odt-ltr-term">b</bdi>) التي ستُنتج <bdi dir="ltr" class="odt-ltr-term">a-b</bdi>
   </li>
-  <li>multiplier(a,b) التي ستنتج a*b
+  <li><bdi dir="ltr" class="odt-ltr-term">multiplier</bdi>(<bdi dir="ltr" class="odt-ltr-term">a</bdi>,<bdi dir="ltr" class="odt-ltr-term">b</bdi>) التي ستنتج <bdi dir="ltr" class="odt-ltr-term">a</bdi>*<bdi dir="ltr" class="odt-ltr-term">b</bdi>
   </li>
-  <li>diviser(a,b) التي ستنتج a/b
+  <li><bdi dir="ltr" class="odt-ltr-term">diviser</bdi>(<bdi dir="ltr" class="odt-ltr-term">a</bdi>,<bdi dir="ltr" class="odt-ltr-term">b</bdi>) التي ستنتج <bdi dir="ltr" class="odt-ltr-term">a/b</bdi>
   </li>
 </ol>
 
@@ -1454,28 +1456,28 @@
 
 <p><a id="refheading10404011168783983"></a></p>
 <h3 id="1231">12.3.1. <span style="color: #4f81bd">جانب الخادم</span></h3>
-<p>نقوم بإنشاء مشروع خدمة ويب باستخدام Visual Web Developer :</p>
+<p>نقوم بإنشاء مشروع خدمة ويب باستخدام <bdi dir="ltr" class="odt-ltr-term">Visual Web Developer</bdi> :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006260000022825EE017C.png" width="472" height="166" style="display:inline-block; margin:4px;width:12.49cm;height:4.38cm;" class="odt-zoomable" data-zoom-src="images/10000000000006260000022825EE017C.png" /></td></tr></table>
 
 <ul>
-  <li>في [1]، تم إنشاء تطبيق الويب <i>WsOperations</i>
+  <li>في [1]، تم إنشاء تطبيق الويب <i><bdi dir="ltr" class="odt-ltr-term">WsOperations</bdi></i>
   </li>
-  <li>في [2]، تم إعادة تصميم تطبيق الويب <i>WsOperations </i>على النحو التالي:
+  <li>في [2]، تم إعادة تصميم تطبيق الويب <i><bdi dir="ltr" class="odt-ltr-term">WsOperations</bdi> </i>على النحو التالي:
   </li>
-  <li>تمت إعادة تسمية صفحة الويب [Service.asmx] إلى [Operations.asmx]
+  <li>تمت إعادة تسمية صفحة الويب [<bdi dir="ltr" class="odt-ltr-term">Service.asmx</bdi>] إلى [<bdi dir="ltr" class="odt-ltr-term">Operations.asmx</bdi>]
   </li>
-  <li>تم تغيير اسم فئة [Service.cs] إلى [Operations.cs]
+  <li>تم تغيير اسم فئة [<bdi dir="ltr" class="odt-ltr-term">Service.cs</bdi>] إلى [<bdi dir="ltr" class="odt-ltr-term">Operations.cs</bdi>]
   </li>
-  <li>تمت إزالة ملف [web.config] لإظهار أنه ليس ضروريًا.
+  <li>تمت إزالة ملف [<bdi dir="ltr" class="odt-ltr-term">web.config</bdi>] لإظهار أنه ليس ضروريًا.
   </li>
 </ul>
 
-<p>تحتوي صفحة الويب [Service.asmx] على السطر التالي:</p>
+<p>تحتوي صفحة الويب [<bdi dir="ltr" class="odt-ltr-term">Service.asmx</bdi>] على السطر التالي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;%<span style="color:#0000ff">@</span> <span style="color:#a31515">WebService</span> <span style="color:#ff0000">Language</span><span style="color:#0000ff">=&quot;C#&quot;</span> <span style="color:#ff0000">CodeBehind</span><span style="color:#0000ff">=&quot;~/App_Code/Operations.cs&quot;</span> <span style="color:#ff0000">Class</span><span style="color:#0000ff">=&quot;Operations&quot;</span> %&gt;</span></span>
 </code></pre></div>
 
-<p>يتم توفير خدمة الويب بواسطة الفئة التالية [Operations.cs]:</p>
+<p>يتم توفير خدمة الويب بواسطة الفئة التالية [<bdi dir="ltr" class="odt-ltr-term">Operations.cs</bdi>]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System.Web.Services;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1510,20 +1512,20 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>لتشغيل خدمة الويب، نتبع الخطوات الموضحة في [3]. ثم نحصل على صفحة الاختبار الخاصة بالطرق الأربع لخدمة الويب <em>WsOperations</em> :</p>
+<p>لتشغيل خدمة الويب، نتبع الخطوات الموضحة في [3]. ثم نحصل على صفحة الاختبار الخاصة بالطرق الأربع لخدمة الويب <em><bdi dir="ltr" class="odt-ltr-term">WsOperations</bdi></em> :</p>
 <p><img src="images/10000000000001A600000175A3BDFEA9.png" width="296" height="261" style="width:7.819cm;height:6.911cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001A600000175A3BDFEA9.png" /></p>
 <p>ندعو القراء لتجربة الطرق الأربع جميعها.</p>
 <p><a id="refheading10404031168783983"></a></p>
 <h3 id="1232">12.3.2. <span style="color: #4f81bd">قسم العملاء</span></h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000052E000001230B022E76.png" width="398" height="87" style="display:inline-block; margin:4px;width:10.53cm;height:2.311cm;" class="odt-zoomable" data-zoom-src="images/100000000000052E000001230B022E76.png" /></td></tr></table>
 
-<p>باستخدام Visual C#، نقوم بإنشاء تطبيق Windows <em>ClientWsOperations</em> :</p>
+<p>باستخدام <bdi dir="ltr" class="odt-ltr-term">Visual C#</bdi>، نقوم بإنشاء تطبيق <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> <em><bdi dir="ltr" class="odt-ltr-term">ClientWsOperations</bdi></em> :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007A5000001D57E16443C.png" width="587" height="141" style="display:inline-block; margin:4px;width:15.529cm;height:3.722cm;" class="odt-zoomable" data-zoom-src="images/10000000000007A5000001D57E16443C.png" /></td></tr></table>
 
 <ul>
-  <li>في [1]، <i>ClientWsOperations </i>في Visual C#
+  <li>في [1]، <i><bdi dir="ltr" class="odt-ltr-term">ClientWsOperations</bdi> </i>في <bdi dir="ltr" class="odt-ltr-term">Visual C#</bdi>
   </li>
-  <li>في [2]، سيكون اسم الفضاء الافتراضي للمشروع هو <i>Customer </i>(انقر بزر الماوس الأيمن على المشروع / خصائص / التطبيق). سيتم استخدام اسم الفضاء هذا لإنشاء اسم الفضاء الخاص بالعميل الذي سيتم إنشاؤه.
+  <li>في [2]، سيكون اسم الفضاء الافتراضي للمشروع هو <i><bdi dir="ltr" class="odt-ltr-term">Customer</bdi> </i>(انقر بزر الماوس الأيمن على المشروع / خصائص / التطبيق). سيتم استخدام اسم الفضاء هذا لإنشاء اسم الفضاء الخاص بالعميل الذي سيتم إنشاؤه.
   </li>
   <li>في [3]، انقر بزر الماوس الأيمن على المشروع لإضافة مرجع إلى خدمة ويب موجودة
   </li>
@@ -1532,29 +1534,29 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000725000003F0BECE7AC8.png" width="549" height="302" style="display:inline-block; margin:4px;width:14.52cm;height:8.003cm;" class="odt-zoomable" data-zoom-src="images/1000000000000725000003F0BECE7AC8.png" /></td></tr></table>
 
 <ul>
-  <li>في [4]، قم بتعيين عنوان Uri لخدمة الويب التي تم إنشاؤها مسبقًا. للقيام بذلك، انظر إلى ما يظهر في حقل العنوان بالمتصفح الذي يعرض صفحة اختبار خدمة الويب.
+  <li>في [4]، قم بتعيين عنوان <bdi dir="ltr" class="odt-ltr-term">Uri</bdi> لخدمة الويب التي تم إنشاؤها مسبقًا. للقيام بذلك، انظر إلى ما يظهر في حقل العنوان بالمتصفح الذي يعرض صفحة اختبار خدمة الويب.
   </li>
-  <li>في [4b]، قم بتوصيل Visual C# بخدمة الويب المحددة في [4]. سيقوم Visual C# باسترداد وصف خدمة الويب واستخدامه لإنشاء عميل.
+  <li>في [4b]، قم بتوصيل <bdi dir="ltr" class="odt-ltr-term">Visual C#</bdi> بخدمة الويب المحددة في [4]. سيقوم <bdi dir="ltr" class="odt-ltr-term">Visual C#</bdi> باسترداد وصف خدمة الويب واستخدامه لإنشاء عميل.
   </li>
-  <li>في [5]، بمجرد استرداد وصف خدمة الويب، يمكن لـ Visual C# عرض أساليبها العامة
+  <li>في [5]، بمجرد استرداد وصف خدمة الويب، يمكن لـ <bdi dir="ltr" class="odt-ltr-term">Visual C#</bdi> عرض أساليبها العامة
   </li>
-  <li>في [6]، حدد مساحة اسم للعميل المراد إنشاؤه. ستُضاف هذه إلى مساحة الاسم المحددة في [2]. وبهذه الطريقة، ستكون مساحة اسم العميل هي <i>Client.WsOperations</i>.
+  <li>في [6]، حدد مساحة اسم للعميل المراد إنشاؤه. ستُضاف هذه إلى مساحة الاسم المحددة في [2]. وبهذه الطريقة، ستكون مساحة اسم العميل هي <i><bdi dir="ltr" class="odt-ltr-term">Client.WsOperations</bdi></i>.
   </li>
   <li>في [6b] للتحقق من صحة المعالج.
   </li>
-  <li>في [7]، تظهر الإشارة إلى خدمة الويب <i>WsOperations </i>في المشروع. بالإضافة إلى ذلك، تم إنشاء ملف تكوين [app.config].
+  <li>في [7]، تظهر الإشارة إلى خدمة الويب <i><bdi dir="ltr" class="odt-ltr-term">WsOperations</bdi> </i>في المشروع. بالإضافة إلى ذلك، تم إنشاء ملف تكوين [<bdi dir="ltr" class="odt-ltr-term">app.config</bdi>].
   </li>
 </ul>
 
-<p>تذكر أن العميل الذي تم إنشاؤه هو من النوع <em>Client.WsOperations.OperationsSoapClient</em> حيث</p>
+<p>تذكر أن العميل الذي تم إنشاؤه هو من النوع <em><bdi dir="ltr" class="odt-ltr-term">Client.WsOperations.OperationsSoapClient</bdi></em> حيث</p>
 <ul>
-  <li><i>Client.WsOperations </i>هو مساحة اسم خدمة عميل الويب
+  <li><i><bdi dir="ltr" class="odt-ltr-term">Client.WsOperations</bdi> </i>هو مساحة اسم خدمة عميل الويب
   </li>
-  <li><i>Operations </i>هي فئة خدمة الويب البعيدة.
+  <li><i><bdi dir="ltr" class="odt-ltr-term">Operations</bdi> </i>هي فئة خدمة الويب البعيدة.
   </li>
 </ul>
 
-<p>على الرغم من وجود طريقة منطقية لإنشاء هذا الاسم، غالبًا ما يكون من الأسهل العثور عليه في ملف [Reference.cs]، وهو ملف مخفي افتراضيًا. ومحتوياته كما يلي:</p>
+<p>على الرغم من وجود طريقة منطقية لإنشاء هذا الاسم، غالبًا ما يكون من الأسهل العثور عليه في ملف [<bdi dir="ltr" class="odt-ltr-term">Reference.cs</bdi>]، وهو ملف مخفي افتراضيًا. ومحتوياته كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">namespace</span> Client.WsOperations {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> ...</span></span>
@@ -1582,13 +1584,13 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>سيتم الوصول إلى طرق <em>Add</em> و <em>Subtract</em> و <em>Multiply</em> و <em>Divide</em> الخاصة بخدمة الويب البعيدة عبر طرق الوكيل التي تحمل نفس الاسم (الأسطر 8 و 12 و 16 و 20) الخاصة بالعميل من النوع <em>Client.WsOperations.OperationsSoapClient</em> (السطر 3).</p>
+<p>سيتم الوصول إلى طرق <em><bdi dir="ltr" class="odt-ltr-term">Add</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">Subtract</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">Multiply</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">Divide</bdi></em> الخاصة بخدمة الويب البعيدة عبر طرق الوكيل التي تحمل نفس الاسم (الأسطر 8 و 12 و 16 و 20) الخاصة بالعميل من النوع <em><bdi dir="ltr" class="odt-ltr-term">Client.WsOperations.OperationsSoapClient</bdi></em> (السطر 3).</p>
 <p>كل ما تبقى هو إنشاء الواجهة الرسومية:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000460000001CB3F0AFCBC.png" width="336" height="138" style="display:inline-block; margin:4px;width:8.89cm;height:3.642cm;" class="odt-zoomable" data-zoom-src="images/1000000000000460000001CB3F0AFCBC.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>رقم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>النوع</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الاسم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">1</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع القائمة المنسدلة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">عمليات قائمة المنسدلة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">قائمة العمليات الحسابية</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">2</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع النص</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">textBoxA</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">رقم أ</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">3</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع نص</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع النص ب</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">رقم ب</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">4</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">زر</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">زر التنفيذ</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يستطلع خدمة الويب البعيدة</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">5</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تسمية</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">labelResult</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">نتيجة العملية</div></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>رقم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>النوع</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الاسم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">1</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع القائمة المنسدلة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">عمليات قائمة المنسدلة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">قائمة العمليات الحسابية</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">2</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع النص</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">textBoxA</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">رقم أ</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">3</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع نص</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع النص ب</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">رقم ب</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">4</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">زر</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">زر التنفيذ</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يستطلع خدمة الويب البعيدة</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">5</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تسمية</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">labelResult</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">نتيجة العملية</div></td></tr></table>
 
-<p>فيما يلي كود [Form1.cs]:</p>
+<p>فيما يلي كود [<bdi dir="ltr" class="odt-ltr-term">Form1.cs</bdi>]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System.Windows.Forms;</span></span>
@@ -1663,7 +1665,7 @@
   </li>
   <li>السطر 23: تنفيذ العملية التي طلبها المستخدم
   </li>
-  <li>الأسطر 25-37: التحقق من أن المدخلتين a و b أرقام حقيقية
+  <li>الأسطر 25-37: التحقق من أن المدخلتين <bdi dir="ltr" class="odt-ltr-term">a</bdi> و <bdi dir="ltr" class="odt-ltr-term">b</bdi> أرقام حقيقية
   </li>
   <li>الأسطر 41-54: مفتاح لتنفيذ العملية البعيدة التي طلبها المستخدم
   </li>
@@ -1673,38 +1675,38 @@
 
 <p><a id="refheading10404051168783983"></a></p>
 <h2 id="124">12.4. <span style="color: #4f81bd">خدمة حساب الضرائب على الويب</span></h2>
-<p>لقد عدنا إلى تطبيق حساب الضرائب الذي أصبح معروفًا الآن. في المرة الأخيرة التي عملنا فيه، جعلناه خادم Tcp عن بُعد يمكن استدعاؤه عبر الإنترنت. وقد حولناه الآن إلى خدمة ويب.</p>
+<p>لقد عدنا إلى تطبيق حساب الضرائب الذي أصبح معروفًا الآن. في المرة الأخيرة التي عملنا فيه، جعلناه خادم <bdi dir="ltr" class="odt-ltr-term">Tcp</bdi> عن بُعد يمكن استدعاؤه عبر الإنترنت. وقد حولناه الآن إلى خدمة ويب.</p>
 <p>كانت بنية الإصدار 8 كما يلي:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000754000001C01C63D89D.png" width="563" height="134" style="display:inline-block; margin:4px;width:14.891cm;height:3.556cm;" class="odt-zoomable" data-zoom-src="images/1000000000000754000001C01C63D89D.png" /></td></tr></table>
 
 <p>وستكون بنية الإصدار 9 مشابهة:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000758000001C2D56E96AE.png" width="564" height="135" style="display:inline-block; margin:4px;width:14.921cm;height:3.572cm;" class="odt-zoomable" data-zoom-src="images/1000000000000758000001C2D56E96AE.png" /></td></tr></table>
 
-<p>هذه البنية مشابهة لتلك الموجودة في الإصدار 8، الموصوفة في الفقرة<a href="#impotsv8-architecture"><u><span style="color: #0563c1"> 11.9.</span></u></a>1، ولكن حيث يتم استبدال خادم وعميل Tcp بشبكة خدمة وعميلها الوكيل. سنقوم بتبني طبقات [ui] و[metier] و[dao] بالكامل من الإصدار 8.</p>
+<p>هذه البنية مشابهة لتلك الموجودة في الإصدار 8، الموصوفة في الفقرة<a href="#impotsv8-architecture"><u><span style="color: #0563c1"> 11.9.</span></u></a>1، ولكن حيث يتم استبدال خادم وعميل <bdi dir="ltr" class="odt-ltr-term">Tcp</bdi> بشبكة خدمة وعميلها الوكيل. سنقوم بتبني طبقات [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] بالكامل من الإصدار 8.</p>
 <p><a id="refheading10404071168783983"></a></p>
 <h3 id="1241">12.4.1. <span style="color: #4f81bd">جانب الخادم</span></h3>
-<p>نقوم بإنشاء مشروع خدمة ويب باستخدام Visual Web Developer :</p>
+<p>نقوم بإنشاء مشروع خدمة ويب باستخدام <bdi dir="ltr" class="odt-ltr-term">Visual Web Developer</bdi> :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000034C0000015717001A0B.png" width="253" height="103" style="display:inline-block; margin:4px;width:6.699cm;height:2.722cm;" class="odt-zoomable" data-zoom-src="images/100000000000034C0000015717001A0B.png" /></td></tr></table>
 
 <ul>
-  <li>في [1]، تم إنشاء تطبيق الويب <i>WsImpot</i>
+  <li>في [1]، تم إنشاء تطبيق الويب <i><bdi dir="ltr" class="odt-ltr-term">WsImpot</bdi></i>
   </li>
-  <li>في [2]، تم إعادة تصميم تطبيق الويب <i>WsImpot </i>على النحو التالي:
+  <li>في [2]، تم إعادة تصميم تطبيق الويب <i><bdi dir="ltr" class="odt-ltr-term">WsImpot</bdi> </i>على النحو التالي:
     <ul>
-      <li>تمت إعادة تسمية صفحة الويب [Service.asmx] إلى [ServiceImpot.asmx]
+      <li>تمت إعادة تسمية صفحة الويب [<bdi dir="ltr" class="odt-ltr-term">Service.asmx</bdi>] إلى [<bdi dir="ltr" class="odt-ltr-term">ServiceImpot.asmx</bdi>]
       </li>
-      <li>تم تغيير اسم فئة [Service.cs] إلى [ServiceImpot.cs]
+      <li>تم تغيير اسم فئة [<bdi dir="ltr" class="odt-ltr-term">Service.cs</bdi>] إلى [<bdi dir="ltr" class="odt-ltr-term">ServiceImpot.cs</bdi>]
       </li>
     </ul>
   </li>
 </ul>
 
-<p>تحتوي صفحة الويب [ServiceImpot.asmx] على السطر التالي:</p>
+<p>تحتوي صفحة الويب [<bdi dir="ltr" class="odt-ltr-term">ServiceImpot.asmx</bdi>] على السطر التالي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;%<span style="color:#0000ff">@</span> <span style="color:#a31515">WebService</span> <span style="color:#ff0000">Language</span><span style="color:#0000ff">=&quot;C#&quot;</span> <span style="color:#ff0000">CodeBehind</span><span style="color:#0000ff">=&quot;~/App_Code/ServiceImpot.cs&quot;</span> <span style="color:#ff0000">Class</span><span style="color:#0000ff">=&quot;ServiceImpot&quot;</span> %&gt;</span></span>
 </code></pre></div>
 
-<p>يتم توفير خدمة الويب بواسطة الفئة التالية [ServiceImpot.cs]:</p>
+<p>يتم توفير خدمة الويب بواسطة الفئة التالية [<bdi dir="ltr" class="odt-ltr-term">ServiceImpot.cs</bdi>]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System.Web.Services;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1722,31 +1724,31 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>ستعرض خدمة الويب فقط <em>CalculerImpot</em> في السطر 9.</p>
+<p>ستعرض خدمة الويب فقط <em><bdi dir="ltr" class="odt-ltr-term">CalculerImpot</bdi></em> في السطر 9.</p>
 <p>لنعد إلى بنية العميل/الخادم في الإصدار 8:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000757000001B5C751C4C3.png" width="564" height="131" style="display:inline-block; margin:4px;width:14.91cm;height:3.468cm;" class="odt-zoomable" data-zoom-src="images/1000000000000757000001B5C751C4C3.png" /></td></tr></table>
 
-<p>كان مشروع Visual Studio على الخادم [1] كما يلي:</p>
+<p>كان مشروع <bdi dir="ltr" class="odt-ltr-term">Visual Studio</bdi> على الخادم [1] كما يلي:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006F600000159945802CC.png" width="534" height="103" style="display:inline-block; margin:4px;width:14.139cm;height:2.738cm;" class="odt-zoomable" data-zoom-src="images/10000000000006F600000159945802CC.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، المشروع. تضمن العناصر التالية:
     <ul>
-      <li>[ServeurImpot.cs]: خادم حساب الضرائب Tcp/Ip في شكل تطبيق وحدة التحكم.
+      <li>[<bdi dir="ltr" class="odt-ltr-term">ServeurImpot.cs</bdi>]: خادم حساب الضرائب <bdi dir="ltr" class="odt-ltr-term">Tcp/Ip</bdi> في شكل تطبيق وحدة التحكم.
       </li>
-      <li>[dbimpots.sdf]: قاعدة البيانات المضغوطة لـ SQL Server من الإصدار 7 الموضحة في الفقرة<a href="#impotsv7-bd-sqlserverce"><u><span style="color: #0563c1"> 9.8.5</span></u></a>.
+      <li>[<bdi dir="ltr" class="odt-ltr-term">dbimpots.sdf</bdi>]: قاعدة البيانات المضغوطة لـ <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi> من الإصدار 7 الموضحة في الفقرة<a href="#impotsv7-bd-sqlserverce"><u><span style="color: #0563c1"> 9.8.5</span></u></a>.
       </li>
-      <li>[App.config]: ملف تكوين التطبيق.
+      <li>[<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]: ملف تكوين التطبيق.
       </li>
     </ul>
   </li>
-  <li>في [2]، يحتوي المجلد [lib] على ملف DLL اللازم للمشروع:
+  <li>في [2]، يحتوي المجلد [<bdi dir="ltr" class="odt-ltr-term">lib</bdi>] على ملف <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> اللازم للمشروع:
     <ul>
-      <li>[ImpotsV7-dao]: طبقة [dao] في الإصدار 7
+      <li>[<bdi dir="ltr" class="odt-ltr-term">ImpotsV7-dao</bdi>]: طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] في الإصدار 7
       </li>
-      <li>[ImpotsV7-metier]: طبقة [metier] في الإصدار 7
+      <li>[<bdi dir="ltr" class="odt-ltr-term">ImpotsV7-metier</bdi>]: طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] في الإصدار 7
       </li>
-      <li>[antlr.runtime، CommonLogging، Spring.Core] لـ Spring
+      <li>[<bdi dir="ltr" class="odt-ltr-term">antlr.runtime</bdi>، <bdi dir="ltr" class="odt-ltr-term">CommonLogging</bdi>، <bdi dir="ltr" class="odt-ltr-term">Spring.Core</bdi>] لـ <bdi dir="ltr" class="odt-ltr-term">Spring</bdi>
       </li>
     </ul>
   </li>
@@ -1754,20 +1756,20 @@
   </li>
 </ul>
 
-<p>طبقات [metier] و [dao] الخاصة بالإصدار موجودة بالفعل: وهي تلك المستخدمة في الإصدارين 7 و 8. وهي في شكل DLL، والتي ندمجها في المشروع على النحو التالي: </p>
+<p>طبقات [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] الخاصة بالإصدار موجودة بالفعل: وهي تلك المستخدمة في الإصدارين 7 و 8. وهي في شكل <bdi dir="ltr" class="odt-ltr-term">DLL</bdi>، والتي ندمجها في المشروع على النحو التالي: </p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000077E000003A72EA5E7F8.png" width="575" height="280" style="display:inline-block; margin:4px;width:15.221cm;height:7.421cm;" class="odt-zoomable" data-zoom-src="images/100000000000077E000003A72EA5E7F8.png" /></td></tr></table>
 
 <ul>
-  <li>في [1] تم نسخ مجلد [lib] الخاص بخادم الإصدار 8 إلى مشروع خدمة الويب الخاص بالإصدار 9.
+  <li>في [1] تم نسخ مجلد [<bdi dir="ltr" class="odt-ltr-term">lib</bdi>] الخاص بخادم الإصدار 8 إلى مشروع خدمة الويب الخاص بالإصدار 9.
   </li>
-  <li>في [2] نقوم بتعديل خصائص الصفحة لإضافة ملف DLL من مجلد [lib] [4] إلى مراجع المشروع [3].
+  <li>في [2] نقوم بتعديل خصائص الصفحة لإضافة ملف <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> من مجلد [<bdi dir="ltr" class="odt-ltr-term">lib</bdi>] [4] إلى مراجع المشروع [3].
   </li>
 </ul>
 
 <p>بعد هذه العملية، أصبح لدينا جميع الطبقات المطلوبة للخادم [1] أدناه:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000075A000001BEB1359C68.png" width="565" height="134" style="display:inline-block; margin:4px;width:14.94cm;height:3.54cm;" class="odt-zoomable" data-zoom-src="images/100000000000075A000001BEB1359C68.png" /></td></tr></table>
 
-<p>بينما عناصر الخادم [1] و[server] و[metier] و[dao] و[entities] و[spring] موجودة جميعها في مشروع Visual Studio، فإننا نفتقد العنصر الذي سيقوم بإنشاء مثيلات لها عند بدء تشغيل تطبيق الويب. في الإصدار 8، قامت فئة رئيسية تحتوي على الطريقة الثابتة [Main] بمهمة إنشاء مثيلات للطبقات بمساعدة Spring. في تطبيق الويب، الفئة القادرة على القيام بمهمة مماثلة هي الفئة المرتبطة بـ [<a id="impotsv9-global-asax"></a> Global.asax]:</p>
+<p>بينما عناصر الخادم [1] و[<bdi dir="ltr" class="odt-ltr-term">server</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">entities</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">spring</bdi>] موجودة جميعها في مشروع <bdi dir="ltr" class="odt-ltr-term">Visual Studio</bdi>، فإننا نفتقد العنصر الذي سيقوم بإنشاء مثيلات لها عند بدء تشغيل تطبيق الويب. في الإصدار 8، قامت فئة رئيسية تحتوي على الطريقة الثابتة [<bdi dir="ltr" class="odt-ltr-term">Main</bdi>] بمهمة إنشاء مثيلات للطبقات بمساعدة <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> في تطبيق الويب، الفئة القادرة على القيام بمهمة مماثلة هي الفئة المرتبطة بـ [<a id="impotsv9-global-asax"></a> <bdi dir="ltr" class="odt-ltr-term">Global.asax</bdi>]:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000078D00000267262A9068.png" width="580" height="184" style="display:inline-block; margin:4px;width:15.341cm;height:4.881cm;" class="odt-zoomable" data-zoom-src="images/100000000000078D00000267262A9068.png" /></td></tr></table>
 
 <ul>
@@ -1783,7 +1785,7 @@
   </li>
 </ul>
 
-<p>دعونا نلقي نظرة على محتويات ملف [Global.asax]:</p>
+<p>دعونا نلقي نظرة على محتويات ملف [<bdi dir="ltr" class="odt-ltr-term">Global.asax</bdi>]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;%<span style="color:#0000ff">@</span> <span style="color:#a31515">Application</span> <span style="color:#ff0000">Language</span><span style="color:#0000ff">=&quot;C#&quot;</span> %&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1817,34 +1819,34 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#a31515">script</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p>الملف عبارة عن مزيج من علامات خادم الويب (الأسطر 1 و 3 و 30) ورمز C#. كانت هذه هي الطريقة الوحيدة المستخدمة مع ASP، سلف ASP.NET، وهي التقنية الحالية التي تستخدمها Microsoft لبرمجة الويب. مع ASP.NET، لا يزال من الممكن استخدام هذه الطريقة، ولكنها ليست الطريقة الافتراضية. الطريقة الافتراضية هي طريقة &quot;CodeBehind&quot;، التي رأيناها في صفحات خدمات الويب، على سبيل المثال هنا في [ServiceImpot.asmx]:</p>
+<p>الملف عبارة عن مزيج من علامات خادم الويب (الأسطر 1 و 3 و 30) ورمز <bdi dir="ltr" class="odt-ltr-term">C#.</bdi> كانت هذه هي الطريقة الوحيدة المستخدمة مع <bdi dir="ltr" class="odt-ltr-term">ASP</bdi>، سلف <bdi dir="ltr" class="odt-ltr-term">ASP.NET</bdi>، وهي التقنية الحالية التي تستخدمها <bdi dir="ltr" class="odt-ltr-term">Microsoft</bdi> لبرمجة الويب. مع <bdi dir="ltr" class="odt-ltr-term">ASP.NET</bdi>، لا يزال من الممكن استخدام هذه الطريقة، ولكنها ليست الطريقة الافتراضية. الطريقة الافتراضية هي طريقة &quot;<bdi dir="ltr" class="odt-ltr-term">CodeBehind</bdi>&quot;، التي رأيناها في صفحات خدمات الويب، على سبيل المثال هنا في [<bdi dir="ltr" class="odt-ltr-term">ServiceImpot.asmx</bdi>]:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;%<span style="color:#0000ff">@</span> <span style="color:#a31515">WebService</span> <span style="color:#ff0000">Language</span><span style="color:#0000ff">=&quot;C#&quot;</span> <span style="color:#ff0000">CodeBehind</span><span style="color:#0000ff">=&quot;~/App_Code/ServiceImpot.cs&quot;</span> <span style="color:#ff0000">Class</span><span style="color:#0000ff">=&quot;ServiceImpot&quot;</span> %&gt;</span></span>
 </code></pre></div>
 
-<p>تحدد <em>CodeBehind</em> موقع شفرة المصدر لصفحة [ServiceImpot.asmx]. بدون هذه السمة، ستكون شفرة المصدر في صفحة [ServiceImpot.asmx] بنحو مشابه لتلك الموجودة في [Global.asax]. لن نحتفظ بملف [Global.asax] كما تم إنشاؤه، لكن شفرته تسمح لنا بفهم الغرض منه:</p>
+<p>تحدد <em><bdi dir="ltr" class="odt-ltr-term">CodeBehind</bdi></em> موقع شفرة المصدر لصفحة [<bdi dir="ltr" class="odt-ltr-term">ServiceImpot.asmx</bdi>]. بدون هذه السمة، ستكون شفرة المصدر في صفحة [<bdi dir="ltr" class="odt-ltr-term">ServiceImpot.asmx</bdi>] بنحو مشابه لتلك الموجودة في [<bdi dir="ltr" class="odt-ltr-term">Global.asax</bdi>]. لن نحتفظ بملف [<bdi dir="ltr" class="odt-ltr-term">Global.asax</bdi>] كما تم إنشاؤه، لكن شفرته تسمح لنا بفهم الغرض منه:</p>
 <ul>
-  <li>يتم إنشاء مثيل للفئة المرتبطة بـ <i>Global.asax </i>عند بدء تشغيل التطبيق. وتستمر مدة وجودها طوال مدة وجود التطبيق بأكمله. وبعبارة محددة، لا تختفي إلا عند إيقاف تشغيل خادم الويب.
+  <li>يتم إنشاء مثيل للفئة المرتبطة بـ <i><bdi dir="ltr" class="odt-ltr-term">Global.asax</bdi> </i>عند بدء تشغيل التطبيق. وتستمر مدة وجودها طوال مدة وجود التطبيق بأكمله. وبعبارة محددة، لا تختفي إلا عند إيقاف تشغيل خادم الويب.
   </li>
-  <li>يتم بعد ذلك تنفيذ الأسلوب <i>Application_Start</i>. هذه هي المرة الوحيدة التي سيتم فيها تنفيذه. لذلك يتم استخدامه لإنشاء مثيلات للكائنات المشتركة بين جميع المستخدمين. يتم وضع هذه الكائنات:
+  <li>يتم بعد ذلك تنفيذ الأسلوب <i><bdi dir="ltr" class="odt-ltr-term">Application_Start</bdi></i>. هذه هي المرة الوحيدة التي سيتم فيها تنفيذه. لذلك يتم استخدامه لإنشاء مثيلات للكائنات المشتركة بين جميع المستخدمين. يتم وضع هذه الكائنات:
     <ul>
-      <li>أو في الحقول الثابتة للفئة المرتبطة بـ <i>Global.asax</i>. ونظرًا لأن هذه الفئة موجودة بشكل دائم، يمكن لأي طلب من أي مستخدم قراءة المعلومات منها.
+      <li>أو في الحقول الثابتة للفئة المرتبطة بـ <i><bdi dir="ltr" class="odt-ltr-term">Global.asax</bdi></i>. ونظرًا لأن هذه الفئة موجودة بشكل دائم، يمكن لأي طلب من أي مستخدم قراءة المعلومات منها.
       </li>
-      <li>أو في الحاوية <b>Application</b>. يتم إنشاء هذه الحاوية أيضًا عند بدء تشغيل التطبيق، وتستمر طوال مدة عمل التطبيق. 
+      <li>أو في الحاوية <b><bdi dir="ltr" class="odt-ltr-term">Application</bdi></b>. يتم إنشاء هذه الحاوية أيضًا عند بدء تشغيل التطبيق، وتستمر طوال مدة عمل التطبيق. 
         <ul>
-          <li>لوضع البيانات في هذه الحاوية، نكتب <i>Application[&quot;key&quot;]=value;</i>
+          <li>لوضع البيانات في هذه الحاوية، نكتب <i><bdi dir="ltr" class="odt-ltr-term">Application</bdi>[&quot;<bdi dir="ltr" class="odt-ltr-term">key</bdi>&quot;]=<bdi dir="ltr" class="odt-ltr-term">value</bdi>;</i>
           </li>
-          <li>لاستردادها، نكتب <i>T value=(T)Application[&quot;key&quot;]; </i>حيث T هو نوع <i>القيمة</i>.
+          <li>لاستردادها، نكتب <i><bdi dir="ltr" class="odt-ltr-term">T value</bdi>=(<bdi dir="ltr" class="odt-ltr-term">T</bdi>)<bdi dir="ltr" class="odt-ltr-term">Application</bdi>[&quot;<bdi dir="ltr" class="odt-ltr-term">key</bdi>&quot;]; </i>حيث <bdi dir="ltr" class="odt-ltr-term">T</bdi> هو نوع <i>القيمة</i>.
           </li>
         </ul>
       </li>
     </ul>
   </li>
-  <li>يتم تنفيذ الطريقة <i>Session_Start </i>في كل مرة يقوم فيها مستخدم جديد بتقديم طلب. كيف نتعرف على مستخدم جديد؟ يتلقى كل مستخدم (عادةً متصفح) رمز جلسة، وهو سلسلة من الأحرف الفريدة لكل مستخدم. في كل مرة يتم فيها تقديم طلب جديد، يرسل المستخدم رمز الجلسة الذي تلقّاه. وهذا يمكّن خادم الويب من التعرف على المستخدم. خلال الطلبات المختلفة للمستخدم، قد يتم تخزين البيانات الخاصة بهذا المستخدم في <b>Session </b>:
+  <li>يتم تنفيذ الطريقة <i><bdi dir="ltr" class="odt-ltr-term">Session_Start</bdi> </i>في كل مرة يقوم فيها مستخدم جديد بتقديم طلب. كيف نتعرف على مستخدم جديد؟ يتلقى كل مستخدم (عادةً متصفح) رمز جلسة، وهو سلسلة من الأحرف الفريدة لكل مستخدم. في كل مرة يتم فيها تقديم طلب جديد، يرسل المستخدم رمز الجلسة الذي تلقّاه. وهذا يمكّن خادم الويب من التعرف على المستخدم. خلال الطلبات المختلفة للمستخدم، قد يتم تخزين البيانات الخاصة بهذا المستخدم في <b><bdi dir="ltr" class="odt-ltr-term">Session</bdi> </b>:
     <ul>
-      <li>لوضع البيانات في هذا الحاوية، نكتب <i>Session[&quot;key&quot;]=value;</i>
+      <li>لوضع البيانات في هذا الحاوية، نكتب <i><bdi dir="ltr" class="odt-ltr-term">Session</bdi>[&quot;<bdi dir="ltr" class="odt-ltr-term">key</bdi>&quot;]=<bdi dir="ltr" class="odt-ltr-term">value</bdi>;</i>
       </li>
-      <li>لاستردادها، نكتب <i>T value=(T)Session[&quot;key&quot;]; </i>حيث T هو نوع <i>القيمة</i>.
+      <li>لاستردادها، نكتب <i><bdi dir="ltr" class="odt-ltr-term">T value</bdi>=(<bdi dir="ltr" class="odt-ltr-term">T</bdi>)<bdi dir="ltr" class="odt-ltr-term">Session</bdi>[&quot;<bdi dir="ltr" class="odt-ltr-term">key</bdi>&quot;]; </i>حيث <bdi dir="ltr" class="odt-ltr-term">T</bdi> هو نوع <i>القيمة</i>.
       </li>
     </ul>
   </li>
@@ -1852,22 +1854,22 @@
 
 <p>بشكل افتراضي، تقتصر مدة الجلسة على 20 دقيقة من عدم نشاط المستخدم (أي أن المستخدم لم يرسل رمز الجلسة الخاص به لمدة 20 دقيقة).</p>
 <ul>
-  <li>يتم تنفيذ الطريقة <i>Application_Error </i>عندما يتم إرسال استثناء لم يتم معالجته بواسطة تطبيق الويب إلى خادم الويب.
+  <li>يتم تنفيذ الطريقة <i><bdi dir="ltr" class="odt-ltr-term">Application_Error</bdi> </i>عندما يتم إرسال استثناء لم يتم معالجته بواسطة تطبيق الويب إلى خادم الويب.
   </li>
   <li>نادرًا ما تُستخدم الطرق الأخرى.
   </li>
 </ul>
 
-<p>بعد هذه المعلومات العامة، ماذا يمكننا أن نفعل من أجلك؟ <em>Global.asax</em>؟ سنستخدم طريقة <em>Application_Start</em> الخاصة به لتهيئة طبقات [metier] و[dao] و[entites] الموجودة في مكتبة DLL [ImpotsV7-metier، ImpotsV7-dao]. سنستخدم Spring لإنشاء مثيلات لها. سيتم بعد ذلك تخزين مراجع الطبقات التي تم إنشاؤها بهذه الطريقة في حقول ثابتة في الفئة المرتبطة بـ  <em>Global.asax.</em></p>
-<p>في الخطوة الأولى، نقوم بنقل كود C# من <em>ملف Global.asax</em> إلى فئة مستقلة. ويتطور المشروع على النحو التالي:</p>
+<p>بعد هذه المعلومات العامة، ماذا يمكننا أن نفعل من أجلك؟ <em><bdi dir="ltr" class="odt-ltr-term">Global.asax</bdi></em>؟ سنستخدم طريقة <em><bdi dir="ltr" class="odt-ltr-term">Application</bdi>_Start</em> الخاصة به لتهيئة طبقات [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">entites</bdi>] الموجودة في مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> [<bdi dir="ltr" class="odt-ltr-term">ImpotsV7-metier</bdi>، <bdi dir="ltr" class="odt-ltr-term">ImpotsV7-dao</bdi>]. سنستخدم <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> لإنشاء مثيلات لها. سيتم بعد ذلك تخزين مراجع الطبقات التي تم إنشاؤها بهذه الطريقة في حقول ثابتة في الفئة المرتبطة بـ  <em><bdi dir="ltr" class="odt-ltr-term">Global.asax.</bdi></em></p>
+<p>في الخطوة الأولى، نقوم بنقل كود <bdi dir="ltr" class="odt-ltr-term">C#</bdi> من <em>ملف <bdi dir="ltr" class="odt-ltr-term">Global.asax</bdi></em> إلى فئة مستقلة. ويتطور المشروع على النحو التالي:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019F000001BB2BAF6171.png" width="124" height="133" style="display:inline-block; margin:4px;width:3.29cm;height:3.512cm;" class="odt-zoomable" data-zoom-src="images/100000000000019F000001BB2BAF6171.png" /></td></tr></table>
 
-<p>في [1]، سيتم ربط الملف [Global.asax] بالفئة [Global.cs] [2] بالسطر الوحيد التالي:</p>
+<p>في [1]، سيتم ربط الملف [<bdi dir="ltr" class="odt-ltr-term">Global.asax</bdi>] بالفئة [<bdi dir="ltr" class="odt-ltr-term">Global.cs</bdi>] [2] بالسطر الوحيد التالي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;%<span style="color:#0000ff">@</span> <span style="color:#a31515">Application</span> <span style="color:#ff0000">Language</span><span style="color:#0000ff">=&quot;C#&quot;</span> <span style="color:#ff0000">Inherits</span><span style="color:#0000ff">=&quot;WsImpot.Global&quot;</span>%&gt;</span></span>
 </code></pre></div>
 
-<p>يشير <em>Inherits=&quot;WsImpot.Global&quot;</em> إلى أن الفئة المرتبطة بـ <em>Global.asax</em> ترث من <em>WsImpot.Global</em>. يتم تعريف هذه الفئة في [Global.cs] على النحو التالي:</p>
+<p>يشير <em><bdi dir="ltr" class="odt-ltr-term">Inherits</bdi>=&quot;<bdi dir="ltr" class="odt-ltr-term">WsImpot.Global</bdi>&quot;</em> إلى أن الفئة المرتبطة بـ <em><bdi dir="ltr" class="odt-ltr-term">Global.asax</bdi></em> ترث من <em><bdi dir="ltr" class="odt-ltr-term">WsImpot.Global</bdi></em>. يتم تعريف هذه الفئة في [<bdi dir="ltr" class="odt-ltr-term">Global.cs</bdi>] على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> Metier;</span></span>
@@ -1892,17 +1894,17 @@
 <ul>
   <li>السطر 4: مساحة اسم الفئة
   </li>
-  <li>السطر 6: الفئة <i>Global</i>. يمكنك تسميتها بأي اسم تريده. المهم هو أنها مشتقة من <b>System.Web.HttpApplication</b>.
+  <li>السطر 6: الفئة <i><bdi dir="ltr" class="odt-ltr-term">Global</bdi></i>. يمكنك تسميتها بأي اسم تريده. المهم هو أنها مشتقة من <b><bdi dir="ltr" class="odt-ltr-term">System.Web.HttpApplication</bdi></b>.
   </li>
-  <li>السطر 9: حقل عام ثابت يحتوي على مرجع إلى طبقة [metier].
+  <li>السطر 9: حقل عام ثابت يحتوي على مرجع إلى طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>].
   </li>
-  <li>السطر 12: الطريقة <i>Application_Start </i>التي سيتم تنفيذها عند بدء تشغيل التطبيق.
+  <li>السطر 12: الطريقة <i><bdi dir="ltr" class="odt-ltr-term">Application_Start</bdi> </i>التي سيتم تنفيذها عند بدء تشغيل التطبيق.
   </li>
-  <li>السطر 15: يُستخدم Spring لاستغلال ملف [web.config]، حيث سيجد الكائنات التي سيتم إنشاء مثيلات لها لإنشاء طبقات [metier] و[dao]. لا يوجد فرق بين استخدام Spring مع [App.config] في تطبيق Windows، واستخدام Spring مع [web.config] في تطبيق ويب. كما أن [web.config] و[App.config] لهما نفس البنية. يخزن السطر 15 مرجع طبقة [metier] في الحقل الثابت في السطر 9، بحيث يكون هذا المرجع متاحًا لجميع الاستعلامات من جميع المستخدمين.
+  <li>السطر 15: يُستخدم <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> لاستغلال ملف [<bdi dir="ltr" class="odt-ltr-term">web.config</bdi>]، حيث سيجد الكائنات التي سيتم إنشاء مثيلات لها لإنشاء طبقات [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]. لا يوجد فرق بين استخدام <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> مع [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] في تطبيق <bdi dir="ltr" class="odt-ltr-term">Windows</bdi>، واستخدام <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> مع [<bdi dir="ltr" class="odt-ltr-term">web.config</bdi>] في تطبيق ويب. كما أن [<bdi dir="ltr" class="odt-ltr-term">web.config</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] لهما نفس البنية. يخزن السطر 15 مرجع طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] في الحقل الثابت في السطر 9، بحيث يكون هذا المرجع متاحًا لجميع الاستعلامات من جميع المستخدمين.
   </li>
 </ul>
 
-<p>سيكون ملف [web.config] كما يلي:</p>
+<p>سيكون ملف [<bdi dir="ltr" class="odt-ltr-term">web.config</bdi>] كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;?</span><span style="color:#a31515">xml</span><span style="color:#0000ff"> </span><span style="color:#ff0000">version</span><span style="color:#0000ff">=</span>&quot;<span style="color:#0000ff">1.0</span>&quot;<span style="color:#0000ff"> </span><span style="color:#ff0000">encoding</span><span style="color:#0000ff">=</span>&quot;<span style="color:#0000ff">utf-8</span>&quot;<span style="color:#0000ff"> ?&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#a31515">configuration</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -1932,26 +1934,26 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#a31515">configuration</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p>هذا هو ملف [App.config] المستخدم في الإصدار 7 من التطبيق والذي تمت دراسته في الفقرة<a href="#impots-v7-ui"><u><span style="color: #0563c1"> 9.8.4</span></u></a>.</p>
+<p>هذا هو ملف [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] المستخدم في الإصدار 7 من التطبيق والذي تمت دراسته في الفقرة<a href="#impots-v7-ui"><u><span style="color: #0563c1"> 9.8.4</span></u></a>.</p>
 <ul>
-  <li>الأسطر 16-20: تحدد طبقة [dao] تعمل مع قاعدة بيانات MySQL5. تم وصف قاعدة البيانات هذه في الفقرة<a href="#impotsv7-bd-mysql5"><u><span style="color: #0563c1"> 9.8.1</span></u></a>.
+  <li>الأسطر 16-20: تحدد طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] تعمل مع قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL5.</bdi> تم وصف قاعدة البيانات هذه في الفقرة<a href="#impotsv7-bd-mysql5"><u><span style="color: #0563c1"> 9.8.1</span></u></a>.
   </li>
-  <li>الأسطر 21-23: تحدد طبقة [metier]
+  <li>الأسطر 21-23: تحدد طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]
   </li>
 </ul>
 
 <p>العودة إلى لغز الخادم:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000762000001CBA64E53E5.png" width="567" height="138" style="display:inline-block; margin:4px;width:15cm;height:3.642cm;" class="odt-zoomable" data-zoom-src="images/1000000000000762000001CBA64E53E5.png" /></td></tr></table>
 
-<p>عند بدء تشغيل التطبيق، يتم إنشاء مثيلات لطبقتي [metier] و[dao]. وتستمر هذه الطبقات طوال فترة عمل التطبيق نفسه. متى يتم إنشاء مثيل لخدمة الويب؟ في كل مرة يتم إرسال طلب إليها. في نهاية الطلب، يتم حذف الكائن الذي خدمه. لذا، للوهلة الأولى، تكون خدمة الويب <strong>عديمة الحالة</strong>. لا يمكنها تخزين المعلومات بين طلبين في الحقول التي تنتمي إليها. يمكنها تخزين المعلومات في جلسة عمل المستخدم. للقيام بذلك، يجب تمييز الطرق التي تعرضها بعلامة خاصة:</p>
+<p>عند بدء تشغيل التطبيق، يتم إنشاء مثيلات لطبقتي [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]. وتستمر هذه الطبقات طوال فترة عمل التطبيق نفسه. متى يتم إنشاء مثيل لخدمة الويب؟ في كل مرة يتم إرسال طلب إليها. في نهاية الطلب، يتم حذف الكائن الذي خدمه. لذا، للوهلة الأولى، تكون خدمة الويب <strong>عديمة الحالة</strong>. لا يمكنها تخزين المعلومات بين طلبين في الحقول التي تنتمي إليها. يمكنها تخزين المعلومات في جلسة عمل المستخدم. للقيام بذلك، يجب تمييز الطرق التي تعرضها بعلامة خاصة:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content">    [<span style="color:#2b91af">WebMethod</span>(EnableSession=<span style="color:#0000ff">true</span>)]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">public</span> <span style="color:#0000ff">int</span> CalculerImpot(<span style="color:#0000ff">bool</span> marié, <span style="color:#0000ff">int</span> nbEnfants, <span style="color:#0000ff">int</span> salaire)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">....</span></span>
 </code></pre></div>
 
-<p>في الأعلى، تسمح السطر 1 لـ <em>CalculerImpot</em> بالوصول إلى الحاوية <em>Session</em> التي ذكرناها سابقًا. لن نحتاج إلى استخدام هذه السمة في تطبيقنا. وبالتالي، سيتم إنشاء مثيل لخدمة الويب <em>WsImpot</em> عند كل طلب وستكون عديمة الحالة.</p>
-<p>يمكننا الآن كتابة الكود [ServiceImpot.cs] الذي ينفذ خدمة الويب:</p>
+<p>في الأعلى، تسمح السطر 1 لـ <em><bdi dir="ltr" class="odt-ltr-term">CalculerImpot</bdi></em> بالوصول إلى الحاوية <em><bdi dir="ltr" class="odt-ltr-term">Session</bdi></em> التي ذكرناها سابقًا. لن نحتاج إلى استخدام هذه السمة في تطبيقنا. وبالتالي، سيتم إنشاء مثيل لخدمة الويب <em><bdi dir="ltr" class="odt-ltr-term">WsImpot</bdi></em> عند كل طلب وستكون عديمة الحالة.</p>
+<p>يمكننا الآن كتابة الكود [<bdi dir="ltr" class="odt-ltr-term">ServiceImpot.cs</bdi>] الذي ينفذ خدمة الويب:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System.Web.Services;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> WsImpot;</span></span>
@@ -1973,75 +1975,75 @@
 <ul>
   <li>السطر 10: طريقة خدمة الويب الفريدة
   </li>
-  <li>السطر 12: نستخدم <i>CalculerImpot </i>من طبقة [metier]. توجد إشارة إلى هذه الطبقة في الحقل الثابت <i>Trade </i>class <i>Global</i>. وهذا ينتمي إلى <i>WsImpot </i>(السطر 2).
+  <li>السطر 12: نستخدم <i><bdi dir="ltr" class="odt-ltr-term">CalculerImpot</bdi> </i>من طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]. توجد إشارة إلى هذه الطبقة في الحقل الثابت <i><bdi dir="ltr" class="odt-ltr-term">Trade</bdi> </i><bdi dir="ltr" class="odt-ltr-term">class</bdi> <i><bdi dir="ltr" class="odt-ltr-term">Global</bdi></i>. وهذا ينتمي إلى <i><bdi dir="ltr" class="odt-ltr-term">WsImpot</bdi> </i>(السطر 2).
   </li>
 </ul>
 
-<p>نحن الآن جاهزون لتشغيل خدمة الويب. أولاً، نحتاج إلى تشغيل SGBD MySQL5 حتى يمكن الوصول إلى قاعدة البيانات <em>bdimpots</em>. بمجرد الانتهاء من ذلك، نبدأ [1] تشغيل خدمة الويب:</p>
+<p>نحن الآن جاهزون لتشغيل خدمة الويب. أولاً، نحتاج إلى تشغيل <bdi dir="ltr" class="odt-ltr-term">SGBD MySQL5</bdi> حتى يمكن الوصول إلى قاعدة البيانات <em><bdi dir="ltr" class="odt-ltr-term">bdimpots</bdi></em>. بمجرد الانتهاء من ذلك، نبدأ [1] تشغيل خدمة الويب:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006A6000002A68065E486.png" width="511" height="203" style="display:inline-block; margin:4px;width:13.51cm;height:5.382cm;" class="odt-zoomable" data-zoom-src="images/10000000000006A6000002A68065E486.png" /></td></tr></table>
 
 <p>ثم يعرض المتصفح الصفحة [2]. نتبع الرابط:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004780000023BE79577E1.png" width="343" height="171" style="display:inline-block; margin:4px;width:9.081cm;height:4.533cm;" class="odt-zoomable" data-zoom-src="images/10000000000004780000023BE79577E1.png" /></td></tr></table>
 
-<p>نحدد قيمة لكل من المعلمات الثلاثة للطريقة <em>CalculerImpot</em> ونطلب تنفيذ الطريقة. نحصل على النتيجة التالية، وهي صحيحة:</p>
+<p>نحدد قيمة لكل من المعلمات الثلاثة للطريقة <em><bdi dir="ltr" class="odt-ltr-term">CalculerImpot</bdi></em> ونطلب تنفيذ الطريقة. نحصل على النتيجة التالية، وهي صحيحة:</p>
 <p><img src="images/100000000000027F000000C5DD404B6D.png" width="447" height="138" style="width:11.83cm;height:3.648cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000027F000000C5DD404B6D.png" /></p>
 <p><a id="refheading10404091168783983"></a></p>
-<h3 id="1242-windows">12.4.2. <span style="color: #4f81bd">عميل رسومي يعمل بنظام Windows لخدمة الويب عن بُعد</span></h3>
+<h3 id="1242-windows">12.4.2. <span style="color: #4f81bd">عميل رسومي يعمل بنظام <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> لخدمة الويب عن بُعد</span></h3>
 <p>الآن بعد أن تمت كتابة خدمة الويب، دعونا ننتقل إلى العميل. دعونا نستعرض بنية تطبيق العميل/الخادم:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000749000001CC1AF02163.png" width="559" height="138" style="display:inline-block; margin:4px;width:14.801cm;height:3.651cm;" class="odt-zoomable" data-zoom-src="images/1000000000000749000001CC1AF02163.png" /></td></tr></table>
 
 <p>نحتاج الآن إلى كتابة العميل [2]. وستكون الواجهة الرسومية مطابقة لتلك الموجودة في الإصدار 8:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006AE0000030D9779C74B.png" width="513" height="234" style="display:inline-block; margin:4px;width:13.57cm;height:6.198cm;" class="odt-zoomable" data-zoom-src="images/10000000000006AE0000030D9779C74B.png" /></td></tr></table>
 
-<p>لكتابة جزء [العميل] من الإصدار 9، سنبدأ من جزء [العميل] من الإصدار 8، ثم نقوم بإجراء التعديلات اللازمة. نقوم بنسخ مشروع Visual Studio الذي تمت دراسته في الفقرة<a href="#impotsv8-client-visualstudio"><u><span style="color: #0563c1"> 11.9.4.</span></u></a>1، ونعيد تسميته <em>ClientWsImpot</em> ونقوم بتحميله في Visual Studio :</p>
+<p>لكتابة جزء [العميل] من الإصدار 9، سنبدأ من جزء [العميل] من الإصدار 8، ثم نقوم بإجراء التعديلات اللازمة. نقوم بنسخ مشروع <bdi dir="ltr" class="odt-ltr-term">Visual Studio</bdi> الذي تمت دراسته في الفقرة<a href="#impotsv8-client-visualstudio"><u><span style="color: #0563c1"> 11.9.4.</span></u></a>1، ونعيد تسميته <em><bdi dir="ltr" class="odt-ltr-term">ClientWsImpot</bdi></em> ونقوم بتحميله في <bdi dir="ltr" class="odt-ltr-term">Visual Studio</bdi> :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002020000027824163AED.png" width="154" height="190" style="display:inline-block; margin:4px;width:4.08cm;height:5.017cm;" class="odt-zoomable" data-zoom-src="images/10000000000002020000027824163AED.png" /></td></tr></table>
 
-<p>تألف حل Visual Studio للإصدار 8 من مشروعين:</p>
+<p>تألف حل <bdi dir="ltr" class="odt-ltr-term">Visual Studio</bdi> للإصدار 8 من مشروعين:</p>
 <ul>
-  <li>مشروع [metier] [1]، الذي كان عميل Tcp لخادم حساب الضرائب Tcp
+  <li>مشروع [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] [1]، الذي كان عميل <bdi dir="ltr" class="odt-ltr-term">Tcp</bdi> لخادم حساب الضرائب <bdi dir="ltr" class="odt-ltr-term">Tcp</bdi>
   </li>
-  <li>مشروع واجهة المستخدم الرسومية [ui] [2].
+  <li>مشروع واجهة المستخدم الرسومية [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] [2].
   </li>
 </ul>
 
 <p>التغييرات المطلوب إجراؤها هي كما يلي:</p>
 <ul>
-  <li>يجب أن يكون مشروع [metier] الآن عميلاً لخدمة ويب
+  <li>يجب أن يكون مشروع [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] الآن عميلاً لخدمة ويب
   </li>
-  <li>يجب أن يشير مشروع [ui] إلى مكتبة DLL الخاصة بطبقة [metier] الجديدة
+  <li>يجب أن يشير مشروع [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] إلى مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الخاصة بطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] الجديدة
   </li>
-  <li>يجب تغيير تكوين طبقة [metier] في [App.config].
+  <li>يجب تغيير تكوين طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] في [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>].
   </li>
 </ul>
 
-<h4 id="12421-metier">12.4.2.1. <span style="color: #4f81bd">الطبقة الجديدة [metier]</span></h4>
+<h4 id="12421-metier">12.4.2.1. <span style="color: #4f81bd">الطبقة الجديدة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]</span></h4>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000071700000143D261C605.png" width="545" height="97" style="display:inline-block; margin:4px;width:14.409cm;height:2.565cm;" class="odt-zoomable" data-zoom-src="images/100000000000071700000143D261C605.png" /></td></tr></table>
 
 <ul>
-  <li>في [1]، <i>IImpotMetier </i>هي واجهة طبقة [metier] و <i>ImpotMetierTcp </i>هي تطبيقها بواسطة عميل Tcp
+  <li>في [1]، <i><bdi dir="ltr" class="odt-ltr-term">IImpotMetier</bdi> </i>هي واجهة طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] و <i><bdi dir="ltr" class="odt-ltr-term">ImpotMetierTcp</bdi> </i>هي تطبيقها بواسطة عميل <bdi dir="ltr" class="odt-ltr-term">Tcp</bdi>
   </li>
-  <li>في [2]، نزيل <i>ImpotMetierTcp</i>. نحتاج إلى إنشاء تطبيق آخر لـ <i>IImpotMetier </i>سيكون عميلاً لخدمة ويب.
+  <li>في [2]، نزيل <i><bdi dir="ltr" class="odt-ltr-term">ImpotMetierTcp</bdi></i>. نحتاج إلى إنشاء تطبيق آخر لـ <i><bdi dir="ltr" class="odt-ltr-term">IImpotMetier</bdi> </i>سيكون عميلاً لخدمة ويب.
   </li>
-  <li>في [3]، نسمي <i>Customer </i>مساحة الاسم الافتراضية لمشروع [metier]. وستسمى مكتبة DLL التي سيتم إنشاؤها [ImpotsV9-metier.dll].
+  <li>في [3]، نسمي <i><bdi dir="ltr" class="odt-ltr-term">Customer</bdi> </i>مساحة الاسم الافتراضية لمشروع [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]. وستسمى مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> التي سيتم إنشاؤها [<bdi dir="ltr" class="odt-ltr-term">ImpotsV9-metier.dll</bdi>].
   </li>
 </ul>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000766000003CDF58135F0.png" width="568" height="292" style="display:inline-block; margin:4px;width:15.03cm;height:7.721cm;" class="odt-zoomable" data-zoom-src="images/1000000000000766000003CDF58135F0.png" /></td></tr></table>
 
 <ul>
-  <li>في [4]، نقوم بإنشاء مرجع إلى خدمة الويب <i>WsImpot</i>.
+  <li>في [4]، نقوم بإنشاء مرجع إلى خدمة الويب <i><bdi dir="ltr" class="odt-ltr-term">WsImpot</bdi></i>.
   </li>
   <li>في [5]، نقوم بتكوينه والتحقق من صحته.
   </li>
-  <li>في [6]، تم إنشاء مرجع لملف خدمة الويب <i>WsImpot </i>وتم إنشاء ملف [app.config].
+  <li>في [6]، تم إنشاء مرجع لملف خدمة الويب <i><bdi dir="ltr" class="odt-ltr-term">WsImpot</bdi> </i>وتم إنشاء ملف [<bdi dir="ltr" class="odt-ltr-term">app.config</bdi>].
   </li>
 </ul>
 
-<p>في الملف المخفي [Reference.cs]:</p>
+<p>في الملف المخفي [<bdi dir="ltr" class="odt-ltr-term">Reference.cs</bdi>]:</p>
 <ul>
-  <li>مساحة الاسم هي <i>Client.WsImport</i>
+  <li>مساحة الاسم هي <i><bdi dir="ltr" class="odt-ltr-term">Client.WsImport</bdi></i>
   </li>
-  <li>تسمى فئة العميل <i>ServiceImpotSoapClient</i>
+  <li>تسمى فئة العميل <i><bdi dir="ltr" class="odt-ltr-term">ServiceImpotSoapClient</bdi></i>
   </li>
   <li>ولديها طريقة توقيع فريدة:
   </li>
@@ -2051,7 +2053,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">public</span> <span style="color:#0000ff">int</span> CalculerImpot(<span style="color:#0000ff">bool</span> marié, <span style="color:#0000ff">int</span> nbEnfants, <span style="color:#0000ff">int</span> salaire) ;</span></span>
 </code></pre></div>
 
-<p>كل ما تبقى هو تنفيذ <em>IImpotMetier</em> :</p>
+<p>كل ما تبقى هو تنفيذ <em><bdi dir="ltr" class="odt-ltr-term">IImpotMetier</bdi></em> :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">namespace</span> Metier {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">public</span> <span style="color:#0000ff">interface</span> <span style="color:#2b91af">IImpotMetier</span> {</span></span>
@@ -2060,7 +2062,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>نقوم بتنفيذها باستخدام <em>ImpotMetierWs</em> التالي:</p>
+<p>نقوم بتنفيذها باستخدام <em><bdi dir="ltr" class="odt-ltr-term">ImpotMetierWs</bdi></em> التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System.Net.Sockets;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System.IO;</span></span>
@@ -2082,45 +2084,45 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 6: تنفذ الفئة <i>ImpotMetierWs </i>واجهة <i>IImpotMetier</i>.
+  <li>السطر 6: تنفذ الفئة <i><bdi dir="ltr" class="odt-ltr-term">ImpotMetierWs</bdi> </i>واجهة <i><bdi dir="ltr" class="odt-ltr-term">IImpotMetier</bdi></i>.
   </li>
-  <li>السطر 9: عند إنشاء مثيل ImpotMetierWs، يتم تهيئة الحقل <i>customer </i>بمثيل عميل لخدمة حساب الضرائب على الويب.
+  <li>السطر 9: عند إنشاء مثيل <bdi dir="ltr" class="odt-ltr-term">ImpotMetierWs</bdi>، يتم تهيئة الحقل <i><bdi dir="ltr" class="odt-ltr-term">customer</bdi> </i>بمثيل عميل لخدمة حساب الضرائب على الويب.
   </li>
-  <li>السطر 12: الواجهة <i>IImpotMetier</i> هي الوحيدة التي يجب تنفيذها.
+  <li>السطر 12: الواجهة <i><bdi dir="ltr" class="odt-ltr-term">IImpotMetier</bdi></i> هي الوحيدة التي يجب تنفيذها.
   </li>
-  <li>السطر 13: نستخدم <i>CalculerImpot </i>الخاص بعميل خدمة حساب الضرائب عبر الويب البعيدة. في النهاية، يتم استدعاء الطريقة <i>CalculerImpot </i>الخاصة بخدمة الويب البعيدة.
+  <li>السطر 13: نستخدم <i><bdi dir="ltr" class="odt-ltr-term">CalculerImpot</bdi> </i>الخاص بعميل خدمة حساب الضرائب عبر الويب البعيدة. في النهاية، يتم استدعاء الطريقة <i><bdi dir="ltr" class="odt-ltr-term">CalculerImpot</bdi> </i>الخاصة بخدمة الويب البعيدة.
   </li>
 </ul>
 
-<p>يمكن إنشاء ملف DLL الخاص بالمشروع:</p>
+<p>يمكن إنشاء ملف <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الخاص بالمشروع:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006C600000192B3D82CDB.png" width="520" height="121" style="display:inline-block; margin:4px;width:13.76cm;height:3.191cm;" class="odt-zoomable" data-zoom-src="images/10000000000006C600000192B3D82CDB.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، مشروع [العميل] في حالته النهائية
   </li>
-  <li>في [2]، إنشاء ملف DLL الخاص بالمشروع
+  <li>في [2]، إنشاء ملف <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الخاص بالمشروع
   </li>
-  <li>في [3]، توجد مكتبة DLL <i>ImpotsV9-metier.dll </i>في مجلد المشروع /bin/Release.
+  <li>في [3]، توجد مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> <i><bdi dir="ltr" class="odt-ltr-term">ImpotsV9-metier.dll</bdi> </i>في مجلد المشروع /<bdi dir="ltr" class="odt-ltr-term">bin/Release.</bdi>
   </li>
 </ul>
 
-<h4 id="12422-ui">12.4.2.2. <span style="color: #4f81bd">الطبقة [ui] الجديدة</span></h4>
+<h4 id="12422-ui">12.4.2.2. <span style="color: #4f81bd">الطبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] الجديدة</span></h4>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000754000001C72003E255.png" width="563" height="137" style="display:inline-block; margin:4px;width:14.891cm;height:3.612cm;" class="odt-zoomable" data-zoom-src="images/1000000000000754000001C72003E255.png" /></td></tr></table>
 
-<p>تمت كتابة طبقة [client] الخاصة بالعميل. نحتاج الآن إلى كتابة طبقة [ui]. العودة إلى مشروع Visual Studio:</p>
+<p>تمت كتابة طبقة [<bdi dir="ltr" class="odt-ltr-term">client</bdi>] الخاصة بالعميل. نحتاج الآن إلى كتابة طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>]. العودة إلى مشروع <bdi dir="ltr" class="odt-ltr-term">Visual Studio:</bdi></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000067E0000017B6F64778F.png" width="499" height="114" style="display:inline-block; margin:4px;width:13.19cm;height:3.007cm;" class="odt-zoomable" data-zoom-src="images/100000000000067E0000017B6F64778F.png" /></td></tr></table>
 
 <ul>
-  <li>في [1]، مشروع [ui] من الإصدار 8
+  <li>في [1]، مشروع [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] من الإصدار 8
   </li>
-  <li>في [2]، تم استبدال مكتبة DLL <i>ImpotsV8-metier </i>الخاصة بطبقة [metier] القديمة بمكتبة DLL ImpotsV9-metier الخاصة بالطبقة الجديدة
+  <li>في [2]، تم استبدال مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> <i><bdi dir="ltr" class="odt-ltr-term">ImpotsV8-metier</bdi> </i>الخاصة بطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] القديمة بمكتبة <bdi dir="ltr" class="odt-ltr-term">DLL ImpotsV9-metier</bdi> الخاصة بالطبقة الجديدة
   </li>
-  <li>في [3]، تمت إضافة DLL <i>ImpotsV9-metier </i>إلى مراجع المشروع.
+  <li>في [3]، تمت إضافة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> <i><bdi dir="ltr" class="odt-ltr-term">ImpotsV9-metier</bdi> </i>إلى مراجع المشروع.
   </li>
 </ul>
 
-<p>يحدث التغيير الثاني في [App.config]. تذكر أن Spring يستخدم هذا الملف لإنشاء مثيل لطبقة [metier]. ونظرًا لتغير ذلك، يجب تغيير تكوين [App.config]. من ناحية أخرى، يجب تكوين [App.config] للوصول إلى خدمة حساب الضرائب عبر الويب البعيدة. تم إنشاء هذا التكوين في ملف [app.config] لمشروع [metier] عند إضافة الإشارة إلى خدمة الويب البعيدة.</p>
-<p>وبذلك يصبح ملف [App.config] كما يلي:</p>
+<p>يحدث التغيير الثاني في [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]. تذكر أن <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> يستخدم هذا الملف لإنشاء مثيل لطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]. ونظرًا لتغير ذلك، يجب تغيير تكوين [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]. من ناحية أخرى، يجب تكوين [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] للوصول إلى خدمة حساب الضرائب عبر الويب البعيدة. تم إنشاء هذا التكوين في ملف [<bdi dir="ltr" class="odt-ltr-term">app.config</bdi>] لمشروع [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] عند إضافة الإشارة إلى خدمة الويب البعيدة.</p>
+<p>وبذلك يصبح ملف [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;?</span><span style="color:#a31515">xml</span><span style="color:#0000ff"> </span><span style="color:#ff0000">version</span><span style="color:#0000ff">=</span>&quot;<span style="color:#0000ff">1.0</span>&quot;<span style="color:#0000ff"> </span><span style="color:#ff0000">encoding</span><span style="color:#0000ff">=</span>&quot;<span style="color:#0000ff">utf-8</span>&quot;<span style="color:#0000ff"> ?&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#a31515">configuration</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -2172,15 +2174,15 @@
 </code></pre></div>
 
 <ul>
-  <li>الأسطر 15-18: يقوم Spring بإنشاء مثيل لكائن واحد فقط، وهو الطبقة [metier]
+  <li>الأسطر 15-18: يقوم <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> بإنشاء مثيل لكائن واحد فقط، وهو الطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]
   </li>
-  <li>السطر 16: يتم إنشاء مثيل لطبقة [metier] بواسطة الفئة [Metier.ImpotMetierWs]، الموجودة في DLL <i>ImpotsV9-metier</i>.
+  <li>السطر 16: يتم إنشاء مثيل لطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] بواسطة الفئة [<bdi dir="ltr" class="odt-ltr-term">Metier.ImpotMetierWs</bdi>]، الموجودة في <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> <i><bdi dir="ltr" class="odt-ltr-term">ImpotsV9-metier</bdi></i>.
   </li>
-  <li>الأسطر 22-46: تكوين العميل لخدمة الويب البعيدة. هذه نسخة/لصق لمحتويات ملف [app.config] في مشروع [metier].
+  <li>الأسطر 22-46: تكوين العميل لخدمة الويب البعيدة. هذه نسخة/لصق لمحتويات ملف [<bdi dir="ltr" class="odt-ltr-term">app.config</bdi>] في مشروع [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>].
   </li>
 </ul>
 
-<p>نحن جاهزون للبدء. قم بتشغيل التطبيق باستخدام Ctrl-F5 (يجب تشغيل خدمة الويب، ويجب تشغيل SGBD MySQL5، ويجب أن يكون المنفذ المذكور في السطر 42 أعلاه صحيحًا):</p>
+<p>نحن جاهزون للبدء. قم بتشغيل التطبيق باستخدام <bdi dir="ltr" class="odt-ltr-term">Ctrl-F5</bdi> (يجب تشغيل خدمة الويب، ويجب تشغيل <bdi dir="ltr" class="odt-ltr-term">SGBD MySQL5</bdi>، ويجب أن يكون المنفذ المذكور في السطر 42 أعلاه صحيحًا):</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012700000169CACC5363.png" width="214" height="262" style="display:inline-block; margin:4px;width:5.666cm;height:6.934cm;" class="odt-zoomable" data-zoom-src="images/100000000000012700000169CACC5363.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading10404111168783983"></a></p>
@@ -2188,17 +2190,17 @@
 <p>لنعد إلى بنية تطبيق العميل/الخادم الذي كتبناه للتو:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000761000001BF96DE1AC7.png" width="567" height="134" style="display:inline-block; margin:4px;width:14.99cm;height:3.547cm;" class="odt-zoomable" data-zoom-src="images/1000000000000761000001BF96DE1AC7.png" /></td></tr></table>
 
-<p>تم تنفيذ الطبقة [ui] أعلاه بواسطة عميل رسومي يعمل بنظام Windows. ونقوم الآن بتنفيذها باستخدام واجهة ويب:</p>
+<p>تم تنفيذ الطبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] أعلاه بواسطة عميل رسومي يعمل بنظام <bdi dir="ltr" class="odt-ltr-term">Windows.</bdi> ونقوم الآن بتنفيذها باستخدام واجهة ويب:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015C00000175F3535294.png" width="174" height="186" style="display:inline-block; margin:4px;width:4.6cm;height:4.93cm;" class="odt-zoomable" data-zoom-src="images/100000000000015C00000175F3535294.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p>يُعد هذا تغييرًا مهمًا للمستخدمين. في الوقت الحالي، يمكن لتطبيق العميل/الخادم الخاص بنا، الإصدار 9، خدمة عدة عملاء في وقت واحد. ويُعد هذا تحسينًا مقارنة بالإصدار 8، الذي كان يخدم عميلاً واحدًا فقط في كل مرة. القيد هو أن المستخدمين الذين يرغبون في استخدام خدمة حساب الضرائب عبر الويب يجب أن يكون لديهم عميل Windows الذي قمنا بكتابته على أجهزة الكمبيوتر الخاصة بهم. في هذا الإصدار الجديد، الذي سنسميه الإصدار 10، سيتمكن المستخدمون من استخدام متصفحهم للوصول إلى خدمة حساب الضرائب عبر الويب.</p>
+<p>يُعد هذا تغييرًا مهمًا للمستخدمين. في الوقت الحالي، يمكن لتطبيق العميل/الخادم الخاص بنا، الإصدار 9، خدمة عدة عملاء في وقت واحد. ويُعد هذا تحسينًا مقارنة بالإصدار 8، الذي كان يخدم عميلاً واحدًا فقط في كل مرة. القيد هو أن المستخدمين الذين يرغبون في استخدام خدمة حساب الضرائب عبر الويب يجب أن يكون لديهم عميل <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> الذي قمنا بكتابته على أجهزة الكمبيوتر الخاصة بهم. في هذا الإصدار الجديد، الذي سنسميه الإصدار 10، سيتمكن المستخدمون من استخدام متصفحهم للوصول إلى خدمة حساب الضرائب عبر الويب.</p>
 <p>في البنية المذكورة أعلاه:</p>
 <ul>
   <li>يظل جانب الخادم دون تغيير. فهو يبقى كما هو في الإصدار 9.
   </li>
-  <li>على جانب العميل، تظل طبقة [عميل خدمة الويب] دون تغيير. وقد تم تغليفها في DLL [ImpotsV9-metier]. سنعيد استخدام هذا DLL.
+  <li>على جانب العميل، تظل طبقة [عميل خدمة الويب] دون تغيير. وقد تم تغليفها في <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> [<bdi dir="ltr" class="odt-ltr-term">ImpotsV9-metier</bdi>]. سنعيد استخدام هذا <bdi dir="ltr" class="odt-ltr-term">DLL.</bdi>
   </li>
-  <li>في النهاية، التغيير الوحيد هو استبدال واجهة المستخدم الرسومية لـ Windows بواجهة ويب.
+  <li>في النهاية، التغيير الوحيد هو استبدال واجهة المستخدم الرسومية لـ <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> بواجهة ويب.
   </li>
 </ul>
 
@@ -2212,9 +2214,9 @@
 <ul>
   <li>يحتوي مستخدم الويب على نموذج ويب في متصفحه
   </li>
-  <li>يتم إرسال هذا النموذج إلى خادم الويب 1، الذي يعالجه من خلال طبقة [web]
+  <li>يتم إرسال هذا النموذج إلى خادم الويب 1، الذي يعالجه من خلال طبقة [<bdi dir="ltr" class="odt-ltr-term">web</bdi>]
   </li>
-  <li>ستحتاج طبقة [web] إلى خدمات العميل الخاصة بخدمة الويب البعيدة، المُغلفة في [ImpotsV9-metier.dll].
+  <li>ستحتاج طبقة [<bdi dir="ltr" class="odt-ltr-term">web</bdi>] إلى خدمات العميل الخاصة بخدمة الويب البعيدة، المُغلفة في [<bdi dir="ltr" class="odt-ltr-term">ImpotsV9-metier.dll</bdi>].
   </li>
   <li>سيتواصل عميل خدمة الويب البعيدة مع خادم الويب 2، الذي يستضيف خدمة الويب البعيدة.
   </li>
@@ -2232,15 +2234,15 @@
   </li>
 </ul>
 
-<p>سيتم تنفيذ كل هذا باستخدام موقع ويب جديد تم إنشاؤه باستخدام Visual Web Developer:</p>
+<p>سيتم تنفيذ كل هذا باستخدام موقع ويب جديد تم إنشاؤه باستخدام <bdi dir="ltr" class="odt-ltr-term">Visual Web Developer:</bdi></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007B800000281E1A7D7F6.png" width="593" height="192" style="display:inline-block; margin:4px;width:15.679cm;height:5.085cm;" class="odt-zoomable" data-zoom-src="images/10000000000007B800000281E1A7D7F6.png" /></td></tr></table>
 
 <ul>
   <li>[1]: اختر الخيار &quot;<b>ملف / موقع ويب جديد&quot;</b>
   </li>
-  <li>[2]: اختر <b>موقع ويب ASP.NET</b>
+  <li>[2]: اختر <b>موقع ويب <bdi dir="ltr" class="odt-ltr-term">ASP.NET</bdi></b>
   </li>
-  <li>[3]: اختر لغة التطوير: <b>C#</b>
+  <li>[3]: اختر لغة التطوير: <b><bdi dir="ltr" class="odt-ltr-term">C#</bdi></b>
   </li>
   <li>[4]: حدد المجلد الذي تريد إنشاء المشروع فيه
   </li>
@@ -2249,13 +2251,13 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A300000145E62B8933.png" width="125" height="97" style="display:inline-block; margin:4px;width:3.32cm;height:2.575cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A300000145E62B8933.png" /></td></tr></table>
 
 <ul>
-  <li>[5]: المشروع الذي تم إنشاؤه في Visual Web Developer
+  <li>[5]: المشروع الذي تم إنشاؤه في <bdi dir="ltr" class="odt-ltr-term">Visual Web Developer</bdi>
     <ul>
-      <li>[Default.aspx] هي صفحة ويب تسمى الصفحة الافتراضية. وهي الصفحة التي سيتم عرضها في حالة طلب عنوان URL<i> http://.../ClientAspImpot </i>دون تحديد مستند. هذه هي الصفحة التي ستحتوي على نموذج حساب الضريبة الذي سيراه المستخدم في متصفحه.
+      <li>[<bdi dir="ltr" class="odt-ltr-term">Default.aspx</bdi>] هي صفحة ويب تسمى الصفحة الافتراضية. وهي الصفحة التي سيتم عرضها في حالة طلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi><i> <bdi dir="ltr" class="odt-ltr-term">http://.../ClientAspImpot</bdi> </i>دون تحديد مستند. هذه هي الصفحة التي ستحتوي على نموذج حساب الضريبة الذي سيراه المستخدم في متصفحه.
       </li>
-      <li>[Default.aspx.cs] هي الفئة المرتبطة بالصفحة، والتي ستقوم بإنشاء النموذج المرسَل إلى المستخدم ومعالجته بمجرد ملئه والتحقق من صحته. 
+      <li>[<bdi dir="ltr" class="odt-ltr-term">Default.aspx.cs</bdi>] هي الفئة المرتبطة بالصفحة، والتي ستقوم بإنشاء النموذج المرسَل إلى المستخدم ومعالجته بمجرد ملئه والتحقق من صحته. 
       </li>
-      <li>[web.config] هو ملف تكوين التطبيق. على عكس المرات السابقة، سنحتفظ به.
+      <li>[<bdi dir="ltr" class="odt-ltr-term">web.config</bdi>] هو ملف تكوين التطبيق. على عكس المرات السابقة، سنحتفظ به.
       </li>
     </ul>
   </li>
@@ -2265,11 +2267,11 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000072A000001A7E88F9CD2.png" width="550" height="127" style="display:inline-block; margin:4px;width:14.559cm;height:3.358cm;" class="odt-zoomable" data-zoom-src="images/100000000000072A000001A7E88F9CD2.png" /></td></tr></table>
 
 <ul>
-  <li>سيتم تنفيذ [1] بواسطة [Default.aspx]
+  <li>سيتم تنفيذ [1] بواسطة [<bdi dir="ltr" class="odt-ltr-term">Default.aspx</bdi>]
   </li>
-  <li>[2] سيتم تنفيذه بواسطة [Default.aspx.cs]
+  <li>[2] سيتم تنفيذه بواسطة [<bdi dir="ltr" class="odt-ltr-term">Default.aspx.cs</bdi>]
   </li>
-  <li>[3] سيتم تنفيذه بواسطة DLL [ImpotV9-metier]
+  <li>[3] سيتم تنفيذه بواسطة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> [<bdi dir="ltr" class="odt-ltr-term">ImpotV9-metier</bdi>]
   </li>
 </ul>
 
@@ -2277,13 +2279,13 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000076300000373F9C30151.png" width="567" height="265" style="display:inline-block; margin:4px;width:15.011cm;height:7.01cm;" class="odt-zoomable" data-zoom-src="images/100000000000076300000373F9C30151.png" /></td></tr></table>
 
 <ul>
-  <li>في [1]، يتم نسخ مجلد [lib] الخاص بعميل الرسومات في Windows 9 إلى مجلد مشروع الويب [ClientAspWsImpot]. ويتم ذلك باستخدام مستكشف Windows. لعرض هذا المجلد في حل Web Developer، قم بتحديث الحل باستخدام الزر [2].
+  <li>في [1]، يتم نسخ مجلد [<bdi dir="ltr" class="odt-ltr-term">lib</bdi>] الخاص بعميل الرسومات في <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> 9 إلى مجلد مشروع الويب [<bdi dir="ltr" class="odt-ltr-term">ClientAspWsImpot</bdi>]. ويتم ذلك باستخدام مستكشف <bdi dir="ltr" class="odt-ltr-term">Windows.</bdi> لعرض هذا المجلد في حل <bdi dir="ltr" class="odt-ltr-term">Web Developer</bdi>، قم بتحديث الحل باستخدام الزر [2].
   </li>
-  <li>ثم أضفها إلى مراجع المشروع [3،4،5]. يتم نسخ ملفات Dll المشار إليها تلقائيًا إلى مجلد /bin الخاص بالمشروع [6].
+  <li>ثم أضفها إلى مراجع المشروع [3،4،5]. يتم نسخ ملفات <bdi dir="ltr" class="odt-ltr-term">Dll</bdi> المشار إليها تلقائيًا إلى مجلد /<bdi dir="ltr" class="odt-ltr-term">bin</bdi> الخاص بالمشروع [6].
   </li>
 </ul>
 
-<p>لدينا الآن ملفات DLL اللازمة لتشغيل Spring، كما تم تنفيذ طبقة العميل لخدمة الويب البعيدة. على الرغم من وجود كود هذه الأخيرة، إلا أن تكوينها لا يزال قيد التنفيذ. في الإصدار 9، تم تكوينها بواسطة الملف التالي [App.config]:</p>
+<p>لدينا الآن ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> اللازمة لتشغيل <bdi dir="ltr" class="odt-ltr-term">Spring</bdi>، كما تم تنفيذ طبقة العميل لخدمة الويب البعيدة. على الرغم من وجود كود هذه الأخيرة، إلا أن تكوينها لا يزال قيد التنفيذ. في الإصدار 9، تم تكوينها بواسطة الملف التالي [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;?</span><span style="color:#a31515">xml</span><span style="color:#0000ff"> </span><span style="color:#ff0000">version</span><span style="color:#0000ff">=</span>&quot;<span style="color:#0000ff">1.0</span>&quot;<span style="color:#0000ff"> </span><span style="color:#ff0000">encoding</span><span style="color:#0000ff">=</span>&quot;<span style="color:#0000ff">utf-8</span>&quot;<span style="color:#0000ff"> ?&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#a31515">configuration</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -2321,7 +2323,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#a31515">configuration</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p>نأخذ هذا التكوين وندمجه في ملف [web.config] على النحو التالي:</p>
+<p>نأخذ هذا التكوين وندمجه في ملف [<bdi dir="ltr" class="odt-ltr-term">web.config</bdi>] على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?xml version=&quot;1.0&quot;?&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;configuration&gt;</span></span>
@@ -2371,27 +2373,27 @@
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;/configuration&gt;</span></span>
 </code></pre></div>
 
-<p>لاحظ أن السطر 37 يشير إلى منفذ خدمة الويب البعيدة. قد يتغير هذا المنفذ، حيث يقوم Visual Developer بتشغيل خدمة الويب على منفذ عشوائي.</p>
+<p>لاحظ أن السطر 37 يشير إلى منفذ خدمة الويب البعيدة. قد يتغير هذا المنفذ، حيث يقوم <bdi dir="ltr" class="odt-ltr-term">Visual Developer</bdi> بتشغيل خدمة الويب على منفذ عشوائي.</p>
 <p>لنعد إلى بنية عميل الويب الذي نحتاج إلى بنائه:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000716000001B0E0C04F8F.png" width="544" height="130" style="display:inline-block; margin:4px;width:14.4cm;height:3.429cm;" class="odt-zoomable" data-zoom-src="images/1000000000000716000001B0E0C04F8F.png" /></td></tr></table>
 
 <ul>
-  <li>سيتم تنفيذ [1] بواسطة [Default.aspx]
+  <li>سيتم تنفيذ [1] بواسطة [<bdi dir="ltr" class="odt-ltr-term">Default.aspx</bdi>]
   </li>
-  <li>[2] سيتم تنفيذه بواسطة [Default.aspx.cs]
+  <li>[2] سيتم تنفيذه بواسطة [<bdi dir="ltr" class="odt-ltr-term">Default.aspx.cs</bdi>]
   </li>
-  <li>[3] تم تنفيذه بواسطة DLL [ImpotV9-metier]
+  <li>[3] تم تنفيذه بواسطة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> [<bdi dir="ltr" class="odt-ltr-term">ImpotV9-metier</bdi>]
   </li>
 </ul>
 
-<p>لقد قمنا للتو بتنفيذ الطبقة [3]. دعونا ننتقل إلى واجهة الويب [1] التي تم تنفيذها بواسطة الصفحة [Default.aspx]. انقر نقرًا مزدوجًا على الصفحة [Default.aspx] للانتقال إلى وضع التصميم.</p>
+<p>لقد قمنا للتو بتنفيذ الطبقة [3]. دعونا ننتقل إلى واجهة الويب [1] التي تم تنفيذها بواسطة الصفحة [<bdi dir="ltr" class="odt-ltr-term">Default.aspx</bdi>]. انقر نقرًا مزدوجًا على الصفحة [<bdi dir="ltr" class="odt-ltr-term">Default.aspx</bdi>] للانتقال إلى وضع التصميم.</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006B90000027D5B050CF9.png" width="516" height="191" style="display:inline-block; margin:4px;width:13.66cm;height:5.055cm;" class="odt-zoomable" data-zoom-src="images/10000000000006B90000027D5B050CF9.png" /></td></tr></table>
 
 <p>هناك طريقتان لإنشاء صفحة ويب:</p>
 <ul>
   <li>بشكل رسومي كما في [2]. يجب عليك بعد ذلك تحديد وضع [التصميم] في [1]. يمكن العثور على شريط الأزرار هذا في أسفل شريط الحالة لمحرر صفحة الويب.
   </li>
-  <li>باستخدام لغة العلامات كما في [3]. يجب عليك بعد ذلك تحديد وضع [Source] في [1].
+  <li>باستخدام لغة العلامات كما في [3]. يجب عليك بعد ذلك تحديد وضع [<bdi dir="ltr" class="odt-ltr-term">Source</bdi>] في [1].
   </li>
 </ul>
 
@@ -2405,15 +2407,15 @@
   </li>
   <li>في [3]، صفحة تصميم النموذج. وهي تتضمن العناصر التالية:
     <ul>
-      <li>السطر A، زران اختيار يُسميان <i>RadioButtonOui </i>و <i>RadioButtonNon</i>
+      <li>السطر <bdi dir="ltr" class="odt-ltr-term">A</bdi>، زران اختيار يُسميان <i><bdi dir="ltr" class="odt-ltr-term">RadioButtonOui</bdi> </i>و <i><bdi dir="ltr" class="odt-ltr-term">RadioButtonNon</bdi></i>
       </li>
-      <li>السطر B، حقل إدخال باسم <i>TextBoxEnfants </i>وتسمية توضيحية باسم <i>LabelErreurEnfants</i>
+      <li>السطر <bdi dir="ltr" class="odt-ltr-term">B</bdi>، حقل إدخال باسم <i><bdi dir="ltr" class="odt-ltr-term">TextBoxEnfants</bdi> </i>وتسمية توضيحية باسم <i><bdi dir="ltr" class="odt-ltr-term">LabelErreurEnfants</bdi></i>
       </li>
-      <li>السطر C، حقل إدخال باسم <i>TextBoxSalaire </i>وتسمية توضيحية باسم <i>LabelErreurSalaire</i>
+      <li>السطر <bdi dir="ltr" class="odt-ltr-term">C</bdi>، حقل إدخال باسم <i><bdi dir="ltr" class="odt-ltr-term">TextBoxSalaire</bdi> </i>وتسمية توضيحية باسم <i><bdi dir="ltr" class="odt-ltr-term">LabelErreurSalaire</bdi></i>
       </li>
-      <li>السطر D، تسمية تسمى <i>LabelImpot</i>
+      <li>السطر <bdi dir="ltr" class="odt-ltr-term">D</bdi>، تسمية تسمى <i><bdi dir="ltr" class="odt-ltr-term">LabelImpot</bdi></i>
       </li>
-      <li>السطر E، زران باسم <i>ButtonCalculer </i>و <i>ButtonEffacer</i>
+      <li>السطر <bdi dir="ltr" class="odt-ltr-term">E</bdi>، زران باسم <i><bdi dir="ltr" class="odt-ltr-term">ButtonCalculer</bdi> </i>و <i><bdi dir="ltr" class="odt-ltr-term">ButtonEffacer</bdi></i>
       </li>
     </ul>
   </li>
@@ -2425,16 +2427,16 @@
 <ul>
   <li>في [1]، الوصول إلى خصائص المكون
   </li>
-  <li>في [2]، ورقة خصائص المكون [LabelErreurEnfants]
+  <li>في [2]، ورقة خصائص المكون [<bdi dir="ltr" class="odt-ltr-term">LabelErreurEnfants</bdi>]
   </li>
-  <li>في [3]، (ID) هو اسم المكون
+  <li>في [3]، (<bdi dir="ltr" class="odt-ltr-term">ID</bdi>) هو اسم المكون
   </li>
   <li>في [4]، قمنا بتلوين أحرف التسمية باللون الأحمر.
   </li>
 </ul>
 
-<p>لا يكفي مجرد وضع المكونات على النموذج ثم تعيين خصائصها. تحتاج أيضًا إلى تنظيم تخطيطها. في واجهة Windows الرسومية، يكون هذا التخطيط مطلقًا. ما عليك سوى سحب المكون إلى المكان الذي تريده. في صفحة الويب، الأمر مختلف، فهو أكثر تعقيدًا ولكنه أيضًا أكثر قوة. لن يتم تناول هذا الجانب هنا.</p>
-<p>فيما يلي شفرة المصدر [Default.aspx] التي تم إنشاؤها بواسطة هذا التصميم:</p>
+<p>لا يكفي مجرد وضع المكونات على النموذج ثم تعيين خصائصها. تحتاج أيضًا إلى تنظيم تخطيطها. في واجهة <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> الرسومية، يكون هذا التخطيط مطلقًا. ما عليك سوى سحب المكون إلى المكان الذي تريده. في صفحة الويب، الأمر مختلف، فهو أكثر تعقيدًا ولكنه أيضًا أكثر قوة. لن يتم تناول هذا الجانب هنا.</p>
+<p>فيما يلي شفرة المصدر [<bdi dir="ltr" class="odt-ltr-term">Default.aspx</bdi>] التي تم إنشاؤها بواسطة هذا التصميم:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;%<span style="color:#0000ff">@</span> <span style="color:#a31515">Page</span> <span style="color:#ff0000">Language</span><span style="color:#0000ff">=&quot;C#&quot;</span> <span style="color:#ff0000">AutoEventWireup</span><span style="color:#0000ff">=&quot;true&quot;</span> <span style="color:#ff0000">CodeFile</span><span style="color:#0000ff">=&quot;Default.aspx.cs&quot;</span> <span style="color:#ff0000">Inherits</span><span style="color:#0000ff">=&quot;_Default&quot;</span> %&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -2521,15 +2523,15 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000763000001B14E4C3899.png" width="567" height="130" style="display:inline-block; margin:4px;width:15.011cm;height:3.438cm;" class="odt-zoomable" data-zoom-src="images/1000000000000763000001B14E4C3899.png" /></td></tr></table>
 
 <ul>
-  <li>تم تنفيذ [1] بواسطة [Default.aspx]
+  <li>تم تنفيذ [1] بواسطة [<bdi dir="ltr" class="odt-ltr-term">Default.aspx</bdi>]
   </li>
-  <li>[2] سيتم تنفيذه بواسطة [Default.aspx.cs]
+  <li>[2] سيتم تنفيذه بواسطة [<bdi dir="ltr" class="odt-ltr-term">Default.aspx.cs</bdi>]
   </li>
-  <li>[3] تم تنفيذه بواسطة DLL [ImpotV9-metier]
+  <li>[3] تم تنفيذه بواسطة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> [<bdi dir="ltr" class="odt-ltr-term">ImpotV9-metier</bdi>]
   </li>
 </ul>
 
-<p>تم الآن تنفيذ الطبقتين [1] و[3]. لا يزال يتعين علينا كتابة الطبقة [2]، التي تقوم بإنشاء النموذج، وإرساله إلى المستخدم، ومعالجته عندما يعيد المستخدم النموذج المملوء، واستخدام الطبقة [3] لحساب الضريبة، وإنشاء صفحة استجابة الويب وإرسالها مرة أخرى إلى المستخدم. يقوم الكود [Default.aspx.cs] بكل هذه المهام:</p>
+<p>تم الآن تنفيذ الطبقتين [1] و[3]. لا يزال يتعين علينا كتابة الطبقة [2]، التي تقوم بإنشاء النموذج، وإرساله إلى المستخدم، ومعالجته عندما يعيد المستخدم النموذج المملوء، واستخدام الطبقة [3] لحساب الضريبة، وإنشاء صفحة استجابة الويب وإرسالها مرة أخرى إلى المستخدم. يقوم الكود [<bdi dir="ltr" class="odt-ltr-term">Default.aspx.cs</bdi>] بكل هذه المهام:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> WsImpot;</span></span>
@@ -2547,31 +2549,31 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>يشبه هذا الكود إلى حد كبير كود نموذج Windows الكلاسيكي. وهذه هي الميزة الرئيسية لتقنية ASP.NET: لا يوجد فاصل بين نموذج برمجة Windows ونموذج برمجة الويب ASP.NET. فقط تذكر الرسم البياني التالي:</p>
+<p>يشبه هذا الكود إلى حد كبير كود نموذج <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> الكلاسيكي. وهذه هي الميزة الرئيسية لتقنية <bdi dir="ltr" class="odt-ltr-term">ASP.NET:</bdi> لا يوجد فاصل بين نموذج برمجة <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> ونموذج برمجة الويب <bdi dir="ltr" class="odt-ltr-term">ASP.NET.</bdi> فقط تذكر الرسم البياني التالي:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006F70000018535BBE152.png" width="535" height="117" style="display:inline-block; margin:4px;width:14.15cm;height:3.087cm;" class="odt-zoomable" data-zoom-src="images/10000000000006F70000018535BBE152.png" /></td></tr></table>
 
-<p>عندما ينقر المستخدم في [1] على زر [Calculate]، يتم تكرار الإجراء وسيتم تنفيذ الإجراء <em>ButtonCalculer_Click</em> في السطر 6 من [Default.aspx.cs]. ولكن في هذه الأثناء:</p>
+<p>عندما ينقر المستخدم في [1] على زر [<bdi dir="ltr" class="odt-ltr-term">Calculate</bdi>]، يتم تكرار الإجراء وسيتم تنفيذ الإجراء <em><bdi dir="ltr" class="odt-ltr-term">ButtonCalculer</bdi>_Click</em> في السطر 6 من [<bdi dir="ltr" class="odt-ltr-term">Default.aspx.cs</bdi>]. ولكن في هذه الأثناء:</p>
 <ul>
-  <li>سيتم نقل قيم النموذج المكتمل من المتصفح إلى خادم الويب عبر بروتوكول Http
+  <li>سيتم نقل قيم النموذج المكتمل من المتصفح إلى خادم الويب عبر بروتوكول <bdi dir="ltr" class="odt-ltr-term">Http</bdi>
   </li>
-  <li>سيقوم خادم ASP.NET بتحليل الطلب ونقله إلى الصفحة [Default.aspx]
+  <li>سيقوم خادم <bdi dir="ltr" class="odt-ltr-term">ASP.NET</bdi> بتحليل الطلب ونقله إلى الصفحة [<bdi dir="ltr" class="odt-ltr-term">Default.aspx</bdi>]
   </li>
-  <li>سيتم إنشاء مثيل لصفحة [Default.aspx].
+  <li>سيتم إنشاء مثيل لصفحة [<bdi dir="ltr" class="odt-ltr-term">Default.aspx</bdi>].
   </li>
-  <li>سيتم تهيئة مكوناته (<i>RadioButtonOui</i>، <i>RadioButtonNon</i>، <i>TextBoxEnfants</i>، TextBoxSalaire، <i>LabelErreurEn</i>fants، <i>LabelErreurSalaire</i>، <i>LabelImpot</i>) بالقيم التي كانت عليها عند إرسال النموذج لأول مرة إلى المتصفح، وذلك بفضل آلية تُسمى &quot;ViewState&quot;.
+  <li>سيتم تهيئة مكوناته (<i><bdi dir="ltr" class="odt-ltr-term">RadioButtonOui</bdi></i>، <i><bdi dir="ltr" class="odt-ltr-term">RadioButtonNon</bdi></i>، <i><bdi dir="ltr" class="odt-ltr-term">TextBoxEnfants</bdi></i>، <bdi dir="ltr" class="odt-ltr-term">TextBoxSalaire</bdi>، <i><bdi dir="ltr" class="odt-ltr-term">LabelErreurEn</bdi></i><bdi dir="ltr" class="odt-ltr-term">fants</bdi>، <i><bdi dir="ltr" class="odt-ltr-term">LabelErreurSalaire</bdi></i>، <i><bdi dir="ltr" class="odt-ltr-term">LabelImpot</bdi></i>) بالقيم التي كانت عليها عند إرسال النموذج لأول مرة إلى المتصفح، وذلك بفضل آلية تُسمى &quot;<bdi dir="ltr" class="odt-ltr-term">ViewState</bdi>&quot;.
   </li>
-  <li>سيتم تعيين القيم المرسلة إلى مكوناتها (<i>RadioButtonOui</i>، <i>RadioButtonNon</i>، <i>TextBoxEnfants</i>، <i>TextBoxSalaire</i>). على سبيل المثال، إذا حدد المستخدم عدد الأطفال بـ 2، فسنحصل على <i>TextBoxEnfants.Text=&quot;2&quot;</i>.
+  <li>سيتم تعيين القيم المرسلة إلى مكوناتها (<i><bdi dir="ltr" class="odt-ltr-term">RadioButtonOui</bdi></i>، <i><bdi dir="ltr" class="odt-ltr-term">RadioButtonNon</bdi></i>، <i><bdi dir="ltr" class="odt-ltr-term">TextBoxEnfants</bdi></i>، <i><bdi dir="ltr" class="odt-ltr-term">TextBoxSalaire</bdi></i>). على سبيل المثال، إذا حدد المستخدم عدد الأطفال بـ 2، فسنحصل على <i><bdi dir="ltr" class="odt-ltr-term">TextBoxEnfants.Text</bdi>=&quot;2&quot;</i>.
   </li>
-  <li>إذا كانت صفحة [Default.aspx] تحتوي على طريقة [Page_Load]، فسيتم تنفيذها
+  <li>إذا كانت صفحة [<bdi dir="ltr" class="odt-ltr-term">Default.aspx</bdi>] تحتوي على طريقة [<bdi dir="ltr" class="odt-ltr-term">Page_Load</bdi>]، فسيتم تنفيذها
   </li>
-  <li>سيتم تنفيذ الطريقة [ButtonCalculer_Click] في السطر 6 إذا تم النقر على زر [Calculate]
+  <li>سيتم تنفيذ الطريقة [<bdi dir="ltr" class="odt-ltr-term">ButtonCalculer_Click</bdi>] في السطر 6 إذا تم النقر على زر [<bdi dir="ltr" class="odt-ltr-term">Calculate</bdi>]
   </li>
-  <li>سيتم تنفيذ الأسلوب [ButtonEffacer_Click] في السطر 10 إذا تم النقر على زر [Delete]
+  <li>سيتم تنفيذ الأسلوب [<bdi dir="ltr" class="odt-ltr-term">ButtonEffacer_Click</bdi>] في السطر 10 إذا تم النقر على زر [<bdi dir="ltr" class="odt-ltr-term">Delete</bdi>]
   </li>
 </ul>
 
-<p>بين اللحظة التي ينشئ فيها المستخدم حدثًا في متصفحه واللحظة التي تتم معالجته في [Default.aspx.cs]، هناك قدر كبير من التعقيد. هذا التعقيد مخفي، ويمكننا التظاهر بأنه غير موجود عندما نكتب معالجات الأحداث على صفحة الويب. ولكن يجب ألا ننسى أبدًا أن هناك شبكة بين الحدث ومعالجته، وأنه لا مجال لمعالجة أحداث الماوس مثل <em>Mouse_Move</em> التي من شأنها أن تتسبب في رحلات ذهاب وإياب مكلفة بين العميل والخادم ...</p>
-<p>الرمز الخاص بإدارة النقرات على زري [Calculate] و [Delete] هو الرمز الذي كان سيُكتب لتطبيق Windows تقليدي:</p>
+<p>بين اللحظة التي ينشئ فيها المستخدم حدثًا في متصفحه واللحظة التي تتم معالجته في [<bdi dir="ltr" class="odt-ltr-term">Default.aspx.cs</bdi>]، هناك قدر كبير من التعقيد. هذا التعقيد مخفي، ويمكننا التظاهر بأنه غير موجود عندما نكتب معالجات الأحداث على صفحة الويب. ولكن يجب ألا ننسى أبدًا أن هناك شبكة بين الحدث ومعالجته، وأنه لا مجال لمعالجة أحداث الماوس مثل <em><bdi dir="ltr" class="odt-ltr-term">Mouse</bdi>_Move</em> التي من شأنها أن تتسبب في رحلات ذهاب وإياب مكلفة بين العميل والخادم ...</p>
+<p>الرمز الخاص بإدارة النقرات على زري [<bdi dir="ltr" class="odt-ltr-term">Calculate</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">Delete</bdi>] هو الرمز الذي كان سيُكتب لتطبيق <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> تقليدي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">protected</span> <span style="color:#0000ff">void</span> ButtonCalculer_Click(<span style="color:#0000ff">object</span> sender, <span style="color:#2b91af">EventArgs</span> e)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    {</span></span>
@@ -2611,17 +2613,17 @@
 <ul>
   <li>لفهم هذا الكود، يجب أن تعرف 
     <ul>
-      <li>في بداية التنفيذ، يكون النموذج [Default.aspx] كما ملأه المستخدم. وهذا يعني أن الحقول (RadioButtonOui، <i>RadioButtonNon</i>، <i>TextBoxEnfants</i>، <i>TextBoxSalaire</i>) تحتوي على القيم التي أدخلها المستخدم.
+      <li>في بداية التنفيذ، يكون النموذج [<bdi dir="ltr" class="odt-ltr-term">Default.aspx</bdi>] كما ملأه المستخدم. وهذا يعني أن الحقول (<bdi dir="ltr" class="odt-ltr-term">RadioButtonOui</bdi>، <i><bdi dir="ltr" class="odt-ltr-term">RadioButtonNon</bdi></i>، <i><bdi dir="ltr" class="odt-ltr-term">TextBoxEnfants</bdi></i>، <i><bdi dir="ltr" class="odt-ltr-term">TextBoxSalaire</bdi></i>) تحتوي على القيم التي أدخلها المستخدم.
       </li>
-      <li>في نهاية التنفيذ، سيتم إرجاع نفس الصفحة [Default.aspx] إلى المستخدم. ويتم ذلك تلقائيًا.
+      <li>في نهاية التنفيذ، سيتم إرجاع نفس الصفحة [<bdi dir="ltr" class="odt-ltr-term">Default.aspx</bdi>] إلى المستخدم. ويتم ذلك تلقائيًا.
       </li>
     </ul>
   </li>
 </ul>
 
-<p>لذلك يجب أن تستند الإجراء <em>ButtonCalculer_Click</em> إلى القيم الحالية للحقول (<em>RadioButtonOui</em>، <em>RadioButtonNon</em>، TextBoxEnfants، <em>TextBoxSalaire</em>) وتعيين قيمة جميع الحقول (<em>RadioButtonOui</em>، <em>RadioButtonNon</em>، <em>TextBoxEn</em>f<em>ants</em>، <em>TextBox</em>Sala<em>ire</em>، LabelErreurEnfants، <em>LabelErreurSalaire</em>، <em>LabelImpot</em>) للصفحة الجديدة [Default.aspx] التي سيتم إرجاعها إلى المستخدم.</p>
-<p>لا توجد صعوبات خاصة في هذا الكود. فقط السطر 27 يحتاج إلى شرح. فهو يستخدم <em>CalculerImpot</em> وحقل <em>Global.Metier</em> الذي لم يتم تحديده بعد. سنعود إلى هذا بعد قليل.</p>
-<p>الطريقة <em>ButtonEffacer_Click</em> هي كما يلي:</p>
+<p>لذلك يجب أن تستند الإجراء <em><bdi dir="ltr" class="odt-ltr-term">ButtonCalculer</bdi>_Click</em> إلى القيم الحالية للحقول (<em><bdi dir="ltr" class="odt-ltr-term">RadioButtonOui</bdi></em>، <em><bdi dir="ltr" class="odt-ltr-term">RadioButtonNon</bdi></em>، <bdi dir="ltr" class="odt-ltr-term">TextBoxEnfants</bdi>، <em><bdi dir="ltr" class="odt-ltr-term">TextBoxSalaire</bdi></em>) وتعيين قيمة جميع الحقول (<em><bdi dir="ltr" class="odt-ltr-term">RadioButtonOui</bdi></em>، <em><bdi dir="ltr" class="odt-ltr-term">RadioButtonNon</bdi></em>، <em><bdi dir="ltr" class="odt-ltr-term">TextBoxEn</bdi></em><bdi dir="ltr" class="odt-ltr-term">f</bdi><em><bdi dir="ltr" class="odt-ltr-term">ants</bdi></em>، <em><bdi dir="ltr" class="odt-ltr-term">TextBox</bdi></em><bdi dir="ltr" class="odt-ltr-term">Sala</bdi><em><bdi dir="ltr" class="odt-ltr-term">ire</bdi></em>، <bdi dir="ltr" class="odt-ltr-term">LabelErreurEnfants</bdi>، <em><bdi dir="ltr" class="odt-ltr-term">LabelErreurSalaire</bdi></em>، <em><bdi dir="ltr" class="odt-ltr-term">LabelImpot</bdi></em>) للصفحة الجديدة [<bdi dir="ltr" class="odt-ltr-term">Default.aspx</bdi>] التي سيتم إرجاعها إلى المستخدم.</p>
+<p>لا توجد صعوبات خاصة في هذا الكود. فقط السطر 27 يحتاج إلى شرح. فهو يستخدم <em><bdi dir="ltr" class="odt-ltr-term">CalculerImpot</bdi></em> وحقل <em><bdi dir="ltr" class="odt-ltr-term">Global.Metier</bdi></em> الذي لم يتم تحديده بعد. سنعود إلى هذا بعد قليل.</p>
+<p>الطريقة <em><bdi dir="ltr" class="odt-ltr-term">ButtonEffacer</bdi>_Click</em> هي كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">protected</span> <span style="color:#0000ff">void</span> ButtonEffacer_Click(<span style="color:#0000ff">object</span> sender, <span style="color:#2b91af">EventArgs</span> e)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    {</span></span>
@@ -2638,11 +2640,11 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000716000001877F8FCDAF.png" width="544" height="117" style="display:inline-block; margin:4px;width:14.4cm;height:3.104cm;" class="odt-zoomable" data-zoom-src="images/1000000000000716000001877F8FCDAF.png" /></td></tr></table>
 
 <ul>
-  <li>تم تنفيذ [1] بواسطة [Default.aspx]
+  <li>تم تنفيذ [1] بواسطة [<bdi dir="ltr" class="odt-ltr-term">Default.aspx</bdi>]
   </li>
-  <li>[2] تم تنفيذه بواسطة [Default.aspx.cs]
+  <li>[2] تم تنفيذه بواسطة [<bdi dir="ltr" class="odt-ltr-term">Default.aspx.cs</bdi>]
   </li>
-  <li>[3] تم تنفيذه بواسطة DLL [ImpotV9-metier]
+  <li>[3] تم تنفيذه بواسطة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> [<bdi dir="ltr" class="odt-ltr-term">ImpotV9-metier</bdi>]
   </li>
 </ul>
 
@@ -2650,17 +2652,17 @@
 <ul>
   <li>إنشاء مثيل للطبقة [3] عند بدء تشغيل التطبيق
   </li>
-  <li>وضع مرجع إليها في مكان يمكن لصفحة الويب [Default.aspx.cs] الحصول عليه في كل مرة يتم فيها إنشاء مثيل لها ويُطلب منها حساب الضريبة.
+  <li>وضع مرجع إليها في مكان يمكن لصفحة الويب [<bdi dir="ltr" class="odt-ltr-term">Default.aspx.cs</bdi>] الحصول عليه في كل مرة يتم فيها إنشاء مثيل لها ويُطلب منها حساب الضريبة.
   </li>
 </ul>
 
 <p>هذه ليست مشكلة جديدة. فقد تمت مواجهتها بالفعل في إنشاء خدمة الويب البعيدة ودراستها في الفقرة<a href="#impotsv9-global-asax"><u><span style="color: #0563c1"> 12.4.1</span></u></a>. ونعلم أن الحل يتكون من: </p>
 <ul>
-  <li>إنشاء ملف [Global.asax] مرتبط بفئة [Global.cs]
+  <li>إنشاء ملف [<bdi dir="ltr" class="odt-ltr-term">Global.asax</bdi>] مرتبط بفئة [<bdi dir="ltr" class="odt-ltr-term">Global.cs</bdi>]
   </li>
-  <li>إنشاء مثيل للطبقة [3] في الأسلوب <i>Application_Start </i>من [Global.cs]
+  <li>إنشاء مثيل للطبقة [3] في الأسلوب <i><bdi dir="ltr" class="odt-ltr-term">Application_Start</bdi> </i>من [<bdi dir="ltr" class="odt-ltr-term">Global.cs</bdi>]
   </li>
-  <li>وضع مرجع الطبقة [3] في حقل ثابت للفئة [Global.cs]، حيث أن مدة حياة هذه الفئة هي مدة حياة التطبيق.
+  <li>وضع مرجع الطبقة [3] في حقل ثابت للفئة [<bdi dir="ltr" class="odt-ltr-term">Global.cs</bdi>]، حيث أن مدة حياة هذه الفئة هي مدة حياة التطبيق.
   </li>
 </ul>
 
@@ -2668,18 +2670,18 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000461000001B435D12D00.png" width="336" height="131" style="display:inline-block; margin:4px;width:8.901cm;height:3.463cm;" class="odt-zoomable" data-zoom-src="images/1000000000000461000001B435D12D00.png" /></td></tr></table>
 
 <ul>
-  <li>في [1]، الملف [Global.asax].
+  <li>في [1]، الملف [<bdi dir="ltr" class="odt-ltr-term">Global.asax</bdi>].
   </li>
-  <li>في [2]، يوجد الكود المرتبط [Global.cs]. المجلد [App_Code] الذي يوجد فيه هذا الملف غير موجود افتراضيًا في حل الويب. استخدم [3] لإنشائه.
+  <li>في [2]، يوجد الكود المرتبط [<bdi dir="ltr" class="odt-ltr-term">Global.cs</bdi>]. المجلد [<bdi dir="ltr" class="odt-ltr-term">App_Code</bdi>] الذي يوجد فيه هذا الملف غير موجود افتراضيًا في حل الويب. استخدم [3] لإنشائه.
   </li>
 </ul>
 
-<p>الملف <em>Global.asax</em> هو كما يلي:</p>
+<p>الملف <em><bdi dir="ltr" class="odt-ltr-term">Global.asax</bdi></em> هو كما يلي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;%<span style="color:#0000ff">@</span> <span style="color:#a31515">Application</span> <span style="color:#ff0000">Language</span><span style="color:#0000ff">=&quot;C#&quot;</span> <span style="color:#ff0000">Inherits</span><span style="color:#0000ff">=&quot;WsImpot.Global&quot;</span>%&gt;</span></span>
 </code></pre></div>
 
-<p>الرمز [Global.cs] هو كما يلي:</p>
+<p>الرمز [<bdi dir="ltr" class="odt-ltr-term">Global.cs</bdi>] هو كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> Metier;</span></span>
@@ -2702,13 +2704,13 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 6: تسمى الفئة <i>Global </i>وهي جزء من <i>WsImpot </i>(السطر 4). اسمها الكامل هو <i>WsImpot.Global </i>وهذا هو الاسم الذي يجب تضمينه في <i>Inherits </i>من <i>Global.asax</i>.
+  <li>السطر 6: تسمى الفئة <i><bdi dir="ltr" class="odt-ltr-term">Global</bdi> </i>وهي جزء من <i><bdi dir="ltr" class="odt-ltr-term">WsImpot</bdi> </i>(السطر 4). اسمها الكامل هو <i><bdi dir="ltr" class="odt-ltr-term">WsImpot.Global</bdi> </i>وهذا هو الاسم الذي يجب تضمينه في <i><bdi dir="ltr" class="odt-ltr-term">Inherits</bdi> </i>من <i><bdi dir="ltr" class="odt-ltr-term">Global.asax</bdi></i>.
   </li>
-  <li>السطر 6: نعلم أن الفئة المرتبطة بفئة <i>Global.asax </i>يجب أن تكون مشتقة من <i>System.Web.HttpApplication</i>.
+  <li>السطر 6: نعلم أن الفئة المرتبطة بفئة <i><bdi dir="ltr" class="odt-ltr-term">Global.asax</bdi> </i>يجب أن تكون مشتقة من <i><bdi dir="ltr" class="odt-ltr-term">System.Web.HttpApplication</bdi></i>.
   </li>
-  <li>السطر 12: يتم تنفيذ الأسلوب <i>Application_Start </i>عند بدء تشغيل تطبيق الويب.
+  <li>السطر 12: يتم تنفيذ الأسلوب <i><bdi dir="ltr" class="odt-ltr-term">Application_Start</bdi> </i>عند بدء تشغيل تطبيق الويب.
   </li>
-  <li>السطر 15: ندمج طبقة [metier] (الطبقة [3] من التطبيق قيد الإنشاء) باستخدام Spring والتكوين التالي في [web.config]:
+  <li>السطر 15: ندمج طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] (الطبقة [3] من التطبيق قيد الإنشاء) باستخدام <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> والتكوين التالي في [<bdi dir="ltr" class="odt-ltr-term">web.config</bdi>]:
   </li>
 </ul>
 
@@ -2725,34 +2727,34 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#a31515">spring</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p>توجد الفئة [Metier.ImpotMetierWS] في السطر (g) أعلاه في [ImpotsV9-metier.dll].</p>
-<p>يتم إدخال مرجع طبقة [metier] التي تم إنشاؤها في الحقل الثابت في السطر 9. ويستخدم هذا الحقل في السطر 27 من <em>ButtonCalculer_Click</em> :</p>
+<p>توجد الفئة [<bdi dir="ltr" class="odt-ltr-term">Metier.ImpotMetierWS</bdi>] في السطر (<bdi dir="ltr" class="odt-ltr-term">g</bdi>) أعلاه في [<bdi dir="ltr" class="odt-ltr-term">ImpotsV9-metier.dll</bdi>].</p>
+<p>يتم إدخال مرجع طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] التي تم إنشاؤها في الحقل الثابت في السطر 9. ويستخدم هذا الحقل في السطر 27 من <em><bdi dir="ltr" class="odt-ltr-term">ButtonCalculer</bdi>_Click</em> :</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content">LabelImpot.Text = <span style="color:#2b91af">String</span>.Format(<span style="color:#a31515">&quot;{0} euros&quot;</span>,Global.Metier.CalculerImpot(marié, nbEnfants, salaire));</span></span>
 </code></pre></div>
 
-<p>نحن جاهزون لإجراء الاختبار. نحتاج إلى تشغيل SGBD MySQL5، وخدمة الويب البعيدة، وتدوين المنفذ الذي تعمل عليه:</p>
+<p>نحن جاهزون لإجراء الاختبار. نحتاج إلى تشغيل <bdi dir="ltr" class="odt-ltr-term">SGBD MySQL5</bdi>، وخدمة الويب البعيدة، وتدوين المنفذ الذي تعمل عليه:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000183000000AAA929D484.png" width="271" height="119" style="display:inline-block; margin:4px;width:7.17cm;height:3.15cm;" class="odt-zoomable" data-zoom-src="images/1000000000000183000000AAA929D484.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p>بمجرد الانتهاء من ذلك، تحقق من أن منفذ خدمة الويب البعيدة صحيح في ملف [web.config] الخاص بعميل الويب:</p>
+<p>بمجرد الانتهاء من ذلك، تحقق من أن منفذ خدمة الويب البعيدة صحيح في ملف [<bdi dir="ltr" class="odt-ltr-term">web.config</bdi>] الخاص بعميل الويب:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000063F000000FB71FCBEDE.png" width="560" height="88" style="display:inline-block; margin:4px;width:14.81cm;height:2.325cm;" class="odt-zoomable" data-zoom-src="images/100000000000063F000000FB71FCBEDE.png" /></td></tr></table>
 
-<p>بمجرد الانتهاء من ذلك، يمكن تشغيل عميل الويب الخاص بخدمة الويب البعيدة بالضغط على Ctrl-F5 :</p>
+<p>بمجرد الانتهاء من ذلك، يمكن تشغيل عميل الويب الخاص بخدمة الويب البعيدة بالضغط على <bdi dir="ltr" class="odt-ltr-term">Ctrl-F5</bdi> :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000158000001752B3C6368.png" width="206" height="224" style="display:inline-block; margin:4px;width:5.459cm;height:5.92cm;" class="odt-zoomable" data-zoom-src="images/1000000000000158000001752B3C6368.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading10404131168783983"></a></p>
-<h2 id="126-java">12.6. <span style="color: #4f81bd">عميل وحدة تحكم Java لخدمة حساب الضرائب على الويب</span></h2>
-<p>لإثبات إمكانية وصول العملاء المكتوبين بأي لغة إلى خدمات الويب، نقوم بكتابة عميل وحدة تحكم Java أساسي. ستكون بنية تطبيق العميل/الخادم كما يلي:</p>
+<h2 id="126-java">12.6. <span style="color: #4f81bd">عميل وحدة تحكم <bdi dir="ltr" class="odt-ltr-term">Java</bdi> لخدمة حساب الضرائب على الويب</span></h2>
+<p>لإثبات إمكانية وصول العملاء المكتوبين بأي لغة إلى خدمات الويب، نقوم بكتابة عميل وحدة تحكم <bdi dir="ltr" class="odt-ltr-term">Java</bdi> أساسي. ستكون بنية تطبيق العميل/الخادم كما يلي:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000757000001D67655B29D.png" width="564" height="141" style="display:inline-block; margin:4px;width:14.91cm;height:3.729cm;" class="odt-zoomable" data-zoom-src="images/1000000000000757000001D67655B29D.png" /></td></tr></table>
 
 <ul>
-  <li>سيتم كتابة العميل [1] بلغة Java
+  <li>سيتم كتابة العميل [1] بلغة <bdi dir="ltr" class="odt-ltr-term">Java</bdi>
   </li>
-  <li>الخادم [2] هو الذي تمت كتابته بلغة C#
+  <li>الخادم [2] هو الذي تمت كتابته بلغة <bdi dir="ltr" class="odt-ltr-term">C#</bdi>
   </li>
 </ul>
 
-<p>أولاً، سنقوم بتغيير أحد التفاصيل في خدمة حساب الضرائب على الويب الخاصة بنا. التعريف الحالي لها في [ServiceImpot.cs] هو كما يلي:</p>
+<p>أولاً، سنقوم بتغيير أحد التفاصيل في خدمة حساب الضرائب على الويب الخاصة بنا. التعريف الحالي لها في [<bdi dir="ltr" class="odt-ltr-term">ServiceImpot.cs</bdi>] هو كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">public</span> <span style="color:#0000ff">class</span> <span style="color:#2b91af">ServiceImpot</span> : System.Web.Services.<span style="color:#2b91af">WebService</span></span></span>
@@ -2767,7 +2769,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>أظهرت الاختبارات أن تشديد المعلمة <em>married</em> في السطرين 6 و 8 قد يشكل مشكلة للتوافق بين Java و C#. نعتمد التعريف الجديد التالي:</p>
+<p>أظهرت الاختبارات أن تشديد المعلمة <em><bdi dir="ltr" class="odt-ltr-term">married</bdi></em> في السطرين 6 و 8 قد يشكل مشكلة للتوافق بين <bdi dir="ltr" class="odt-ltr-term">Java</bdi> و <bdi dir="ltr" class="odt-ltr-term">C#.</bdi> نعتمد التعريف الجديد التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">public</span> <span style="color:#0000ff">class</span> <span style="color:#2b91af">ServiceImpot</span> : System.Web.Services.<span style="color:#2b91af">WebService</span></span></span>
@@ -2782,15 +2784,15 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>سيتم وضع هذه الخدمة في مشروع Web Developer جديد يسمى <em>WsImpotsSansAccents</em>. وستكون عنوان URL لخدمة الويب هو [/WsImpotSansAccents/ServiceImpot.asmx].</p>
+<p>سيتم وضع هذه الخدمة في مشروع <bdi dir="ltr" class="odt-ltr-term">Web Developer</bdi> جديد يسمى <em><bdi dir="ltr" class="odt-ltr-term">WsImpotsSansAccents</bdi></em>. وستكون عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> لخدمة الويب هو [/<bdi dir="ltr" class="odt-ltr-term">WsImpotSansAccents/ServiceImpot.asmx</bdi>].</p>
 <p><img src="images/10000000000001A80000010DBBF320CA.png" width="297" height="188" style="width:7.849cm;height:4.979cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001A80000010DBBF320CA.png" /></p>
-<p>لكتابة عميل Java، سنستخدم بيئة تطوير Netbeans [http://www.netbeans.org/] :</p>
+<p>لكتابة عميل <bdi dir="ltr" class="odt-ltr-term">Java</bdi>، سنستخدم بيئة تطوير <bdi dir="ltr" class="odt-ltr-term">Netbeans</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://www.netbeans.org/</bdi>] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000077F0000027CD7DBCF3C.png" width="576" height="191" style="display:inline-block; margin:4px;width:15.229cm;height:5.046cm;" class="odt-zoomable" data-zoom-src="images/100000000000077F0000027CD7DBCF3C.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، قم بإنشاء مشروع جديد
   </li>
-  <li>في [2،3]، حدد نوع مشروع <i>Java &quot;تطبيق Java&quot;</i>.
+  <li>في [2،3]، حدد نوع مشروع <i><bdi dir="ltr" class="odt-ltr-term">Java</bdi> &quot;تطبيق <bdi dir="ltr" class="odt-ltr-term">Java</bdi>&quot;</i>.
   </li>
   <li>في [4]، انتقل إلى الخطوة التالية
   </li>
@@ -2807,7 +2809,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007330000014F9EC8644F.png" width="553" height="100" style="display:inline-block; margin:4px;width:14.63cm;height:2.658cm;" class="odt-zoomable" data-zoom-src="images/10000000000007330000014F9EC8644F.png" /></td></tr></table>
 
 <ul>
-  <li>في [9]: مشروع Java الذي تم إنشاؤه
+  <li>في [9]: مشروع <bdi dir="ltr" class="odt-ltr-term">Java</bdi> الذي تم إنشاؤه
   </li>
   <li>في [10]: انقر بزر الماوس الأيمن على المشروع لإنشاء عميل خدمة حساب الضرائب على الويب
   </li>
@@ -2816,14 +2818,14 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000079B00000377B0069281.png" width="584" height="266" style="display:inline-block; margin:4px;width:15.45cm;height:7.04cm;" class="odt-zoomable" data-zoom-src="images/100000000000079B00000377B0069281.png" /></td></tr></table>
 
 <ul>
-  <li>في [11]، عنوان URL للملف الذي يصف خدمة حساب الضرائب على الويب:
+  <li>في [11]، عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> للملف الذي يصف خدمة حساب الضرائب على الويب:
   </li>
 </ul>
 
-<p><em>http://localhost:1089/WsImpotSansAccents/ServiceImpot.asmx?WSDL</em></p>
-<p>هذا الرابط هو رابط خدمة [ServiceImpot.asmx]، التي نضيف إليها المعلمة ?WSDL. يصف المستند الموجود في هذا الرابط بلغة Xml ما يمكن أن تفعله الخدمة [15]. وهو عنصر قياسي في خدمة الويب.</p>
+<p><em><bdi dir="ltr" class="odt-ltr-term">http://localhost:1089/WsImpotSansAccents/ServiceImpot.asmx</bdi>?<bdi dir="ltr" class="odt-ltr-term">WSDL</bdi></em></p>
+<p>هذا الرابط هو رابط خدمة [<bdi dir="ltr" class="odt-ltr-term">ServiceImpot.asmx</bdi>]، التي نضيف إليها المعلمة ?<bdi dir="ltr" class="odt-ltr-term">WSDL.</bdi> يصف المستند الموجود في هذا الرابط بلغة <bdi dir="ltr" class="odt-ltr-term">Xml</bdi> ما يمكن أن تفعله الخدمة [15]. وهو عنصر قياسي في خدمة الويب.</p>
 <ul>
-  <li>في [12]، الحزمة (المكافئة لمساحة اسم C#) التي توضع فيها الفئات المراد إنشاؤها
+  <li>في [12]، الحزمة (المكافئة لمساحة اسم <bdi dir="ltr" class="odt-ltr-term">C#</bdi>) التي توضع فيها الفئات المراد إنشاؤها
   </li>
   <li>في [13]، اترك القيمة الافتراضية
   </li>
@@ -2834,22 +2836,22 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006F20000024053348940.png" width="533" height="173" style="display:inline-block; margin:4px;width:14.109cm;height:4.57cm;" class="odt-zoomable" data-zoom-src="images/10000000000006F20000024053348940.png" /></td></tr></table>
 
 <ul>
-  <li>في [16]، تم دمج خدمة الويب المستوردة في مشروع Java. وهي تدعم بروتوكولي اتصال <i>Soap </i>و <i>Soap12</i>.
+  <li>في [16]، تم دمج خدمة الويب المستوردة في مشروع <bdi dir="ltr" class="odt-ltr-term">Java.</bdi> وهي تدعم بروتوكولي اتصال <i><bdi dir="ltr" class="odt-ltr-term">Soap</bdi> </i>و <i><bdi dir="ltr" class="odt-ltr-term">Soap12</bdi></i>.
   </li>
-  <li>في [17]، فئة [Main] التي سنستخدم فيها العميل الذي تم إنشاؤه
+  <li>في [17]، فئة [<bdi dir="ltr" class="odt-ltr-term">Main</bdi>] التي سنستخدم فيها العميل الذي تم إنشاؤه
   </li>
 </ul>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000074F0000043989D18D60.png" width="561" height="324" style="display:inline-block; margin:4px;width:14.85cm;height:8.58cm;" class="odt-zoomable" data-zoom-src="images/100000000000074F0000043989D18D60.png" /></td></tr></table>
 
 <ul>
-  <li>في [18]، سنقوم بإدراج بعض الأكواد في الطريقة [main]. ضع المؤشر في المكان الذي تريد إدراج الكود فيه، وانقر بزر الماوس الأيمن واختر الخيار [19]
+  <li>في [18]، سنقوم بإدراج بعض الأكواد في الطريقة [<bdi dir="ltr" class="odt-ltr-term">main</bdi>]. ضع المؤشر في المكان الذي تريد إدراج الكود فيه، وانقر بزر الماوس الأيمن واختر الخيار [19]
   </li>
-  <li>في [20]، حدد أنك تريد إنشاء كود الاستدعاء لـ <i>CalculerImpot </i>الخاص بخدمة حساب الضرائب عن بُعد، ثم اضغط على &quot;موافق&quot;.
+  <li>في [20]، حدد أنك تريد إنشاء كود الاستدعاء لـ <i><bdi dir="ltr" class="odt-ltr-term">CalculerImpot</bdi> </i>الخاص بخدمة حساب الضرائب عن بُعد، ثم اضغط على &quot;موافق&quot;.
   </li>
 </ul>
 
-<p>الكود الذي تم إنشاؤه في [Main] هو كما يلي:</p>
+<p>الكود الذي تم إنشاؤه في [<bdi dir="ltr" class="odt-ltr-term">Main</bdi>] هو كما يلي:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
@@ -2888,7 +2890,7 @@
 <a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>يوضح الكود الذي تم إنشاؤه كيفية استدعاء <em>CalculerImpot</em> لخدمة حساب الضرائب عن بُعد. إذا قارنا ذلك بما رأيناه في C#، فإن المتغير <em>port</em> في السطر 7 يعادل العميل المستخدم في C#. لن نعلق أكثر على هذا الكود. سنعيد ترتيبه على النحو التالي:</p>
+<p>يوضح الكود الذي تم إنشاؤه كيفية استدعاء <em><bdi dir="ltr" class="odt-ltr-term">CalculerImpot</bdi></em> لخدمة حساب الضرائب عن بُعد. إذا قارنا ذلك بما رأيناه في <bdi dir="ltr" class="odt-ltr-term">C#</bdi>، فإن المتغير <em><bdi dir="ltr" class="odt-ltr-term">port</bdi></em> في السطر 7 يعادل العميل المستخدم في <bdi dir="ltr" class="odt-ltr-term">C#.</bdi> لن نعلق أكثر على هذا الكود. سنعيد ترتيبه على النحو التالي:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
@@ -2912,13 +2914,13 @@
 <a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>السطر 1: نقوم باستيراد <i>ServiceImpot </i>الذي يمثل العميل الذي تم إنشاؤه بواسطة المعالج.
+  <li>السطر 1: نقوم باستيراد <i><bdi dir="ltr" class="odt-ltr-term">ServiceImpot</bdi> </i>الذي يمثل العميل الذي تم إنشاؤه بواسطة المعالج.
   </li>
-  <li>السطر 6: نستدعي الطريقة البعيدة <i>CalculerImpot </i>باتباع الإجراء المشار إليه في الكود الذي تم إنشاؤه في main.
+  <li>السطر 6: نستدعي الطريقة البعيدة <i><bdi dir="ltr" class="odt-ltr-term">CalculerImpot</bdi> </i>باتباع الإجراء المشار إليه في الكود الذي تم إنشاؤه في <bdi dir="ltr" class="odt-ltr-term">main.</bdi>
   </li>
 </ul>
 
-<p>النتائج التي تم الحصول عليها في وحدة التحكم أثناء وقت التشغيل (F6) هي كما يلي:</p>
+<p>النتائج التي تم الحصول عليها في وحدة التحكم أثناء وقت التشغيل (<bdi dir="ltr" class="odt-ltr-term">F6</bdi>) هي كما يلي:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-6-3"> 3</a></span>

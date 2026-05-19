@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -801,76 +803,76 @@
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">this</span>.buttonAfficher.Click += <span style="color:#0000ff">new</span> System.<span style="color:#2b91af">EventHandler</span>(<span style="color:#0000ff">this</span>.buttonAfficher_Click);</span></span>
 </code></pre></div>
 
-<p>حيث كان <em>buttonAfficher</em> مكونًا من نوع [Button]. تحتوي هذه الفئة على حدث <strong>Click</strong> محدد على النحو التالي:</p>
+<p>حيث كان <em><bdi dir="ltr" class="odt-ltr-term">buttonAfficher</bdi></em> مكونًا من نوع [<bdi dir="ltr" class="odt-ltr-term">Button</bdi>]. تحتوي هذه الفئة على حدث <strong><bdi dir="ltr" class="odt-ltr-term">Click</bdi></strong> محدد على النحو التالي:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006D600000361A5C9640D.png" width="525" height="260" style="display:inline-block; margin:4px;width:13.891cm;height:6.867cm;" class="odt-zoomable" data-zoom-src="images/10000000000006D600000361A5C9640D.png" /></td></tr></table>
 
 <ul>
-  <li>[1]: فئة [Button]
+  <li>[1]: فئة [<bdi dir="ltr" class="odt-ltr-term">Button</bdi>]
   </li>
   <li>[2]: أحداثها
   </li>
-  <li>[3،4]: الحدث <i>Click</i>
+  <li>[3،4]: الحدث <i><bdi dir="ltr" class="odt-ltr-term">Click</bdi></i>
   </li>
-  <li>[5]: إعلان الحدث [Control.Click] [4].
+  <li>[5]: إعلان الحدث [<bdi dir="ltr" class="odt-ltr-term">Control.Click</bdi>] [4].
     <ul>
-      <li><i>EventHandler </i>هو نموذج أولي (نموذج) لطريقة تسمى <b>delegate</b>.
+      <li><i><bdi dir="ltr" class="odt-ltr-term">EventHandler</bdi> </i>هو نموذج أولي (نموذج) لطريقة تسمى <b><bdi dir="ltr" class="odt-ltr-term">delegate</bdi></b>.
       </li>
-      <li><i>event </i>هي كلمة رئيسية تقيد وظائف <i>delegate </i><b>EventHandler</b>: كائن <i>delegate </i>له وظائف أكثر ثراءً من <i>event</i>.
+      <li><i><bdi dir="ltr" class="odt-ltr-term">event</bdi> </i>هي كلمة رئيسية تقيد وظائف <i><bdi dir="ltr" class="odt-ltr-term">delegate</bdi> </i><b><bdi dir="ltr" class="odt-ltr-term">EventHandler</bdi></b>: كائن <i><bdi dir="ltr" class="odt-ltr-term">delegate</bdi> </i>له وظائف أكثر ثراءً من <i><bdi dir="ltr" class="odt-ltr-term">event</bdi></i>.
       </li>
     </ul>
   </li>
 </ul>
 
-<p>زيارة <em>delegate</em> يتم تعريف <strong>EventHandler</strong> على النحو التالي:</p>
+<p>زيارة <em><bdi dir="ltr" class="odt-ltr-term">delegate</bdi></em> يتم تعريف <strong><bdi dir="ltr" class="odt-ltr-term">EventHandler</bdi></strong> على النحو التالي:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001AE0000013BDE4AB081.png" width="301" height="220" style="display:inline-block; margin:4px;width:7.96cm;height:5.831cm;" class="odt-zoomable" data-zoom-src="images/10000000000001AE0000013BDE4AB081.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p>يحدد <em>مندوب</em> Visit <strong>EventHandler</strong> نموذج طريقة:</p>
+<p>يحدد <em>مندوب</em> <bdi dir="ltr" class="odt-ltr-term">Visit</bdi> <strong><bdi dir="ltr" class="odt-ltr-term">EventHandler</bdi></strong> نموذج طريقة:</p>
 <ul>
-  <li>مع النوع كمعلمة أولى <b>Object</b>
+  <li>مع النوع كمعلمة أولى <b><bdi dir="ltr" class="odt-ltr-term">Object</bdi></b>
   </li>
-  <li>والذي يكون المعلمة الثانية له هي <b>EventArgs</b>
+  <li>والذي يكون المعلمة الثانية له هي <b><bdi dir="ltr" class="odt-ltr-term">EventArgs</bdi></b>
   </li>
   <li>لا يعيد أي نتائج
   </li>
 </ul>
 
-<p>قد تكون الطريقة المطابقة للنموذج المحدد بواسطة <em>EventHandler</em> كما يلي:</p>
+<p>قد تكون الطريقة المطابقة للنموذج المحدد بواسطة <em><bdi dir="ltr" class="odt-ltr-term">EventHandler</bdi></em> كما يلي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">private</span> <span style="color:#0000ff">void</span> buttonAfficher_Click(<span style="color:#0000ff">object</span> sender, <span style="color:#2b91af">EventArgs</span> e);</span></span>
 </code></pre></div>
 
-<p>لإنشاء <em>EventHandler</em>، اتبع الخطوات التالية:</p>
+<p>لإنشاء <em><bdi dir="ltr" class="odt-ltr-term">EventHandler</bdi></em>، اتبع الخطوات التالية:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>EventHandler evtHandler=new EventHandler(méthode correspondant au prototype  défini par le type EventHandler);
 </code></pre></div>
 <p>وبالتالي يمكننا كتابة:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>EventHandler evtHandler=new EventHandler(buttonAfficher_Click);
 </code></pre></div>
-<p>المتغير من نوع <em>delegate</em> هو في الواقع قائمة من المراجع إلى الطرق المطابقة للـ <em>delegate</em>. لإضافة طريقة جديدة <em>M</em> إلى المتغير <em>evtHandler</em> أعلاه، نستخدم الصيغة:</p>
+<p>المتغير من نوع <em><bdi dir="ltr" class="odt-ltr-term">delegate</bdi></em> هو في الواقع قائمة من المراجع إلى الطرق المطابقة للـ <em><bdi dir="ltr" class="odt-ltr-term">delegate</bdi></em>. لإضافة طريقة جديدة <em><bdi dir="ltr" class="odt-ltr-term">M</bdi></em> إلى المتغير <em><bdi dir="ltr" class="odt-ltr-term">evtHandler</bdi></em> أعلاه، نستخدم الصيغة:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>evtHandler+=new EvtHandler(M);
 </code></pre></div>
-<p>يمكن استخدام الرمز += حتى لو كان <em>evtHandler</em> قائمة فارغة.</p>
+<p>يمكن استخدام الرمز += حتى لو كان <em><bdi dir="ltr" class="odt-ltr-term">evtHandler</bdi></em> قائمة فارغة.</p>
 <p>التعليمات:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">this</span>.buttonAfficher.Click += <span style="color:#0000ff">new</span> System.<span style="color:#2b91af">EventHandler</span>(<span style="color:#0000ff">this</span>.buttonAfficher_Click);</span></span>
 </code></pre></div>
 
-<p>يضيف <em>EventHandler</em> إلى قائمة أساليب الحدث <em>buttonAfficher</em>.<em>Click</em>. عندما يحدث الحدث <em>Click</em> على المكون buttonAfficher، يقوم VB بتنفيذ:</p>
+<p>يضيف <em><bdi dir="ltr" class="odt-ltr-term">EventHandler</bdi></em> إلى قائمة أساليب الحدث <em><bdi dir="ltr" class="odt-ltr-term">buttonAfficher</bdi></em>.<em><bdi dir="ltr" class="odt-ltr-term">Click</bdi></em>. عندما يحدث الحدث <em><bdi dir="ltr" class="odt-ltr-term">Click</bdi></em> على المكون <bdi dir="ltr" class="odt-ltr-term">buttonAfficher</bdi>، يقوم <bdi dir="ltr" class="odt-ltr-term">VB</bdi> بتنفيذ:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>            buttonAfficher.Click(source, evt);
 </code></pre></div>
 <p>حيث:</p>
 <ul>
-  <li><i>source </i>هو <i>الكائن </i>وراء الحدث
+  <li><i><bdi dir="ltr" class="odt-ltr-term">source</bdi> </i>هو <i>الكائن </i>وراء الحدث
   </li>
-  <li><i>evt </i>من نوع <i>EventArgs </i>ولا يحتوي على أي معلومات
+  <li><i><bdi dir="ltr" class="odt-ltr-term">evt</bdi> </i>من نوع <i><bdi dir="ltr" class="odt-ltr-term">EventArgs</bdi> </i>ولا يحتوي على أي معلومات
   </li>
 </ul>
 
-<p>جميع طرق التوقيع <em>void M(object,EventArgs)</em> المرتبطة بالحدث <em>Click</em> بواسطة:</p>
+<p>جميع طرق التوقيع <em><bdi dir="ltr" class="odt-ltr-term">void M</bdi>(<bdi dir="ltr" class="odt-ltr-term">object</bdi>,<bdi dir="ltr" class="odt-ltr-term">EventArgs</bdi>)</em> المرتبطة بالحدث <em><bdi dir="ltr" class="odt-ltr-term">Click</bdi></em> بواسطة:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">this</span>.buttonAfficher.Click += <span style="color:#0000ff">new</span> System.<span style="color:#2b91af">EventHandler</span>(M);</span></span>
 </code></pre></div>
 
-<p>سيتم استدعاؤها بالمعلمات (<em>source</em>, <em>evt</em>) التي تم إرسالها بواسطة VB.</p>
+<p>سيتم استدعاؤها بالمعلمات (<em><bdi dir="ltr" class="odt-ltr-term">source</bdi></em>, <em><bdi dir="ltr" class="odt-ltr-term">evt</bdi></em>) التي تم إرسالها بواسطة <bdi dir="ltr" class="odt-ltr-term">VB.</bdi></p>
 <p><a id="refheading10401611168783983"></a></p>
 <h2 id="82">8.2. <span style="color: #4f81bd">تعريف كائنات المندوب</span></h2>
 <p>التعليمات</p>
@@ -878,8 +880,8 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">public</span> <span style="color:#0000ff">delegate</span> <span style="color:#0000ff">int</span> Opération(<span style="color:#0000ff">int</span> n1, <span style="color:#0000ff">int</span> n2);</span></span>
 </code></pre></div>
 
-<p>يحدد نوعًا يسمى <em>Operation</em> يمثل نموذجًا أوليًا لدالة تقبل عددين صحيحين وتُرجع عددًا صحيحًا واحدًا. الكلمة الرئيسية <em>delegate</em> هي التي تجعل من <em>Operation</em> تعريفًا لنموذج أولي لدالة.</p>
-<p>ستسجل المتغير <em>op</em> من النوع <em>Operation</em> قائمة بالدوال المطابقة للنموذج الأولي <em>Operation</em> :</p>
+<p>يحدد نوعًا يسمى <em><bdi dir="ltr" class="odt-ltr-term">Operation</bdi></em> يمثل نموذجًا أوليًا لدالة تقبل عددين صحيحين وتُرجع عددًا صحيحًا واحدًا. الكلمة الرئيسية <em><bdi dir="ltr" class="odt-ltr-term">delegate</bdi></em> هي التي تجعل من <em><bdi dir="ltr" class="odt-ltr-term">Operation</bdi></em> تعريفًا لنموذج أولي لدالة.</p>
+<p>ستسجل المتغير <em><bdi dir="ltr" class="odt-ltr-term">op</bdi></em> من النوع <em><bdi dir="ltr" class="odt-ltr-term">Operation</bdi></em> قائمة بالدوال المطابقة للنموذج الأولي <em><bdi dir="ltr" class="odt-ltr-term">Operation</bdi></em> :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>int f1(int,int)
 </code></pre></div>
@@ -892,7 +894,7 @@
 </code></pre></div>
 </div></td></tr></table>
 
-<p>يتم تسجيل طريقة <em>fi</em> في المتغير <em>op</em> بواسطة <em>op=new Operation(fi)</em> أو ببساطة <em>op=fi.</em> لإضافة طريقة <em>fj</em> إلى قائمة الدوال المسجلة، نكتب <em>op+= fj</em>. لإزالة طريقة <em>fk</em> نكتب <em>op-=fk</em>. إذا كتبنا في مثالنا <em>n=op(n1,n2)</em>، فسيتم تنفيذ مجموعة الطرق المخزنة في <em>op</em> بالمعلمات <em>n1</em> و <em>n2</em>. وستكون النتيجة <em>n</em> المستردة هي نتيجة آخر طريقة تم تنفيذها. لا يمكن الحصول على النتائج التي تنتجها جميع الطرق. ولهذا السبب، إذا قمت بتخزين قائمة بالطرق في دالة مفوضة، فستُرجع عادةً نتيجة من النوع <em>void</em>.</p>
+<p>يتم تسجيل طريقة <em><bdi dir="ltr" class="odt-ltr-term">fi</bdi></em> في المتغير <em><bdi dir="ltr" class="odt-ltr-term">op</bdi></em> بواسطة <em><bdi dir="ltr" class="odt-ltr-term">op</bdi>=<bdi dir="ltr" class="odt-ltr-term">new Operation</bdi>(<bdi dir="ltr" class="odt-ltr-term">fi</bdi>)</em> أو ببساطة <em><bdi dir="ltr" class="odt-ltr-term">op</bdi>=<bdi dir="ltr" class="odt-ltr-term">fi.</bdi></em> لإضافة طريقة <em><bdi dir="ltr" class="odt-ltr-term">fj</bdi></em> إلى قائمة الدوال المسجلة، نكتب <em><bdi dir="ltr" class="odt-ltr-term">op+</bdi>= <bdi dir="ltr" class="odt-ltr-term">fj</bdi></em>. لإزالة طريقة <em><bdi dir="ltr" class="odt-ltr-term">fk</bdi></em> نكتب <em><bdi dir="ltr" class="odt-ltr-term">op-</bdi>=<bdi dir="ltr" class="odt-ltr-term">fk</bdi></em>. إذا كتبنا في مثالنا <em><bdi dir="ltr" class="odt-ltr-term">n</bdi>=<bdi dir="ltr" class="odt-ltr-term">op</bdi>(<bdi dir="ltr" class="odt-ltr-term">n1</bdi>,<bdi dir="ltr" class="odt-ltr-term">n2</bdi>)</em>، فسيتم تنفيذ مجموعة الطرق المخزنة في <em><bdi dir="ltr" class="odt-ltr-term">op</bdi></em> بالمعلمات <em><bdi dir="ltr" class="odt-ltr-term">n1</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">n2</bdi></em>. وستكون النتيجة <em><bdi dir="ltr" class="odt-ltr-term">n</bdi></em> المستردة هي نتيجة آخر طريقة تم تنفيذها. لا يمكن الحصول على النتائج التي تنتجها جميع الطرق. ولهذا السبب، إذا قمت بتخزين قائمة بالطرق في دالة مفوضة، فستُرجع عادةً نتيجة من النوع <em><bdi dir="ltr" class="odt-ltr-term">void</bdi></em>.</p>
 <p>انظر المثال التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
@@ -954,37 +956,37 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 3: يحدد فئة <i>Class1</i>.
+  <li>السطر 3: يحدد فئة <i><bdi dir="ltr" class="odt-ltr-term">Class1</bdi></i>.
   </li>
-  <li>السطر 6: تعريف <i>الوكيل Operation</i>: نموذج أولي للطرق التي تقبل معلمتين من النوع <i>int </i>وتُرجع قيمة <i>من النوع int</i>
+  <li>السطر 6: تعريف <i>الوكيل <bdi dir="ltr" class="odt-ltr-term">Operation</bdi></i>: نموذج أولي للطرق التي تقبل معلمتين من النوع <i><bdi dir="ltr" class="odt-ltr-term">int</bdi> </i>وتُرجع قيمة <i>من النوع <bdi dir="ltr" class="odt-ltr-term">int</bdi></i>
   </li>
-  <li>الأسطر 9-12: طريقة المثيل <i>Add </i>إلى توقيع <i>الوكيل Operation</i>.
+  <li>الأسطر 9-12: طريقة المثيل <i><bdi dir="ltr" class="odt-ltr-term">Add</bdi> </i>إلى توقيع <i>الوكيل <bdi dir="ltr" class="odt-ltr-term">Operation</bdi></i>.
   </li>
-  <li>الأسطر 14-17: طريقة المثيل S <i>subtract </i>إلى توقيع <i>الوكيل Operation</i>.
+  <li>الأسطر 14-17: طريقة المثيل <bdi dir="ltr" class="odt-ltr-term">S</bdi> <i><bdi dir="ltr" class="odt-ltr-term">subtract</bdi> </i>إلى توقيع <i>الوكيل <bdi dir="ltr" class="odt-ltr-term">Operation</bdi></i>.
   </li>
-  <li>الأسطر 20-23: طريقة <b>class </b><i>Ancrease </i>إلى توقيع <i>الوكيل Operation</i>.
+  <li>الأسطر 20-23: طريقة <b><bdi dir="ltr" class="odt-ltr-term">class</bdi> </b><i><bdi dir="ltr" class="odt-ltr-term">Ancrease</bdi> </i>إلى توقيع <i>الوكيل <bdi dir="ltr" class="odt-ltr-term">Operation</bdi></i>.
   </li>
-  <li>السطر 25: تم تنفيذ الدالة <i>Main</i>
+  <li>السطر 25: تم تنفيذ الدالة <i><bdi dir="ltr" class="odt-ltr-term">Main</bdi></i>
   </li>
-  <li>السطر 20: المتغير <i>op</i> من نوع <i>delegate Operation</i>. وسيحتوي على قائمة بالطرق ذات توقيع النوع <i>delegate Operation. </i>ويتم تعيين مرجع الطريقة الأولى له، وهو مرجع الطريقة الثابتة <i>Class1.Augmenter</i>.
+  <li>السطر 20: المتغير <i><bdi dir="ltr" class="odt-ltr-term">op</bdi></i> من نوع <i><bdi dir="ltr" class="odt-ltr-term">delegate Operation</bdi></i>. وسيحتوي على قائمة بالطرق ذات توقيع النوع <i><bdi dir="ltr" class="odt-ltr-term">delegate Operation.</bdi> </i>ويتم تعيين مرجع الطريقة الأولى له، وهو مرجع الطريقة الثابتة <i><bdi dir="ltr" class="odt-ltr-term">Class1.Augmenter</bdi></i>.
   </li>
-  <li>السطر 31: يتم تنفيذ <i>الوكيل op</i>: جميع الطرق المشار إليها بواسطة <i>op </i>والتي سيتم تنفيذها. سيتم تنفيذها باستخدام المعلمات التي تم تمريرها إلى <i>الوكيل op. </i>هنا، سيتم تنفيذ الطريقة الثابتة <i>Class1.Augmenter </i>فقط.
+  <li>السطر 31: يتم تنفيذ <i>الوكيل <bdi dir="ltr" class="odt-ltr-term">op</bdi></i>: جميع الطرق المشار إليها بواسطة <i><bdi dir="ltr" class="odt-ltr-term">op</bdi> </i>والتي سيتم تنفيذها. سيتم تنفيذها باستخدام المعلمات التي تم تمريرها إلى <i>الوكيل <bdi dir="ltr" class="odt-ltr-term">op.</bdi> </i>هنا، سيتم تنفيذ الطريقة الثابتة <i><bdi dir="ltr" class="odt-ltr-term">Class1.Augmenter</bdi> </i>فقط.
   </li>
-  <li>السطر 35: يتم إنشاء مثيل <i>c1 </i>لفئة <i>Class1</i>.
+  <li>السطر 35: يتم إنشاء مثيل <i><bdi dir="ltr" class="odt-ltr-term">c1</bdi> </i>لفئة <i><bdi dir="ltr" class="odt-ltr-term">Class1</bdi></i>.
   </li>
-  <li>السطر 37: يتم تعيين الطريقة <i>c1.Ajouter </i>للمثيل إلى <i>الوكيل op</i>. كانت <i>Increase </i>طريقة ثابتة، أما <i>Add </i>فهي طريقة مثيل. أردنا إظهار أنه لا يهم.
+  <li>السطر 37: يتم تعيين الطريقة <i><bdi dir="ltr" class="odt-ltr-term">c1.Ajouter</bdi> </i>للمثيل إلى <i>الوكيل <bdi dir="ltr" class="odt-ltr-term">op</bdi></i>. كانت <i><bdi dir="ltr" class="odt-ltr-term">Increase</bdi> </i>طريقة ثابتة، أما <i><bdi dir="ltr" class="odt-ltr-term">Add</bdi> </i>فهي طريقة مثيل. أردنا إظهار أنه لا يهم.
   </li>
-  <li>السطر 39: يتم تنفيذ <i>الوكيل op</i>: سيتم تنفيذ <i>Add </i>باستخدام المعلمات التي تم تمريرها إلى <i>الوكيل op</i>.
+  <li>السطر 39: يتم تنفيذ <i>الوكيل <bdi dir="ltr" class="odt-ltr-term">op</bdi></i>: سيتم تنفيذ <i><bdi dir="ltr" class="odt-ltr-term">Add</bdi> </i>باستخدام المعلمات التي تم تمريرها إلى <i>الوكيل <bdi dir="ltr" class="odt-ltr-term">op</bdi></i>.
   </li>
-  <li>السطر 42: نفعل الشيء نفسه مع الطريقة الخاصة بالمثيل <i>Subtract</i>.
+  <li>السطر 42: نفعل الشيء نفسه مع الطريقة الخاصة بالمثيل <i><bdi dir="ltr" class="odt-ltr-term">Subtract</bdi></i>.
   </li>
-  <li>السطران 46-47: الطريقتان <i>Add </i>و <i>Subtract </i>في <i>المندوب op</i>.
+  <li>السطران 46-47: الطريقتان <i><bdi dir="ltr" class="odt-ltr-term">Add</bdi> </i>و <i><bdi dir="ltr" class="odt-ltr-term">Subtract</bdi> </i>في <i>المندوب <bdi dir="ltr" class="odt-ltr-term">op</bdi></i>.
   </li>
-  <li>السطر 49: يتم تنفيذ <i>المندوب op</i>: سيتم تنفيذ كل من <i>Add </i>و <i>Subtract </i>باستخدام المعلمات التي تم تمريرها إلى <i>المندوب op</i>.
+  <li>السطر 49: يتم تنفيذ <i>المندوب <bdi dir="ltr" class="odt-ltr-term">op</bdi></i>: سيتم تنفيذ كل من <i><bdi dir="ltr" class="odt-ltr-term">Add</bdi> </i>و <i><bdi dir="ltr" class="odt-ltr-term">Subtract</bdi> </i>باستخدام المعلمات التي تم تمريرها إلى <i>المندوب <bdi dir="ltr" class="odt-ltr-term">op</bdi></i>.
   </li>
-  <li>السطر 51: تتم إزالة الطريقة <i>Subtract </i>من <i>العملية</i> <i>المفوضة</i>.
+  <li>السطر 51: تتم إزالة الطريقة <i><bdi dir="ltr" class="odt-ltr-term">Subtract</bdi> </i>من <i>العملية</i> <i>المفوضة</i>.
   </li>
-  <li>السطر 53: يتم تنفيذ <i>عملية</i> <i>التفويض</i>: سيتم تنفيذ <i>Add</i> المتبقية.
+  <li>السطر 53: يتم تنفيذ <i>عملية</i> <i>التفويض</i>: سيتم تنفيذ <i><bdi dir="ltr" class="odt-ltr-term">Add</bdi></i> المتبقية.
   </li>
 </ul>
 
@@ -1052,7 +1054,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>السطر 20، تتوقع الطريقة <em>Execute</em> مرجعًا إلى كائن من نوع <em>مندوب Operation</em> المُعرَّف في السطر 6. وهذا يؤدي إلى التبديل إلى طرق <em>Execute</em> المختلفة (السطور 26 و28 و32 و36). ويمكن أيضًا تحقيق خاصية تعدد الأشكال هذه باستخدام :</p>
+<p>السطر 20، تتوقع الطريقة <em><bdi dir="ltr" class="odt-ltr-term">Execute</bdi></em> مرجعًا إلى كائن من نوع <em>مندوب <bdi dir="ltr" class="odt-ltr-term">Operation</bdi></em> المُعرَّف في السطر 6. وهذا يؤدي إلى التبديل إلى طرق <em><bdi dir="ltr" class="odt-ltr-term">Execute</bdi></em> المختلفة (السطور 26 و28 و32 و36). ويمكن أيضًا تحقيق خاصية تعدد الأشكال هذه باستخدام :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1097,11 +1099,11 @@
 </code></pre></div>
 
 <ul>
-  <li>الأسطر 6-8: تحدد واجهة [IOperation] طريقة <i>operation</i>.
+  <li>الأسطر 6-8: تحدد واجهة [<bdi dir="ltr" class="odt-ltr-term">IOperation</bdi>] طريقة <i><bdi dir="ltr" class="odt-ltr-term">operation</bdi></i>.
   </li>
-  <li>الأسطر 11-16 و19-24: تنفذ فئتا [Add] و[Subtract] واجهة [IOperation].
+  <li>الأسطر 11-16 و19-24: تنفذ فئتا [<bdi dir="ltr" class="odt-ltr-term">Add</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">Subtract</bdi>] واجهة [<bdi dir="ltr" class="odt-ltr-term">IOperation</bdi>].
   </li>
-  <li>الأسطر 29-31: الطريقة <i>Execute</i> التي يكون المعامل الأول لها من نوع واجهة <i>IOperation</i>. ستتلقى الطريقة <i>Execute </i>بالتتابع، كمعامل أول، مثيلًا للفئة <i>Add </i>ثم مثيلًا للفئة <i>Subtract</i>.
+  <li>الأسطر 29-31: الطريقة <i><bdi dir="ltr" class="odt-ltr-term">Execute</bdi></i> التي يكون المعامل الأول لها من نوع واجهة <i><bdi dir="ltr" class="odt-ltr-term">IOperation</bdi></i>. ستتلقى الطريقة <i><bdi dir="ltr" class="odt-ltr-term">Execute</bdi> </i>بالتتابع، كمعامل أول، مثيلًا للفئة <i><bdi dir="ltr" class="odt-ltr-term">Add</bdi> </i>ثم مثيلًا للفئة <i><bdi dir="ltr" class="odt-ltr-term">Subtract</bdi></i>.
   </li>
 </ul>
 
@@ -1114,36 +1116,36 @@
   </li>
 </ul>
 
-<p>إذا تم استيفاء هذين الشرطين، فيمكننا الاختيار بين التوقيعين التاليين للطريقة <em>Execute</em> :</p>
+<p>إذا تم استيفاء هذين الشرطين، فيمكننا الاختيار بين التوقيعين التاليين للطريقة <em><bdi dir="ltr" class="odt-ltr-term">Execute</bdi></em> :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">int</span> Execute(<span style="color:#2b91af">IOperation</span> op, <span style="color:#0000ff">int</span> n1, <span style="color:#0000ff">int</span> n2)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">int</span> Execute(<span style="color:#2b91af">Opération</span> op, <span style="color:#0000ff">int</span> n1, <span style="color:#0000ff">int</span> n2)</span></span>
 </code></pre></div>
 
-<p>أما الطريقة الثانية، التي تستخدم <em>الوكيل</em>، فيمكن استخدامها بمرونة أكبر. في التوقيع الأول، يجب أن تنفذ المعلمة الأولى للطريقة واجهة <em>IOperation</em>. وهذا يتطلب إنشاء فئة لتعريف الطريقة التي سيتم تمريرها كمعلمة أولى إلى <em>Execute</em>. أما في التوقيع الثاني، فأي طريقة موجودة ذات التوقيع الصحيح ستفي بالغرض. ولا يلزم إنشاء أي بنية إضافية.</p>
+<p>أما الطريقة الثانية، التي تستخدم <em>الوكيل</em>، فيمكن استخدامها بمرونة أكبر. في التوقيع الأول، يجب أن تنفذ المعلمة الأولى للطريقة واجهة <em><bdi dir="ltr" class="odt-ltr-term">IOperation</bdi></em>. وهذا يتطلب إنشاء فئة لتعريف الطريقة التي سيتم تمريرها كمعلمة أولى إلى <em><bdi dir="ltr" class="odt-ltr-term">Execute</bdi></em>. أما في التوقيع الثاني، فأي طريقة موجودة ذات التوقيع الصحيح ستفي بالغرض. ولا يلزم إنشاء أي بنية إضافية.</p>
 <p><a id="refheading10401651168783983"></a></p>
 <h2 id="84">8.4. <span style="color: #4f81bd">إدارة الأحداث</span></h2>
-<p>يمكن استخدام فئات <em>تفويض</em> الكائنات لتعريف الأحداث. يمكن لفئة <em>C1</em> تعريف حدث <em>evt</em> على النحو التالي:</p>
+<p>يمكن استخدام فئات <em>تفويض</em> الكائنات لتعريف الأحداث. يمكن لفئة <em><bdi dir="ltr" class="odt-ltr-term">C1</bdi></em> تعريف حدث <em><bdi dir="ltr" class="odt-ltr-term">evt</bdi></em> على النحو التالي:</p>
 <ul>
-  <li>يتم تعريف نوع <i>التفويض </i>داخل أو خارج الفئة C1:
+  <li>يتم تعريف نوع <i>التفويض </i>داخل أو خارج الفئة <bdi dir="ltr" class="odt-ltr-term">C1:</bdi>
   </li>
 </ul>
 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">delegate</span><span class="w"> </span><span class="n">TResult</span><span class="w"> </span><span class="nf">Evt</span><span class="p">(</span><span class="n">T1</span><span class="w"> </span><span class="n">param1</span><span class="p">,</span><span class="w"> </span><span class="n">T2</span><span class="w"> </span><span class="n">param2</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span>
 </code></pre></div>
 <ul>
-  <li>تُعرّف الفئة <i>C1 مندوبًا Evt </i>:
+  <li>تُعرّف الفئة <i><bdi dir="ltr" class="odt-ltr-term">C1</bdi> مندوبًا <bdi dir="ltr" class="odt-ltr-term">Evt</bdi> </i>:
   </li>
 </ul>
 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>public Evt Evt1;
 </code></pre></div>
 <ul>
-  <li>عندما ترغب مثيل الفئة <i>C1 </i>في الإبلاغ عن حدث، فإنها ستنفذ <i>مندوبها Evt1 </i>ممررة له المعلمات المحددة بواسطة <i>المندوب Evt</i>. سيتم بعد ذلك تنفيذ جميع الطرق المسجلة في <i>المندوب Evt1 </i>باستخدام هذه المعلمات. يمكننا القول بأنها قد تم إخطارها بالحدث <i>Evt1</i>.
+  <li>عندما ترغب مثيل الفئة <i><bdi dir="ltr" class="odt-ltr-term">C1</bdi> </i>في الإبلاغ عن حدث، فإنها ستنفذ <i>مندوبها <bdi dir="ltr" class="odt-ltr-term">Evt1</bdi> </i>ممررة له المعلمات المحددة بواسطة <i>المندوب <bdi dir="ltr" class="odt-ltr-term">Evt</bdi></i>. سيتم بعد ذلك تنفيذ جميع الطرق المسجلة في <i>المندوب <bdi dir="ltr" class="odt-ltr-term">Evt1</bdi> </i>باستخدام هذه المعلمات. يمكننا القول بأنها قد تم إخطارها بالحدث <i><bdi dir="ltr" class="odt-ltr-term">Evt1</bdi></i>.
   </li>
-  <li>إذا أراد كائن <i>c2 </i>يستخدم <i>c1 </i>أن يتم إخطاره عند حدوث حدث <i>Evt1 </i>على الكائن c1، فسيقوم بتسجيل أحد <i>c2.M </i>الخاص به في الكائن المفوض <i>c1.Evt1 </i>للكائن <i>c1. </i>سيتم تنفيذ <i>c2.M </i>الخاص به في كل مرة يحدث فيها الحدث <i>Evt1 </i>على الكائن <i>c1</i>. يمكنهم أيضًا إلغاء الاشتراك إذا لم يعودوا يرغبون في تلقي إخطارات بالحدث.
+  <li>إذا أراد كائن <i><bdi dir="ltr" class="odt-ltr-term">c2</bdi> </i>يستخدم <i><bdi dir="ltr" class="odt-ltr-term">c1</bdi> </i>أن يتم إخطاره عند حدوث حدث <i><bdi dir="ltr" class="odt-ltr-term">Evt1</bdi> </i>على الكائن <bdi dir="ltr" class="odt-ltr-term">c1</bdi>، فسيقوم بتسجيل أحد <i><bdi dir="ltr" class="odt-ltr-term">c2.M</bdi> </i>الخاص به في الكائن المفوض <i><bdi dir="ltr" class="odt-ltr-term">c1.Evt1</bdi> </i>للكائن <i><bdi dir="ltr" class="odt-ltr-term">c1.</bdi> </i>سيتم تنفيذ <i><bdi dir="ltr" class="odt-ltr-term">c2.M</bdi> </i>الخاص به في كل مرة يحدث فيها الحدث <i><bdi dir="ltr" class="odt-ltr-term">Evt1</bdi> </i>على الكائن <i><bdi dir="ltr" class="odt-ltr-term">c1</bdi></i>. يمكنهم أيضًا إلغاء الاشتراك إذا لم يعودوا يرغبون في تلقي إخطارات بالحدث.
   </li>
-  <li>نظرًا لأن الكائن المفوض <i>c1.Evt1 </i>يمكنه تسجيل عدة طرق، يمكن لـ <i>ci</i> مختلفة التسجيل مع <i>c1.Evt1 </i>لتلقي إشعار بالحدث <i>Evt1 </i>على <i>c1</i>.
+  <li>نظرًا لأن الكائن المفوض <i><bdi dir="ltr" class="odt-ltr-term">c1.Evt1</bdi> </i>يمكنه تسجيل عدة طرق، يمكن لـ <i><bdi dir="ltr" class="odt-ltr-term">ci</bdi></i> مختلفة التسجيل مع <i><bdi dir="ltr" class="odt-ltr-term">c1.Evt1</bdi> </i>لتلقي إشعار بالحدث <i><bdi dir="ltr" class="odt-ltr-term">Evt1</bdi> </i>على <i><bdi dir="ltr" class="odt-ltr-term">c1</bdi></i>.
   </li>
 </ul>
 
@@ -1157,7 +1159,7 @@
   </li>
 </ul>
 
-<p>يحدد إطار عمل .NET ما يلي:</p>
+<p>يحدد إطار عمل .<bdi dir="ltr" class="odt-ltr-term">NET</bdi> ما يلي:</p>
 <ul>
   <li>توقيع قياسي <i>للمندوب </i>حدث
   </li>
@@ -1166,16 +1168,16 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">public</span><span class="w"> </span><span class="k">delegate</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">MyEventHandler</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">source</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">evtInfo</span><span class="p">);</span>
 </code></pre></div>
 <ul>
-  <li><i>source </i>: الكائن الذي أبلغ عن الحدث
+  <li><i><bdi dir="ltr" class="odt-ltr-term">source</bdi> </i>: الكائن الذي أبلغ عن الحدث
   </li>
-  <li><i>evtInfo</i>: كائن من نوع <i>EventArgs </i>أو مشتق منه يوفر معلومات حول الحدث
+  <li><i><bdi dir="ltr" class="odt-ltr-term">evtInfo</bdi></i>: كائن من نوع <i><bdi dir="ltr" class="odt-ltr-term">EventArgs</bdi> </i>أو مشتق منه يوفر معلومات حول الحدث
   </li>
-  <li>يجب أن ينتهي اسم <i>المندوب </i>بـ <i>EventHandler</i>
+  <li>يجب أن ينتهي اسم <i>المندوب </i>بـ <i><bdi dir="ltr" class="odt-ltr-term">EventHandler</bdi></i>
   </li>
 </ul>
 
 <ul>
-  <li>طريقة قياسية لإعلان <i>MyEventHandler </i>في فئة:
+  <li>طريقة قياسية لإعلان <i><bdi dir="ltr" class="odt-ltr-term">MyEventHandler</bdi> </i>في فئة:
   </li>
 </ul>
 
@@ -1187,48 +1189,48 @@
 <a id="__codelineno-11-3" name="__codelineno-11-3"></a>...
 <a id="__codelineno-11-4" name="__codelineno-11-4"></a>}
 </code></pre></div></td></tr></table></div>
-<p>نوع <em>Evt1</em> هو <em>مندوب</em>. توجد الكلمة الرئيسية <em>event</em> لتقييد العمليات التي يمكن إجراؤها عليه:</p>
+<p>نوع <em><bdi dir="ltr" class="odt-ltr-term">Evt1</bdi></em> هو <em>مندوب</em>. توجد الكلمة الرئيسية <em><bdi dir="ltr" class="odt-ltr-term">event</bdi></em> لتقييد العمليات التي يمكن إجراؤها عليه:</p>
 <ul>
-  <li>من خارج الفصل C1، لا يمكن إجراء سوى عمليات += و -=. وهذا يمنع حذف الطرق المشتركة في الحدث (بسبب خطأ المطور، على سبيل المثال). يمكنك ببساطة الاشتراك (+=) أو إلغاء الاشتراك (-=) في الحدث.
+  <li>من خارج الفصل <bdi dir="ltr" class="odt-ltr-term">C1</bdi>، لا يمكن إجراء سوى عمليات += و -=. وهذا يمنع حذف الطرق المشتركة في الحدث (بسبب خطأ المطور، على سبيل المثال). يمكنك ببساطة الاشتراك (+=) أو إلغاء الاشتراك (-=) في الحدث.
   </li>
-  <li>لا يمكن إلا لمثيل من النوع <i>C1 </i>تنفيذ الاستدعاء <i>Evt1(source,evtInfo) </i>الذي يؤدي إلى تشغيل الطرق المشتركة في <i>Evt1.</i>
+  <li>لا يمكن إلا لمثيل من النوع <i><bdi dir="ltr" class="odt-ltr-term">C1</bdi> </i>تنفيذ الاستدعاء <i><bdi dir="ltr" class="odt-ltr-term">Evt1</bdi>(<bdi dir="ltr" class="odt-ltr-term">source</bdi>,<bdi dir="ltr" class="odt-ltr-term">evtInfo</bdi>) </i>الذي يؤدي إلى تشغيل الطرق المشتركة في <i><bdi dir="ltr" class="odt-ltr-term">Evt1.</bdi></i>
   </li>
 </ul>
 
-<p>يوفر إطار عمل .NET طريقة عامة تفي بتوقيع <em>مندوب</em> الحدث:</p>
+<p>يوفر إطار عمل .<bdi dir="ltr" class="odt-ltr-term">NET</bdi> طريقة عامة تفي بتوقيع <em>مندوب</em> الحدث:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">public</span><span class="w"> </span><span class="k">delegate</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="n">EventHandler</span><span class="o">&lt;</span><span class="n">TEventArgs</span><span class="o">&gt;</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">source</span><span class="p">,</span><span class="w"> </span><span class="n">TEventArgs</span><span class="w"> </span><span class="n">evtInfo</span><span class="p">)</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">TEventArgs</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">EventArgs</span>
 </code></pre></div>
 <ul>
-  <li>يستخدم <i>الوكيل EventHandler </i>النوع العام <i>TEventArgs </i>وهو نوع المعلمة الثانية
+  <li>يستخدم <i>الوكيل <bdi dir="ltr" class="odt-ltr-term">EventHandler</bdi> </i>النوع العام <i><bdi dir="ltr" class="odt-ltr-term">TEventArgs</bdi> </i>وهو نوع المعلمة الثانية
   </li>
-  <li>يجب أن يكون النوع <i>TEventArgs </i>مشتقًا من <i>EventsArgs </i>(<i>حيث TEventArgs : EventArgs</i>)
+  <li>يجب أن يكون النوع <i><bdi dir="ltr" class="odt-ltr-term">TEventArgs</bdi> </i>مشتقًا من <i><bdi dir="ltr" class="odt-ltr-term">EventsArgs</bdi> </i>(<i>حيث <bdi dir="ltr" class="odt-ltr-term">TEventArgs</bdi> : <bdi dir="ltr" class="odt-ltr-term">EventArgs</bdi></i>)
   </li>
 </ul>
 
-<p>مع هذا <em>المندوب</em> العام، سيتبع إعلان الحدث <em>X</em> في الفئة C المخطط الموصى به التالي:</p>
+<p>مع هذا <em>المندوب</em> العام، سيتبع إعلان الحدث <em><bdi dir="ltr" class="odt-ltr-term">X</bdi></em> في الفئة <bdi dir="ltr" class="odt-ltr-term">C</bdi> المخطط الموصى به التالي:</p>
 <ul>
-  <li>تحديد نوع <i>XEventArgs </i>مشتق من <i>EventArgs </i>لتغليف معلومات الحدث <i>X</i>
+  <li>تحديد نوع <i><bdi dir="ltr" class="odt-ltr-term">XEventArgs</bdi> </i>مشتق من <i><bdi dir="ltr" class="odt-ltr-term">EventArgs</bdi> </i>لتغليف معلومات الحدث <i><bdi dir="ltr" class="odt-ltr-term">X</bdi></i>
   </li>
-  <li>تحديد  في الفئة C <i>EventHandler&lt;XEventArgs&gt;</i>.
+  <li>تحديد  في الفئة <bdi dir="ltr" class="odt-ltr-term">C</bdi> <i><bdi dir="ltr" class="odt-ltr-term">EventHandler</bdi>&lt;<bdi dir="ltr" class="odt-ltr-term">XEventArgs</bdi>&gt;</i>.
   </li>
-  <li>تحديد  في الفئة C طريقة محمية 
+  <li>تحديد  في الفئة <bdi dir="ltr" class="odt-ltr-term">C</bdi> طريقة محمية 
   </li>
 </ul>
 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">protected</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnXHandler</span><span class="p">(</span><span class="n">XEventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">);</span>
 </code></pre></div>
-<p>لـ&quot;نشر&quot; الحدث X للمشتركين.</p>
+<p>لـ&quot;نشر&quot; الحدث <bdi dir="ltr" class="odt-ltr-term">X</bdi> للمشتركين.</p>
 <p>انظر المثال التالي:</p>
 <ul>
-  <li>تغلف الفئة <i>Transmitter </i>درجة حرارة. يتم رصد هذه الدرجة. عندما تتجاوز هذه الدرجة عتبة معينة، يتم تشغيل حدث. سنسمي هذا الحدث <i>TemperatureTropHaute</i>. سيتم تغليف المعلومات المتعلقة بهذا الحدث في نوع <i>TemperatureTropHauteEventArgs.</i>
+  <li>تغلف الفئة <i><bdi dir="ltr" class="odt-ltr-term">Transmitter</bdi> </i>درجة حرارة. يتم رصد هذه الدرجة. عندما تتجاوز هذه الدرجة عتبة معينة، يتم تشغيل حدث. سنسمي هذا الحدث <i><bdi dir="ltr" class="odt-ltr-term">TemperatureTropHaute</bdi></i>. سيتم تغليف المعلومات المتعلقة بهذا الحدث في نوع <i><bdi dir="ltr" class="odt-ltr-term">TemperatureTropHauteEventArgs.</bdi></i>
   </li>
-  <li>تقوم فئة <i>Underwriter </i>بالاشتراك في الحدث السابق. عند إخطارها بالحدث، تعرض رسالة على وحدة التحكم.
+  <li>تقوم فئة <i><bdi dir="ltr" class="odt-ltr-term">Underwriter</bdi> </i>بالاشتراك في الحدث السابق. عند إخطارها بالحدث، تعرض رسالة على وحدة التحكم.
   </li>
-  <li>يقوم برنامج وحدة التحكم بإنشاء جهاز إرسال واثنين من المشتركين. يقوم بإدخال درجات الحرارة من لوحة المفاتيح وتخزينها في <i>Transmitter</i>. إذا كانت درجة الحرارة مرتفعة جدًا،  يقوم  <i>Transmitter </i>بنشر الحدث <i>TemperatureTropHaute.</i>
+  <li>يقوم برنامج وحدة التحكم بإنشاء جهاز إرسال واثنين من المشتركين. يقوم بإدخال درجات الحرارة من لوحة المفاتيح وتخزينها في <i><bdi dir="ltr" class="odt-ltr-term">Transmitter</bdi></i>. إذا كانت درجة الحرارة مرتفعة جدًا،  يقوم  <i><bdi dir="ltr" class="odt-ltr-term">Transmitter</bdi> </i>بنشر الحدث <i><bdi dir="ltr" class="odt-ltr-term">TemperatureTropHaute.</bdi></i>
   </li>
 </ul>
 
-<p>للتوافق مع الطريقة الموصى بها لإدارة الأحداث، نحدد أولاً النوع <em>TemperatureTropHauteEventArgs</em> لتغليف معلومات الحدث:</p>
+<p>للتوافق مع الطريقة الموصى بها لإدارة الأحداث، نحدد أولاً النوع <em><bdi dir="ltr" class="odt-ltr-term">TemperatureTropHauteEventArgs</bdi></em> لتغليف معلومات الحدث:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1247,11 +1249,11 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 6: المعلومات التي تحتوي عليها <i>TemperatureTropHauteEventArgs </i>هي درجة الحرارة التي تسببت في الحدث <i>TemperatureTropHaute</i>.
+  <li>السطر 6: المعلومات التي تحتوي عليها <i><bdi dir="ltr" class="odt-ltr-term">TemperatureTropHauteEventArgs</bdi> </i>هي درجة الحرارة التي تسببت في الحدث <i><bdi dir="ltr" class="odt-ltr-term">TemperatureTropHaute</bdi></i>.
   </li>
 </ul>
 
-<p>الفئة <em>Transmitter</em> هي كما يلي:</p>
+<p>الفئة <em><bdi dir="ltr" class="odt-ltr-term">Transmitter</bdi></em> هي كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1290,19 +1292,19 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 5: عتبة درجة الحرارة التي عند تجاوزها سيتم نشر الحدث <i>TemperatureTropHaute</i>.
+  <li>السطر 5: عتبة درجة الحرارة التي عند تجاوزها سيتم نشر الحدث <i><bdi dir="ltr" class="odt-ltr-term">TemperatureTropHaute</bdi></i>.
   </li>
   <li>السطر 10: المرسل له اسم لأغراض التعريف
   </li>
-  <li>السطر 12: الحدث  <i>TemperatureTropHaute</i>.
+  <li>السطر 12: الحدث  <i><bdi dir="ltr" class="odt-ltr-term">TemperatureTropHaute</bdi></i>.
   </li>
-  <li>الأسطر 15-26: الطريقة <i>get </i>التي تحدد درجة الحرارة والطريقة <i>set </i>التي تسجلها. هذه هي <i>المجموعة</i> التي تنشر الحدث <i>TemperatureTropHaute </i>إذا تجاوزت درجة الحرارة المراد تسجيلها الحد المحدد في السطر 5. وهي تنشر الحدث باستخدام <i>OnTemperatureTropHauteHandler </i>من السطر 29 عن طريق تمرير <i>TemperatureTropHauteEventArgs </i>الذي تم فيه تسجيل درجة الحرارة التي تجاوزت الحد المحدد.
+  <li>الأسطر 15-26: الطريقة <i><bdi dir="ltr" class="odt-ltr-term">get</bdi> </i>التي تحدد درجة الحرارة والطريقة <i><bdi dir="ltr" class="odt-ltr-term">set</bdi> </i>التي تسجلها. هذه هي <i>المجموعة</i> التي تنشر الحدث <i><bdi dir="ltr" class="odt-ltr-term">TemperatureTropHaute</bdi> </i>إذا تجاوزت درجة الحرارة المراد تسجيلها الحد المحدد في السطر 5. وهي تنشر الحدث باستخدام <i><bdi dir="ltr" class="odt-ltr-term">OnTemperatureTropHauteHandler</bdi> </i>من السطر 29 عن طريق تمرير <i><bdi dir="ltr" class="odt-ltr-term">TemperatureTropHauteEventArgs</bdi> </i>الذي تم فيه تسجيل درجة الحرارة التي تجاوزت الحد المحدد.
   </li>
-  <li>الأسطر 29-32: يتم نشر الحدث <i>TemperatureTropHaute </i>مع المرسل نفسه كمعلمة أولى والكائن <i>TemperatureTropHauteEventArgs</i> الذي تم استلامه كمعلمة.
+  <li>الأسطر 29-32: يتم نشر الحدث <i><bdi dir="ltr" class="odt-ltr-term">TemperatureTropHaute</bdi> </i>مع المرسل نفسه كمعلمة أولى والكائن <i><bdi dir="ltr" class="odt-ltr-term">TemperatureTropHauteEventArgs</bdi></i> الذي تم استلامه كمعلمة.
   </li>
 </ul>
 
-<p>الفئة <em>Underwriter</em> التي ستشترك في الحدث <em>TemperatureTropHaute</em> هي كما يلي:</p>
+<p>الفئة <em><bdi dir="ltr" class="odt-ltr-term">Underwriter</bdi></em> التي ستشترك في الحدث <em><bdi dir="ltr" class="odt-ltr-term">TemperatureTropHaute</bdi></em> هي كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1323,13 +1325,13 @@
 <ul>
   <li>السطر 6: يتم تحديد كل مشترك بالاسم.
   </li>
-  <li>الأسطر 9-12: الطريقة المراد ربطها بالحدث <i>TemperatureTropHaute</i>. وهي تحمل توقيع النوع <i>المندوب EventHandler&lt;TEventArgs&gt; </i>الذي يجب أن يتوفر فيه مدير الأحداث. تعرض هذه الطريقة على وحدة التحكم: اسم المشترك الذي يعرض الرسالة، واسم المرسل الذي أبلغ عن الحدث، ودرجة الحرارة التي أدت إلى حدوث الحدث.
+  <li>الأسطر 9-12: الطريقة المراد ربطها بالحدث <i><bdi dir="ltr" class="odt-ltr-term">TemperatureTropHaute</bdi></i>. وهي تحمل توقيع النوع <i>المندوب <bdi dir="ltr" class="odt-ltr-term">EventHandler</bdi>&lt;<bdi dir="ltr" class="odt-ltr-term">TEventArgs</bdi>&gt; </i>الذي يجب أن يتوفر فيه مدير الأحداث. تعرض هذه الطريقة على وحدة التحكم: اسم المشترك الذي يعرض الرسالة، واسم المرسل الذي أبلغ عن الحدث، ودرجة الحرارة التي أدت إلى حدوث الحدث.
   </li>
-  <li>لا يتم الاشتراك في الحدث <i>TemperatureTropHaute </i>لكائن <i>Transmitter </i>في الفصل <i>Underwriter</i>. سيتم ذلك بواسطة فصل خارجي.
+  <li>لا يتم الاشتراك في الحدث <i><bdi dir="ltr" class="odt-ltr-term">TemperatureTropHaute</bdi> </i>لكائن <i><bdi dir="ltr" class="odt-ltr-term">Transmitter</bdi> </i>في الفصل <i><bdi dir="ltr" class="odt-ltr-term">Underwriter</bdi></i>. سيتم ذلك بواسطة فصل خارجي.
   </li>
 </ul>
 
-<p>يربط البرنامج [Program.cs] جميع هذه العناصر معًا:</p>
+<p>يربط البرنامج [<bdi dir="ltr" class="odt-ltr-term">Program.cs</bdi>] جميع هذه العناصر معًا:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">namespace</span> Chap6 {</span></span>
@@ -1371,11 +1373,11 @@
 <ul>
   <li>السطر 6: إنشاء جهاز الإرسال
   </li>
-  <li>الأسطر 8-14: إنشاء مشتركين اثنين في حدث <i>TemperatureTropHaute </i>الخاص بجهاز الإرسال.
+  <li>الأسطر 8-14: إنشاء مشتركين اثنين في حدث <i><bdi dir="ltr" class="odt-ltr-term">TemperatureTropHaute</bdi> </i>الخاص بجهاز الإرسال.
   </li>
   <li>الأسطر 20-32: حلقة إدخال درجة الحرارة من لوحة المفاتيح
   </li>
-  <li>السطر 24: إذا كانت درجة الحرارة المدخلة صحيحة، يتم إرسالها إلى الكائن <i>Transmitter </i>e1 الذي سيطلق <i>TemperatureTropHaute </i>إذا كانت درجة الحرارة أعلى من 19 درجة مئوية.
+  <li>السطر 24: إذا كانت درجة الحرارة المدخلة صحيحة، يتم إرسالها إلى الكائن <i><bdi dir="ltr" class="odt-ltr-term">Transmitter</bdi> </i><bdi dir="ltr" class="odt-ltr-term">e1</bdi> الذي سيطلق <i><bdi dir="ltr" class="odt-ltr-term">TemperatureTropHaute</bdi> </i>إذا كانت درجة الحرارة أعلى من 19 درجة مئوية.
   </li>
 </ul>
 
