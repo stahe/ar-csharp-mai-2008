@@ -1,0 +1,962 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="تعلم لغة C# الإصدار 3.0 باستخدام .NET Framework 3.5">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/ar-csharp-mai-2008/tthbyt-visual-c-2008.html">
+      
+      
+        <link rel="prev" href="mqdm.html">
+      
+      
+        <link rel="next" href="----ssyt-l-c.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>2. تثبيت Visual C# 2008 - تعلم لغة C# الإصدار 3.0 باستخدام .NET Framework 3.5</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "تعلم لغة C# الإصدار 3.0 باستخدام .NET Framework 3.5";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2-visual-c-2008" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="تعلم لغة C# الإصدار 3.0 باستخدام .NET Framework 3.5" class="md-header__button md-logo" aria-label="تعلم لغة C# الإصدار 3.0 باستخدام .NET Framework 3.5" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            تعلم لغة C# الإصدار 3.0 باستخدام .NET Framework 3.5
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2. تثبيت Visual C# 2008
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="التبديل إلى الوضع الداكن"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="التبديل إلى الوضع الداكن" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="التبديل إلى الوضع الفاتح"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="التبديل إلى الوضع الفاتح" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/stahe/ar-csharp-mai-2008" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="تعلم لغة C# الإصدار 3.0 باستخدام .NET Framework 3.5" class="md-nav__button md-logo" aria-label="تعلم لغة C# الإصدار 3.0 باستخدام .NET Framework 3.5" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    تعلم لغة C# الإصدار 3.0 باستخدام .NET Framework 3.5
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/stahe/ar-csharp-mai-2008" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مرحبًا بكم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mqdm.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. مقدمة
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="tthbyt-visual-c-2008.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. تثبيت Visual C# 2008
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="----ssyt-l-c.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.     أساسيات لغة C#
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lfyt-lhykl-lwjht.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. الفئات، الهياكل، الواجهات
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="fyt-net-shy-lstkhdm.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. فئات .NET شائعة الاستخدام
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bn-thlthy-lbqt.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. بنى ثلاثية الطبقات
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lwjht-lrswmy-bstkhdm-c-w-vsnet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. الواجهات الرسومية باستخدام C# و VS.NET
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dth-lmstkhdm.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. أحداث المستخدم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lwwl-l-qd-lbynt.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. الوصول إلى قاعدة البيانات
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="khyw-ltnfydh.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. خيوط التنفيذ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="brmj-lntrnt.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. برمجة الإنترنت
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="khdmt-lwyb.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. خدمات الويب
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="yutb.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. يُتبع..
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lmlq.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. الملاحق
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<p><a id="refheading10399091168783983"></a></p>
+<h1 id="2-visual-c-2008">2. <span style="color: #365f91">تثبيت Visual C# 2008</span></h1>
+<p>في نهاية يناير 2008، أصبحت إصدارات Express من Visual Studio 2008 متاحة للتنزيل [2] على العنوان التالي [1]: [http://msdn2.microsoft.com/en-fr/express/future/default(en-us).aspx] :</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000745000001985C486F1A.png" width="680" height="149" style="display:inline-block; margin:4px;width:17.997cm;height:3.946cm;" class="odt-zoomable" data-zoom-src="images/1000000000000745000001985C486F1A.png" /></td></tr></table>
+
+<ul>
+  <li>[1]: عنوان التنزيل
+  </li>
+  <li>[2]: علامة التبويب &quot;التنزيلات&quot;
+  </li>
+  <li>[3]: تنزيل C# 2008
+  </li>
+</ul>
+
+<p>عند تثبيت C# 2008، ستقوم أيضًا بتثبيت:</p>
+<ul>
+  <li>إطار عمل .NET 3.5
+  </li>
+  <li>SGBD SQL Server Compact 3.5
+  </li>
+  <li>وثائق MSDN
+  </li>
+</ul>
+
+<p>لإنشاء أول برنامج لك باستخدام C# 2008، اتبع الخطوات التالية بعد تشغيل C# :</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000008390000023731DB14B4.png" width="680" height="183" style="display:inline-block; margin:4px;width:17.997cm;height:4.847cm;" class="odt-zoomable" data-zoom-src="images/10000000000008390000023731DB14B4.png" /></td></tr></table>
+
+<ul>
+  <li>[1]: اختر الخيار &quot;ملف / مشروع جديد&quot;
+  </li>
+  <li>[2]: اختر تطبيق Console
+  </li>
+  <li>[3]: قم بتسمية المشروع - سيتم تغيير الاسم أدناه
+  </li>
+  <li>[4]: قم بالتحقق
+  </li>
+  <li>[4ب]: تم إنشاء المشروع
+  </li>
+  <li>[4c]: <i>Program.cs </i>هو برنامج C# الذي تم إنشاؤه افتراضيًا في المشروع.
+  </li>
+</ul>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007D1000002725EBFED22.png" width="680" height="213" style="display:inline-block; margin:4px;width:17.997cm;height:5.63cm;" class="odt-zoomable" data-zoom-src="images/10000000000007D1000002725EBFED22.png" /></td></tr></table>
+
+<ul>
+  <li>لم تسأل الخطوة 1 عن مكان حفظ المشروع. إذا لم نقم بأي شيء، فسيتم حفظه في موقع افتراضي قد لا يناسبنا. تُستخدم الخيار [5] لحفظ المشروع في مجلد محدد.
+  </li>
+  <li>يمكنك تسمية المشروع باسم جديد في [6] وتحديد مجلده في [7]. للقيام بذلك، يمكنك استخدام [8]. إذا اخترت Ici، فسيتم حفظ المشروع في المجلد [C:\temp\08-01-31MyApplication1].
+  </li>
+  <li>عن طريق تحديد [9]، يمكنك إنشاء مجلد للحل المسمى في [10]. إذا كان <i>Solution1 </i>هو اسم الحل:
+  </li>
+  <li>سيتم إنشاء مجلد [C:\temp\08-01-31\Solution1] للحل <i>Solution1</i>
+  </li>
+  <li>سيتم إنشاء مجلد [C:\temp\08-01-31\Solution1\MyApplication1] للمشروع <i>MyApplication1</i>. هذا الحل مناسب تمامًا للحلول المكونة من عدة مشاريع. سيكون لكل مشروع مجلد فرعي في مجلد الحل.
+  </li>
+</ul>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000078C000001FD1922CEB4.png" width="680" height="179" style="display:inline-block; margin:4px;width:17.997cm;height:4.741cm;" class="odt-zoomable" data-zoom-src="images/100000000000078C000001FD1922CEB4.png" /></td></tr></table>
+
+<ul>
+  <li>في [1]: <i>نافذة</i> ملفات مشروع <i>MyApplication1</i>
+  </li>
+  <li>في [2]: محتوياته
+  </li>
+  <li>في [3]: المشروع في مستكشف المشاريع في Visual Studio
+  </li>
+</ul>
+
+<p>دعونا نعدل كود ملف [Program.cs] [3] على النحو التالي:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">namespace</span> ConsoleApplication1 {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">class</span> <span style="color:#2b91af">Program</span> {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">static</span> <span style="color:#0000ff">void</span> Main(<span style="color:#0000ff">string</span>[] args) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#2b91af">Console</span>.WriteLine(<span style="color:#a31515">&quot;1er essai avec C# 2008&quot;</span>);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+</code></pre></div>
+
+<ul>
+  <li>السطر 3: مساحة اسم الفئة المحددة في السطر 4. الاسم الكامل للفئة المحددة في السطر 4 هو <i>ConsoleApplication1.Program</i>.
+  </li>
+  <li>الأسطر 5-7: الطريقة الثابتة <i>Main </i>التي يتم تنفيذها عند تنفيذ
+  </li>
+  <li>السطر 6: عرض الشاشة
+  </li>
+</ul>
+
+<p>يمكن تشغيل البرنامج على النحو التالي:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000069F00000161B1380E1B.png" width="680" height="142" style="display:inline-block; margin:4px;width:17.997cm;height:3.748cm;" class="odt-zoomable" data-zoom-src="images/100000000000069F00000161B1380E1B.png" /></td></tr></table>
+
+<ul>
+  <li>[Ctrl-F5] لتشغيل المشروع، في [1]
+  </li>
+  <li>في [2]، يتم الحصول على عرض وحدة التحكم.
+  </li>
+</ul>
+
+<p>أدى التنفيذ إلى إضافة ملفات إلى:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000050400000248D9EF2344.png" width="642" height="292" style="display:inline-block; margin:4px;width:16.986cm;height:7.726cm;" class="odt-zoomable" data-zoom-src="images/100000000000050400000248D9EF2344.png" /></td></tr></table>
+
+<ul>
+  <li>في [1]، عرض جميع ملفات المشروع
+  </li>
+  <li>في [2]: يحتوي المجلد [Release] على الملف القابل للتنفيذ للمشروع [MyApplication1.exe].
+  </li>
+  <li>في [3]: المجلد [Debug]، الذي سيحتوي أيضًا على ملف تنفيذي [MyApplication1.exe] للمشروع لو تم تشغيله في وضع [Debug] (مفتاح F5 بدلاً من Ctrl-F5). هذا الملف التنفيذي يختلف عن الملف الذي تم الحصول عليه في وضع [Release]. فهو يحتوي على معلومات إضافية تتيح إجراء عملية التصحيح.
+  </li>
+</ul>
+
+<p>يمكن إضافة مشروع جديد إلى الحل الحالي:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007A80000029AD8D93BBE.png" width="680" height="231" style="display:inline-block; margin:4px;width:17.997cm;height:6.115cm;" class="odt-zoomable" data-zoom-src="images/10000000000007A80000029AD8D93BBE.png" /></td></tr></table>
+
+<ul>
+  <li>[1]: انقر بزر الماوس الأيمن على الحل (وليس المشروع) / Add / New Project
+  </li>
+  <li>[2]: حدد نوع التطبيق
+  </li>
+  <li>[3]: المجلد الافتراضي هو المجلد الذي يحتوي على مجلد المشروع الحالي [MyApplication1]
+  </li>
+  <li>[4]: قم بتسمية المشروع الجديد
+  </li>
+</ul>
+
+<p>يصبح للحل بعد ذلك مشروعان:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051D000002A7D8BF85A6.png" width="458" height="238" style="display:inline-block; margin:4px;width:12.12cm;height:6.287cm;" class="odt-zoomable" data-zoom-src="images/100000000000051D000002A7D8BF85A6.png" /></td></tr></table>
+
+<ul>
+  <li>[1]: المشروع الجديد
+  </li>
+  <li>[2]: عند تنفيذ الحل باستخدام (F5 أو Ctrl-F5)، يتم تنفيذ أحد المشروعين. وهذا ما يُسمى [2].
+  </li>
+</ul>
+
+<p>يمكن أن يحتوي المشروع على عدة فئات قابلة للتنفيذ (تحتوي على طريقة Main). في هذه الحالة، يجب تحديد الفئة المراد تنفيذها عند تشغيل المشروع:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000075F00000331E5A90CB5.png" width="680" height="295" style="display:inline-block; margin:4px;width:17.997cm;height:7.793cm;" class="odt-zoomable" data-zoom-src="images/100000000000075F00000331E5A90CB5.png" /></td></tr></table>
+
+<ul>
+  <li>[1، 2]: نسخ/لصق ملف [Program.cs]
+  </li>
+  <li>[3]: نسخ/لصق النتيجة
+  </li>
+  <li>[4، 5]: إعادة تسمية الملفين
+  </li>
+</ul>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000190000000E58F7EF598.png" width="140" height="80" style="display:inline-block; margin:4px;width:3.701cm;height:2.118cm;" class="odt-zoomable" data-zoom-src="images/1000000000000190000000E58F7EF598.png" /></td></tr></table>
+
+<p>الفئة P1 (السطر 4):</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">namespace</span> MyApplication2 {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">class</span> <span style="color:#2b91af">P1</span> {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">static</span> <span style="color:#0000ff">void</span> Main(<span style="color:#0000ff">string</span>[] args) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+</code></pre></div>
+
+<p>فئة P2 (السطر 4):</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">namespace</span> MyApplication2 {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">class</span> <span style="color:#2b91af">P2</span> {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">static</span> <span style="color:#0000ff">void</span> Main(<span style="color:#0000ff">string</span>[] args) {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+</code></pre></div>
+
+<p>يحتوي مشروع [MyApplication2] الآن على فئتين بهما طريقة ثابتة <em>Main</em>. يجب إخبار المشروع بأيهما:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000068B0000038B180AD1D6.png" width="586" height="317" style="display:inline-block; margin:4px;width:15.51cm;height:8.4cm;" class="odt-zoomable" data-zoom-src="images/100000000000068B0000038B180AD1D6.png" /></td></tr></table>
+
+<ul>
+  <li>في [1]: خصائص المشروع [MyApplication2]
+  </li>
+  <li>في [2]: حدد الفئة المراد تنفيذها عند تشغيل المشروع (F5 أو Ctrl-F5)
+  </li>
+  <li>في [3]: نوع الملف القابل للتنفيذ الناتج - هنا سيؤدي تطبيق Console إلى إنتاج ملف .exe.
+  </li>
+  <li>في [4]: اسم الملف القابل للتنفيذ الناتج (بدون الامتداد .exe)
+  </li>
+  <li>في [5]: مساحة الاسم الافتراضية. هذه هي المساحة التي سيتم إنشاؤها في كود كل فئة جديدة تضاف إلى المشروع. يمكن بعد ذلك تغييرها مباشرة في الكود، إذا لزم الأمر.
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
+        </a>
+        <br>
+        هذا البرنامج التعليمي الذي كتبه <strong>Serge Tahé</strong> متاح للجمهور وفقًا لشروط
+<em>Creative Commons Attribution – Non-Commercial –
+ShareAlike 3.0 Unported</em>.
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>
