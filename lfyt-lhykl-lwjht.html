@@ -1144,7 +1144,7 @@
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="err">…</span>
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">}</span>
 </code></pre></div>
-<p>من الفئة <em><bdi dir="ltr" class="odt-ltr-term">C1</bdi></em> أعلاه، يمكنك إنشاء العديد من الكائنات <em><bdi dir="ltr" class="odt-ltr-term">O1</bdi>، <bdi dir="ltr" class="odt-ltr-term">O2</bdi>،...</em> وستحتوي جميعها على الحقول <em><bdi dir="ltr" class="odt-ltr-term">p1</bdi>، <bdi dir="ltr" class="odt-ltr-term">p2</bdi>،...</em> والطرق <em><bdi dir="ltr" class="odt-ltr-term">m3</bdi>، <bdi dir="ltr" class="odt-ltr-term">m4</bdi>،...</em> ولكنها ستحتوي على قيم مختلفة لحقولها <em><bdi dir="ltr" class="odt-ltr-term">pi</bdi></em>، لكل منها حالتها الخاصة. إذا كان <em><bdi dir="ltr" class="odt-ltr-term">o1</bdi></em> كائنًا من النوع <bdi dir="ltr" class="odt-ltr-term">C1</bdi>، <em>فإن <bdi dir="ltr" class="odt-ltr-term">o1.p1</bdi></em> يشير إلى الخاصية <em><bdi dir="ltr" class="odt-ltr-term">p1</bdi></em> من <em><bdi dir="ltr" class="odt-ltr-term">o1</bdi></em>، <em>و<bdi dir="ltr" class="odt-ltr-term">o1.m1</bdi></em> يشير إلى الطريقة <em><bdi dir="ltr" class="odt-ltr-term">m1</bdi></em> من <em><bdi dir="ltr" class="odt-ltr-term">O1</bdi></em>.</p>
+<p>من الفئة <em><bdi dir="ltr" class="odt-ltr-term">C1</bdi></em> أعلاه، يمكنك إنشاء العديد من الكائنات <em><bdi dir="ltr" class="odt-ltr-term">O1</bdi>، <bdi dir="ltr" class="odt-ltr-term">O2</bdi>،...</em> وستحتوي جميعها على الحقول <em>p1، p2،...</em> والطرق <em>m3، m4،...</em> ولكنها ستحتوي على قيم مختلفة لحقولها <em>pi</em>، لكل منها حالتها الخاصة. إذا كان <em>o1</em> كائنًا من النوع <bdi dir="ltr" class="odt-ltr-term">C1</bdi>، <em>فإن <bdi dir="ltr" class="odt-ltr-term">o1.p1</bdi></em> يشير إلى الخاصية <em>p1</em> من <em>o1</em>، <em>و<bdi dir="ltr" class="odt-ltr-term">o1.m1</bdi></em> يشير إلى الطريقة <em>m1</em> من <em><bdi dir="ltr" class="odt-ltr-term">O1</bdi></em>.</p>
 <p>لننظر إلى نموذج الكائن الأول: <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em>.</p>
 <p><a id="refheading10399711168783983"></a></p>
 <h3 id="412-c">4.1.2. <span style="color: #4f81bd">إنشاء مشروع <bdi dir="ltr" class="odt-ltr-term">C#</bdi></span></h3>
@@ -1318,16 +1318,16 @@
 <p>غير صحيح. التعليمات</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>    Personne p1;
 </code></pre></div>
-<p>تشير إلى <em><bdi dir="ltr" class="odt-ltr-term">p1</bdi></em> كمرجع إلى كائن من نوع <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em>. هذا الكائن غير موجود بعد، لذا لم يتم تهيئة <em><bdi dir="ltr" class="odt-ltr-term">p1</bdi></em>. الأمر يشبه كتابة:</p>
+<p>تشير إلى <em>p1</em> كمرجع إلى كائن من نوع <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em>. هذا الكائن غير موجود بعد، لذا لم يتم تهيئة <em>p1</em>. الأمر يشبه كتابة:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Personne p1=null;
 </code></pre></div>
-<p>حيث تشير الكلمة الرئيسية <em><bdi dir="ltr" class="odt-ltr-term">null</bdi></em> إلى أن المتغير <em><bdi dir="ltr" class="odt-ltr-term">p1</bdi></em> لا يشير بعد إلى أي كائن. وعندما تكتب بعد ذلك </p>
+<p>حيث تشير الكلمة الرئيسية <em><bdi dir="ltr" class="odt-ltr-term">null</bdi></em> إلى أن المتغير <em>p1</em> لا يشير بعد إلى أي كائن. وعندما تكتب بعد ذلك </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>p1.Initialise(&quot;Jean&quot;,&quot;Dupont&quot;,30);
 </code></pre></div>
-<p>نستخدم <em><bdi dir="ltr" class="odt-ltr-term">Initializes</bdi></em> للكائن الذي يشير إليه <em><bdi dir="ltr" class="odt-ltr-term">p1</bdi></em>. أو أن هذا الكائن غير موجود بعد وسيقوم المُجمع بالإشارة إلى الخطأ. للتأكد من أن <em><bdi dir="ltr" class="odt-ltr-term">p1</bdi></em> يشير إلى كائن، اكتب:</p>
+<p>نستخدم <em><bdi dir="ltr" class="odt-ltr-term">Initializes</bdi></em> للكائن الذي يشير إليه <em>p1</em>. أو أن هذا الكائن غير موجود بعد وسيقوم المُجمع بالإشارة إلى الخطأ. للتأكد من أن <em>p1</em> يشير إلى كائن، اكتب:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Personne p1=new Personne();
 </code></pre></div>
-<p>يؤدي هذا إلى إنشاء كائن من نوع <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em> لم يتم تهيئته بعد: ستكون قيمة السمتين <em><bdi dir="ltr" class="odt-ltr-term">name</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">first name</bdi></em> — اللتين تشيران إلى كائنين من نوع <em><bdi dir="ltr" class="odt-ltr-term">String</bdi></em> — <em>هي <bdi dir="ltr" class="odt-ltr-term">null</bdi></em>، وستكون قيمة السمة <em><bdi dir="ltr" class="odt-ltr-term">age</bdi></em> هي <em>0</em>. أي أن هناك تهيئة افتراضية. والآن بعد أن أصبح <em><bdi dir="ltr" class="odt-ltr-term">p1</bdi></em> يشير إلى كائن، فإن تعليمة التهيئة لهذا الكائن</p>
+<p>يؤدي هذا إلى إنشاء كائن من نوع <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em> لم يتم تهيئته بعد: ستكون قيمة السمتين <em><bdi dir="ltr" class="odt-ltr-term">name</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">first name</bdi></em> — اللتين تشيران إلى كائنين من نوع <em><bdi dir="ltr" class="odt-ltr-term">String</bdi></em> — <em>هي <bdi dir="ltr" class="odt-ltr-term">null</bdi></em>، وستكون قيمة السمة <em>age</em> هي <em>0</em>. أي أن هناك تهيئة افتراضية. والآن بعد أن أصبح <em>p1</em> يشير إلى كائن، فإن تعليمة التهيئة لهذا الكائن</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>p1.Initialise(&quot;Jean&quot;,&quot;Dupont&quot;,30);
 </code></pre></div>
 <p>صحيحة.</p>
@@ -1342,10 +1342,10 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>تعني التعليمات <em><bdi dir="ltr" class="odt-ltr-term">this.prenom</bdi>=<bdi dir="ltr" class="odt-ltr-term">p</bdi></em> أن <em>الاسم الأول</em> للكائن الحالي (<em><bdi dir="ltr" class="odt-ltr-term">this</bdi></em>) يأخذ القيمة <em><bdi dir="ltr" class="odt-ltr-term">p</bdi></em>. تشير الكلمة الرئيسية <em><bdi dir="ltr" class="odt-ltr-term">this</bdi></em> إلى الكائن الحالي: الكائن الذي توجد فيه الطريقة المنفذة. كيف نعرف ذلك؟ لنلقِ نظرة على تهيئة الكائن المشار إليه بواسطة <em><bdi dir="ltr" class="odt-ltr-term">p1</bdi></em> في البرنامج المستدعي:</p>
+<p>تعني التعليمات <em><bdi dir="ltr" class="odt-ltr-term">this.prenom</bdi>=p</em> أن <em>الاسم الأول</em> للكائن الحالي (<em><bdi dir="ltr" class="odt-ltr-term">this</bdi></em>) يأخذ القيمة <em>p</em>. تشير الكلمة الرئيسية <em><bdi dir="ltr" class="odt-ltr-term">this</bdi></em> إلى الكائن الحالي: الكائن الذي توجد فيه الطريقة المنفذة. كيف نعرف ذلك؟ لنلقِ نظرة على تهيئة الكائن المشار إليه بواسطة <em>p1</em> في البرنامج المستدعي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>p1.Initialise(&quot;Jean&quot;,&quot;Dupont&quot;,30);
 </code></pre></div>
-<p>هذه هي طريقة <em><bdi dir="ltr" class="odt-ltr-term">Initializes</bdi></em> للكائن <em><bdi dir="ltr" class="odt-ltr-term">p1</bdi></em>. عندما تشير هذه الطريقة إلى <em><bdi dir="ltr" class="odt-ltr-term">this</bdi></em>، فإنها تشير في الواقع إلى الكائن <em><bdi dir="ltr" class="odt-ltr-term">p1</bdi></em>. كان من الممكن أيضًا كتابة الطريقة <em><bdi dir="ltr" class="odt-ltr-term">Initializes</bdi></em> على النحو التالي:</p>
+<p>هذه هي طريقة <em><bdi dir="ltr" class="odt-ltr-term">Initializes</bdi></em> للكائن <em>p1</em>. عندما تشير هذه الطريقة إلى <em><bdi dir="ltr" class="odt-ltr-term">this</bdi></em>، فإنها تشير في الواقع إلى الكائن <em>p1</em>. كان من الممكن أيضًا كتابة الطريقة <em><bdi dir="ltr" class="odt-ltr-term">Initializes</bdi></em> على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">public</span> <span style="color:#0000ff">void</span> Initialise(<span style="color:#0000ff">string</span> p, <span style="color:#0000ff">string</span> n, <span style="color:#0000ff">int</span> age) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            prenom = p;</span></span>
@@ -1359,7 +1359,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#0000ff">this</span>.age=age;</span></span>
 </code></pre></div>
 
-<p>حيث يشير <em>«<bdi dir="ltr" class="odt-ltr-term">age</bdi>»</em> إلى سمة الكائن الحالي والمعلمة <em>«<bdi dir="ltr" class="odt-ltr-term">age</bdi></em>» التي تستقبلها الطريقة. ويجب عندئذٍ حل هذا الغموض عن طريق الإشارة إلى السمة <em>«<bdi dir="ltr" class="odt-ltr-term">age</bdi>»</em> باستخدام <em>«<bdi dir="ltr" class="odt-ltr-term">this.age</bdi></em>».</p>
+<p>حيث يشير <em>«age»</em> إلى سمة الكائن الحالي والمعلمة <em>«age</em>» التي تستقبلها الطريقة. ويجب عندئذٍ حل هذا الغموض عن طريق الإشارة إلى السمة <em>«age»</em> باستخدام <em>«<bdi dir="ltr" class="odt-ltr-term">this.age</bdi></em>».</p>
 <p><a id="refheading10399811168783983"></a></p>
 <h3 id="417">4.1.7. <span style="color: #4f81bd">برنامج اختبار</span></h3>
 <p>إليك برنامج اختبار قصير. وهو مكتوب في ملف المصدر [<em><bdi dir="ltr" class="odt-ltr-term">Program.cs</bdi></em>]:</p>
@@ -1395,7 +1395,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>لدينا الآن طريقتان باسم <em><bdi dir="ltr" class="odt-ltr-term">Initializes</bdi></em> : وهذا أمر مقبول طالما أنهما تقبلان معلمات مختلفة. وهذا هو الحال هنا. المعلمة الآن هي مرجع <em><bdi dir="ltr" class="odt-ltr-term">p</bdi></em> إلى شخص. ثم يتم تعيين سمات الشخص <em><bdi dir="ltr" class="odt-ltr-term">p</bdi></em> إلى الكائن الحالي (<em><bdi dir="ltr" class="odt-ltr-term">this</bdi></em>). لاحظ أن <em><bdi dir="ltr" class="odt-ltr-term">Initializes</bdi></em> لها وصول مباشر إلى سمات الكائن <em><bdi dir="ltr" class="odt-ltr-term">p</bdi></em> على الرغم من أنها <em>خاصة</em>. وهذا صحيح دائمًا: الكائن <em><bdi dir="ltr" class="odt-ltr-term">o1</bdi></em> من الفئة <em><bdi dir="ltr" class="odt-ltr-term">C</bdi></em> لديه دائمًا وصول إلى سمات الكائنات من نفس الفئة <em><bdi dir="ltr" class="odt-ltr-term">C</bdi></em>.</p>
+<p>لدينا الآن طريقتان باسم <em><bdi dir="ltr" class="odt-ltr-term">Initializes</bdi></em> : وهذا أمر مقبول طالما أنهما تقبلان معلمات مختلفة. وهذا هو الحال هنا. المعلمة الآن هي مرجع <em>p</em> إلى شخص. ثم يتم تعيين سمات الشخص <em>p</em> إلى الكائن الحالي (<em><bdi dir="ltr" class="odt-ltr-term">this</bdi></em>). لاحظ أن <em><bdi dir="ltr" class="odt-ltr-term">Initializes</bdi></em> لها وصول مباشر إلى سمات الكائن <em>p</em> على الرغم من أنها <em>خاصة</em>. وهذا صحيح دائمًا: الكائن <em>o1</em> من الفئة <em><bdi dir="ltr" class="odt-ltr-term">C</bdi></em> لديه دائمًا وصول إلى سمات الكائنات من نفس الفئة <em><bdi dir="ltr" class="odt-ltr-term">C</bdi></em>.</p>
 <p>فيما يلي اختبار للفئة الجديدة <bdi dir="ltr" class="odt-ltr-term">P</bdi> <em><bdi dir="ltr" class="odt-ltr-term">person</bdi></em>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
@@ -1422,7 +1422,7 @@
 <p><a id="refheading10399851168783983"></a></p>
 <h3 id="419-person">4.1.9. <span style="color: #4f81bd">منشئات فئة <bdi dir="ltr" class="odt-ltr-term">Person</bdi></span></h3>
 <p>منشئ هو طريقة تحمل اسم الفئة ويتم استدعاؤها عند إنشاء الكائن. وتستخدم عادةً لتهيئة الكائن. ويمكنها قبول معلمات، لكنها لا تُرجع أي نتائج. ولا يسبق نموذجها الأولي أو تعريفها أي نوع (ولا حتى <em><bdi dir="ltr" class="odt-ltr-term">void</bdi></em>).</p>
-<p>إذا كانت فئة <bdi dir="ltr" class="odt-ltr-term">C</bdi> تحتوي على منشئ يقبل <bdi dir="ltr" class="odt-ltr-term">n</bdi> معلمات <bdi dir="ltr" class="odt-ltr-term">argi</bdi>، فيمكن إجراء إعلان وتهيئة كائن من هذه الفئة بالشكل التالي:</p>
+<p>إذا كانت فئة <bdi dir="ltr" class="odt-ltr-term">C</bdi> تحتوي على منشئ يقبل n معلمات <bdi dir="ltr" class="odt-ltr-term">argi</bdi>، فيمكن إجراء إعلان وتهيئة كائن من هذه الفئة بالشكل التالي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>        C objet =new C(arg1,arg2, ... argn);
 </code></pre></div>
 <p>أو</p>
@@ -1471,7 +1471,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>يستخدم منشئانا ببساطة <em><bdi dir="ltr" class="odt-ltr-term">Initializes</bdi></em> التي درسناها سابقًا. تذكر أنه عندما يستخدم المصمم الترميز <em><bdi dir="ltr" class="odt-ltr-term">Initialise</bdi>(<bdi dir="ltr" class="odt-ltr-term">p</bdi>)</em> على سبيل المثال، يقوم المُترجم بترجمة <em><bdi dir="ltr" class="odt-ltr-term">this.Initialise</bdi>(<bdi dir="ltr" class="odt-ltr-term">p</bdi>)</em>. في المنشئ، يتم استدعاء <em><bdi dir="ltr" class="odt-ltr-term">Initializes</bdi></em> للعمل على الكائن المشار إليه بواسطة <bdi dir="ltr" class="odt-ltr-term">this</bdi>، أي الكائن الحالي، الذي يجري إنشاؤه. </p>
+<p>يستخدم منشئانا ببساطة <em><bdi dir="ltr" class="odt-ltr-term">Initializes</bdi></em> التي درسناها سابقًا. تذكر أنه عندما يستخدم المصمم الترميز <em><bdi dir="ltr" class="odt-ltr-term">Initialise</bdi>(p)</em> على سبيل المثال، يقوم المُترجم بترجمة <em><bdi dir="ltr" class="odt-ltr-term">this.Initialise</bdi>(p)</em>. في المنشئ، يتم استدعاء <em><bdi dir="ltr" class="odt-ltr-term">Initializes</bdi></em> للعمل على الكائن المشار إليه بواسطة <bdi dir="ltr" class="odt-ltr-term">this</bdi>، أي الكائن الحالي، الذي يجري إنشاؤه. </p>
 <p>فيما يلي برنامج اختبار قصير:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
@@ -1536,21 +1536,21 @@
 <a id="__codelineno-19-5" name="__codelineno-19-5"></a>p2=[Micheline, Benoît, 67]
 <a id="__codelineno-19-6" name="__codelineno-19-6"></a>p3=[Jean, Dupont, 30]
 </code></pre></div></td></tr></table></div>
-<p>عند تعريف المتغير <em><bdi dir="ltr" class="odt-ltr-term">p1</bdi></em> بواسطة </p>
+<p>عند تعريف المتغير <em>p1</em> بواسطة </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Personne p1=new Personne(&quot;Jean&quot;,&quot;Dupont&quot;,30);
 </code></pre></div>
-<p><em>فإن <bdi dir="ltr" class="odt-ltr-term">p1</bdi></em> يشير إلى الكائن <em><bdi dir="ltr" class="odt-ltr-term">Pperson</bdi>(&quot;<bdi dir="ltr" class="odt-ltr-term">John</bdi>&quot;, &quot;<bdi dir="ltr" class="odt-ltr-term">Smith</bdi>&quot;,30)</em> ولكنه ليس الكائن نفسه. في لغة <bdi dir="ltr" class="odt-ltr-term">C</bdi>، نقول إنه مؤشر، أي عنوان الكائن الذي تم إنشاؤه. إذا كتبت بعد ذلك:</p>
+<p><em>فإن p1</em> يشير إلى الكائن <em><bdi dir="ltr" class="odt-ltr-term">Pperson</bdi>(&quot;<bdi dir="ltr" class="odt-ltr-term">John</bdi>&quot;, &quot;<bdi dir="ltr" class="odt-ltr-term">Smith</bdi>&quot;,30)</em> ولكنه ليس الكائن نفسه. في لغة <bdi dir="ltr" class="odt-ltr-term">C</bdi>، نقول إنه مؤشر، أي عنوان الكائن الذي تم إنشاؤه. إذا كتبت بعد ذلك:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>    p1=null;
 </code></pre></div>
-<p>فليس الكائن <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi>(&quot;<bdi dir="ltr" class="odt-ltr-term">John</bdi>&quot;, &quot;<bdi dir="ltr" class="odt-ltr-term">Smith</bdi>&quot;,30)</em> هو الذي يتم تعديله، بل المرجع <em><bdi dir="ltr" class="odt-ltr-term">p1</bdi></em> هو الذي يتغير قيمته. وسيُفقد الكائن <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi>(&quot;<bdi dir="ltr" class="odt-ltr-term">John</bdi>&quot;, &quot;<bdi dir="ltr" class="odt-ltr-term">Smith</bdi>&quot;,30)</em> إذا لم تتم الإشارة إليه بواسطة أي متغير آخر.</p>
+<p>فليس الكائن <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi>(&quot;<bdi dir="ltr" class="odt-ltr-term">John</bdi>&quot;, &quot;<bdi dir="ltr" class="odt-ltr-term">Smith</bdi>&quot;,30)</em> هو الذي يتم تعديله، بل المرجع <em>p1</em> هو الذي يتغير قيمته. وسيُفقد الكائن <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi>(&quot;<bdi dir="ltr" class="odt-ltr-term">John</bdi>&quot;, &quot;<bdi dir="ltr" class="odt-ltr-term">Smith</bdi>&quot;,30)</em> إذا لم تتم الإشارة إليه بواسطة أي متغير آخر.</p>
 <p>عندما نكتب:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>Personne p2=p1;
 </code></pre></div>
-<p>نقوم بتهيئة المؤشر <em><bdi dir="ltr" class="odt-ltr-term">p2</bdi></em>: فهو &quot;يشير&quot; إلى نفس الكائن (يحدد نفس الكائن) الذي يشير إليه المؤشر <em><bdi dir="ltr" class="odt-ltr-term">p1</bdi></em>. لذا، إذا قمنا بتعديل الكائن الذي &quot;يشير إليه&quot; (أو المشار إليه) <bdi dir="ltr" class="odt-ltr-term">p1</bdi>، فإننا نقوم أيضًا بتعديل الكائن المشار إليه بواسطة <em><bdi dir="ltr" class="odt-ltr-term">p2</bdi></em>.</p>
+<p>نقوم بتهيئة المؤشر <em>p2</em>: فهو &quot;يشير&quot; إلى نفس الكائن (يحدد نفس الكائن) الذي يشير إليه المؤشر <em>p1</em>. لذا، إذا قمنا بتعديل الكائن الذي &quot;يشير إليه&quot; (أو المشار إليه) p1، فإننا نقوم أيضًا بتعديل الكائن المشار إليه بواسطة <em>p2</em>.</p>
 <p>عندما نكتب:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>Personne p3=new Personne(p1);
 </code></pre></div>
-<p>يتم إنشاء كائن جديد <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em>. سيتم الإشارة إلى هذا الكائن الجديد بواسطة <em><bdi dir="ltr" class="odt-ltr-term">p3</bdi></em>. إذا قمت بتعديل الكائن الذي &quot;يشير إليه&quot; (أو المشار إليه) بواسطة <bdi dir="ltr" class="odt-ltr-term">p1</bdi>، فإن الكائن المشار إليه بواسطة <em><bdi dir="ltr" class="odt-ltr-term">p3</bdi></em> سيتغير أيضًا. وهذا ما تظهره النتائج.</p>
+<p>يتم إنشاء كائن جديد <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em>. سيتم الإشارة إلى هذا الكائن الجديد بواسطة <em>p3</em>. إذا قمت بتعديل الكائن الذي &quot;يشير إليه&quot; (أو المشار إليه) بواسطة p1، فإن الكائن المشار إليه بواسطة <em>p3</em> سيتغير أيضًا. وهذا ما تظهره النتائج.</p>
 <p><a id="refheading10399891168783983"></a></p>
 <h3 id="4111">4.1.11. <span style="color: #4f81bd">تمرير معلمات مرجعية للكائنات</span></h3>
 <p>في الفصل السابق، تناولنا كيفية تمرير معلمات الدالة عندما تمثل نوعًا بسيطًا في <bdi dir="ltr" class="odt-ltr-term">C#</bdi> ممثلاً ببنية .<bdi dir="ltr" class="odt-ltr-term">NET.</bdi> لنرى ما يحدث عندما تكون المعلمة:</p>
@@ -1590,21 +1590,21 @@
 <span class="normal"><a href="#__codelineno-24-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a>string s=&quot;une chaîne&quot;;
 <a id="__codelineno-24-2" name="__codelineno-24-2"></a>s=s.ToUpperCase();
 </code></pre></div></td></tr></table></div>
-<p>السطر 1 ينشئ <em>سلسلة نصية</em>، و <bdi dir="ltr" class="odt-ltr-term">s</bdi> هو عنوانها. في السطر 2، تؤدي <em><bdi dir="ltr" class="odt-ltr-term">s.ToUpperCase</bdi>()</em> إلى إنشاء كائن <em>سلسلة نصية</em> آخر في الذاكرة. وبالتالي، بين السطرين 1 و 2، تغيرت قيمة <em><bdi dir="ltr" class="odt-ltr-term">s</bdi></em> (أصبحت تشير إلى الكائن الجديد). تسمح لك فئة <em><bdi dir="ltr" class="odt-ltr-term">StringBuilder</bdi></em> بتعديل سلسلة نصية دون إنشاء كائن ثانٍ. وهذا هو المثال المذكور أعلاه:</p>
+<p>السطر 1 ينشئ <em>سلسلة نصية</em>، و s هو عنوانها. في السطر 2، تؤدي <em><bdi dir="ltr" class="odt-ltr-term">s.ToUpperCase</bdi>()</em> إلى إنشاء كائن <em>سلسلة نصية</em> آخر في الذاكرة. وبالتالي، بين السطرين 1 و 2، تغيرت قيمة <em>s</em> (أصبحت تشير إلى الكائن الجديد). تسمح لك فئة <em><bdi dir="ltr" class="odt-ltr-term">StringBuilder</bdi></em> بتعديل سلسلة نصية دون إنشاء كائن ثانٍ. وهذا هو المثال المذكور أعلاه:</p>
 <ul>
-  <li>السطر 8: 4 مراجع [<bdi dir="ltr" class="odt-ltr-term">sb0</bdi>، <bdi dir="ltr" class="odt-ltr-term">sb1</bdi>، <bdi dir="ltr" class="odt-ltr-term">sb2</bdi>، <bdi dir="ltr" class="odt-ltr-term">sb3</bdi>] إلى كائنات من نوع <i><bdi dir="ltr" class="odt-ltr-term">StringBuilder</bdi></i>
+  <li>السطر 8: 4 مراجع [sb0، sb1، sb2، sb3] إلى كائنات من نوع <i><bdi dir="ltr" class="odt-ltr-term">StringBuilder</bdi></i>
   </li>
-  <li>السطر 10: يتم تمريرها إلى <i><bdi dir="ltr" class="odt-ltr-term">ChangeStringBuilder</bdi> </i>بأوضاع مختلفة: <i><bdi dir="ltr" class="odt-ltr-term">sb0</bdi> </i>و <i><bdi dir="ltr" class="odt-ltr-term">sb1</bdi> </i>بالوضع الافتراضي، و <i><bdi dir="ltr" class="odt-ltr-term">sb2</bdi> </i>بالكلمة الرئيسية <b><bdi dir="ltr" class="odt-ltr-term">ref</bdi></b>، و <i><bdi dir="ltr" class="odt-ltr-term">sb3</bdi> </i>بالكلمة الرئيسية <b><bdi dir="ltr" class="odt-ltr-term">out</bdi></b>.
+  <li>السطر 10: يتم تمريرها إلى <i><bdi dir="ltr" class="odt-ltr-term">ChangeStringBuilder</bdi> </i>بأوضاع مختلفة: <i>sb0 </i>و <i>sb1 </i>بالوضع الافتراضي، و <i>sb2 </i>بالكلمة الرئيسية <b>ref</b>، و <i>sb3 </i>بالكلمة الرئيسية <b>out</b>.
   </li>
-  <li>الأسطر 15-22: طريقة ذات معلمات رسمية [<bdi dir="ltr" class="odt-ltr-term">sbf0</bdi>، <bdi dir="ltr" class="odt-ltr-term">sbf1</bdi>، <bdi dir="ltr" class="odt-ltr-term">sbf2</bdi>، <bdi dir="ltr" class="odt-ltr-term">sbf3</bdi>]. العلاقات بين المعلمات الرسمية <i><bdi dir="ltr" class="odt-ltr-term">sbfi</bdi> </i>والقوى العاملة <i><bdi dir="ltr" class="odt-ltr-term">sbi</bdi> </i>هي كما يلي:
+  <li>الأسطر 15-22: طريقة ذات معلمات رسمية [<bdi dir="ltr" class="odt-ltr-term">sbf0</bdi>، <bdi dir="ltr" class="odt-ltr-term">sbf1</bdi>، <bdi dir="ltr" class="odt-ltr-term">sbf2</bdi>، <bdi dir="ltr" class="odt-ltr-term">sbf3</bdi>]. العلاقات بين المعلمات الرسمية <i><bdi dir="ltr" class="odt-ltr-term">sbfi</bdi> </i>والقوى العاملة <i>sbi </i>هي كما يلي:
   </li>
-  <li><i><bdi dir="ltr" class="odt-ltr-term">sbf0</bdi> </i>و <i><bdi dir="ltr" class="odt-ltr-term">sb0</bdi> </i>هما، في بداية الدالة، <b>مرجعان منفصلان </b>يشيران إلى نفس الكائن (تمرير قيمة العنوان)
+  <li><i><bdi dir="ltr" class="odt-ltr-term">sbf0</bdi> </i>و <i>sb0 </i>هما، في بداية الدالة، <b>مرجعان منفصلان </b>يشيران إلى نفس الكائن (تمرير قيمة العنوان)
   </li>
-  <li>وينطبق الأمر نفسه على <i><bdi dir="ltr" class="odt-ltr-term">sbf1</bdi> </i>و <i><bdi dir="ltr" class="odt-ltr-term">sb1</bdi></i>
+  <li>وينطبق الأمر نفسه على <i><bdi dir="ltr" class="odt-ltr-term">sbf1</bdi> </i>و <i>sb1</i>
   </li>
-  <li><i><bdi dir="ltr" class="odt-ltr-term">sbf2</bdi> </i>و <i><bdi dir="ltr" class="odt-ltr-term">sb2</bdi> </i>هما، في بداية الطريقة، <b>مرجع واحد </b>لنفس الكائن (الكلمة الرئيسية <i><bdi dir="ltr" class="odt-ltr-term">ref</bdi></i>)
+  <li><i><bdi dir="ltr" class="odt-ltr-term">sbf2</bdi> </i>و <i>sb2 </i>هما، في بداية الطريقة، <b>مرجع واحد </b>لنفس الكائن (الكلمة الرئيسية <i>ref</i>)
   </li>
-  <li><i><bdi dir="ltr" class="odt-ltr-term">sbf3</bdi> </i>و <i><bdi dir="ltr" class="odt-ltr-term">sb3</bdi> </i>هما، بعد تنفيذ الطريقة، <b>مرجع واحد </b>لنفس الكائن (الكلمة الرئيسية <i><bdi dir="ltr" class="odt-ltr-term">out</bdi></i>) 
+  <li><i><bdi dir="ltr" class="odt-ltr-term">sbf3</bdi> </i>و <i>sb3 </i>هما، بعد تنفيذ الطريقة، <b>مرجع واحد </b>لنفس الكائن (الكلمة الرئيسية <i>out</i>) 
   </li>
 </ul>
 
@@ -1619,13 +1619,13 @@
 </code></pre></div></td></tr></table></div>
 <p>التفسيرات:</p>
 <ul>
-  <li><i><bdi dir="ltr" class="odt-ltr-term">sb0</bdi> </i>و <i><bdi dir="ltr" class="odt-ltr-term">sbf0</bdi> </i>هما مرجعان منفصلان لنفس الكائن. تم تعديل هذا الكائن عبر <i><bdi dir="ltr" class="odt-ltr-term">sbf0</bdi> </i>- السطر 3. يمكن رؤية هذا التعديل عبر <i><bdi dir="ltr" class="odt-ltr-term">sb0</bdi> </i>- السطر 4.
+  <li><i>sb0 </i>و <i><bdi dir="ltr" class="odt-ltr-term">sbf0</bdi> </i>هما مرجعان منفصلان لنفس الكائن. تم تعديل هذا الكائن عبر <i><bdi dir="ltr" class="odt-ltr-term">sbf0</bdi> </i>- السطر 3. يمكن رؤية هذا التعديل عبر <i>sb0 </i>- السطر 4.
   </li>
-  <li><i><bdi dir="ltr" class="odt-ltr-term">sb1</bdi> </i>و <i><bdi dir="ltr" class="odt-ltr-term">sbf1</bdi> </i>هما مرجعان متميزان لنفس الكائن. طريقة <i><bdi dir="ltr" class="odt-ltr-term">sbf1</bdi> </i>وتشير الآن إلى كائن جديد - السطر 3. هذا لا يغير قيمة <i><bdi dir="ltr" class="odt-ltr-term">sb1</bdi> </i>التي تستمر في الإشارة إلى نفس الكائن - السطر 4.
+  <li><i>sb1 </i>و <i><bdi dir="ltr" class="odt-ltr-term">sbf1</bdi> </i>هما مرجعان متميزان لنفس الكائن. طريقة <i><bdi dir="ltr" class="odt-ltr-term">sbf1</bdi> </i>وتشير الآن إلى كائن جديد - السطر 3. هذا لا يغير قيمة <i>sb1 </i>التي تستمر في الإشارة إلى نفس الكائن - السطر 4.
   </li>
-  <li><i><bdi dir="ltr" class="odt-ltr-term">sb2</bdi> </i>و <i><bdi dir="ltr" class="odt-ltr-term">sbf2</bdi> </i>هما نفس المرجع لنفس الكائن. تم تعديل <i><bdi dir="ltr" class="odt-ltr-term">sbf2</bdi> </i>في الطريقة ويشير الآن إلى كائن جديد - السطر 3. وبما أن <i><bdi dir="ltr" class="odt-ltr-term">sbf2</bdi> </i>و <i><bdi dir="ltr" class="odt-ltr-term">sb2</bdi> </i>كيان واحد، فقد تم تعديل قيمة <i><bdi dir="ltr" class="odt-ltr-term">sb2</bdi> </i>أيضًا ويشير <i><bdi dir="ltr" class="odt-ltr-term">sb2</bdi> </i>إلى نفس الكائن الذي يشير إليه <i><bdi dir="ltr" class="odt-ltr-term">sbf2</bdi> </i>- السطران 3 و 4.
+  <li><i>sb2 </i>و <i><bdi dir="ltr" class="odt-ltr-term">sbf2</bdi> </i>هما نفس المرجع لنفس الكائن. تم تعديل <i><bdi dir="ltr" class="odt-ltr-term">sbf2</bdi> </i>في الطريقة ويشير الآن إلى كائن جديد - السطر 3. وبما أن <i><bdi dir="ltr" class="odt-ltr-term">sbf2</bdi> </i>و <i>sb2 </i>كيان واحد، فقد تم تعديل قيمة <i>sb2 </i>أيضًا ويشير <i>sb2 </i>إلى نفس الكائن الذي يشير إليه <i><bdi dir="ltr" class="odt-ltr-term">sbf2</bdi> </i>- السطران 3 و 4.
   </li>
-  <li>قبل استدعاء الطريقة، كان <i><bdi dir="ltr" class="odt-ltr-term">sb3</bdi> </i>عديم القيمة. بعد الطريقة، يتلقى <i><bdi dir="ltr" class="odt-ltr-term">sb3</bdi> </i>قيمة <i><bdi dir="ltr" class="odt-ltr-term">sbf3</bdi></i>. لذلك لدينا مرجعان لنفس الكائن - السطران 3 و 4
+  <li>قبل استدعاء الطريقة، كان <i>sb3 </i>عديم القيمة. بعد الطريقة، يتلقى <i>sb3 </i>قيمة <i><bdi dir="ltr" class="odt-ltr-term">sbf3</bdi></i>. لذلك لدينا مرجعان لنفس الكائن - السطران 3 و 4
   </li>
 </ul>
 <p><a id="refheading10399911168783983"></a></p>
@@ -1840,8 +1840,8 @@
 <a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>    set {...}
 <a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>}
 </code></pre></div>
-<p>حيث يجب أن يكون <em>«<bdi dir="ltr" class="odt-ltr-term">Type</bdi>»</em> هو نوع السمة التي تديرها الخاصية. ويمكن أن تحتوي على طريقتين تسميان <strong>«<bdi dir="ltr" class="odt-ltr-term">get</bdi>» و«<bdi dir="ltr" class="odt-ltr-term">set</bdi></strong>». عادةً ما تكون الطريقة <strong>«<bdi dir="ltr" class="odt-ltr-term">get</bdi>»</strong> مسؤولة عن عرض قيمة السمة التي تديرها (ويمكنها عرض شيء آخر، فلا شيء يمنعها من ذلك). تستقبل الطريقة <strong><bdi dir="ltr" class="odt-ltr-term">set</bdi></strong> معلمة تسمى <strong><bdi dir="ltr" class="odt-ltr-term">value</bdi></strong> والتي عادةً ما تخصصها للسمة التي تديرها. يمكنها الاستفادة من ذلك للتحقق من صحة القيمة المستلمة، وإذا لزم الأمر، إلقاء استثناء إذا تبين أن القيمة غير صالحة. هذا ما تفعله <bdi dir="ltr" class="odt-ltr-term">ici.</bdi></p>
-<p>كيف يتم استدعاء هاتين الطريقتين <strong><bdi dir="ltr" class="odt-ltr-term">get</bdi></strong> و <strong><bdi dir="ltr" class="odt-ltr-term">set</bdi></strong>؟ انظر إلى برنامج الاختبار التالي:</p>
+<p>حيث يجب أن يكون <em>«<bdi dir="ltr" class="odt-ltr-term">Type</bdi>»</em> هو نوع السمة التي تديرها الخاصية. ويمكن أن تحتوي على طريقتين تسميان <strong>«get» و«set</strong>». عادةً ما تكون الطريقة <strong>«get»</strong> مسؤولة عن عرض قيمة السمة التي تديرها (ويمكنها عرض شيء آخر، فلا شيء يمنعها من ذلك). تستقبل الطريقة <strong>set</strong> معلمة تسمى <strong><bdi dir="ltr" class="odt-ltr-term">value</bdi></strong> والتي عادةً ما تخصصها للسمة التي تديرها. يمكنها الاستفادة من ذلك للتحقق من صحة القيمة المستلمة، وإذا لزم الأمر، إلقاء استثناء إذا تبين أن القيمة غير صالحة. هذا ما تفعله <bdi dir="ltr" class="odt-ltr-term">ici.</bdi></p>
+<p>كيف يتم استدعاء هاتين الطريقتين <strong>get</strong> و <strong>set</strong>؟ انظر إلى برنامج الاختبار التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1867,12 +1867,12 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#2b91af">Console</span>.Out.WriteLine(<span style="color:#a31515">&quot;p=(&quot;</span> + p.Prenom + <span style="color:#a31515">&quot;,&quot;</span> + p.Nom + <span style="color:#a31515">&quot;,&quot;</span> + p.Age + <span style="color:#a31515">&quot;)&quot;</span>);</span></span>
 </code></pre></div>
 
-<p>نحن نبحث عن قيم &quot;<em>الاسم</em>&quot; و&quot;<em>اللقب</em>&quot; و&quot;<em>العمر</em>&quot; للشخص <strong><bdi dir="ltr" class="odt-ltr-term">p</bdi></strong>. هذه هي طريقة <strong>الحصول</strong> على هذه الخصائص، والتي يتم استدعاؤها بعد ذلك لتُرجع قيمة السمة التي تديرها.</p>
+<p>نحن نبحث عن قيم &quot;<em>الاسم</em>&quot; و&quot;<em>اللقب</em>&quot; و&quot;<em>العمر</em>&quot; للشخص <strong>p</strong>. هذه هي طريقة <strong>الحصول</strong> على هذه الخصائص، والتي يتم استدعاؤها بعد ذلك لتُرجع قيمة السمة التي تديرها.</p>
 <p>في</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>        p.Age=56;
 </code></pre></div>
-<p>نريد تعيين قيمة الخاصية <em><bdi dir="ltr" class="odt-ltr-term">Age</bdi></em>. هذه هي <strong>مجموعة <bdi dir="ltr" class="odt-ltr-term">set</bdi></strong> التي يتم استدعاؤها بعد ذلك. وستتلقى 56 في <strong>قيمة</strong> معلمتها.</p>
-<p>يُقال إن الخاصية <strong><bdi dir="ltr" class="odt-ltr-term">P</bdi></strong> لفئة <strong><bdi dir="ltr" class="odt-ltr-term">C</bdi></strong> التي تحدد فقط الدالة <strong><bdi dir="ltr" class="odt-ltr-term">get</bdi></strong> هي خاصية للقراءة فقط. إذا كان <bdi dir="ltr" class="odt-ltr-term">c</bdi> كائنًا من فئة <bdi dir="ltr" class="odt-ltr-term">C</bdi>، فسيتم رفض العملية <em><bdi dir="ltr" class="odt-ltr-term">c.P</bdi>=<bdi dir="ltr" class="odt-ltr-term">valeur</bdi></em> من قبل المُترجم.</p>
+<p>نريد تعيين قيمة الخاصية <em><bdi dir="ltr" class="odt-ltr-term">Age</bdi></em>. هذه هي <strong>مجموعة set</strong> التي يتم استدعاؤها بعد ذلك. وستتلقى 56 في <strong>قيمة</strong> معلمتها.</p>
+<p>يُقال إن الخاصية <strong><bdi dir="ltr" class="odt-ltr-term">P</bdi></strong> لفئة <strong><bdi dir="ltr" class="odt-ltr-term">C</bdi></strong> التي تحدد فقط الدالة <strong>get</strong> هي خاصية للقراءة فقط. إذا كان c كائنًا من فئة <bdi dir="ltr" class="odt-ltr-term">C</bdi>، فسيتم رفض العملية <em><bdi dir="ltr" class="odt-ltr-term">c.P</bdi>=<bdi dir="ltr" class="odt-ltr-term">valeur</bdi></em> من قبل المُترجم.</p>
 <p>يؤدي تنفيذ برنامج الاختبار السابق إلى النتائج التالية:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span>
 <span class="normal"><a href="#__codelineno-30-2">2</a></span>
@@ -1923,7 +1923,7 @@
 <p>والنتائج هي كما يلي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>p2=(Arthur,Martin,7)
 </code></pre></div>
-<p>في كثير من الحالات، تقوم خاصية <em><bdi dir="ltr" class="odt-ltr-term">get</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">set</bdi></em> ببساطة بقراءة وكتابة حقل خاص دون أي معالجة إضافية. في هذا السيناريو، يمكننا استخدام إعلان <strong>تلقائي</strong> على النحو التالي:</p>
+<p>في كثير من الحالات، تقوم خاصية <em>get</em> و <em>set</em> ببساطة بقراءة وكتابة حقل خاص دون أي معالجة إضافية. في هذا السيناريو، يمكننا استخدام إعلان <strong>تلقائي</strong> على النحو التالي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>public Type Propriété{ get ; set ; }
 </code></pre></div>
 <p>لا يتم إعلان الحقل الخاص المرتبط بالخاصية. يتم إنشاؤه تلقائيًا بواسطة المُجمع. ولا يمكن الوصول إليه إلا من خلال خاصيته. لذا، بدلاً من كتابة:</p>
@@ -1947,7 +1947,7 @@
 <p>يمكننا كتابة:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>public string Prenom {get; set;}
 </code></pre></div>
-<p>دون إعلان الحقل الخاص <em><bdi dir="ltr" class="odt-ltr-term">first name</bdi></em>. الفرق بين الخاصيتين السابقتين هو أن الأولى تتحقق من صحة الاسم الأول في <em>مجموعة</em> <bdi dir="ltr" class="odt-ltr-term">set</bdi>، بينما الثانية لا تفعل ذلك.</p>
+<p>دون إعلان الحقل الخاص <em><bdi dir="ltr" class="odt-ltr-term">first name</bdi></em>. الفرق بين الخاصيتين السابقتين هو أن الأولى تتحقق من صحة الاسم الأول في <em>مجموعة</em> set، بينما الثانية لا تفعل ذلك.</p>
 <p>استخدم الخاصية التلقائية <em>«<bdi dir="ltr" class="odt-ltr-term">First name</bdi></em>» لإعلان الحقل <em>«<bdi dir="ltr" class="odt-ltr-term">First name</bdi>»</em> كحقل <strong>عام</strong>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>public string Prenom;
 </code></pre></div>
@@ -1965,7 +1965,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>في السطر 2 أعلاه، يمكن للفئة الفرعية <em><bdi dir="ltr" class="odt-ltr-term">Class2</bdi></em> إدراج كود في <em><bdi dir="ltr" class="odt-ltr-term">set</bdi></em> للتحقق من صحة القيمة المعينة للخاصية التلقائية <em><bdi dir="ltr" class="odt-ltr-term">base.Prop</bdi></em> للفئة الأصلية <em><bdi dir="ltr" class="odt-ltr-term">Class1</bdi></em>.</p>
+<p>في السطر 2 أعلاه، يمكن للفئة الفرعية <em><bdi dir="ltr" class="odt-ltr-term">Class2</bdi></em> إدراج كود في <em>set</em> للتحقق من صحة القيمة المعينة للخاصية التلقائية <em><bdi dir="ltr" class="odt-ltr-term">base.Prop</bdi></em> للفئة الأصلية <em><bdi dir="ltr" class="odt-ltr-term">Class1</bdi></em>.</p>
 <p><a id="refheading10399971168783983"></a></p>
 <h3 id="4115">4.1.15. <span style="color: #4f81bd">طرق الفئة وسماتها</span></h3>
 <p>لنفترض أننا نريد حساب عدد الكائنات <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em> التي تم إنشاؤها في أحد التطبيقات. يمكنك إدارة العداد بنفسك، ولكنك تخاطر بنسيان الكائنات المؤقتة التي يتم إنشاؤها هنا أو هناك. يبدو أنه من الأكثر أمانًا تضمين تعليمات في منشئات الفئة <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em> تعمل على زيادة العداد. تكمن المشكلة في تمرير مرجع إلى هذا العداد حتى يتمكن منشئ الفئة من زيادته: يجب تمرير معلمة جديدة. بدلاً من ذلك، يمكنك تضمين العداد في تعريف الفئة. نظرًا لأنه سمة للفئة نفسها وليس لمثيل معين من تلك الفئة، فإننا نعلنه بشكل مختلف باستخدام الكلمة الرئيسية <em><bdi dir="ltr" class="odt-ltr-term">static</bdi></em> :</p>
@@ -1973,7 +1973,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">private</span> <span style="color:#0000ff">static</span> <span style="color:#0000ff">long</span> nbPersonnes;</span></span>
 </code></pre></div>
 
-<p>للإشارة إليه، نكتب <em><bdi dir="ltr" class="odt-ltr-term">Personne.nbPersonnes</bdi></em> لإظهار أنه سمة من سمات فئة <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em> نفسها. هنا، أنشأنا سمة خاصة لن يتم الوصول إليها مباشرة خارج الفئة. لذلك، نقوم بإنشاء خاصية عامة لإتاحة الوصول إلى سمة الفئة <em><bdi dir="ltr" class="odt-ltr-term">nbPersonnes</bdi></em>. لإرجاع قيمة <em><bdi dir="ltr" class="odt-ltr-term">nbPersonnes</bdi>،</em> لا تحتاج طريقة <em><bdi dir="ltr" class="odt-ltr-term">get</bdi></em> لهذه الخاصية إلى كائن <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em> معين: في الواقع، <em><bdi dir="ltr" class="odt-ltr-term">nbPersonnes</bdi></em> هي سمة لفئة بأكملها. لذلك نحتاج إلى خاصية مُعلنة أيضًا بـ <em><bdi dir="ltr" class="odt-ltr-term">static</bdi></em> :</p>
+<p>للإشارة إليه، نكتب <em><bdi dir="ltr" class="odt-ltr-term">Personne.nbPersonnes</bdi></em> لإظهار أنه سمة من سمات فئة <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em> نفسها. هنا، أنشأنا سمة خاصة لن يتم الوصول إليها مباشرة خارج الفئة. لذلك، نقوم بإنشاء خاصية عامة لإتاحة الوصول إلى سمة الفئة <em><bdi dir="ltr" class="odt-ltr-term">nbPersonnes</bdi></em>. لإرجاع قيمة <em><bdi dir="ltr" class="odt-ltr-term">nbPersonnes</bdi>،</em> لا تحتاج طريقة <em>get</em> لهذه الخاصية إلى كائن <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em> معين: في الواقع، <em><bdi dir="ltr" class="odt-ltr-term">nbPersonnes</bdi></em> هي سمة لفئة بأكملها. لذلك نحتاج إلى خاصية مُعلنة أيضًا بـ <em><bdi dir="ltr" class="odt-ltr-term">static</bdi></em> :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">public</span> <span style="color:#0000ff">static</span> <span style="color:#0000ff">long</span> NbPersonnes {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">get</span> { <span style="color:#0000ff">return</span> nbPersonnes; }</span></span>
@@ -2057,7 +2057,7 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 7: ينشئ مصفوفة من 3 عناصر من نوع <i><bdi dir="ltr" class="odt-ltr-term">Person</bdi></i>. يتم تهيئة هذه العناصر الثلاثة هنا بالقيمة <i><bdi dir="ltr" class="odt-ltr-term">null</bdi></i>، أي أنها لا تشير إلى أي كائنات. مرة أخرى، هذا استخدام خاطئ لمصطلح &quot;مصفوفة من الكائنات&quot;، في حين أنها في الواقع مجرد مصفوفة من مراجع الكائنات. إن إنشاء مصفوفة الكائنات، التي هي كائن بحد ذاتها (وجود <i><bdi dir="ltr" class="odt-ltr-term">new</bdi></i>)، لا يؤدي إلى إنشاء أي كائنات من نفس نوع عناصرها.
+  <li>السطر 7: ينشئ مصفوفة من 3 عناصر من نوع <i><bdi dir="ltr" class="odt-ltr-term">Person</bdi></i>. يتم تهيئة هذه العناصر الثلاثة هنا بالقيمة <i><bdi dir="ltr" class="odt-ltr-term">null</bdi></i>، أي أنها لا تشير إلى أي كائنات. مرة أخرى، هذا استخدام خاطئ لمصطلح &quot;مصفوفة من الكائنات&quot;، في حين أنها في الواقع مجرد مصفوفة من مراجع الكائنات. إن إنشاء مصفوفة الكائنات، التي هي كائن بحد ذاتها (وجود <i>new</i>)، لا يؤدي إلى إنشاء أي كائنات من نفس نوع عناصرها.
   </li>
   <li>الأسطر 8-10: إنشاء 3 كائنات من نوع <i><bdi dir="ltr" class="odt-ltr-term">Person</bdi></i>
   </li>
@@ -2216,7 +2216,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">            : <span style="color:#0000ff">base</span>(prenom, nom, age) {</span></span>
 </code></pre></div>
 
-<p>يُشير إلى أن مُنشئ الفئة يتلقى أربعة معلمات <em>هي الاسم</em> الأول، والاسم، والع<em>مر</em>، <em>والقسم</em>، بالإضافة إلى ثلاث معلمات أخرى <em>(<bdi dir="ltr" class="odt-ltr-term">firstname</bdi>، <bdi dir="ltr" class="odt-ltr-term">lastname</bdi>، <bdi dir="ltr" class="odt-ltr-term">age</bdi>)</em> من فئته الأساسية، وهي هنا فئة <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em>. ونعلم أن هذه الفئة تحتوي على مُنشئ <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi>(<bdi dir="ltr" class="odt-ltr-term">string</bdi>، <bdi dir="ltr" class="odt-ltr-term">string</bdi>، <bdi dir="ltr" class="odt-ltr-term">int</bdi>)</em> الذي سيقوم بإنشاء شخص باستخدام المعلمات المُرسلة <em>(<bdi dir="ltr" class="odt-ltr-term">firstname</bdi>، <bdi dir="ltr" class="odt-ltr-term">lastname</bdi>، <bdi dir="ltr" class="odt-ltr-term">age</bdi>)</em>. وبمجرد اكتمال إنشاء الفئة الأساسية، يستمر إنشاء فئة <em><bdi dir="ltr" class="odt-ltr-term">Teacher</bdi></em> بتنفيذ نص مُنشئ الفئة:</p>
+<p>يُشير إلى أن مُنشئ الفئة يتلقى أربعة معلمات <em>هي الاسم</em> الأول، والاسم، والع<em>مر</em>، <em>والقسم</em>، بالإضافة إلى ثلاث معلمات أخرى <em>(<bdi dir="ltr" class="odt-ltr-term">firstname</bdi>، <bdi dir="ltr" class="odt-ltr-term">lastname</bdi>، age)</em> من فئته الأساسية، وهي هنا فئة <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em>. ونعلم أن هذه الفئة تحتوي على مُنشئ <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi>(<bdi dir="ltr" class="odt-ltr-term">string</bdi>، <bdi dir="ltr" class="odt-ltr-term">string</bdi>، int)</em> الذي سيقوم بإنشاء شخص باستخدام المعلمات المُرسلة <em>(<bdi dir="ltr" class="odt-ltr-term">firstname</bdi>، <bdi dir="ltr" class="odt-ltr-term">lastname</bdi>، age)</em>. وبمجرد اكتمال إنشاء الفئة الأساسية، يستمر إنشاء فئة <em><bdi dir="ltr" class="odt-ltr-term">Teacher</bdi></em> بتنفيذ نص مُنشئ الفئة:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#008000">// on mémorise la section</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            Section = section;</span></span>
@@ -2242,7 +2242,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 </code></pre></div>
 
-<p>لا يمكن القيام بذلك. فقد أعلنت الفئة <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em> أن حقولها الثلاثة <em><bdi dir="ltr" class="odt-ltr-term">first name</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">name</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">age</bdi></em> هي حقول خاصة (<em><bdi dir="ltr" class="odt-ltr-term">private</bdi></em>). ولا يمكن الوصول المباشر إلى هذه الحقول إلا من خلال كائنات من نفس الفئة. أما جميع الكائنات الأخرى، بما في ذلك الكائنات الفرعية مثل <bdi dir="ltr" class="odt-ltr-term">ici</bdi>، فيجب عليها استخدام الطرق العامة للوصول إليها. وكان الأمر سيختلف لو أن <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em> أعلنت أن الحقول الثلاثة هي حقول محمية (<em><bdi dir="ltr" class="odt-ltr-term">protected</bdi></em>): فهذا يسمح للفئات المشتقة بالوصول المباشر إلى الحقول الثلاثة. في مثالنا، كان استخدام منشئ الفئة الأصلية هو الحل الصحيح، وهذه هي الطريقة المعتادة: عند إنشاء كائن فرعي، نستدعي أولاً منشئ الكائن الأصلي، ثم نكمل عمليات التهيئة الخاصة بالكائن الفرعي (<em><bdi dir="ltr" class="odt-ltr-term">section</bdi></em> في مثالنا).</p>
+<p>لا يمكن القيام بذلك. فقد أعلنت الفئة <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em> أن حقولها الثلاثة <em><bdi dir="ltr" class="odt-ltr-term">first name</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">name</bdi></em> و <em>age</em> هي حقول خاصة (<em><bdi dir="ltr" class="odt-ltr-term">private</bdi></em>). ولا يمكن الوصول المباشر إلى هذه الحقول إلا من خلال كائنات من نفس الفئة. أما جميع الكائنات الأخرى، بما في ذلك الكائنات الفرعية مثل ici، فيجب عليها استخدام الطرق العامة للوصول إليها. وكان الأمر سيختلف لو أن <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em> أعلنت أن الحقول الثلاثة هي حقول محمية (<em><bdi dir="ltr" class="odt-ltr-term">protected</bdi></em>): فهذا يسمح للفئات المشتقة بالوصول المباشر إلى الحقول الثلاثة. في مثالنا، كان استخدام منشئ الفئة الأصلية هو الحل الصحيح، وهذه هي الطريقة المعتادة: عند إنشاء كائن فرعي، نستدعي أولاً منشئ الكائن الأصلي، ثم نكمل عمليات التهيئة الخاصة بالكائن الفرعي (<em><bdi dir="ltr" class="odt-ltr-term">section</bdi></em> في مثالنا).</p>
 <p>دعونا نجرب برنامج اختبار أول [<bdi dir="ltr" class="odt-ltr-term">Program.cs</bdi>] :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
@@ -2316,7 +2316,7 @@
 <p>لنفترض وجود كائن <em><bdi dir="ltr" class="odt-ltr-term">teacher</bdi></em> <bdi dir="ltr" class="odt-ltr-term">E.</bdi> يحتوي هذا الكائن على <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em> :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002AA000001838237ABD8.png" width="238" height="135" style="display:inline-block; margin:4px;width:6.309cm;height:3.581cm;" class="odt-zoomable" data-zoom-src="images/10000000000002AA000001838237ABD8.png" /></td></tr></table>
 
-<p>يتم تعريف الخاصية <strong><bdi dir="ltr" class="odt-ltr-term">Identity</bdi></strong> في كل من فئة <em><bdi dir="ltr" class="odt-ltr-term">Teacher</bdi></em> وفئتها الأم <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em>. في فئة <em><bdi dir="ltr" class="odt-ltr-term">Teacher</bdi></em> الخاصة بالفتيات، يجب أن تسبق الخاصية <em><bdi dir="ltr" class="odt-ltr-term">Identity</bdi></em> الكلمة الرئيسية <strong><bdi dir="ltr" class="odt-ltr-term">new</bdi></strong> للإشارة إلى أنه يتم إعادة تعريف خاصية <em><bdi dir="ltr" class="odt-ltr-term">Identity</bdi></em> جديدة لفئة <em><bdi dir="ltr" class="odt-ltr-term">Teacher.</bdi></em></p>
+<p>يتم تعريف الخاصية <strong><bdi dir="ltr" class="odt-ltr-term">Identity</bdi></strong> في كل من فئة <em><bdi dir="ltr" class="odt-ltr-term">Teacher</bdi></em> وفئتها الأم <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em>. في فئة <em><bdi dir="ltr" class="odt-ltr-term">Teacher</bdi></em> الخاصة بالفتيات، يجب أن تسبق الخاصية <em><bdi dir="ltr" class="odt-ltr-term">Identity</bdi></em> الكلمة الرئيسية <strong>new</strong> للإشارة إلى أنه يتم إعادة تعريف خاصية <em><bdi dir="ltr" class="odt-ltr-term">Identity</bdi></em> جديدة لفئة <em><bdi dir="ltr" class="odt-ltr-term">Teacher.</bdi></em></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">public</span> <span style="color:#0000ff">new</span> <span style="color:#0000ff">string</span> Identite{</span></span>
 </code></pre></div>
@@ -2388,7 +2388,7 @@
 <a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>    ...
 <a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a>    Affiche(e);
 </code></pre></div>
-<p>في الحالة الأخيرة، ستتلقى المعلمة الرسمية <em><bdi dir="ltr" class="odt-ltr-term">p</bdi></em> من النوع <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em> في الطريقة الثابتة <em><bdi dir="ltr" class="odt-ltr-term">Affiche</bdi></em> قيمة من النوع <em><bdi dir="ltr" class="odt-ltr-term">Enstructor</bdi></em>. وبما أن نوع <em>المعلم</em> ينحرف <em>عن</em> <bdi dir="ltr" class="odt-ltr-term">Person</bdi>، فإن ذلك يعتبر صحيحًا.</p>
+<p>في الحالة الأخيرة، ستتلقى المعلمة الرسمية <em>p</em> من النوع <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em> في الطريقة الثابتة <em><bdi dir="ltr" class="odt-ltr-term">Affiche</bdi></em> قيمة من النوع <em><bdi dir="ltr" class="odt-ltr-term">Enstructor</bdi></em>. وبما أن نوع <em>المعلم</em> ينحرف <em>عن</em> <bdi dir="ltr" class="odt-ltr-term">Person</bdi>، فإن ذلك يعتبر صحيحًا.</p>
 <p><a id="refheading10400111168783983"></a></p>
 <h3 id="425">4.2.5. <span style="color: #4f81bd">إعادة التعريف والتعدد الشكلي</span></h3>
 <p>دعونا نكمل <em>طريقة <bdi dir="ltr" class="odt-ltr-term">Aff</bdi></em><bdi dir="ltr" class="odt-ltr-term">iche</bdi> الخاصة بنا: </p>
@@ -2440,7 +2440,7 @@
 <a id="__codelineno-47-4" name="__codelineno-47-4"></a>Constructeur Personne(string, string, int)
 <a id="__codelineno-47-5" name="__codelineno-47-5"></a>[Jean, Dupont, 30]
 </code></pre></div></td></tr></table></div>
-<p>يُظهر التنفيذ أن <em><bdi dir="ltr" class="odt-ltr-term">p.Identite</bdi></em> (السطر 17) قد نفذت <em>هوية شخص</em>، أولاً (السطر 7) الشخص الموجود في <em>المعلم</em> <bdi dir="ltr" class="odt-ltr-term">e</bdi>، ثم (السطر 10) <em>الشخص</em> <bdi dir="ltr" class="odt-ltr-term">p</bdi> نفسه. لم تتكيف مع الكائن الذي تم تمريره فعليًا كمعلمة إلى <em><bdi dir="ltr" class="odt-ltr-term">Poster</bdi></em>. كنا نفضل الحصول على الهوية الكاملة لـ <em><bdi dir="ltr" class="odt-ltr-term">theTeacher</bdi></em> <bdi dir="ltr" class="odt-ltr-term">e.</bdi> وكان هذا سيتطلب استخدام صيغة <em><bdi dir="ltr" class="odt-ltr-term">p.Identite</bdi></em> للإشارة إلى خاصية <em><bdi dir="ltr" class="odt-ltr-term">Identity</bdi></em> للكائن الذي يشير إليه <em><bdi dir="ltr" class="odt-ltr-term">p</bdi></em> فعليًا بدلاً من خاصية <em><bdi dir="ltr" class="odt-ltr-term">Identity</bdi></em> الخاصة بـ &quot;<em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em>&quot; للكائن الذي يشير إليه <em><bdi dir="ltr" class="odt-ltr-term">p</bdi></em> فعليًا.</p>
+<p>يُظهر التنفيذ أن <em><bdi dir="ltr" class="odt-ltr-term">p.Identite</bdi></em> (السطر 17) قد نفذت <em>هوية شخص</em>، أولاً (السطر 7) الشخص الموجود في <em>المعلم</em> e، ثم (السطر 10) <em>الشخص</em> p نفسه. لم تتكيف مع الكائن الذي تم تمريره فعليًا كمعلمة إلى <em><bdi dir="ltr" class="odt-ltr-term">Poster</bdi></em>. كنا نفضل الحصول على الهوية الكاملة لـ <em><bdi dir="ltr" class="odt-ltr-term">theTeacher</bdi></em> <bdi dir="ltr" class="odt-ltr-term">e.</bdi> وكان هذا سيتطلب استخدام صيغة <em><bdi dir="ltr" class="odt-ltr-term">p.Identite</bdi></em> للإشارة إلى خاصية <em><bdi dir="ltr" class="odt-ltr-term">Identity</bdi></em> للكائن الذي يشير إليه <em>p</em> فعليًا بدلاً من خاصية <em><bdi dir="ltr" class="odt-ltr-term">Identity</bdi></em> الخاصة بـ &quot;<em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em>&quot; للكائن الذي يشير إليه <em>p</em> فعليًا.</p>
 <p>يمكن الحصول على هذه النتيجة من خلال إعلان <em><bdi dir="ltr" class="odt-ltr-term">Identity</bdi></em> كخاصية <strong>افتراضية</strong> (<strong><bdi dir="ltr" class="odt-ltr-term">virtual</bdi></strong>) في الفئة الأساسية <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em> :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">public</span> <span style="font-weight:bold;color:#0000ff">virtual</span> <span style="color:#0000ff">string</span> Identite {</span></span>
@@ -2448,7 +2448,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">        }</span></span>
 </code></pre></div>
 
-<p>جعلت الكلمة الرئيسية <strong><bdi dir="ltr" class="odt-ltr-term">virtual</bdi></strong> من <em><bdi dir="ltr" class="odt-ltr-term">Identity</bdi></em> خاصية افتراضية. يمكن أيضًا تطبيق هذه الكلمة الرئيسية على الطرق. يجب على الفئات الفرعية التي تعيد تعريف خاصية أو طريقة افتراضية أن تستخدم الكلمة الرئيسية <strong><bdi dir="ltr" class="odt-ltr-term">override</bdi></strong> بدلاً من <strong><bdi dir="ltr" class="odt-ltr-term">new</bdi></strong> لتأهيل الخاصية/الطريقة المعاد تعريفها. وبالتالي، في فئة <bdi dir="ltr" class="odt-ltr-term">Teacher</bdi>، يتم إعادة تعريف الخاصية <em><bdi dir="ltr" class="odt-ltr-term">Identity</bdi></em> على النحو التالي:</p>
+<p>جعلت الكلمة الرئيسية <strong><bdi dir="ltr" class="odt-ltr-term">virtual</bdi></strong> من <em><bdi dir="ltr" class="odt-ltr-term">Identity</bdi></em> خاصية افتراضية. يمكن أيضًا تطبيق هذه الكلمة الرئيسية على الطرق. يجب على الفئات الفرعية التي تعيد تعريف خاصية أو طريقة افتراضية أن تستخدم الكلمة الرئيسية <strong><bdi dir="ltr" class="odt-ltr-term">override</bdi></strong> بدلاً من <strong>new</strong> لتأهيل الخاصية/الطريقة المعاد تعريفها. وبالتالي، في فئة <bdi dir="ltr" class="odt-ltr-term">Teacher</bdi>، يتم إعادة تعريف الخاصية <em><bdi dir="ltr" class="odt-ltr-term">Identity</bdi></em> على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">public</span> <span style="font-weight:bold;color:#0000ff">override</span> <span style="color:#0000ff">string</span> Identite {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">get</span> { <span style="color:#0000ff">return</span> <span style="color:#2b91af">String</span>.Format(<span style="color:#a31515">&quot;Enseignant[{0},{1}]&quot;</span>, <span style="color:#0000ff">base</span>.Identite, Section); }</span></span>
@@ -2533,7 +2533,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>لنلقِ نظرة على الطريقة <em><bdi dir="ltr" class="odt-ltr-term">Poster</bdi></em> التي يكون معلمتها شخصًا <em><bdi dir="ltr" class="odt-ltr-term">p</bdi></em>. في السطر 15، لا تحتوي فئة <em><bdi dir="ltr" class="odt-ltr-term">Console</bdi></em> على أي متغير يقبل معلمة من نوع <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em>. من بين طرق <em><bdi dir="ltr" class="odt-ltr-term">WriteLine</bdi></em> المختلفة، هناك طريقة تقبل <em>كائنًا</em>. سيستخدم المُجمِّع هذه الطريقة، <em><bdi dir="ltr" class="odt-ltr-term">WriteLine</bdi>(<bdi dir="ltr" class="odt-ltr-term">Object o</bdi>)،</em> لأن هذا التوقيع يعني أن <em><bdi dir="ltr" class="odt-ltr-term">o</bdi></em> يمكن أن يكون من نوع <em><bdi dir="ltr" class="odt-ltr-term">Object</bdi></em> أو مشتقًا منه. نظرًا لأن <em><bdi dir="ltr" class="odt-ltr-term">Object</bdi></em> هي الفئة الأم لجميع الفئات، يمكن تمرير أي كائن كمعلمة إلى <em><bdi dir="ltr" class="odt-ltr-term">WriteLine</bdi></em> وبالتالي كائن من نوع <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em> أو <em><bdi dir="ltr" class="odt-ltr-term">Teacher</bdi></em>. تكتب الطريقة <em><bdi dir="ltr" class="odt-ltr-term">WriteLine</bdi>(<bdi dir="ltr" class="odt-ltr-term">Object o</bdi>) <bdi dir="ltr" class="odt-ltr-term">o.ToString</bdi>()</em> في تدفق الكتابة <em><bdi dir="ltr" class="odt-ltr-term">Out</bdi></em>. نظرًا لأن الطريقة <em><bdi dir="ltr" class="odt-ltr-term">ToString</bdi></em> افتراضية، إذا كان الكائن <bdi dir="ltr" class="odt-ltr-term">o</bdi> (من نوع <em><bdi dir="ltr" class="odt-ltr-term">Object</bdi></em> أو مشتق) قد أعاد <em>تعريف</em> <bdi dir="ltr" class="odt-ltr-term">ToString</bdi>، فسيتم استخدام هذا الأخير. هذا هو الحال هنا مع <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">Teacher</bdi></em>.</p>
+<p>لنلقِ نظرة على الطريقة <em><bdi dir="ltr" class="odt-ltr-term">Poster</bdi></em> التي يكون معلمتها شخصًا <em>p</em>. في السطر 15، لا تحتوي فئة <em><bdi dir="ltr" class="odt-ltr-term">Console</bdi></em> على أي متغير يقبل معلمة من نوع <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em>. من بين طرق <em><bdi dir="ltr" class="odt-ltr-term">WriteLine</bdi></em> المختلفة، هناك طريقة تقبل <em>كائنًا</em>. سيستخدم المُجمِّع هذه الطريقة، <em><bdi dir="ltr" class="odt-ltr-term">WriteLine</bdi>(<bdi dir="ltr" class="odt-ltr-term">Object o</bdi>)،</em> لأن هذا التوقيع يعني أن <em>o</em> يمكن أن يكون من نوع <em><bdi dir="ltr" class="odt-ltr-term">Object</bdi></em> أو مشتقًا منه. نظرًا لأن <em><bdi dir="ltr" class="odt-ltr-term">Object</bdi></em> هي الفئة الأم لجميع الفئات، يمكن تمرير أي كائن كمعلمة إلى <em><bdi dir="ltr" class="odt-ltr-term">WriteLine</bdi></em> وبالتالي كائن من نوع <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em> أو <em><bdi dir="ltr" class="odt-ltr-term">Teacher</bdi></em>. تكتب الطريقة <em><bdi dir="ltr" class="odt-ltr-term">WriteLine</bdi>(<bdi dir="ltr" class="odt-ltr-term">Object o</bdi>) <bdi dir="ltr" class="odt-ltr-term">o.ToString</bdi>()</em> في تدفق الكتابة <em><bdi dir="ltr" class="odt-ltr-term">Out</bdi></em>. نظرًا لأن الطريقة <em><bdi dir="ltr" class="odt-ltr-term">ToString</bdi></em> افتراضية، إذا كان الكائن o (من نوع <em><bdi dir="ltr" class="odt-ltr-term">Object</bdi></em> أو مشتق) قد أعاد <em>تعريف</em> <bdi dir="ltr" class="odt-ltr-term">ToString</bdi>، فسيتم استخدام هذا الأخير. هذا هو الحال هنا مع <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">Teacher</bdi></em>.</p>
 <p>وهذا ما تظهره نتائج الأداء:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-52-1">1</a></span>
 <span class="normal"><a href="#__codelineno-52-2">2</a></span>
@@ -2552,14 +2552,14 @@
 <p>لننظر إلى التعليمات التالية</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>op1 + op2
 </code></pre></div>
-<p>حيث <em><bdi dir="ltr" class="odt-ltr-term">op1</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">op2</bdi></em> هما معاملان. من الممكن إعادة تعريف معنى عامل +. إذا كان المعامل <em><bdi dir="ltr" class="odt-ltr-term">op1</bdi></em> كائنًا من فئة <em><bdi dir="ltr" class="odt-ltr-term">C1</bdi>،</em> فيجب تعريف طريقة ثابتة في <em><bdi dir="ltr" class="odt-ltr-term">C1</bdi></em> بالتوقيع التالي:</p>
+<p>حيث <em>op1</em> و <em>op2</em> هما معاملان. من الممكن إعادة تعريف معنى عامل +. إذا كان المعامل <em>op1</em> كائنًا من فئة <em><bdi dir="ltr" class="odt-ltr-term">C1</bdi>،</em> فيجب تعريف طريقة ثابتة في <em><bdi dir="ltr" class="odt-ltr-term">C1</bdi></em> بالتوقيع التالي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>public static [type] operator +(C1 opérande1, C2 opérande2);
 </code></pre></div>
 <p>عندما يصادف المُترجم</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>op1 + op2
 </code></pre></div>
-<p>ثم يقوم بترجمتها إلى <em><bdi dir="ltr" class="odt-ltr-term">C1.operator+</bdi>(<bdi dir="ltr" class="odt-ltr-term">op1</bdi>,<bdi dir="ltr" class="odt-ltr-term">op2</bdi>)</em>. ويُعد النوع الذي يحدده <em>المشغل</em> أمرًا مهمًا. لنأخذ العملية <em><bdi dir="ltr" class="odt-ltr-term">op1+op2+op3</bdi></em> على سبيل المثال. يقوم المُترجم بترجمتها إلى <em>(<bdi dir="ltr" class="odt-ltr-term">op1+op2</bdi>)+<bdi dir="ltr" class="odt-ltr-term">op3</bdi></em>. لنفترض أن <em><bdi dir="ltr" class="odt-ltr-term">res12</bdi></em> هي نتيجة <em><bdi dir="ltr" class="odt-ltr-term">op1+op2</bdi></em>. العملية التالية هي <em><bdi dir="ltr" class="odt-ltr-term">res12+op3</bdi></em>. إذا كان نوع <em><bdi dir="ltr" class="odt-ltr-term">res12</bdi> هو</em> <bdi dir="ltr" class="odt-ltr-term">C1</bdi>، فسيتم ترجمتها أيضًا إلى <em><bdi dir="ltr" class="odt-ltr-term">C1.operator+</bdi>(<bdi dir="ltr" class="odt-ltr-term">res12</bdi>,<bdi dir="ltr" class="odt-ltr-term">op3</bdi>)</em>. وهذا يجعل من الممكن ربط العمليات معًا.</p>
-<p>يمكن أيضًا إعادة تعريف العوامل الأحادية ذات المعامل الواحد. على سبيل المثال، إذا كان <em><bdi dir="ltr" class="odt-ltr-term">op1</bdi></em> كائنًا من النوع <bdi dir="ltr" class="odt-ltr-term">C1</bdi>، فيمكن إعادة تعريف العملية <em><bdi dir="ltr" class="odt-ltr-term">op1++</bdi></em> بواسطة طريقة ثابتة لـ <em><bdi dir="ltr" class="odt-ltr-term">C1</bdi></em> :</p>
+<p>ثم يقوم بترجمتها إلى <em><bdi dir="ltr" class="odt-ltr-term">C1.operator+</bdi>(op1,op2)</em>. ويُعد النوع الذي يحدده <em>المشغل</em> أمرًا مهمًا. لنأخذ العملية <em><bdi dir="ltr" class="odt-ltr-term">op1+op2+op3</bdi></em> على سبيل المثال. يقوم المُترجم بترجمتها إلى <em>(<bdi dir="ltr" class="odt-ltr-term">op1+op2</bdi>)+op3</em>. لنفترض أن <em><bdi dir="ltr" class="odt-ltr-term">res12</bdi></em> هي نتيجة <em><bdi dir="ltr" class="odt-ltr-term">op1+op2</bdi></em>. العملية التالية هي <em><bdi dir="ltr" class="odt-ltr-term">res12+op3</bdi></em>. إذا كان نوع <em><bdi dir="ltr" class="odt-ltr-term">res12</bdi> هو</em> <bdi dir="ltr" class="odt-ltr-term">C1</bdi>، فسيتم ترجمتها أيضًا إلى <em><bdi dir="ltr" class="odt-ltr-term">C1.operator+</bdi>(<bdi dir="ltr" class="odt-ltr-term">res12</bdi>,op3)</em>. وهذا يجعل من الممكن ربط العمليات معًا.</p>
+<p>يمكن أيضًا إعادة تعريف العوامل الأحادية ذات المعامل الواحد. على سبيل المثال، إذا كان <em>op1</em> كائنًا من النوع <bdi dir="ltr" class="odt-ltr-term">C1</bdi>، فيمكن إعادة تعريف العملية <em><bdi dir="ltr" class="odt-ltr-term">op1++</bdi></em> بواسطة طريقة ثابتة لـ <em><bdi dir="ltr" class="odt-ltr-term">C1</bdi></em> :</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a>public static [type] operator ++(C1 opérande1);
 </code></pre></div>
 <p>ما قيل هنا ينطبق على معظم العوامل مع بعض الاستثناءات:</p>
@@ -2573,11 +2573,11 @@
 <h3 id="432">4.3.2. <span style="color: #4f81bd">مثال</span></h3>
 <p>نقوم بإنشاء <em><bdi dir="ltr" class="odt-ltr-term">ListeDePersonnes</bdi></em> مشتقة من <em><bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi></em>. تنفذ هذه الفئة قائمة ديناميكية ويتم عرضها في الفصل التالي. نستخدم فقط العناصر التالية من هذه الفئة:</p>
 <ul>
-  <li>الطريقة <bdi dir="ltr" class="odt-ltr-term">L.</bdi><i><bdi dir="ltr" class="odt-ltr-term">Add</bdi>(<bdi dir="ltr" class="odt-ltr-term">Object o</bdi>) </i>لإضافة كائن <i><bdi dir="ltr" class="odt-ltr-term">o</bdi> </i>إلى <i><bdi dir="ltr" class="odt-ltr-term">L</bdi></i>. هنا سيكون الكائن <i><bdi dir="ltr" class="odt-ltr-term">o</bdi> </i>كائنًا <i>من فئة <bdi dir="ltr" class="odt-ltr-term">Person</bdi></i>.
+  <li>الطريقة <bdi dir="ltr" class="odt-ltr-term">L.</bdi><i><bdi dir="ltr" class="odt-ltr-term">Add</bdi>(<bdi dir="ltr" class="odt-ltr-term">Object o</bdi>) </i>لإضافة كائن <i>o </i>إلى <i><bdi dir="ltr" class="odt-ltr-term">L</bdi></i>. هنا سيكون الكائن <i>o </i>كائنًا <i>من فئة <bdi dir="ltr" class="odt-ltr-term">Person</bdi></i>.
   </li>
   <li>الخاصية <bdi dir="ltr" class="odt-ltr-term">L.</bdi><i><bdi dir="ltr" class="odt-ltr-term">Count</bdi> </i>التي تعطي عدد العناصر في القائمة <bdi dir="ltr" class="odt-ltr-term">L</bdi>
   </li>
-  <li>الترميز <bdi dir="ltr" class="odt-ltr-term">L</bdi><i>[<bdi dir="ltr" class="odt-ltr-term">i</bdi>] </i>الذي يعطي العنصر <bdi dir="ltr" class="odt-ltr-term">i</bdi> من القائمة <bdi dir="ltr" class="odt-ltr-term">L</bdi>
+  <li>الترميز <bdi dir="ltr" class="odt-ltr-term">L</bdi><i>[i] </i>الذي يعطي العنصر i من القائمة <bdi dir="ltr" class="odt-ltr-term">L</bdi>
   </li>
 </ul>
 
@@ -2622,11 +2622,11 @@
 <ul>
   <li>السطر 6: اشتقاق فئة <i><bdi dir="ltr" class="odt-ltr-term">ListeDePersonnes</bdi></i> من فئة <i><bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi></i>
   </li>
-  <li>الأسطر 8-13: تعريف عامل + لعملية <bdi dir="ltr" class="odt-ltr-term">l</bdi> + <bdi dir="ltr" class="odt-ltr-term">p</bdi>، حيث <bdi dir="ltr" class="odt-ltr-term">l</bdi> من نوع <i><bdi dir="ltr" class="odt-ltr-term">ListeDePersonnes</bdi> </i>و <bdi dir="ltr" class="odt-ltr-term">p</bdi> من نوع <i><bdi dir="ltr" class="odt-ltr-term">Person</bdi> </i>أو مشتق.
+  <li>الأسطر 8-13: تعريف عامل + لعملية l + p، حيث l من نوع <i><bdi dir="ltr" class="odt-ltr-term">ListeDePersonnes</bdi> </i>و p من نوع <i><bdi dir="ltr" class="odt-ltr-term">Person</bdi> </i>أو مشتق.
   </li>
-  <li>السطر 10: تتم إضافة الشخص <bdi dir="ltr" class="odt-ltr-term">p</bdi> إلى القائمة <bdi dir="ltr" class="odt-ltr-term">l.</bdi> هذه هي طريقة <i><bdi dir="ltr" class="odt-ltr-term">Add</bdi> </i>للفئة الأصلية <i><bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi> </i>المستخدمة هنا.
+  <li>السطر 10: تتم إضافة الشخص p إلى القائمة <bdi dir="ltr" class="odt-ltr-term">l.</bdi> هذه هي طريقة <i><bdi dir="ltr" class="odt-ltr-term">Add</bdi> </i>للفئة الأصلية <i><bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi> </i>المستخدمة هنا.
   </li>
-  <li>السطر 12: يتم عرض الإشارة إلى القائمة <bdi dir="ltr" class="odt-ltr-term">l</bdi> بحيث يمكن ربط عوامل +، كما في <bdi dir="ltr" class="odt-ltr-term">l</bdi> + <bdi dir="ltr" class="odt-ltr-term">p1</bdi> + <bdi dir="ltr" class="odt-ltr-term">p2.</bdi> سيتم تفسير العملية <i><bdi dir="ltr" class="odt-ltr-term">l+p1+p2</bdi> </i>(أولوية العامل) على أنها <i>(<bdi dir="ltr" class="odt-ltr-term">l+p1</bdi>)+<bdi dir="ltr" class="odt-ltr-term">p2</bdi></i>. تؤدي العملية <i><bdi dir="ltr" class="odt-ltr-term">l+p1</bdi> </i>إلى إنشاء المرجع <i><bdi dir="ltr" class="odt-ltr-term">l</bdi></i>. ثم تصبح العملية <i>(<bdi dir="ltr" class="odt-ltr-term">l+p1</bdi>)+<bdi dir="ltr" class="odt-ltr-term">p2</bdi> </i>هي <i><bdi dir="ltr" class="odt-ltr-term">l+p2</bdi> </i>التي تضيف الشخص <i><bdi dir="ltr" class="odt-ltr-term">p2</bdi> </i>إلى قائمة الأشخاص <i><bdi dir="ltr" class="odt-ltr-term">l</bdi></i>.
+  <li>السطر 12: يتم عرض الإشارة إلى القائمة l بحيث يمكن ربط عوامل +، كما في l + p1 + <bdi dir="ltr" class="odt-ltr-term">p2.</bdi> سيتم تفسير العملية <i><bdi dir="ltr" class="odt-ltr-term">l+p1+p2</bdi> </i>(أولوية العامل) على أنها <i>(<bdi dir="ltr" class="odt-ltr-term">l+p1</bdi>)+p2</i>. تؤدي العملية <i><bdi dir="ltr" class="odt-ltr-term">l+p1</bdi> </i>إلى إنشاء المرجع <i>l</i>. ثم تصبح العملية <i>(<bdi dir="ltr" class="odt-ltr-term">l+p1</bdi>)+p2 </i>هي <i><bdi dir="ltr" class="odt-ltr-term">l+p2</bdi> </i>التي تضيف الشخص <i>p2 </i>إلى قائمة الأشخاص <i>l</i>.
   </li>
   <li>السطر 16: نعيد تعريف <i><bdi dir="ltr" class="odt-ltr-term">ToString</bdi> </i>لعرض قائمة بالأشخاص على النحو التالي <i>(<bdi dir="ltr" class="odt-ltr-term">person1</bdi>, <bdi dir="ltr" class="odt-ltr-term">person2</bdi>, ..) </i>حيث <i><bdi dir="ltr" class="odt-ltr-term">personi</bdi> </i>هي نفسها نتيجة فئة <i><bdi dir="ltr" class="odt-ltr-term">ToString Person</bdi></i>.
   </li>
@@ -2634,7 +2634,7 @@
   </li>
   <li>السطر 21: التمرير عبر عناصر قائمة الأشخاص. يتم هنا تحديد هذه القائمة بواسطة <b><bdi dir="ltr" class="odt-ltr-term">this</bdi></b>. هذا هو الكائن الحالي الذي يتم تطبيق <i><bdi dir="ltr" class="odt-ltr-term">ToString</bdi></i> عليه. الخاصية <i><bdi dir="ltr" class="odt-ltr-term">Count</bdi> </i>هي خاصية للفئة الأصلية <i><bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi></i>.
   </li>
-  <li>السطر 22: العنصر رقم <bdi dir="ltr" class="odt-ltr-term">i</bdi> في القائمة الحالية <i><bdi dir="ltr" class="odt-ltr-term">this</bdi> </i>يمكن الوصول إليه عبر الترميز <i><bdi dir="ltr" class="odt-ltr-term">this</bdi>[<bdi dir="ltr" class="odt-ltr-term">i</bdi>]</i>. مرة أخرى، هذه خاصية من <i><bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi></i>. وبما أن الأمر يتعلق بإضافة سلاسل، فسيتم استخدام <i><bdi dir="ltr" class="odt-ltr-term">this</bdi>[<bdi dir="ltr" class="odt-ltr-term">i</bdi>].<bdi dir="ltr" class="odt-ltr-term">ToString</bdi>()</i>. وبما أن هذه طريقة افتراضية، فسيتم استخدام كائن <i><bdi dir="ltr" class="odt-ltr-term">ToString this</bdi></i>، من النوع <i><bdi dir="ltr" class="odt-ltr-term">Person</bdi> </i>أو مشتق منه.
+  <li>السطر 22: العنصر رقم i في القائمة الحالية <i><bdi dir="ltr" class="odt-ltr-term">this</bdi> </i>يمكن الوصول إليه عبر الترميز <i><bdi dir="ltr" class="odt-ltr-term">this</bdi>[i]</i>. مرة أخرى، هذه خاصية من <i><bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi></i>. وبما أن الأمر يتعلق بإضافة سلاسل، فسيتم استخدام <i><bdi dir="ltr" class="odt-ltr-term">this</bdi>[i].<bdi dir="ltr" class="odt-ltr-term">ToString</bdi>()</i>. وبما أن هذه طريقة افتراضية، فسيتم استخدام كائن <i><bdi dir="ltr" class="odt-ltr-term">ToString this</bdi></i>، من النوع <i><bdi dir="ltr" class="odt-ltr-term">Person</bdi> </i>أو مشتق منه.
   </li>
   <li>السطر 31: نحتاج إلى إرجاع كائن من نوع <i><bdi dir="ltr" class="odt-ltr-term">string</bdi> </i>(السطر 16). تحتوي الفئة <i><bdi dir="ltr" class="odt-ltr-term">StringBuilder</bdi> </i>على طريقة <i><bdi dir="ltr" class="odt-ltr-term">ToString</bdi> </i>التي تسمح لك بالتحويل من <i><bdi dir="ltr" class="odt-ltr-term">StringBuilder</bdi> </i>إلى نوع <i><bdi dir="ltr" class="odt-ltr-term">string</bdi></i>.
   </li>
@@ -2670,7 +2670,7 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 7: إنشاء قائمة بالأشخاص <bdi dir="ltr" class="odt-ltr-term">l</bdi>
+  <li>السطر 7: إنشاء قائمة بالأشخاص l
   </li>
   <li>السطر 9: إضافة شخصين باستخدام علامة +
   </li>
@@ -2687,8 +2687,8 @@
 </code></pre></div></td></tr></table></div>
 <p><a id="refheading10400191168783983"></a></p>
 <h2 id="44">4.4. <span style="color: #4f81bd">تحديد مفهرس لفئة</span></h2>
-<p>نستمر هنا في استخدام الفئة <em><bdi dir="ltr" class="odt-ltr-term">ListeDePersonnes</bdi></em>. إذا كان <em><bdi dir="ltr" class="odt-ltr-term">l</bdi></em> كائنًا <em>من فئة</em> <bdi dir="ltr" class="odt-ltr-term">ListeDePersonnes</bdi>، فإننا نريد أن نتمكن من استخدام <em><bdi dir="ltr" class="odt-ltr-term">l</bdi>[<bdi dir="ltr" class="odt-ltr-term">i</bdi>]</em> للإشارة إلى الشخص رقم <bdi dir="ltr" class="odt-ltr-term">i</bdi> في القائمة <em><bdi dir="ltr" class="odt-ltr-term">l</bdi></em> سواء في القراءة (<em><bdi dir="ltr" class="odt-ltr-term">Person p</bdi>=<bdi dir="ltr" class="odt-ltr-term">l</bdi>[<bdi dir="ltr" class="odt-ltr-term">i</bdi>]</em>) أو في الكتابة (<em><bdi dir="ltr" class="odt-ltr-term">l</bdi>[<bdi dir="ltr" class="odt-ltr-term">i</bdi>]=<bdi dir="ltr" class="odt-ltr-term">new Person</bdi>(...)</em>).</p>
-<p>لنتمكن من كتابة <em><bdi dir="ltr" class="odt-ltr-term">l</bdi>[<bdi dir="ltr" class="odt-ltr-term">i</bdi>]</em> حيث يشير <em><bdi dir="ltr" class="odt-ltr-term">l</bdi>[<bdi dir="ltr" class="odt-ltr-term">i</bdi>]</em> إلى كائن <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em>، الفئة، نحتاج إلى تعريف <em><bdi dir="ltr" class="odt-ltr-term">ListeDePersonnes</bdi></em> بالطريقة التالية:</p>
+<p>نستمر هنا في استخدام الفئة <em><bdi dir="ltr" class="odt-ltr-term">ListeDePersonnes</bdi></em>. إذا كان <em>l</em> كائنًا <em>من فئة</em> <bdi dir="ltr" class="odt-ltr-term">ListeDePersonnes</bdi>، فإننا نريد أن نتمكن من استخدام <em>l[i]</em> للإشارة إلى الشخص رقم i في القائمة <em>l</em> سواء في القراءة (<em><bdi dir="ltr" class="odt-ltr-term">Person p</bdi>=l[i]</em>) أو في الكتابة (<em>l[i]=<bdi dir="ltr" class="odt-ltr-term">new Person</bdi>(...)</em>).</p>
+<p>لنتمكن من كتابة <em>l[i]</em> حيث يشير <em>l[i]</em> إلى كائن <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em>، الفئة، نحتاج إلى تعريف <em><bdi dir="ltr" class="odt-ltr-term">ListeDePersonnes</bdi></em> بالطريقة التالية:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">public</span> <span style="color:#2b91af">Personne</span> <span style="color:#0000ff">this</span>[<span style="color:#0000ff">int</span> i] {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">get</span> { ... }</span></span>
@@ -2696,7 +2696,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>تسمى هذه الطريقة <em><bdi dir="ltr" class="odt-ltr-term">this</bdi>[<bdi dir="ltr" class="odt-ltr-term">int i</bdi>]</em>، وهي عبارة عن <strong>مؤشر</strong> لأنها تعطي معنى للتعبير <em><bdi dir="ltr" class="odt-ltr-term">obj</bdi>[<bdi dir="ltr" class="odt-ltr-term">i</bdi>]</em> الذي يذكرنا بترميز المصفوفات، في حين أن <em><bdi dir="ltr" class="odt-ltr-term">obj</bdi></em> ليس مصفوفة بل كائن. يتم استدعاء طريقة <em><bdi dir="ltr" class="odt-ltr-term">get</bdi> لهذا</em> الكائن <em><bdi dir="ltr" class="odt-ltr-term">obj</bdi></em> عند كتابة <em><bdi dir="ltr" class="odt-ltr-term">variable</bdi>=<bdi dir="ltr" class="odt-ltr-term">obj</bdi>[<bdi dir="ltr" class="odt-ltr-term">i</bdi>]</em>، بينما يتم استدعاء طريقة <em><bdi dir="ltr" class="odt-ltr-term">set</bdi></em> عند كتابة <em><bdi dir="ltr" class="odt-ltr-term">obj</bdi>[<bdi dir="ltr" class="odt-ltr-term">i</bdi>]=<bdi dir="ltr" class="odt-ltr-term">value</bdi></em>.</p>
+<p>تسمى هذه الطريقة <em><bdi dir="ltr" class="odt-ltr-term">this</bdi>[<bdi dir="ltr" class="odt-ltr-term">int i</bdi>]</em>، وهي عبارة عن <strong>مؤشر</strong> لأنها تعطي معنى للتعبير <em>obj[i]</em> الذي يذكرنا بترميز المصفوفات، في حين أن <em>obj</em> ليس مصفوفة بل كائن. يتم استدعاء طريقة <em>get لهذا</em> الكائن <em>obj</em> عند كتابة <em><bdi dir="ltr" class="odt-ltr-term">variable</bdi>=obj[i]</em>، بينما يتم استدعاء طريقة <em>set</em> عند كتابة <em>obj[i]=<bdi dir="ltr" class="odt-ltr-term">value</bdi></em>.</p>
 <p>تشتق فئة <em><bdi dir="ltr" class="odt-ltr-term">ListeDePersonnes</bdi></em> من فئة <em><bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi></em> التي تحتوي هي نفسها على مؤشر:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a>    public object this[int i] { ... }
 </code></pre></div>
@@ -2710,7 +2710,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"> <span style="color:#0000ff">public</span> object <span style="color:#0000ff">this</span>[<span style="color:#0000ff">int</span> i] </span></span>
 </code></pre></div>
 
-<p>لأنهما يحملان نفس الاسم ونفس نوع المعلمة (<bdi dir="ltr" class="odt-ltr-term">int</bdi>). وللإشارة إلى أن <em>هذه</em> الفئة <em><bdi dir="ltr" class="odt-ltr-term">ListeDePersonnes</bdi></em> &quot;تخزن مؤقتًا&quot; الطريقة التي تحمل نفس الاسم في <em>فئة <bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi>،</em> يتعين علينا إضافة الكلمة الرئيسية <em><bdi dir="ltr" class="odt-ltr-term">new</bdi></em> عند إعلان <em><bdi dir="ltr" class="odt-ltr-term">ListeDePersonnes</bdi></em>. لذلك نكتب:</p>
+<p>لأنهما يحملان نفس الاسم ونفس نوع المعلمة (int). وللإشارة إلى أن <em>هذه</em> الفئة <em><bdi dir="ltr" class="odt-ltr-term">ListeDePersonnes</bdi></em> &quot;تخزن مؤقتًا&quot; الطريقة التي تحمل نفس الاسم في <em>فئة <bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi>،</em> يتعين علينا إضافة الكلمة الرئيسية <em>new</em> عند إعلان <em><bdi dir="ltr" class="odt-ltr-term">ListeDePersonnes</bdi></em>. لذلك نكتب:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">public</span> new Personne <span style="color:#0000ff">this</span>[<span style="color:#0000ff">int</span> i]{</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">get</span> { <span style="color:#0000ff">...</span> }</span></span>
@@ -2718,7 +2718,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 </code></pre></div>
 
-<p>دعونا نكمل هذه الطريقة. يتم استدعاء الطريقة <em><bdi dir="ltr" class="odt-ltr-term">this.get</bdi></em> عندما تكون <em>المتغير=<bdi dir="ltr" class="odt-ltr-term">l</bdi>[<bdi dir="ltr" class="odt-ltr-term">i</bdi>]</em> على سبيل المثال، حيث نوع <em><bdi dir="ltr" class="odt-ltr-term">l</bdi></em> هو <em><bdi dir="ltr" class="odt-ltr-term">ListeDePersonnes</bdi></em>. يجب علينا عندئذٍ إرجاع الشخص رقم <bdi dir="ltr" class="odt-ltr-term">i</bdi> من القائمة <em><bdi dir="ltr" class="odt-ltr-term">l</bdi></em>. يتم ذلك باستخدام الترميز <em><bdi dir="ltr" class="odt-ltr-term">base</bdi>[<bdi dir="ltr" class="odt-ltr-term">i</bdi>]،</em> الذي يجعل الكائن رقم <bdi dir="ltr" class="odt-ltr-term">i</bdi> من فئة <em><bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi></em> التي تشكل الأساس <em>لـ <bdi dir="ltr" class="odt-ltr-term">ListeDePersonnes</bdi></em>. الكائن المرجع هو من نوع <bdi dir="ltr" class="odt-ltr-term">Object</bdi>، لذا يلزم تحويله إلى فئة <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em>.</p>
+<p>دعونا نكمل هذه الطريقة. يتم استدعاء الطريقة <em><bdi dir="ltr" class="odt-ltr-term">this.get</bdi></em> عندما تكون <em>المتغير=l[i]</em> على سبيل المثال، حيث نوع <em>l</em> هو <em><bdi dir="ltr" class="odt-ltr-term">ListeDePersonnes</bdi></em>. يجب علينا عندئذٍ إرجاع الشخص رقم i من القائمة <em>l</em>. يتم ذلك باستخدام الترميز <em><bdi dir="ltr" class="odt-ltr-term">base</bdi>[i]،</em> الذي يجعل الكائن رقم i من فئة <em><bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi></em> التي تشكل الأساس <em>لـ <bdi dir="ltr" class="odt-ltr-term">ListeDePersonnes</bdi></em>. الكائن المرجع هو من نوع <bdi dir="ltr" class="odt-ltr-term">Object</bdi>، لذا يلزم تحويله إلى فئة <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em>.</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">public</span> <span style="color:#0000ff">new</span> Personne <span style="color:#0000ff">this</span>[<span style="color:#0000ff">int</span> i]{</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">get</span> { <span style="color:#0000ff">return</span> (Personne) <span style="color:#0000ff">base</span>[i]; }</span></span>
@@ -2726,7 +2726,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 </code></pre></div>
 
-<p>يتم استدعاء الطريقة <em><bdi dir="ltr" class="odt-ltr-term">set</bdi></em> عندما يكون <em><bdi dir="ltr" class="odt-ltr-term">l</bdi>[<bdi dir="ltr" class="odt-ltr-term">i</bdi>]=<bdi dir="ltr" class="odt-ltr-term">p</bdi></em> حيث <em><bdi dir="ltr" class="odt-ltr-term">p</bdi></em> هو <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em>. والهدف هو ربط الشخص <em><bdi dir="ltr" class="odt-ltr-term">p</bdi></em> بالعنصر <bdi dir="ltr" class="odt-ltr-term">i</bdi> في <em><bdi dir="ltr" class="odt-ltr-term">l</bdi></em>. </p>
+<p>يتم استدعاء الطريقة <em>set</em> عندما يكون <em>l[i]=p</em> حيث <em>p</em> هو <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em>. والهدف هو ربط الشخص <em>p</em> بالعنصر i في <em>l</em>. </p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">public</span> <span style="color:#0000ff">new</span> Personne <span style="color:#0000ff">this</span>[<span style="color:#0000ff">int</span> i]{</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">get</span> { ... }</span></span>
@@ -2734,7 +2734,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 </code></pre></div>
 
-<p>هنا، يتم تعيين الشخص <em><bdi dir="ltr" class="odt-ltr-term">p</bdi></em> الذي تمثله الكلمة الرئيسية <em><bdi dir="ltr" class="odt-ltr-term">value</bdi></em> إلى العنصر رقم <em><bdi dir="ltr" class="odt-ltr-term">i</bdi></em> من الفئة الأساسية <em><bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi></em>.</p>
+<p>هنا، يتم تعيين الشخص <em>p</em> الذي تمثله الكلمة الرئيسية <em><bdi dir="ltr" class="odt-ltr-term">value</bdi></em> إلى العنصر رقم <em>i</em> من الفئة الأساسية <em><bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi></em>.</p>
 <p>وبالتالي، سيكون مؤشر الفئة <em><bdi dir="ltr" class="odt-ltr-term">ListeDePersonnes</bdi></em> كما يلي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">public</span> <span style="color:#0000ff">new</span> Personne <span style="color:#0000ff">this</span>[<span style="color:#0000ff">int</span> i]{</span></span>
@@ -2743,7 +2743,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 </code></pre></div>
 
-<p>الآن نريد أن نتمكن من كتابة <em><bdi dir="ltr" class="odt-ltr-term">Person p</bdi>=<bdi dir="ltr" class="odt-ltr-term">l</bdi>[&quot;<bdi dir="ltr" class="odt-ltr-term">name</bdi>&quot;]</em>, أي فهرسة القائمة <em><bdi dir="ltr" class="odt-ltr-term">l</bdi></em> ليس برقم العنصر، بل باسم الشخص. للقيام بذلك، نحدد مؤشرًا جديدًا:</p>
+<p>الآن نريد أن نتمكن من كتابة <em><bdi dir="ltr" class="odt-ltr-term">Person p</bdi>=l[&quot;<bdi dir="ltr" class="odt-ltr-term">name</bdi>&quot;]</em>, أي فهرسة القائمة <em>l</em> ليس برقم العنصر، بل باسم الشخص. للقيام بذلك، نحدد مؤشرًا جديدًا:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-bash">
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#008000">// indexeur via un nom</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">public</span> <span style="color:#0000ff">int</span> <span style="color:#0000ff">this</span>[<span style="color:#0000ff">string</span> nom] {</span></span>
@@ -2763,8 +2763,8 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">public</span> <span style="color:#0000ff">int</span> <span style="color:#0000ff">this</span>[<span style="color:#0000ff">string</span> nom]</span></span>
 </code></pre></div>
 
-<p>يشير إلى أن قائمة <em><bdi dir="ltr" class="odt-ltr-term">ListeDePersonnes</bdi></em> تحتوي على <em>اسم</em> سلسلة نصية، وأن نتيجة <em><bdi dir="ltr" class="odt-ltr-term">l</bdi>[<bdi dir="ltr" class="odt-ltr-term">name</bdi>]</em> هي عدد صحيح. وسيكون هذا العدد الصحيح هو الموضع الذي يشغله الشخص الذي يحمل الاسم <em>&quot;<bdi dir="ltr" class="odt-ltr-term">name</bdi>&quot;</em> في القائمة، أو -1 إذا لم يكن هذا الشخص موجودًا في القائمة. ويقتصر الأمر على <em>القراءة</em> فقط<em>،</em> مما يمنع الكتابة <em><bdi dir="ltr" class="odt-ltr-term">l</bdi>[&quot;<bdi dir="ltr" class="odt-ltr-term">name</bdi>&quot;]=<bdi dir="ltr" class="odt-ltr-term">value</bdi></em>، الأمر الذي كان سيتطلب تعريف فئة <em><bdi dir="ltr" class="odt-ltr-term">set</bdi></em>. الكلمة الرئيسية <em><bdi dir="ltr" class="odt-ltr-term">new</bdi></em> غير مطلوبة في إعلان المؤشر، حيث أن الفئة الأساسية <em><bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi></em> لا تحدد مؤشرًا <em><bdi dir="ltr" class="odt-ltr-term">this</bdi>[<bdi dir="ltr" class="odt-ltr-term">string</bdi>]</em>.</p>
-<p>في نص <em><bdi dir="ltr" class="odt-ltr-term">get</bdi></em>، يتم مسح قائمة الأشخاص بحثًا عن الاسم الذي تم تمريره في المعلمة. إذا تم العثور عليه في الموضع <bdi dir="ltr" class="odt-ltr-term">i</bdi>، يتم إرجاع <bdi dir="ltr" class="odt-ltr-term">i</bdi>، وإلا يتم إرجاع -1.</p>
+<p>يشير إلى أن قائمة <em><bdi dir="ltr" class="odt-ltr-term">ListeDePersonnes</bdi></em> تحتوي على <em>اسم</em> سلسلة نصية، وأن نتيجة <em>l[<bdi dir="ltr" class="odt-ltr-term">name</bdi>]</em> هي عدد صحيح. وسيكون هذا العدد الصحيح هو الموضع الذي يشغله الشخص الذي يحمل الاسم <em>&quot;<bdi dir="ltr" class="odt-ltr-term">name</bdi>&quot;</em> في القائمة، أو -1 إذا لم يكن هذا الشخص موجودًا في القائمة. ويقتصر الأمر على <em>القراءة</em> فقط<em>،</em> مما يمنع الكتابة <em>l[&quot;<bdi dir="ltr" class="odt-ltr-term">name</bdi>&quot;]=<bdi dir="ltr" class="odt-ltr-term">value</bdi></em>، الأمر الذي كان سيتطلب تعريف فئة <em>set</em>. الكلمة الرئيسية <em>new</em> غير مطلوبة في إعلان المؤشر، حيث أن الفئة الأساسية <em><bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi></em> لا تحدد مؤشرًا <em><bdi dir="ltr" class="odt-ltr-term">this</bdi>[<bdi dir="ltr" class="odt-ltr-term">string</bdi>]</em>.</p>
+<p>في نص <em>get</em>، يتم مسح قائمة الأشخاص بحثًا عن الاسم الذي تم تمريره في المعلمة. إذا تم العثور عليه في الموضع i، يتم إرجاع i، وإلا يتم إرجاع -1.</p>
 <p><span style="color: #0000ff"> </span></p>
 <p>يتم إكمال برنامج الاختبار السابق على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
@@ -2930,17 +2930,17 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#2b91af">SPersonne</span> sp1=new Spersonne();</span></span>
 </code></pre></div>
 
-<p>يتم إنشاء بنية (<bdi dir="ltr" class="odt-ltr-term">Name</bdi>,<bdi dir="ltr" class="odt-ltr-term">Age</bdi>) <strong>وقيمة</strong> <bdi dir="ltr" class="odt-ltr-term">sp1</bdi> هي هذه <strong>البنية نفسها</strong>. في حالة الفئة، يجب أن يتم إنشاء الكائن (<bdi dir="ltr" class="odt-ltr-term">Name</bdi>,<bdi dir="ltr" class="odt-ltr-term">Age</bdi>) بشكل صريح بواسطة المشغل <strong><bdi dir="ltr" class="odt-ltr-term">new</bdi></strong> (السطر 22):</p>
+<p>يتم إنشاء بنية (<bdi dir="ltr" class="odt-ltr-term">Name</bdi>,<bdi dir="ltr" class="odt-ltr-term">Age</bdi>) <strong>وقيمة</strong> sp1 هي هذه <strong>البنية نفسها</strong>. في حالة الفئة، يجب أن يتم إنشاء الكائن (<bdi dir="ltr" class="odt-ltr-term">Name</bdi>,<bdi dir="ltr" class="odt-ltr-term">Age</bdi>) بشكل صريح بواسطة المشغل <strong>new</strong> (السطر 22):</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#2b91af">CPersonne</span> op1=<span style="color:#0000ff">new</span> <span style="color:#2b91af">CPersonne</span>();</span></span>
 </code></pre></div>
 
-<p>تنشئ التعليمات السابقة كائن <em><bdi dir="ltr" class="odt-ltr-term">CPersonne</bdi></em> (مما يعادل تقريبًا البنية الخاصة بنا) وتكون <strong>قيمة</strong> <em><bdi dir="ltr" class="odt-ltr-term">p1</bdi></em> عندئذٍ <strong>هي عنوان</strong> (مرجع) هذا الكائن. </p>
+<p>تنشئ التعليمات السابقة كائن <em><bdi dir="ltr" class="odt-ltr-term">CPersonne</bdi></em> (مما يعادل تقريبًا البنية الخاصة بنا) وتكون <strong>قيمة</strong> <em>p1</em> عندئذٍ <strong>هي عنوان</strong> (مرجع) هذا الكائن. </p>
 <p>للتلخيص </p>
 <ul>
-  <li>في حالة البنية، تكون <b>قيمة </b><bdi dir="ltr" class="odt-ltr-term">sp1</bdi> هي البنية نفسها
+  <li>في حالة البنية، تكون <b>قيمة </b>sp1 هي البنية نفسها
   </li>
-  <li>في حالة الفئة، تكون <b>قيمة </b><bdi dir="ltr" class="odt-ltr-term">op1</bdi> هي <b>عنوان </b>الكائن الذي تم إنشاؤه
+  <li>في حالة الفئة، تكون <b>قيمة </b>op1 هي <b>عنوان </b>الكائن الذي تم إنشاؤه
   </li>
 </ul>
 
@@ -2951,16 +2951,16 @@
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#2b91af">SPersonne</span> sp2 = sp1;</span></span>
 </code></pre></div>
 
-<p>يتم إنشاء بنية <bdi dir="ltr" class="odt-ltr-term">sp2</bdi>(<bdi dir="ltr" class="odt-ltr-term">Name</bdi>,<bdi dir="ltr" class="odt-ltr-term">Age</bdi>) جديدة وتهيئتها بقيمة <em><bdi dir="ltr" class="odt-ltr-term">sp1</bdi>،</em> وهي البنية نفسها.</p>
+<p>يتم إنشاء بنية sp2(<bdi dir="ltr" class="odt-ltr-term">Name</bdi>,<bdi dir="ltr" class="odt-ltr-term">Age</bdi>) جديدة وتهيئتها بقيمة <em>sp1،</em> وهي البنية نفسها.</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005F300000155EE2EB2C6.png" width="533" height="119" style="display:inline-block; margin:4px;width:14.101cm;height:3.157cm;" class="odt-zoomable" data-zoom-src="images/10000000000005F300000155EE2EB2C6.png" /></td></tr></table>
 
-<p>يتم <strong>تكرار</strong> بنية <bdi dir="ltr" class="odt-ltr-term">sp1</bdi> في <bdi dir="ltr" class="odt-ltr-term">sp2</bdi> [1]. هذه نسخة من قيمة. الآن انظر إلى التعليمات في السطر 27:</p>
+<p>يتم <strong>تكرار</strong> بنية sp1 في sp2 [1]. هذه نسخة من قيمة. الآن انظر إلى التعليمات في السطر 27:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#2b91af">CPersonne</span> op2=op1;</span></span>
 </code></pre></div>
 
-<p>في حالة الفئات، يتم نسخ قيمة <bdi dir="ltr" class="odt-ltr-term">op1</bdi> إلى <bdi dir="ltr" class="odt-ltr-term">op2</bdi>، ولكن بما أن هذه القيمة هي في الواقع عنوان الكائن، فإنها لا يتم تكرارها [2].</p>
-<p>في حالة البنية [1]، إذا قمنا بتغيير قيمة <em><bdi dir="ltr" class="odt-ltr-term">sp2</bdi></em>، فإن قيمة <em><bdi dir="ltr" class="odt-ltr-term">sp1</bdi></em> تتغير، كما هو موضح في البرنامج. في حالة الكائن [2]، إذا قمنا بتعديل الكائن الذي يشير إليه <bdi dir="ltr" class="odt-ltr-term">op2</bdi>، فإن الكائن الذي يشير إليه <em><bdi dir="ltr" class="odt-ltr-term">op1</bdi></em> يتغير أيضًا لأنهما متطابقان. وهذا ما تظهره نتائج البرنامج أيضًا.</p>
+<p>في حالة الفئات، يتم نسخ قيمة op1 إلى op2، ولكن بما أن هذه القيمة هي في الواقع عنوان الكائن، فإنها لا يتم تكرارها [2].</p>
+<p>في حالة البنية [1]، إذا قمنا بتغيير قيمة <em>sp2</em>، فإن قيمة <em>sp1</em> تتغير، كما هو موضح في البرنامج. في حالة الكائن [2]، إذا قمنا بتعديل الكائن الذي يشير إليه op2، فإن الكائن الذي يشير إليه <em>op1</em> يتغير أيضًا لأنهما متطابقان. وهذا ما تظهره نتائج البرنامج أيضًا.</p>
 <p>توضح هذه التفسيرات ما يلي:</p>
 <ul>
   <li>قيمة متغير البنية هي البنية نفسها
@@ -3011,7 +3011,7 @@
   </li>
   <li>السطور 12-20: خصائص عامة مرتبطة
   </li>
-  <li>الأسطر 23-26: تعريف مُنشئ. لاحظ أن المُنشئ الخالي من المعلمات <i><bdi dir="ltr" class="odt-ltr-term">SPersonne</bdi></i>() موجود دائمًا ولا يحتاج إلى إعلان. فالإعلان عنه يُرفض من قِبل المُترجم. في المُنشئ الموجود في الأسطر 23-26، قد تميل إلى تهيئة الحقول الخاصة <i><bdi dir="ltr" class="odt-ltr-term">name</bdi> </i>و <i><bdi dir="ltr" class="odt-ltr-term">age</bdi> </i>عبر خصائصهما العامة <i><bdi dir="ltr" class="odt-ltr-term">Name</bdi> </i>و <i><bdi dir="ltr" class="odt-ltr-term">Age</bdi></i>. لكن المُترجم يرفض ذلك. لا يمكن استخدام أساليب البنية أثناء إنشاء البنية.
+  <li>الأسطر 23-26: تعريف مُنشئ. لاحظ أن المُنشئ الخالي من المعلمات <i><bdi dir="ltr" class="odt-ltr-term">SPersonne</bdi></i>() موجود دائمًا ولا يحتاج إلى إعلان. فالإعلان عنه يُرفض من قِبل المُترجم. في المُنشئ الموجود في الأسطر 23-26، قد تميل إلى تهيئة الحقول الخاصة <i><bdi dir="ltr" class="odt-ltr-term">name</bdi> </i>و <i>age </i>عبر خصائصهما العامة <i><bdi dir="ltr" class="odt-ltr-term">Name</bdi> </i>و <i><bdi dir="ltr" class="odt-ltr-term">Age</bdi></i>. لكن المُترجم يرفض ذلك. لا يمكن استخدام أساليب البنية أثناء إنشاء البنية.
   </li>
   <li>الأسطر 29-31: إعادة تعريف الأسلوب <i><bdi dir="ltr" class="odt-ltr-term">ToString</bdi></i>.
   </li>
@@ -3064,7 +3064,7 @@
   </li>
   <li>السطر 10: سيتم استخدام الطريقة <i><bdi dir="ltr" class="odt-ltr-term">p1.ToString</bdi> </i>في <i><bdi dir="ltr" class="odt-ltr-term">WriteLine</bdi></i>.
   </li>
-  <li>السطر 21: إنشاء بنية باستخدام المنشئ <i><bdi dir="ltr" class="odt-ltr-term">SPersonne</bdi>(<bdi dir="ltr" class="odt-ltr-term">string</bdi>,<bdi dir="ltr" class="odt-ltr-term">int</bdi>)</i>
+  <li>السطر 21: إنشاء بنية باستخدام المنشئ <i><bdi dir="ltr" class="odt-ltr-term">SPersonne</bdi>(<bdi dir="ltr" class="odt-ltr-term">string</bdi>,int)</i>
   </li>
   <li>السطر 24:  إنشاء بنية باستخدام المنشئ بدون معلمات <i><bdi dir="ltr" class="odt-ltr-term">SPersonne</bdi>() </i>مع تهيئة الحقول الخاصة بين الأقواس باستخدام خصائصها العامة.
   </li>
@@ -3083,7 +3083,7 @@
 <a id="__codelineno-64-5" name="__codelineno-64-5"></a>p3=SPersonne(amandin,18)
 <a id="__codelineno-64-6" name="__codelineno-64-6"></a>p4=SPersonne(x,10)
 </code></pre></div></td></tr></table></div>
-<p>الفرق الوحيد الملحوظ هنا بين البنية والفئة هو أنه في حالة الفئة، كان الكائنان <em><bdi dir="ltr" class="odt-ltr-term">p1</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">p2</bdi></em> سيشيران إلى نفس الكائن في نهاية البرنامج.</p>
+<p>الفرق الوحيد الملحوظ هنا بين البنية والفئة هو أنه في حالة الفئة، كان الكائنان <em>p1</em> و <em>p2</em> سيشيران إلى نفس الكائن في نهاية البرنامج.</p>
 <p><a id="refheading10400231168783983"></a></p>
 <h2 id="46">4.6. <span style="color: #4f81bd">الواجهات</span></h2>
 <p>الواجهة هي مجموعة من الأساليب أو الخصائص النموذجية التي تشكل عقدًا. تتعهد الفئة التي تقرر تنفيذ واجهة بتوفير تنفيذ لجميع الأساليب المحددة في الواجهة. يتحقق المُترجم من هذا التنفيذ.</p>
@@ -3228,13 +3228,13 @@
   </li>
   <li>السطر 10: متوسط الدرجات - خاصية تنفذ واجهة <i><bdi dir="ltr" class="odt-ltr-term">Average</bdi> </i><bdi dir="ltr" class="odt-ltr-term">IStats.</bdi>
   </li>
-  <li>السطر 11: الحقل الذي يحفظ الانحراف المعياري للدرجات - الطريقة <i><bdi dir="ltr" class="odt-ltr-term">get</bdi> </i>المرتبطة بـ <i><bdi dir="ltr" class="odt-ltr-term">EcartType</bdi> </i>في الأسطر 35-37 تنفذ واجهة <i><bdi dir="ltr" class="odt-ltr-term">EcartType IStats</bdi></i>.
+  <li>السطر 11: الحقل الذي يحفظ الانحراف المعياري للدرجات - الطريقة <i>get </i>المرتبطة بـ <i><bdi dir="ltr" class="odt-ltr-term">EcartType</bdi> </i>في الأسطر 35-37 تنفذ واجهة <i><bdi dir="ltr" class="odt-ltr-term">EcartType IStats</bdi></i>.
   </li>
   <li>السطر 9: يتم تخزين الدرجات في جدول. ويتم إرسال هذا الجدول عند إنشاء فئة <i><bdi dir="ltr" class="odt-ltr-term">TableauDeNotes</bdi> </i>إلى مُنشئ الأسطر 14-33.
   </li>
   <li>السطور 14-33: المنشئ. يُفترض هنا أن الدرجات التي يتم إرسالها إلى المنشئ لن تتغير في المستقبل. لذلك نستخدم المنشئ لحساب المتوسط والانحراف المعياري لهذه الدرجات على الفور وتخزينهما في الحقول الموجودة في السطور 10-11. يتم تخزين المتوسط في الحقل الخاص الذي يكمن وراء الخاصية التلقائية <i><bdi dir="ltr" class="odt-ltr-term">Average</bdi> </i>في السطر 10، ويتم تخزين الانحراف المعياري في الحقل الخاص في السطر 11.
   </li>
-  <li>السطر 10: ستقوم الطريقة <i><bdi dir="ltr" class="odt-ltr-term">get</bdi></i> التي تمتلكها الخاصية التلقائية <i><bdi dir="ltr" class="odt-ltr-term">Average</bdi> </i>بعرض الحقل الخاص الأساسي.
+  <li>السطر 10: ستقوم الطريقة <i>get</i> التي تمتلكها الخاصية التلقائية <i><bdi dir="ltr" class="odt-ltr-term">Average</bdi> </i>بعرض الحقل الخاص الأساسي.
   </li>
   <li>الأسطر 35-37: تعرض الطريقة <i><bdi dir="ltr" class="odt-ltr-term">EcartType</bdi> </i>قيمة الحقل الخاص في السطر 11.
   </li>
@@ -3242,7 +3242,7 @@
 
 <p>هناك بعض التفاصيل الدقيقة في هذا الكود:</p>
 <ul>
-  <li>السطر 23: تُستخدم الطريقة <i><bdi dir="ltr" class="odt-ltr-term">set</bdi> </i><bdi dir="ltr" class="odt-ltr-term">property</bdi> <i><bdi dir="ltr" class="odt-ltr-term">Average</bdi> </i>لإجراء التعيين. تم إعلان هذه الطريقة على أنها خاصة في السطر 10، بحيث لا يمكن تعيين قيمة لـ <i><bdi dir="ltr" class="odt-ltr-term">Average</bdi> </i>إلا داخل الفصل الدراسي.
+  <li>السطر 23: تُستخدم الطريقة <i>set </i><bdi dir="ltr" class="odt-ltr-term">property</bdi> <i><bdi dir="ltr" class="odt-ltr-term">Average</bdi> </i>لإجراء التعيين. تم إعلان هذه الطريقة على أنها خاصة في السطر 10، بحيث لا يمكن تعيين قيمة لـ <i><bdi dir="ltr" class="odt-ltr-term">Average</bdi> </i>إلا داخل الفصل الدراسي.
   </li>
   <li>الأسطر 40-54: استخدم كائن <i><bdi dir="ltr" class="odt-ltr-term">StringBuilder</bdi> </i>لإنشاء السلسلة التي تمثل <i><bdi dir="ltr" class="odt-ltr-term">TableauDeNotes</bdi> </i>لتحسين الأداء. ومع ذلك، تجدر الإشارة إلى أن قابلية قراءة الكود تتأثر بشكل كبير. وهذا هو الجانب الآخر من العملة.
   </li>
@@ -3652,7 +3652,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>الفرق بين الطريقتين هو نوع <bdi dir="ltr" class="odt-ltr-term">T</bdi> للمعلمات: <em><bdi dir="ltr" class="odt-ltr-term">int</bdi></em> في <bdi dir="ltr" class="odt-ltr-term">Exchange1</bdi>، <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em> في <em><bdi dir="ltr" class="odt-ltr-term">Exchange2</bdi></em>. تلبي الفئات والواجهات العامة الحاجة إلى طرق لا تختلف إلا في نوع بعض معلماتها.</p>
+<p>الفرق بين الطريقتين هو نوع <bdi dir="ltr" class="odt-ltr-term">T</bdi> للمعلمات: <em>int</em> في <bdi dir="ltr" class="odt-ltr-term">Exchange1</bdi>، <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em> في <em><bdi dir="ltr" class="odt-ltr-term">Exchange2</bdi></em>. تلبي الفئات والواجهات العامة الحاجة إلى طرق لا تختلف إلا في نوع بعض معلماتها.</p>
 <p>باستخدام فئة عامة، يمكن إعادة كتابة <em><bdi dir="ltr" class="odt-ltr-term">Exchange</bdi></em> على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">namespace</span> Chap2 {</span></span>
@@ -3702,7 +3702,7 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 8: عند استخدام فئة عامة معلمة بالأنواع <bdi dir="ltr" class="odt-ltr-term">T1</bdi>، <bdi dir="ltr" class="odt-ltr-term">T2</bdi>، ... يجب &quot;إنشاء مثيلات&quot; لهذه الأنواع. السطر 8: استخدم الطريقة الثابتة <i><bdi dir="ltr" class="odt-ltr-term">Exchange</bdi></i> من النوع <i><bdi dir="ltr" class="odt-ltr-term">Generic1</bdi>&lt;<bdi dir="ltr" class="odt-ltr-term">int</bdi>&gt; </i>للإشارة إلى أن المراجع التي تم تمريرها إلى <i><bdi dir="ltr" class="odt-ltr-term">Exchange</bdi> </i>هي من النوع <i><bdi dir="ltr" class="odt-ltr-term">int</bdi></i>.
+  <li>السطر 8: عند استخدام فئة عامة معلمة بالأنواع <bdi dir="ltr" class="odt-ltr-term">T1</bdi>، <bdi dir="ltr" class="odt-ltr-term">T2</bdi>، ... يجب &quot;إنشاء مثيلات&quot; لهذه الأنواع. السطر 8: استخدم الطريقة الثابتة <i><bdi dir="ltr" class="odt-ltr-term">Exchange</bdi></i> من النوع <i><bdi dir="ltr" class="odt-ltr-term">Generic1</bdi>&lt;int&gt; </i>للإشارة إلى أن المراجع التي تم تمريرها إلى <i><bdi dir="ltr" class="odt-ltr-term">Exchange</bdi> </i>هي من النوع <i>int</i>.
   </li>
   <li>السطر 12: يتم استخدام الطريقة الثابتة <i><bdi dir="ltr" class="odt-ltr-term">Exchange</bdi> </i>من النوع <i><bdi dir="ltr" class="odt-ltr-term">Generic1</bdi>&lt;<bdi dir="ltr" class="odt-ltr-term">string</bdi>&gt; </i>للإشارة إلى أن المراجع التي تم تمريرها إلى <i><bdi dir="ltr" class="odt-ltr-term">Exchange</bdi> </i>هي من النوع <i><bdi dir="ltr" class="odt-ltr-term">string</bdi></i>.
   </li>
@@ -3822,7 +3822,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>يعلن المُترجم عن وجود خطأ في السطر 8 لأن النوع <em><bdi dir="ltr" class="odt-ltr-term">int</bdi></em> ليس فئة أو واجهة، بل هو بنية:</p>
+<p>يعلن المُترجم عن وجود خطأ في السطر 8 لأن النوع <em>int</em> ليس فئة أو واجهة، بل هو بنية:</p>
 <p><img src="images/10000000000002D600000037BBA1C3CF.png" width="665" height="50" style="width:17.604cm;height:1.334cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002D600000037BBA1C3CF.png" /></p>
 <p>انظر إلى الطريقة العامة الجديدة <em><bdi dir="ltr" class="odt-ltr-term">Exchange</bdi></em> التالية:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
@@ -4027,9 +4027,9 @@
 </code></pre></div></td></tr></table></div>
 <p>تحتوي الواجهة <strong><bdi dir="ltr" class="odt-ltr-term">IComparer</bdi>&lt;<bdi dir="ltr" class="odt-ltr-term">T</bdi>&gt;</strong> على طريقة واحدة فقط. الطريقة <strong><bdi dir="ltr" class="odt-ltr-term">Compare</bdi></strong> :</p>
 <ul>
-  <li>تستقبل عنصرين كمعلمات <i><bdi dir="ltr" class="odt-ltr-term">t1</bdi> </i>و <i><bdi dir="ltr" class="odt-ltr-term">t2</bdi> </i>من النوع <i><bdi dir="ltr" class="odt-ltr-term">T</bdi></i>
+  <li>تستقبل عنصرين كمعلمات <i>t1 </i>و <i>t2 </i>من النوع <i><bdi dir="ltr" class="odt-ltr-term">T</bdi></i>
   </li>
-  <li>تُرجع 1 إذا كان <bdi dir="ltr" class="odt-ltr-term">t1</bdi>&gt;<bdi dir="ltr" class="odt-ltr-term">t2</bdi>، و0 إذا كان <bdi dir="ltr" class="odt-ltr-term">t1</bdi>==<bdi dir="ltr" class="odt-ltr-term">t2</bdi>، و-1 إذا كان <bdi dir="ltr" class="odt-ltr-term">t1</bdi>&lt;<bdi dir="ltr" class="odt-ltr-term">t2.</bdi> يعود الأمر للمطور لإعطاء معنى لمشغلات &lt; و== و&gt;. على سبيل المثال، إذا كان <bdi dir="ltr" class="odt-ltr-term">p1</bdi> و<bdi dir="ltr" class="odt-ltr-term">p2</bdi> كائنين <i>من نوع </i><bdi dir="ltr" class="odt-ltr-term">Person</bdi>، فيمكننا القول أن <bdi dir="ltr" class="odt-ltr-term">p1</bdi>&gt;<bdi dir="ltr" class="odt-ltr-term">p2</bdi> إذا كان اسم <bdi dir="ltr" class="odt-ltr-term">p1</bdi> يسبق اسم <bdi dir="ltr" class="odt-ltr-term">p2</bdi> بالترتيب الأبجدي. سنقوم بعد ذلك بالفرز بترتيب تصاعدي حسب الاسم. إذا كنت تريد الفرز حسب العمر، فقل <bdi dir="ltr" class="odt-ltr-term">p1</bdi>&gt;<bdi dir="ltr" class="odt-ltr-term">p2</bdi> إذا كان عمر <bdi dir="ltr" class="odt-ltr-term">p1</bdi> أكبر من عمر <bdi dir="ltr" class="odt-ltr-term">p2.</bdi>
+  <li>تُرجع 1 إذا كان t1&gt;t2، و0 إذا كان t1==t2، و-1 إذا كان t1&lt;<bdi dir="ltr" class="odt-ltr-term">t2.</bdi> يعود الأمر للمطور لإعطاء معنى لمشغلات &lt; و== و&gt;. على سبيل المثال، إذا كان p1 وp2 كائنين <i>من نوع </i><bdi dir="ltr" class="odt-ltr-term">Person</bdi>، فيمكننا القول أن p1&gt;p2 إذا كان اسم p1 يسبق اسم p2 بالترتيب الأبجدي. سنقوم بعد ذلك بالفرز بترتيب تصاعدي حسب الاسم. إذا كنت تريد الفرز حسب العمر، فقل p1&gt;p2 إذا كان عمر p1 أكبر من عمر <bdi dir="ltr" class="odt-ltr-term">p2.</bdi>
   </li>
   <li>للترتيب بترتيب تنازلي، ما عليك سوى عكس نتائج +1 و -1
   </li>
@@ -4153,10 +4153,10 @@
 <p>نقول إننا <strong>نستورد</strong> مساحة <em>الاسم <bdi dir="ltr" class="odt-ltr-term">System</bdi></em> باستخدام الجملة <em><bdi dir="ltr" class="odt-ltr-term">using</bdi></em>. عندما يصادف المُترجم اسم فئة (هنا <em><bdi dir="ltr" class="odt-ltr-term">Console</bdi></em>)، سيحاول العثور عليها في مساحات الأسماء المختلفة التي تم استيرادها بواسطة <em><bdi dir="ltr" class="odt-ltr-term">using</bdi></em>. هنا سيجد الفئة <em><bdi dir="ltr" class="odt-ltr-term">Console</bdi></em> في مساحة <em>الاسم <bdi dir="ltr" class="odt-ltr-term">System</bdi></em>. الآن دعونا نلاحظ المعلومة الثانية المرتبطة بالفئة <em><bdi dir="ltr" class="odt-ltr-term">Console</bdi></em>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-79-1" name="__codelineno-79-1" href="#__codelineno-79-1"></a>Assembly: Mscorlib (in Mscorlib.dll)
 </code></pre></div>
-<p>يشير هذا السطر إلى &quot;التجميع&quot; الذي يوجد فيه تعريف الفئة <em><bdi dir="ltr" class="odt-ltr-term">Console</bdi></em>. عند التحويل البرمجي خارج <bdi dir="ltr" class="odt-ltr-term">Visual Studio</bdi> وتحتاج إلى إعطاء مراجع إلى <em>ملفات <bdi dir="ltr" class="odt-ltr-term">dll</bdi></em> المختلفة التي تحتوي على الفئات المراد استخدامها، يمكن أن تكون هذه المعلومات مفيدة. للإشارة إلى <em>ملف <bdi dir="ltr" class="odt-ltr-term">dll</bdi></em> المطلوب لتحويل فئة برمجياً، نكتب:</p>
+<p>يشير هذا السطر إلى &quot;التجميع&quot; الذي يوجد فيه تعريف الفئة <em><bdi dir="ltr" class="odt-ltr-term">Console</bdi></em>. عند التحويل البرمجي خارج <bdi dir="ltr" class="odt-ltr-term">Visual Studio</bdi> وتحتاج إلى إعطاء مراجع إلى <em>ملفات dll</em> المختلفة التي تحتوي على الفئات المراد استخدامها، يمكن أن تكون هذه المعلومات مفيدة. للإشارة إلى <em>ملف dll</em> المطلوب لتحويل فئة برمجياً، نكتب:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-80-1" name="__codelineno-80-1" href="#__codelineno-80-1"></a>csc /r:fic1.dll /r:fic2.dll ... prog.cs
 </code></pre></div>
-<p>حيث يُعرف <em><bdi dir="ltr" class="odt-ltr-term">CSC</bdi></em> بأنه مُترجم لغة <bdi dir="ltr" class="odt-ltr-term">C#.</bdi> وعندما نقوم بإنشاء فئة، يمكننا إنشاؤها ضمن مساحة اسم. والغرض من مساحات الأسماء هذه هو تجنب تضارب الأسماء بين الفئات عند بيعها، على سبيل المثال. لنفترض أن هناك شركتين، <bdi dir="ltr" class="odt-ltr-term">E1</bdi> و <bdi dir="ltr" class="odt-ltr-term">E2</bdi>، توزعان فئات مجمعة على التوالي في <em>ملفات <bdi dir="ltr" class="odt-ltr-term">dll</bdi></em>، <em><bdi dir="ltr" class="odt-ltr-term">e1.dll</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">e2.dll</bdi></em>. لنفترض أن عميلاً <bdi dir="ltr" class="odt-ltr-term">C</bdi> يشتري هاتين المجموعتين من الفئات التي حددت فيهما الشركتان فئة <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em>. يقوم العميل <bdi dir="ltr" class="odt-ltr-term">C</bdi> بترجمة برنامج على النحو التالي:</p>
+<p>حيث يُعرف <em><bdi dir="ltr" class="odt-ltr-term">CSC</bdi></em> بأنه مُترجم لغة <bdi dir="ltr" class="odt-ltr-term">C#.</bdi> وعندما نقوم بإنشاء فئة، يمكننا إنشاؤها ضمن مساحة اسم. والغرض من مساحات الأسماء هذه هو تجنب تضارب الأسماء بين الفئات عند بيعها، على سبيل المثال. لنفترض أن هناك شركتين، <bdi dir="ltr" class="odt-ltr-term">E1</bdi> و <bdi dir="ltr" class="odt-ltr-term">E2</bdi>، توزعان فئات مجمعة على التوالي في <em>ملفات dll</em>، <em><bdi dir="ltr" class="odt-ltr-term">e1.dll</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">e2.dll</bdi></em>. لنفترض أن عميلاً <bdi dir="ltr" class="odt-ltr-term">C</bdi> يشتري هاتين المجموعتين من الفئات التي حددت فيهما الشركتان فئة <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em>. يقوم العميل <bdi dir="ltr" class="odt-ltr-term">C</bdi> بترجمة برنامج على النحو التالي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-81-1" name="__codelineno-81-1" href="#__codelineno-81-1"></a>csc /r:e1.dll /r:e2.dll prog.cs
 </code></pre></div>
 <p>إذا استخدم الملف المصدري <em><bdi dir="ltr" class="odt-ltr-term">prog.cs</bdi></em> فئة <bdi dir="ltr" class="odt-ltr-term">Person</bdi>، فلن يعرف المُجمِّع ما إذا كان عليه أخذ <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em> من <em><bdi dir="ltr" class="odt-ltr-term">e1.dll</bdi></em> أم من <em><bdi dir="ltr" class="odt-ltr-term">e2.dll</bdi></em>. وسيُشير إلى وجود خطأ. إذا حرصت الشركة <bdi dir="ltr" class="odt-ltr-term">E1</bdi> على إنشاء فئاتها في مساحة أسماء تسمى <bdi dir="ltr" class="odt-ltr-term">E1</bdi> والشركة <bdi dir="ltr" class="odt-ltr-term">E2</bdi> في مساحة أسماء تسمى <bdi dir="ltr" class="odt-ltr-term">E2</bdi>، فستُسمى فئتا <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em> عندئذٍ <em><bdi dir="ltr" class="odt-ltr-term">E1.Person</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">E2.Personne</bdi></em>. يجب على العميل استخدام <em><bdi dir="ltr" class="odt-ltr-term">E1.Personne</bdi></em> أو <em><bdi dir="ltr" class="odt-ltr-term">E2.Personne</bdi></em> وليس <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em>. يزيل مساحة الاسم أي غموض.</p>
@@ -4363,7 +4363,7 @@
 
 <p>يتيح البرنامج أعلاه للمستخدم إجراء محاكاة متكررة لحساب الضرائب.</p>
 <ul>
-  <li>السطر 16: إنشاء كائن <i><bdi dir="ltr" class="odt-ltr-term">tax</bdi> </i>الذي ينفذ واجهة <i><bdi dir="ltr" class="odt-ltr-term">IImpot</bdi></i>. يتم الحصول على هذا الكائن عن طريق إنشاء مث<i>يل </i>لـ <bdi dir="ltr" class="odt-ltr-term">HardwiredImpot</bdi>، وهو نوع ينفذ واجهة <i><bdi dir="ltr" class="odt-ltr-term">IImpot</bdi></i>. لاحظ أننا لم نعط المتغير <i><bdi dir="ltr" class="odt-ltr-term">tax</bdi> </i>النوع <i><bdi dir="ltr" class="odt-ltr-term">HardwiredImpot</bdi> </i>بل واجهة <i><bdi dir="ltr" class="odt-ltr-term">IImpot</bdi></i>. هذا يشير إلى أننا مهتمون فقط بكائن <i><bdi dir="ltr" class="odt-ltr-term">calculate</bdi> </i>وليس بالباقي.
+  <li>السطر 16: إنشاء كائن <i>tax </i>الذي ينفذ واجهة <i><bdi dir="ltr" class="odt-ltr-term">IImpot</bdi></i>. يتم الحصول على هذا الكائن عن طريق إنشاء مث<i>يل </i>لـ <bdi dir="ltr" class="odt-ltr-term">HardwiredImpot</bdi>، وهو نوع ينفذ واجهة <i><bdi dir="ltr" class="odt-ltr-term">IImpot</bdi></i>. لاحظ أننا لم نعط المتغير <i>tax </i>النوع <i><bdi dir="ltr" class="odt-ltr-term">HardwiredImpot</bdi> </i>بل واجهة <i><bdi dir="ltr" class="odt-ltr-term">IImpot</bdi></i>. هذا يشير إلى أننا مهتمون فقط بكائن <i><bdi dir="ltr" class="odt-ltr-term">calculate</bdi> </i>وليس بالباقي.
   </li>
   <li>الأسطر 19-68: حلقة محاكاة حساب الضريبة
   </li>

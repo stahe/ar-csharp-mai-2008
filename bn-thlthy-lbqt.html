@@ -998,22 +998,22 @@
 
 <p>في الرسم البياني أعلاه، يمكن أن تأتي البيانات من مكانين:</p>
 <ul>
-  <li>طبقة الوصول إلى البيانات أو [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] (<bdi dir="ltr" class="odt-ltr-term">DAO</bdi> = كائن الوصول إلى البيانات) للبيانات المخزنة بالفعل في الملفات أو قواعد البيانات. قد يكون هذا هو الحال بالنسبة للشرائح الضريبية هنا، كما كان الحال في الإصدار السابق من التطبيق.
+  <li>طبقة الوصول إلى البيانات أو [dao] (<bdi dir="ltr" class="odt-ltr-term">DAO</bdi> = كائن الوصول إلى البيانات) للبيانات المخزنة بالفعل في الملفات أو قواعد البيانات. قد يكون هذا هو الحال بالنسبة للشرائح الضريبية هنا، كما كان الحال في الإصدار السابق من التطبيق.
   </li>
-  <li>طبقة واجهة المستخدم أو [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] (<bdi dir="ltr" class="odt-ltr-term">UI</bdi> = واجهة المستخدم) للبيانات التي يدخلها المستخدم أو التي تُعرض عليه. قد يكون هذا هو الحال هنا بالنسبة لعدد الأطفال والحالة الاجتماعية والراتب السنوي للمكلف
+  <li>طبقة واجهة المستخدم أو [ui] (<bdi dir="ltr" class="odt-ltr-term">UI</bdi> = واجهة المستخدم) للبيانات التي يدخلها المستخدم أو التي تُعرض عليه. قد يكون هذا هو الحال هنا بالنسبة لعدد الأطفال والحالة الاجتماعية والراتب السنوي للمكلف
   </li>
 </ul>
 
 <ul>
-  <li>بشكل عام، تتولى طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] الوصول إلى البيانات الدائمة (الملفات وقواعد البيانات) أو البيانات غير الدائمة (الشبكة وأجهزة الاستشعار، إلخ).
+  <li>بشكل عام، تتولى طبقة [dao] الوصول إلى البيانات الدائمة (الملفات وقواعد البيانات) أو البيانات غير الدائمة (الشبكة وأجهزة الاستشعار، إلخ).
   </li>
-  <li>تتولى طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] التعامل مع التفاعلات مع المستخدم، إن وجدت.
+  <li>تتولى طبقة [ui] التعامل مع التفاعلات مع المستخدم، إن وجدت.
   </li>
   <li>تتمتع الطبقات الثلاث بالاستقلالية من خلال استخدام الواجهات.
   </li>
 </ul>
 
-<p>سنأخذ التطبيق [<bdi dir="ltr" class="odt-ltr-term">Impots</bdi>] الذي درسناه عدة مرات من قبل ونمنحه بنية ثلاثية الطبقات. للقيام بذلك، سندرس الطبقات [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>، <bdi dir="ltr" class="odt-ltr-term">metier</bdi>، <bdi dir="ltr" class="odt-ltr-term">dao</bdi>] واحدة تلو الأخرى، بدءًا من طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]، التي تتولى معالجة البيانات الدائمة.</p>
+<p>سنأخذ التطبيق [<bdi dir="ltr" class="odt-ltr-term">Impots</bdi>] الذي درسناه عدة مرات من قبل ونمنحه بنية ثلاثية الطبقات. للقيام بذلك، سندرس الطبقات [ui، <bdi dir="ltr" class="odt-ltr-term">metier</bdi>، dao] واحدة تلو الأخرى، بدءًا من طبقة [dao]، التي تتولى معالجة البيانات الدائمة.</p>
 <p>أولاً، نحتاج إلى تعريف واجهات طبقات التطبيق المختلفة [<bdi dir="ltr" class="odt-ltr-term">Impots</bdi>].</p>
 <p><a id="refheading10400811168783983"></a></p>
 <h2 id="62-impots">6.2. <span style="color: #4f81bd">واجهات التطبيق [<bdi dir="ltr" class="odt-ltr-term">Impots</bdi>]</span></h2>
@@ -1023,17 +1023,17 @@
 
 <p>في هذا النوع من البنية، غالبًا ما يكون المستخدم هو من يبادر. فهو يقدم طلبًا في [1] ويتلقى استجابة في [8]. ويُعرف هذا بدورة الطلب والاستجابة. لنأخذ مثال حساب الضريبة على دافع الضرائب. سيتطلب هذا عدة خطوات:</p>
 <ol>
-  <li>ستحتاج الطبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] إلى سؤال المستخدم عن عدد أطفاله وحالته الاجتماعية وراتبه السنوي. هذه هي العملية [1] أعلاه.
+  <li>ستحتاج الطبقة [ui] إلى سؤال المستخدم عن عدد أطفاله وحالته الاجتماعية وراتبه السنوي. هذه هي العملية [1] أعلاه.
   </li>
-  <li>بمجرد الانتهاء من ذلك، ستطلب طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] من طبقة الأعمال حساب الضريبة. للقيام بذلك، ستقوم بنقل البيانات التي تلقتها من المستخدم. هذه هي العملية [2].
+  <li>بمجرد الانتهاء من ذلك، ستطلب طبقة [ui] من طبقة الأعمال حساب الضريبة. للقيام بذلك، ستقوم بنقل البيانات التي تلقتها من المستخدم. هذه هي العملية [2].
   </li>
-  <li>تحتاج طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] إلى معلومات معينة لأداء عملها: شرائح الضرائب. وستطلب هذه المعلومات من طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] عبر المسار [3، 4، 5، 6]. [3] هو الطلب الأولي و[6] هو الرد على هذا الطلب.
+  <li>تحتاج طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] إلى معلومات معينة لأداء عملها: شرائح الضرائب. وستطلب هذه المعلومات من طبقة [dao] عبر المسار [3، 4، 5، 6]. [3] هو الطلب الأولي و[6] هو الرد على هذا الطلب.
   </li>
   <li>بعد الحصول على جميع البيانات التي تحتاجها، تقوم طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] بحساب الضريبة.
   </li>
-  <li>يمكن لطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] الآن الرد على الطلب المقدم من طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] في (ب). هذا هو المسار [7].
+  <li>يمكن لطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] الآن الرد على الطلب المقدم من طبقة [ui] في (ب). هذا هو المسار [7].
   </li>
-  <li>ستقوم طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] بتنسيق هذه النتائج وعرضها على المستخدم. هذا هو المسار [8].
+  <li>ستقوم طبقة [ui] بتنسيق هذه النتائج وعرضها على المستخدم. هذا هو المسار [8].
   </li>
   <li>يمكننا أن نتخيل أن المستخدم يقوم بإجراء محاكاة للضرائب ويريد حفظها. سيستخدم المسار [1-8] للقيام بذلك.
   </li>
@@ -1042,7 +1042,7 @@
 <p>يوضح هذا الوصف أن الطبقة ستستخدم موارد الطبقة الموجودة على يمينها، ولكنها لن تستخدم أبدًا موارد الطبقة الموجودة على يسارها. لنفكر في طبقتين متجاورتين:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000342000000FAFBA4418D.png" width="292" height="87" style="display:inline-block; margin:4px;width:7.721cm;height:2.314cm;" class="odt-zoomable" data-zoom-src="images/1000000000000342000000FAFBA4418D.png" /></td></tr></table>
 
-<p>الطبقة [<bdi dir="ltr" class="odt-ltr-term">A</bdi>] ترسل طلبات إلى الطبقة [<bdi dir="ltr" class="odt-ltr-term">B</bdi>]. في أبسط الحالات، يتم تنفيذ الطبقة بواسطة فئة واحدة. يتطور التطبيق بمرور الوقت. لذلك قد تحتوي الطبقة [<bdi dir="ltr" class="odt-ltr-term">B</bdi>] على فئات تنفيذ مختلفة [<bdi dir="ltr" class="odt-ltr-term">B1</bdi>، <bdi dir="ltr" class="odt-ltr-term">B2</bdi>، ...]. إذا كانت الطبقة [<bdi dir="ltr" class="odt-ltr-term">B</bdi>] هي الطبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]، فقد يكون لها تنفيذ أول [<bdi dir="ltr" class="odt-ltr-term">B1</bdi>] يسترد البيانات من ملف. بعد بضع سنوات، قد ترغب في وضع البيانات في قاعدة بيانات.  ثم نقوم بإنشاء فئة تنفيذ ثانية [<bdi dir="ltr" class="odt-ltr-term">B2</bdi>]. إذا كانت الطبقة [<bdi dir="ltr" class="odt-ltr-term">A</bdi>] في التطبيق الأولي تعمل مباشرة مع الفئة [<bdi dir="ltr" class="odt-ltr-term">B1</bdi>]، فإننا نضطر إلى إعادة كتابة جزء من كود الطبقة [<bdi dir="ltr" class="odt-ltr-term">A</bdi>]. على سبيل المثال، لنفترض أن الطبقة [<bdi dir="ltr" class="odt-ltr-term">A</bdi>] قد كُتبت على النحو التالي:</p>
+<p>الطبقة [<bdi dir="ltr" class="odt-ltr-term">A</bdi>] ترسل طلبات إلى الطبقة [<bdi dir="ltr" class="odt-ltr-term">B</bdi>]. في أبسط الحالات، يتم تنفيذ الطبقة بواسطة فئة واحدة. يتطور التطبيق بمرور الوقت. لذلك قد تحتوي الطبقة [<bdi dir="ltr" class="odt-ltr-term">B</bdi>] على فئات تنفيذ مختلفة [<bdi dir="ltr" class="odt-ltr-term">B1</bdi>، <bdi dir="ltr" class="odt-ltr-term">B2</bdi>، ...]. إذا كانت الطبقة [<bdi dir="ltr" class="odt-ltr-term">B</bdi>] هي الطبقة [dao]، فقد يكون لها تنفيذ أول [<bdi dir="ltr" class="odt-ltr-term">B1</bdi>] يسترد البيانات من ملف. بعد بضع سنوات، قد ترغب في وضع البيانات في قاعدة بيانات.  ثم نقوم بإنشاء فئة تنفيذ ثانية [<bdi dir="ltr" class="odt-ltr-term">B2</bdi>]. إذا كانت الطبقة [<bdi dir="ltr" class="odt-ltr-term">A</bdi>] في التطبيق الأولي تعمل مباشرة مع الفئة [<bdi dir="ltr" class="odt-ltr-term">B1</bdi>]، فإننا نضطر إلى إعادة كتابة جزء من كود الطبقة [<bdi dir="ltr" class="odt-ltr-term">A</bdi>]. على سبيل المثال، لنفترض أن الطبقة [<bdi dir="ltr" class="odt-ltr-term">A</bdi>] قد كُتبت على النحو التالي:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>B1 b1=new B1(...);
@@ -1068,9 +1068,9 @@
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a>ib.getData(...);
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>السطر 1: يتم إنشاء مثيل [<bdi dir="ltr" class="odt-ltr-term">ib</bdi>] الذي ينفذ واجهة [<bdi dir="ltr" class="odt-ltr-term">IB</bdi>] عن طريق إنشاء مثيل للفئة [<bdi dir="ltr" class="odt-ltr-term">B1</bdi>]
+  <li>السطر 1: يتم إنشاء مثيل [ib] الذي ينفذ واجهة [<bdi dir="ltr" class="odt-ltr-term">IB</bdi>] عن طريق إنشاء مثيل للفئة [<bdi dir="ltr" class="odt-ltr-term">B1</bdi>]
   </li>
-  <li>السطر 3: يتم طلب البيانات من المثيل [<bdi dir="ltr" class="odt-ltr-term">ib</bdi>]
+  <li>السطر 3: يتم طلب البيانات من المثيل [ib]
   </li>
 </ul>
 
@@ -1087,15 +1087,15 @@
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a>ib.getData(...);
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>السطر 1: مثيل [<bdi dir="ltr" class="odt-ltr-term">ib</bdi>] ينفذ واجهة [<bdi dir="ltr" class="odt-ltr-term">IB</bdi>] للطبقة [<bdi dir="ltr" class="odt-ltr-term">B</bdi>]. يتم إنشاء هذا المثيل بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> بناءً على المعلومات الموجودة في ملف التكوين. سيقوم <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> بإنشاء:
+  <li>السطر 1: مثيل [ib] ينفذ واجهة [<bdi dir="ltr" class="odt-ltr-term">IB</bdi>] للطبقة [<bdi dir="ltr" class="odt-ltr-term">B</bdi>]. يتم إنشاء هذا المثيل بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> بناءً على المعلومات الموجودة في ملف التكوين. سيقوم <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> بإنشاء:
     <ul>
-      <li>مثيل [<bdi dir="ltr" class="odt-ltr-term">b</bdi>] الذي ينفذ الطبقة [<bdi dir="ltr" class="odt-ltr-term">B</bdi>]
+      <li>مثيل [b] الذي ينفذ الطبقة [<bdi dir="ltr" class="odt-ltr-term">B</bdi>]
       </li>
-      <li>المثيل [<bdi dir="ltr" class="odt-ltr-term">a</bdi>] الذي ينفذ الطبقة [<bdi dir="ltr" class="odt-ltr-term">A</bdi>]. سيتم تهيئة هذا المثيل. سيتم تعيين الحقل [<bdi dir="ltr" class="odt-ltr-term">ib</bdi>] أعلاه إلى المرجع [<bdi dir="ltr" class="odt-ltr-term">b</bdi>] للكائن الذي ينفذ الطبقة [<bdi dir="ltr" class="odt-ltr-term">B</bdi>]
+      <li>المثيل [a] الذي ينفذ الطبقة [<bdi dir="ltr" class="odt-ltr-term">A</bdi>]. سيتم تهيئة هذا المثيل. سيتم تعيين الحقل [ib] أعلاه إلى المرجع [b] للكائن الذي ينفذ الطبقة [<bdi dir="ltr" class="odt-ltr-term">B</bdi>]
       </li>
     </ul>
   </li>
-  <li>السطر 3: يتم طلب البيانات من المثيل [<bdi dir="ltr" class="odt-ltr-term">ib</bdi>]
+  <li>السطر 3: يتم طلب البيانات من المثيل [ib]
   </li>
 </ul>
 
@@ -1106,19 +1106,19 @@
 
 <p>في الحالات البسيطة، يمكننا البدء من طبقة [الأعمال] لاكتشاف واجهات التطبيق. لكي يعمل، يحتاج إلى:</p>
 <ul>
-  <li>متوفرة بالفعل في الملفات أو قواعد البيانات أو عبر الشبكة. يتم توفيرها بواسطة طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>].
+  <li>متوفرة بالفعل في الملفات أو قواعد البيانات أو عبر الشبكة. يتم توفيرها بواسطة طبقة [dao].
   </li>
-  <li>غير متوفرة بعد. يتم توفيرها من قبل طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>]، التي تحصل عليها من مستخدم التطبيق.
+  <li>غير متوفرة بعد. يتم توفيرها من قبل طبقة [ui]، التي تحصل عليها من مستخدم التطبيق.
   </li>
 </ul>
 
-<p>ما هي الواجهة التي يجب أن توفرها طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] لطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]؟ ما هي التفاعلات المحتملة بين هاتين الطبقتين؟ يجب أن تزود طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] بالبيانات التالية:</p>
+<p>ما هي الواجهة التي يجب أن توفرها طبقة [dao] لطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]؟ ما هي التفاعلات المحتملة بين هاتين الطبقتين؟ يجب أن تزود طبقة [dao] طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] بالبيانات التالية:</p>
 <ul>
   <li>شرائح الضرائب
   </li>
 </ul>
 
-<p>في تطبيقنا، تستخدم طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] البيانات الموجودة ولكنها لا تنشئ بيانات جديدة. يمكن أن يكون تعريف واجهة طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] كما يلي:</p>
+<p>في تطبيقنا، تستخدم طبقة [dao] البيانات الموجودة ولكنها لا تنشئ بيانات جديدة. يمكن أن يكون تعريف واجهة طبقة [dao] كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> Entites;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1131,7 +1131,7 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 3: سيتم وضع الطبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] في مساحة الاسم [<bdi dir="ltr" class="odt-ltr-term">Dao</bdi>]
+  <li>السطر 3: سيتم وضع الطبقة [dao] في مساحة الاسم [<bdi dir="ltr" class="odt-ltr-term">Dao</bdi>]
   </li>
   <li>السطر 6: تحدد الواجهة <i><bdi dir="ltr" class="odt-ltr-term">IImpotDao</bdi> </i>الخاصية <i><bdi dir="ltr" class="odt-ltr-term">TranchesImpot</bdi> </i>التي ستزود طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] بشرائح الضرائب.
   </li>
@@ -1153,11 +1153,11 @@
 <p>لنعد إلى بنية التطبيق المكونة من ثلاث طبقات:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006C40000016B73280BE4.png" width="606" height="127" style="display:inline-block; margin:4px;width:16.041cm;height:3.362cm;" class="odt-zoomable" data-zoom-src="images/10000000000006C40000016B73280BE4.png" /></td></tr></table>
 
-<p>ما هي الواجهة التي يجب أن تقدمها طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] إلى طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>]؟ دعونا نستذكر التفاعلات بين هاتين الطبقتين:</p>
+<p>ما هي الواجهة التي يجب أن تقدمها طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] إلى طبقة [ui]؟ دعونا نستذكر التفاعلات بين هاتين الطبقتين:</p>
 <ol>
-  <li>تطلب طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] من المستخدم عدد أطفاله وحالته الاجتماعية وراتبه السنوي. هذه هي العملية [1] أعلاه.
+  <li>تطلب طبقة [ui] من المستخدم عدد أطفاله وحالته الاجتماعية وراتبه السنوي. هذه هي العملية [1] أعلاه.
   </li>
-  <li>بمجرد الانتهاء من ذلك، ستطلب طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] من طبقة الأعمال حساب عدد المقاعد. للقيام بذلك، ستقوم بنقل البيانات التي تلقتها من المستخدم. هذه هي العملية [2].
+  <li>بمجرد الانتهاء من ذلك، ستطلب طبقة [ui] من طبقة الأعمال حساب عدد المقاعد. للقيام بذلك، ستقوم بنقل البيانات التي تلقتها من المستخدم. هذه هي العملية [2].
   </li>
 </ol>
 
@@ -1186,15 +1186,15 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000620000002A7A3628E03.png" width="549" height="238" style="display:inline-block; margin:4px;width:14.52cm;height:6.288cm;" class="odt-zoomable" data-zoom-src="images/1000000000000620000002A7A3628E03.png" /></td></tr></table>
 
 <ul>
-  <li>[1]: يحتوي المجلد [<bdi dir="ltr" class="odt-ltr-term">Entites</bdi>] على كائنات تشمل طبقات [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>، <bdi dir="ltr" class="odt-ltr-term">metier</bdi>، <bdi dir="ltr" class="odt-ltr-term">dao</bdi>]: البنية <i><bdi dir="ltr" class="odt-ltr-term">TrancheImpot</bdi></i>، والاستثناء <i><bdi dir="ltr" class="odt-ltr-term">FileImpotException</bdi></i>.
+  <li>[1]: يحتوي المجلد [<bdi dir="ltr" class="odt-ltr-term">Entites</bdi>] على كائنات تشمل طبقات [ui، <bdi dir="ltr" class="odt-ltr-term">metier</bdi>، dao]: البنية <i><bdi dir="ltr" class="odt-ltr-term">TrancheImpot</bdi></i>، والاستثناء <i><bdi dir="ltr" class="odt-ltr-term">FileImpotException</bdi></i>.
   </li>
-  <li>[2]: يحتوي المجلد [<bdi dir="ltr" class="odt-ltr-term">Dao</bdi>] على فئات وواجهات طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]. سنستخدم تنفيذين لـ <i><bdi dir="ltr" class="odt-ltr-term">IImpotDao</bdi> </i>: الفئة <i><bdi dir="ltr" class="odt-ltr-term">HardwiredImpot</bdi></i> التي تمت مناقشتها في الفقرة<a href="#impots-v2"><u><span style="color: #0563c1"> 4.10</span></u></a> و <i><bdi dir="ltr" class="odt-ltr-term">FileImpot</bdi> </i>التي تمت مناقشتها في الفقرة<a href="#impots-v3"><u><span style="color: #0563c1"> 5.8</span></u></a>.
+  <li>[2]: يحتوي المجلد [<bdi dir="ltr" class="odt-ltr-term">Dao</bdi>] على فئات وواجهات طبقة [dao]. سنستخدم تنفيذين لـ <i><bdi dir="ltr" class="odt-ltr-term">IImpotDao</bdi> </i>: الفئة <i><bdi dir="ltr" class="odt-ltr-term">HardwiredImpot</bdi></i> التي تمت مناقشتها في الفقرة<a href="#impots-v2"><u><span style="color: #0563c1"> 4.10</span></u></a> و <i><bdi dir="ltr" class="odt-ltr-term">FileImpot</bdi> </i>التي تمت مناقشتها في الفقرة<a href="#impots-v3"><u><span style="color: #0563c1"> 5.8</span></u></a>.
   </li>
   <li>[3]: يحتوي المجلد [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>] على فئات وواجهات لطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]
   </li>
-  <li>[4]: يحتوي المجلد [<bdi dir="ltr" class="odt-ltr-term">Ui</bdi>] على فئات طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>]
+  <li>[4]: يحتوي المجلد [<bdi dir="ltr" class="odt-ltr-term">Ui</bdi>] على فئات طبقة [ui]
   </li>
-  <li>[5]: يحتوي الملف [<bdi dir="ltr" class="odt-ltr-term">DataImpot.txt</bdi>] على الشرائح الضريبية المستخدمة من قبل تطبيق طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] <i><bdi dir="ltr" class="odt-ltr-term">FileImpot</bdi></i>. تم تكوينه [6] ليتم نسخه تلقائيًا إلى مجلد تنفيذ المشروع.
+  <li>[5]: يحتوي الملف [<bdi dir="ltr" class="odt-ltr-term">DataImpot.txt</bdi>] على الشرائح الضريبية المستخدمة من قبل تطبيق طبقة [dao] <i><bdi dir="ltr" class="odt-ltr-term">FileImpot</bdi></i>. تم تكوينه [6] ليتم نسخه تلقائيًا إلى مجلد تنفيذ المشروع.
   </li>
 </ul>
 <p><a id="refheading10400871168783983"></a></p>
@@ -1202,7 +1202,7 @@
 <p>لنعد إلى بنية التطبيق المكونة من 3 طبقات:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006CF0000019F730C355B.png" width="610" height="145" style="display:inline-block; margin:4px;width:16.14cm;height:3.844cm;" class="odt-zoomable" data-zoom-src="images/10000000000006CF0000019F730C355B.png" /></td></tr></table>
 
-<p>نسميها «فئات <em>الكيانات</em> عبر الطبقات». وينطبق هذا عمومًا على الفئات والهياكل التي تغلف البيانات الواردة من طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]. وعادةً ما تمتد هذه الكيانات حتى طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>].</p>
+<p>نسميها «فئات <em>الكيانات</em> عبر الطبقات». وينطبق هذا عمومًا على الفئات والهياكل التي تغلف البيانات الواردة من طبقة [dao]. وعادةً ما تمتد هذه الكيانات حتى طبقة [ui].</p>
 <p>كيانات التطبيق هي كما يلي:</p>
 <p><u>البنية </u><u><em><bdi dir="ltr" class="odt-ltr-term">TrancheImpot</bdi></em></u></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
@@ -1242,12 +1242,12 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>ملاحظة: لا تكون استثناء <em><bdi dir="ltr" class="odt-ltr-term">FileImportException</bdi></em> مفيدة إلا إذا تم تنفيذ طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] بواسطة <em><bdi dir="ltr" class="odt-ltr-term">FileImport</bdi></em>.</p>
+<p>ملاحظة: لا تكون استثناء <em><bdi dir="ltr" class="odt-ltr-term">FileImportException</bdi></em> مفيدة إلا إذا تم تنفيذ طبقة [dao] بواسطة <em><bdi dir="ltr" class="odt-ltr-term">FileImport</bdi></em>.</p>
 <p><a id="refheading10400891168783983"></a></p>
-<h3 id="633-dao">6.3.3. <span style="color: #4f81bd">طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</span></h3>
+<h3 id="633-dao">6.3.3. <span style="color: #4f81bd">طبقة [dao]</span></h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006B6000001683D85C8FF.png" width="601" height="126" style="display:inline-block; margin:4px;width:15.91cm;height:3.334cm;" class="odt-zoomable" data-zoom-src="images/10000000000006B6000001683D85C8FF.png" /></td></tr></table>
 
-<p>تذكر واجهة طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]:</p>
+<p>تذكر واجهة طبقة [dao]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> Entites;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1291,7 +1291,7 @@
 <ul>
   <li>السطر 5: الفئة <i><bdi dir="ltr" class="odt-ltr-term">HardwiredImpot</bdi> </i>تنفذ واجهة <i><bdi dir="ltr" class="odt-ltr-term">IImpotDao</bdi></i>
   </li>
-  <li>السطر 12: تنفيذ واجهة <i><bdi dir="ltr" class="odt-ltr-term">TranchesImpot IImpotDao.</bdi> </i>هذه الخاصية هي خاصية تلقائية. وهي تنفذ خاصية <i><bdi dir="ltr" class="odt-ltr-term">get</bdi> </i>لواجهة <i><bdi dir="ltr" class="odt-ltr-term">TranchesImpot IImpotDao.</bdi> </i>كما أعلنا عن طريقة <i><bdi dir="ltr" class="odt-ltr-term">set</bdi> </i>داخلية للفئة، بحيث يمكن لمُنشئ الأسطر 15-22 تهيئة جدول شرائح الضرائب.
+  <li>السطر 12: تنفيذ واجهة <i><bdi dir="ltr" class="odt-ltr-term">TranchesImpot IImpotDao.</bdi> </i>هذه الخاصية هي خاصية تلقائية. وهي تنفذ خاصية <i>get </i>لواجهة <i><bdi dir="ltr" class="odt-ltr-term">TranchesImpot IImpotDao.</bdi> </i>كما أعلنا عن طريقة <i>set </i>داخلية للفئة، بحيث يمكن لمُنشئ الأسطر 15-22 تهيئة جدول شرائح الضرائب.
   </li>
 </ul>
 
@@ -1452,9 +1452,9 @@
 <ul>
   <li>السطر 5: تنفذ فئة [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>] واجهة [<bdi dir="ltr" class="odt-ltr-term">IImpotMetier</bdi>].
   </li>
-  <li>الأسطر 14-19: يجب أن تتعاون طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] مع طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]. لذلك يجب أن تحتوي على مرجع إلى الكائن الذي ينفذ واجهة <i><bdi dir="ltr" class="odt-ltr-term">IImpotDao</bdi></i>. ولهذا السبب يتم تمرير هذا المرجع كمعلمة إلى المنشئ.
+  <li>الأسطر 14-19: يجب أن تتعاون طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] مع طبقة [dao]. لذلك يجب أن تحتوي على مرجع إلى الكائن الذي ينفذ واجهة <i><bdi dir="ltr" class="odt-ltr-term">IImpotDao</bdi></i>. ولهذا السبب يتم تمرير هذا المرجع كمعلمة إلى المنشئ.
   </li>
-  <li>السطر 16: يتم تخزين مرجع الطبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] في الحقل الخاص في السطر 8
+  <li>السطر 16: يتم تخزين مرجع الطبقة [dao] في الحقل الخاص في السطر 8
   </li>
   <li>السطر 18: من هذه الإشارة، يطلب المنشئ جدول شرائح الضرائب ويخزن إشارة في الخاصية الخاصة في السطر 8.
   </li>
@@ -1463,7 +1463,7 @@
 </ul>
 
 <p><a id="refheading10400931168783983"></a></p>
-<h3 id="635-ui">6.3.5. <span style="color: #4f81bd">طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>]</span></h3>
+<h3 id="635-ui">6.3.5. <span style="color: #4f81bd">طبقة [ui]</span></h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006B700000180F1F14DF5.png" width="602" height="134" style="display:inline-block; margin:4px;width:15.921cm;height:3.558cm;" class="odt-zoomable" data-zoom-src="images/10000000000006B700000180F1F14DF5.png" /></td></tr></table>
 
 <p>كانت فئات حوار المستخدم في الإصدارين 2 و 3 متشابهة جدًا. وكانت فئة الإصدار 2 كما يلي:</p>
@@ -1518,7 +1518,7 @@
 </code></pre></div>
 
 <p>الشيء الوحيد الذي يتغير هو طريقة إنشاء مثيل واجهة <em><bdi dir="ltr" class="odt-ltr-term">IImpot</bdi></em> المستخدمة لحساب الضريبة. ويتوافق هذا الكائن هنا مع طبقة [الأعمال] لدينا.</p>
-<p>بالنسبة لتنفيذ [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] باستخدام فئة <em><bdi dir="ltr" class="odt-ltr-term">HardwiredImpot</bdi></em>، تكون فئة الحوار كما يلي:</p>
+<p>بالنسبة لتنفيذ [dao] باستخدام فئة <em><bdi dir="ltr" class="odt-ltr-term">HardwiredImpot</bdi></em>، تكون فئة الحوار كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> Metier;</span></span>
@@ -1546,13 +1546,13 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 12: إنشاء مثيلات للطبقات [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]. تذكر أن الطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] تتطلب الطبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>].
+  <li>السطر 12: إنشاء مثيلات للطبقات [dao] و [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]. تذكر أن الطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] تتطلب الطبقة [dao].
   </li>
   <li>السطر 18: استخدام طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] لحساب الضريبة
   </li>
 </ul>
 
-<p>بالنسبة لتنفيذ [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] باستخدام فئة <em><bdi dir="ltr" class="odt-ltr-term">FileImport</bdi></em>، تكون فئة الحوار كما يلي:</p>
+<p>بالنسبة لتنفيذ [dao] باستخدام فئة <em><bdi dir="ltr" class="odt-ltr-term">FileImport</bdi></em>، تكون فئة الحوار كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> Metier;</span></span>
@@ -1588,7 +1588,7 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 11-21: إنشاء مثيلات للطبقات [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]. قد يؤدي إنشاء مثيل لطبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] إلى إثارة استثناء، يتم التعامل معه بواسطة
+  <li>السطر 11-21: إنشاء مثيلات للطبقات [dao] و [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]. قد يؤدي إنشاء مثيل لطبقة [dao] إلى إثارة استثناء، يتم التعامل معه بواسطة
   </li>
   <li>السطر 26: استخدام طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] لحساب الضريبة، كما في الإصدار السابق
   </li>
@@ -1596,7 +1596,7 @@
 
 <p><a id="refheading10400951168783983"></a></p>
 <h3 id="636">6.3.6. <span style="color: #4f81bd">الخلاصة</span></h3>
-<p>أضفت البنية الطبقية واستخدام الواجهات مرونة معينة على تطبيقنا. ويتجلى ذلك بشكل خاص في الطريقة التي تقوم بها طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] بإنشاء مثيلات لطبقتي [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">business</bdi>]:</p>
+<p>أضفت البنية الطبقية واستخدام الواجهات مرونة معينة على تطبيقنا. ويتجلى ذلك بشكل خاص في الطريقة التي تقوم بها طبقة [ui] بإنشاء مثيلات لطبقتي [dao] و[<bdi dir="ltr" class="odt-ltr-term">business</bdi>]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-vbscript">
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#008000">// on crée les couches [metier et dao]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#2b91af">IImpotMetier</span> metier = <span style="color:#0000ff">new</span> <span style="color:#2b91af">ImpotMetier</span>(<span style="color:#0000ff">new</span> <span style="color:#2b91af">HardwiredImpot</span>());</span></span>
@@ -1618,7 +1618,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">            }</span></span>
 </code></pre></div>
 
-<p>في الآخر. باستثناء معالجة الاستثناءات في الحالة 2، فإن إنشاء مثيلات طبقات [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] متشابه في كلا التطبيقين. بمجرد إنشاء مثيلات طبقات [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]، يكون كود طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] متطابقًا في كلتا الحالتين. ويرجع ذلك إلى حقيقة أن طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] يتم التعامل معها عبر واجهتها <em><bdi dir="ltr" class="odt-ltr-term">IImpotMetier</bdi></em> وليس عبر فئة التنفيذ الخاصة بها. إن تغيير طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] أو طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] في التطبيق دون تغيير واجهاتهما يعني دائمًا تغيير الأسطر السابقة في طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] فقط.</p>
+<p>في الآخر. باستثناء معالجة الاستثناءات في الحالة 2، فإن إنشاء مثيلات طبقات [dao] و[<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] متشابه في كلا التطبيقين. بمجرد إنشاء مثيلات طبقات [dao] و[<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]، يكون كود طبقة [ui] متطابقًا في كلتا الحالتين. ويرجع ذلك إلى حقيقة أن طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] يتم التعامل معها عبر واجهتها <em><bdi dir="ltr" class="odt-ltr-term">IImpotMetier</bdi></em> وليس عبر فئة التنفيذ الخاصة بها. إن تغيير طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] أو طبقة [dao] في التطبيق دون تغيير واجهاتهما يعني دائمًا تغيير الأسطر السابقة في طبقة [ui] فقط.</p>
 <p>مثال آخر على المرونة التي توفرها هذه البنية هو تنفيذ طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> Entites;</span></span>
@@ -1650,7 +1650,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>يُظهر السطر 14 أن طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] مبنية من مرجع إلى واجهة طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]. وبالتالي، فإن تغيير تنفيذ هذه الأخيرة لا يؤثر مطلقًا على طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]. وهذا هو السبب في أن تنفيذنا الوحيد لطبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] كان قادرًا على العمل دون تغيير مع تنفيذين مختلفين لطبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>].</p>
+<p>يُظهر السطر 14 أن طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] مبنية من مرجع إلى واجهة طبقة [dao]. وبالتالي، فإن تغيير تنفيذ هذه الأخيرة لا يؤثر مطلقًا على طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]. وهذا هو السبب في أن تنفيذنا الوحيد لطبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] كان قادرًا على العمل دون تغيير مع تنفيذين مختلفين لطبقة [dao].</p>
 <p><a id="refheading10400971168783983"></a>
 <a id="impots-v5"></a></p>
 <h2 id="64-5">6.4. <span style="color: #4f81bd">مثال على التطبيق - الإصدار 5 من</span></h2>
@@ -1658,15 +1658,15 @@
 
 <p>يعتمد هذا الإصدار الجديد على الإصدار السابق ويتضمن التغييرات التالية: </p>
 <ul>
-  <li>يتم تغليف كل من طبقتي [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] في مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> ويتم اختبارهما باستخدام إطار عمل اختبار الوحدات <bdi dir="ltr" class="odt-ltr-term">NUnit.</bdi>
+  <li>يتم تغليف كل من طبقتي [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] و [dao] في مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> ويتم اختبارهما باستخدام إطار عمل اختبار الوحدات <bdi dir="ltr" class="odt-ltr-term">NUnit.</bdi>
   </li>
   <li>يتم توفير تكامل الطبقات بواسطة إطار عمل <bdi dir="ltr" class="odt-ltr-term">Spring</bdi>
   </li>
 </ul>
 
 <p>في المشاريع الكبيرة، يعمل العديد من المطورين على نفس المشروع. تسهل البنى الطبقية طريقة العمل هذه: نظرًا لأن الطبقات تتواصل مع بعضها البعض عبر واجهات محددة جيدًا، لا يتعين على المطور الذي يعمل على طبقة واحدة أن يقلق بشأن عمل المطورين الآخرين على الطبقات الأخرى. كل ما هو مطلوب هو أن يحترم الجميع الواجهات.</p>
-<p>في المثال أعلاه، سيحتاج مطور طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] إلى تنفيذ لطبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] عند اختبار طبقته. إلى أن يتم الانتهاء من ذلك، يمكنه استخدام تنفيذ وهمي لطبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]، طالما أنه يتوافق مع واجهة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] <em><bdi dir="ltr" class="odt-ltr-term">IImpotDao</bdi></em>. هذه ميزة أخرى للهندسة الطبقية: لا يمنع التأخير في طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] اختبار طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]. كما أن التنفيذ الوهمي لطبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] يتميز بأنه غالبًا ما يكون أسهل في التنفيذ من طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] الحقيقية، التي قد تتطلب تشغيل <bdi dir="ltr" class="odt-ltr-term">SGBD</bdi> واتصالات شبكة، ...</p>
-<p>عند اكتمال طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] واختبارها، سيتم تسليمها إلى مطوري طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] في شكل مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> بدلاً من شفرة المصدر. في النهاية، غالبًا ما يتم تسليم التطبيق في شكل ملف .<bdi dir="ltr" class="odt-ltr-term">exe</bdi> قابل للتنفيذ (لطبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>]) ومكتبات فئات .<bdi dir="ltr" class="odt-ltr-term">dll</bdi> (للطبقات الأخرى).</p>
+<p>في المثال أعلاه، سيحتاج مطور طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] إلى تنفيذ لطبقة [dao] عند اختبار طبقته. إلى أن يتم الانتهاء من ذلك، يمكنه استخدام تنفيذ وهمي لطبقة [dao]، طالما أنه يتوافق مع واجهة [dao] <em><bdi dir="ltr" class="odt-ltr-term">IImpotDao</bdi></em>. هذه ميزة أخرى للهندسة الطبقية: لا يمنع التأخير في طبقة [dao] اختبار طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]. كما أن التنفيذ الوهمي لطبقة [dao] يتميز بأنه غالبًا ما يكون أسهل في التنفيذ من طبقة [dao] الحقيقية، التي قد تتطلب تشغيل <bdi dir="ltr" class="odt-ltr-term">SGBD</bdi> واتصالات شبكة، ...</p>
+<p>عند اكتمال طبقة [dao] واختبارها، سيتم تسليمها إلى مطوري طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] في شكل مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> بدلاً من شفرة المصدر. في النهاية، غالبًا ما يتم تسليم التطبيق في شكل ملف .exe قابل للتنفيذ (لطبقة [ui]) ومكتبات فئات .dll (للطبقات الأخرى).</p>
 <p><a id="refheading10400991168783983"></a></p>
 <h3 id="641-nunit">6.4.1. <span style="color: #4f81bd"><bdi dir="ltr" class="odt-ltr-term">NUnit</bdi></span></h3>
 <p>حتى الآن، كانت الاختبارات التي أجريت على تطبيقاتنا المختلفة تعتمد على التحقق البصري. كنا نتحقق من أننا نحصل على ما هو متوقع على الشاشة. هذه الطريقة غير قابلة للاستخدام عندما يكون هناك العديد من الاختبارات التي يجب إجراؤها. البشر عرضة للإرهاق، وقدرتهم على التحقق من الاختبارات تتضاءل مع مرور اليوم. لذلك يجب أتمتة الاختبارات، والسعي إلى عدم تدخل الإنسان مطلقًا.</p>
@@ -1738,9 +1738,9 @@
   </li>
   <li>السطر 21: أحد [<i><bdi dir="ltr" class="odt-ltr-term">Assert.</bdi>*</i>]<i> </i>المحددة بواسطة إطار عمل <bdi dir="ltr" class="odt-ltr-term">NUnit.</bdi> تتوفر طرق [<bdi dir="ltr" class="odt-ltr-term">Assert</bdi>] التالية:
     <ul>
-      <li><b>[</b><i><bdi dir="ltr" class="odt-ltr-term">Assert.AreEqual</bdi>(<bdi dir="ltr" class="odt-ltr-term">expression1</bdi>, <bdi dir="ltr" class="odt-ltr-term">expression2</bdi>)</i><b>] </b>: يتحقق من أن قيم التعبيرين متساوية. يتم دعم العديد من أنواع التعبيرات (<bdi dir="ltr" class="odt-ltr-term">int</bdi>، <bdi dir="ltr" class="odt-ltr-term">string</bdi>، <bdi dir="ltr" class="odt-ltr-term">float</bdi>، <bdi dir="ltr" class="odt-ltr-term">double</bdi>، <bdi dir="ltr" class="odt-ltr-term">decimal</bdi>، ...). إذا لم يكن التعبيران متساويين، يتم إلقاء استثناء.
+      <li><b>[</b><i><bdi dir="ltr" class="odt-ltr-term">Assert.AreEqual</bdi>(<bdi dir="ltr" class="odt-ltr-term">expression1</bdi>, <bdi dir="ltr" class="odt-ltr-term">expression2</bdi>)</i><b>] </b>: يتحقق من أن قيم التعبيرين متساوية. يتم دعم العديد من أنواع التعبيرات (int، <bdi dir="ltr" class="odt-ltr-term">string</bdi>، <bdi dir="ltr" class="odt-ltr-term">float</bdi>، <bdi dir="ltr" class="odt-ltr-term">double</bdi>، <bdi dir="ltr" class="odt-ltr-term">decimal</bdi>، ...). إذا لم يكن التعبيران متساويين، يتم إلقاء استثناء.
       </li>
-      <li><b>[</b><i><bdi dir="ltr" class="odt-ltr-term">Assert.AreEqual</bdi>(<bdi dir="ltr" class="odt-ltr-term">real1</bdi>, <bdi dir="ltr" class="odt-ltr-term">real2</bdi>, <bdi dir="ltr" class="odt-ltr-term">delta</bdi>)</i><b>] </b>: يتحقق من أن رقمين حقيقيين متساويان تقريبًا بقيمة <b><bdi dir="ltr" class="odt-ltr-term">delta</bdi></b>، أي <bdi dir="ltr" class="odt-ltr-term">abs</bdi>(<bdi dir="ltr" class="odt-ltr-term">real1-real2</bdi>)&lt;=<bdi dir="ltr" class="odt-ltr-term">delta.</bdi> على سبيل المثال، يمكننا كتابة [<i><bdi dir="ltr" class="odt-ltr-term">Assert.AreEqual</bdi>(<bdi dir="ltr" class="odt-ltr-term">real1</bdi>, <bdi dir="ltr" class="odt-ltr-term">real2</bdi>, 1E-6)</i><b>] </b>للتحقق من أن القيمتين متساويتان تقريبًا بقيمة 10-6.
+      <li><b>[</b><i><bdi dir="ltr" class="odt-ltr-term">Assert.AreEqual</bdi>(<bdi dir="ltr" class="odt-ltr-term">real1</bdi>, <bdi dir="ltr" class="odt-ltr-term">real2</bdi>, <bdi dir="ltr" class="odt-ltr-term">delta</bdi>)</i><b>] </b>: يتحقق من أن رقمين حقيقيين متساويان تقريبًا بقيمة <b><bdi dir="ltr" class="odt-ltr-term">delta</bdi></b>، أي abs(<bdi dir="ltr" class="odt-ltr-term">real1-real2</bdi>)&lt;=<bdi dir="ltr" class="odt-ltr-term">delta.</bdi> على سبيل المثال، يمكننا كتابة [<i><bdi dir="ltr" class="odt-ltr-term">Assert.AreEqual</bdi>(<bdi dir="ltr" class="odt-ltr-term">real1</bdi>, <bdi dir="ltr" class="odt-ltr-term">real2</bdi>, 1E-6)</i><b>] </b>للتحقق من أن القيمتين متساويتان تقريبًا بقيمة 10-6.
       </li>
       <li><b>[</b><i><bdi dir="ltr" class="odt-ltr-term">Assert.AreEqual</bdi>(<bdi dir="ltr" class="odt-ltr-term">expression1</bdi>, <bdi dir="ltr" class="odt-ltr-term">expression2</bdi>, <bdi dir="ltr" class="odt-ltr-term">message</bdi>)</i><b>] </b>و [<i><bdi dir="ltr" class="odt-ltr-term">Assert.AreEqual</bdi>(<bdi dir="ltr" class="odt-ltr-term">real1</bdi>, <bdi dir="ltr" class="odt-ltr-term">real2</bdi>, <bdi dir="ltr" class="odt-ltr-term">delta</bdi>, <bdi dir="ltr" class="odt-ltr-term">message</bdi>)</i><b>] </b>هما متغيران يستخدمان لتحديد رسالة الخطأ المرتبطة بالاستثناء الذي يتم إلقائه عند فشل [<i><bdi dir="ltr" class="odt-ltr-term">Assert.AreEqual</bdi></i>].
       </li>
@@ -1767,7 +1767,7 @@
   </li>
 </ul>
 
-<p>دعونا نُهيئ المشروع بحيث ينتج عنه ملف <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> بدلاً من ملف .<bdi dir="ltr" class="odt-ltr-term">exe</bdi> قابل للتنفيذ:</p>
+<p>دعونا نُهيئ المشروع بحيث ينتج عنه ملف <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> بدلاً من ملف .exe قابل للتنفيذ:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000081700000334AE742D3D.png" width="621" height="246" style="display:inline-block; margin:4px;width:16.439cm;height:6.509cm;" class="odt-zoomable" data-zoom-src="images/100000000000081700000334AE742D3D.png" /></td></tr></table>
 
 <ul>
@@ -1798,7 +1798,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000838000002DAC020B66E.png" width="631" height="219" style="display:inline-block; margin:4px;width:16.701cm;height:5.794cm;" class="odt-zoomable" data-zoom-src="images/1000000000000838000002DAC020B66E.png" /></td></tr></table>
 
 <ul>
-  <li>في [7]: النتائج: نجح <bdi dir="ltr" class="odt-ltr-term">t1</bdi>، وفشل <bdi dir="ltr" class="odt-ltr-term">t2</bdi>
+  <li>في [7]: النتائج: نجح t1، وفشل t2
   </li>
   <li>في [8]: يشير الشريط الأحمر إلى فشل عام لفئة الاختبار
   </li>
@@ -1946,9 +1946,9 @@
 <ul>
   <li>في [1]: تم الكشف تلقائيًا عن فئة الاختبار الجديدة [<bdi dir="ltr" class="odt-ltr-term">NUnit2</bdi>]
   </li>
-  <li>في [2]: تشغيل اختبار <bdi dir="ltr" class="odt-ltr-term">t3</bdi> لـ <bdi dir="ltr" class="odt-ltr-term">NUnit2</bdi>
+  <li>في [2]: تشغيل اختبار t3 لـ <bdi dir="ltr" class="odt-ltr-term">NUnit2</bdi>
   </li>
-  <li>في [3]: اجتاز اختبار <bdi dir="ltr" class="odt-ltr-term">t3</bdi>
+  <li>في [3]: اجتاز اختبار t3
   </li>
 </ul>
 
@@ -1965,11 +1965,11 @@
 <ul>
   <li>في [1]: يتكون الحل <i><bdi dir="ltr" class="odt-ltr-term">ImpotsV5</bdi> </i>من ثلاثة مشاريع، واحد لكل طبقة من الطبقات الثلاث للتطبيق
   </li>
-  <li>في [2]: مشروع [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] من الطبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]
+  <li>في [2]: مشروع [dao] من الطبقة [dao]
   </li>
   <li>في [3]: مشروع [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] للطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]
   </li>
-  <li>في [4]: مشروع [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] من الطبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>]
+  <li>في [4]: مشروع [ui] من الطبقة [ui]
   </li>
 </ul>
 
@@ -1977,22 +1977,22 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>1</b></div><img src="images/100000000000007000000049B2484001.png" width="78" height="51" style="display:inline-block; margin:4px;width:2.071cm;height:1.349cm;" class="odt-zoomable" data-zoom-src="images/100000000000007000000049B2484001.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>234</b></div><img src="images/10000000000001BF000000CFA8CC9870.png" width="313" height="145" style="display:inline-block; margin:4px;width:8.28cm;height:3.835cm;" class="odt-zoomable" data-zoom-src="images/10000000000001BF000000CFA8CC9870.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>5</b></div><img src="images/10000000000000D1000000F0CAF13A2C.png" width="146" height="168" style="display:inline-block; margin:4px;width:3.87cm;height:4.443cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D1000000F0CAF13A2C.png" /></td></tr></table>
 
 <ul>
-  <li><bdi dir="ltr" class="odt-ltr-term">en</bdi> [1]: إنشاء مشروع جديد
+  <li>en [1]: إنشاء مشروع جديد
   </li>
-  <li><bdi dir="ltr" class="odt-ltr-term">en</bdi> [2]: حدد تطبيق وحدة التحكم
+  <li>en [2]: حدد تطبيق وحدة التحكم
   </li>
-  <li><bdi dir="ltr" class="odt-ltr-term">in</bdi> [3]: تسمية المشروع [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]
+  <li>in [3]: تسمية المشروع [dao]
   </li>
-  <li><bdi dir="ltr" class="odt-ltr-term">in</bdi> [4]: إنشاء المشروع
+  <li>in [4]: إنشاء المشروع
   </li>
-  <li><bdi dir="ltr" class="odt-ltr-term">in</bdi> [5]: بمجرد إنشاء المشروع، احفظه
+  <li>in [5]: بمجرد إنشاء المشروع، احفظه
   </li>
 </ul>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000075400000166A95016E6.png" width="563" height="107" style="display:inline-block; margin:4px;width:14.891cm;height:2.842cm;" class="odt-zoomable" data-zoom-src="images/100000000000075400000166A95016E6.png" /></td></tr></table>
 
 <ul>
-  <li>في [6]: احتفظ باسم [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] للمشروع
+  <li>في [6]: احتفظ باسم [dao] للمشروع
   </li>
   <li>في [7]: حدد مجلدًا لحفظ المشروع وحله
   </li>
@@ -2002,16 +2002,16 @@
   </li>
   <li>في [10]: احفظ المشروع وحله
   </li>
-  <li>في [11]: مشروع [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] في حله <i><bdi dir="ltr" class="odt-ltr-term">ImpotsV5</bdi></i>
+  <li>في [11]: مشروع [dao] في حله <i><bdi dir="ltr" class="odt-ltr-term">ImpotsV5</bdi></i>
   </li>
 </ul>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006090000019D120F31A1.png" width="463" height="124" style="display:inline-block; margin:4px;width:12.261cm;height:3.277cm;" class="odt-zoomable" data-zoom-src="images/10000000000006090000019D120F31A1.png" /></td></tr></table>
 
 <ul>
-  <li>في [12]: ملف الحل <i><bdi dir="ltr" class="odt-ltr-term">ImpotsV5</bdi></i>. يحتوي على المجلد [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] من المجلد [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>].
+  <li>في [12]: ملف الحل <i><bdi dir="ltr" class="odt-ltr-term">ImpotsV5</bdi></i>. يحتوي على المجلد [dao] من المجلد [dao].
   </li>
-  <li>في [13]: محتويات المجلد [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]
+  <li>في [13]: محتويات المجلد [dao]
   </li>
   <li>في [14]: تمت إضافة مشروع جديد إلى الحل <i><bdi dir="ltr" class="odt-ltr-term">ImpotsV5</bdi></i>
   </li>
@@ -2024,7 +2024,7 @@
   </li>
   <li>في [16]: الحل مع مشروعيه
   </li>
-  <li>في [17]: الحل، بعد إضافة المشروع الثالث [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>]
+  <li>في [17]: الحل، بعد إضافة المشروع الثالث [ui]
   </li>
 </ul>
 
@@ -2043,7 +2043,7 @@
 
 <p><a id="refheading10401031168783983"></a>
 <a id="impotsv5-dao"></a></p>
-<h3 id="643-dao">6.4.3. <span style="color: #4f81bd">[الطبقة <bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</span></h3>
+<h3 id="643-dao">6.4.3. <span style="color: #4f81bd">[الطبقة dao]</span></h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006C3000001D83B9E6292.png" width="519" height="142" style="display:inline-block; margin:4px;width:13.741cm;height:3.747cm;" class="odt-zoomable" data-zoom-src="images/10000000000006C3000001D83B9E6292.png" /></td></tr></table>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E9000002A26E2681CE.png" width="377" height="202" style="display:inline-block; margin:4px;width:9.98cm;height:5.352cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E9000002A26E2681CE.png" /></td></tr></table>
@@ -2051,7 +2051,7 @@
 <p><u><strong>مراجع المشروع</strong> </u>(انظر [1] في المشروع)</p>
 <p>نضيف مرجع [<bdi dir="ltr" class="odt-ltr-term">nunit.framework</bdi>] المطلوب لاختبارات [<bdi dir="ltr" class="odt-ltr-term">NUnit</bdi>]</p>
 <p><u><strong>الكيانات</strong> </u>(انظر [2] في المشروع)</p>
-<p>فئة [<bdi dir="ltr" class="odt-ltr-term">TrancheImpot</bdi>] هي نفسها الموجودة في الإصدارات السابقة. تم تغيير اسم فئة [<bdi dir="ltr" class="odt-ltr-term">FileImpotException</bdi>] من الإصدار السابق إلى [<bdi dir="ltr" class="odt-ltr-term">ImpotException</bdi>] لجعلها أكثر عمومية وعدم ربطها بطبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] معينة:</p>
+<p>فئة [<bdi dir="ltr" class="odt-ltr-term">TrancheImpot</bdi>] هي نفسها الموجودة في الإصدارات السابقة. تم تغيير اسم فئة [<bdi dir="ltr" class="odt-ltr-term">FileImpotException</bdi>] من الإصدار السابق إلى [<bdi dir="ltr" class="odt-ltr-term">ImpotException</bdi>] لجعلها أكثر عمومية وعدم ربطها بطبقة [dao] معينة:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -2074,7 +2074,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><u><strong>طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</strong> </u>(انظر [3] في المشروع)</p>
+<p><u><strong>طبقة [dao]</strong> </u>(انظر [3] في المشروع)</p>
 <p>واجهة [<bdi dir="ltr" class="odt-ltr-term">IImpotDao</bdi>] هي نفسها كما في الإصدار السابق. وينطبق الأمر نفسه على فئة [<bdi dir="ltr" class="odt-ltr-term">HardwiredImpot</bdi>]. تم تعديل فئة [<bdi dir="ltr" class="odt-ltr-term">FileImpot</bdi>] لتأخذ في الاعتبار تغيير الاستثناء [<bdi dir="ltr" class="odt-ltr-term">FileImpotException</bdi>] إلى [<bdi dir="ltr" class="odt-ltr-term">ImpotException</bdi>]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
@@ -2160,19 +2160,19 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 13: يتم تنفيذ الطبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] بواسطة الفئة [<bdi dir="ltr" class="odt-ltr-term">FileImpot</bdi>]
+  <li>السطر 13: يتم تنفيذ الطبقة [dao] بواسطة الفئة [<bdi dir="ltr" class="odt-ltr-term">FileImpot</bdi>]
   </li>
   <li>السطر 14: يعالج استثناء [<bdi dir="ltr" class="odt-ltr-term">ImpotException</bdi>] الذي قد يحدث.
   </li>
 </ul>
 
-<p>يتم نسخ ملف [<bdi dir="ltr" class="odt-ltr-term">DataImpot.txt</bdi>] المطلوب للاختبار تلقائيًا إلى مجلد تنفيذ المشروع (انظر [5] في المشروع). سيحتوي مشروع [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] على عدة فئات تحتوي على طريقة [<bdi dir="ltr" class="odt-ltr-term">Main</bdi>]. في هذه الحالة، يجب أن تشير صراحةً إلى الفئة المراد تنفيذها عندما يطلب المستخدم تنفيذ المشروع بالضغط على <bdi dir="ltr" class="odt-ltr-term">Ctrl-F5</bdi> :</p>
+<p>يتم نسخ ملف [<bdi dir="ltr" class="odt-ltr-term">DataImpot.txt</bdi>] المطلوب للاختبار تلقائيًا إلى مجلد تنفيذ المشروع (انظر [5] في المشروع). سيحتوي مشروع [dao] على عدة فئات تحتوي على طريقة [<bdi dir="ltr" class="odt-ltr-term">Main</bdi>]. في هذه الحالة، يجب أن تشير صراحةً إلى الفئة المراد تنفيذها عندما يطلب المستخدم تنفيذ المشروع بالضغط على <bdi dir="ltr" class="odt-ltr-term">Ctrl-F5</bdi> :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007F50000034F9073383D.png" width="611" height="254" style="display:inline-block; margin:4px;width:16.17cm;height:6.724cm;" class="odt-zoomable" data-zoom-src="images/10000000000007F50000034F9073383D.png" /></td></tr></table>
 
 <ul>
-  <li><bdi dir="ltr" class="odt-ltr-term">en</bdi> [1]: الوصول إلى خصائص المشروع
+  <li>en [1]: الوصول إلى خصائص المشروع
   </li>
-  <li><bdi dir="ltr" class="odt-ltr-term">en</bdi> [2]: تحديد أن هذا تطبيق وحدة التحكم
+  <li>en [2]: تحديد أن هذا تطبيق وحدة التحكم
   </li>
   <li>في [3]: حدد الفئة المراد تنفيذها
   </li>
@@ -2188,7 +2188,7 @@
 <a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>0:0,481:9505,54
 </code></pre></div>
 <p><u><strong>اختبار [<bdi dir="ltr" class="odt-ltr-term">Test2</bdi>]</strong> </u>(انظر [4] في المشروع)</p>
-<p>تقوم فئة [<bdi dir="ltr" class="odt-ltr-term">Test2</bdi>] بنفس ما تقوم به فئة [<bdi dir="ltr" class="odt-ltr-term">Test1</bdi>]، حيث تنفذ طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] باستخدام فئة [<bdi dir="ltr" class="odt-ltr-term">HardwiredImpot</bdi>]. يتم استبدال السطر 13 من [<bdi dir="ltr" class="odt-ltr-term">Test1</bdi>] بما يلي:</p>
+<p>تقوم فئة [<bdi dir="ltr" class="odt-ltr-term">Test2</bdi>] بنفس ما تقوم به فئة [<bdi dir="ltr" class="odt-ltr-term">Test1</bdi>]، حيث تنفذ طبقة [dao] باستخدام فئة [<bdi dir="ltr" class="odt-ltr-term">HardwiredImpot</bdi>]. يتم استبدال السطر 13 من [<bdi dir="ltr" class="odt-ltr-term">Test1</bdi>] بما يلي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vbscript">
 <span class="odt-code-line"><span class="odt-code-line-content">                dao = <span style="color:#0000ff">new</span> <span style="color:#2b91af">HardwiredImpot</span>();</span></span>
 </code></pre></div>
@@ -2238,13 +2238,13 @@
 <ul>
   <li>تستمد فئة الاختبار من فئة [<bdi dir="ltr" class="odt-ltr-term">AssertionHelper</bdi>]، مما يتيح استخدام الطريقة الثابتة <i><bdi dir="ltr" class="odt-ltr-term">Expect</bdi> </i>(الأسطر 27-30).
   </li>
-  <li>السطر 10: إشارة إلى طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]
+  <li>السطر 10: إشارة إلى طبقة [dao]
   </li>
-  <li>الأسطر 13-16: يقوم المنشئ بإنشاء مثيل لطبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] باستخدام فئة [<bdi dir="ltr" class="odt-ltr-term">FileImpot</bdi>]
+  <li>الأسطر 13-16: يقوم المنشئ بإنشاء مثيل لطبقة [dao] باستخدام فئة [<bdi dir="ltr" class="odt-ltr-term">FileImpot</bdi>]
   </li>
   <li>السطور 19-20: طريقة الاختبار
   </li>
-  <li>السطر 22: يسترد جدول الشرائح الضريبية من طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]
+  <li>السطر 22: يسترد جدول الشرائح الضريبية من طبقة [dao]
   </li>
   <li>الأسطر 23-25: يتم عرضها كما في السابق. لن يكون هذا العرض ضروريًا في اختبار الوحدة الفعلي. هنا، لهذا العرض غرض تعليمي.
   </li>
@@ -2270,7 +2270,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000082C000001C62429FC1A.png" width="628" height="136" style="display:inline-block; margin:4px;width:16.611cm;height:3.605cm;" class="odt-zoomable" data-zoom-src="images/100000000000082C000001C62429FC1A.png" /></td></tr></table>
 
 <ul>
-  <li>في [1]: اجتازت الاختبارات. نعتبر الآن طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] جاهزة للعمل. تحتوي مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الخاصة بها على جميع فئات المشروع، بما في ذلك فئات الاختبار. لم تعد هناك حاجة لهذه الفئات. نعيد بناء مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> لاستبعاد فئات الاختبار.
+  <li>في [1]: اجتازت الاختبارات. نعتبر الآن طبقة [dao] جاهزة للعمل. تحتوي مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الخاصة بها على جميع فئات المشروع، بما في ذلك فئات الاختبار. لم تعد هناك حاجة لهذه الفئات. نعيد بناء مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> لاستبعاد فئات الاختبار.
   </li>
   <li>في [2]: تم استبعاد المجلد [<bdi dir="ltr" class="odt-ltr-term">tests</bdi>] من المشروع
   </li>
@@ -2299,7 +2299,7 @@
 </ul>
 
 <p><u><strong>مراجع المشروع</strong> </u>(انظر [2] في المشروع)</p>
-<p>كما هو الحال مع مشروع [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]، نضيف مرجع [<bdi dir="ltr" class="odt-ltr-term">nunit.framework</bdi>] المطلوب لاختبارات [<bdi dir="ltr" class="odt-ltr-term">NUnit</bdi>]. تحتاج طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] إلى طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]. ولذلك فهي تحتاج إلى مرجع إلى مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> لهذه الطبقة. اتبع الخطوات التالية:</p>
+<p>كما هو الحال مع مشروع [dao]، نضيف مرجع [<bdi dir="ltr" class="odt-ltr-term">nunit.framework</bdi>] المطلوب لاختبارات [<bdi dir="ltr" class="odt-ltr-term">NUnit</bdi>]. تحتاج طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] إلى طبقة [dao]. ولذلك فهي تحتاج إلى مرجع إلى مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> لهذه الطبقة. اتبع الخطوات التالية:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000077A000001A324F2BD2E.png" width="574" height="126" style="display:inline-block; margin:4px;width:15.191cm;height:3.327cm;" class="odt-zoomable" data-zoom-src="images/100000000000077A000001A324F2BD2E.png" /></td></tr></table>
 
 <ul>
@@ -2309,7 +2309,7 @@
   </li>
   <li>في [3]: حدد المجلد [<bdi dir="ltr" class="odt-ltr-term">dao/bin/Release</bdi>]
   </li>
-  <li>في [4]: حدد ملف <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> [<bdi dir="ltr" class="odt-ltr-term">ImpotsV5-dao.dll</bdi>] الذي تم إنشاؤه في المشروع [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]
+  <li>في [4]: حدد ملف <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> [<bdi dir="ltr" class="odt-ltr-term">ImpotsV5-dao.dll</bdi>] الذي تم إنشاؤه في المشروع [dao]
   </li>
   <li>في [5]: المرجع الجديد
   </li>
@@ -2352,7 +2352,7 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 14: إنشاء طبقات [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]. يتم تنفيذ طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] باستخدام فئة [<bdi dir="ltr" class="odt-ltr-term">FileImpot</bdi>]
+  <li>السطر 14: إنشاء طبقات [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] و [dao]. يتم تنفيذ طبقة [dao] باستخدام فئة [<bdi dir="ltr" class="odt-ltr-term">FileImpot</bdi>]
   </li>
   <li>الأسطر 12-21: معالجة استثناء [<bdi dir="ltr" class="odt-ltr-term">ImpotException</bdi>] المحتمل
   </li>
@@ -2414,7 +2414,7 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 14: إنشاء طبقات [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]. يتم تنفيذ طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] باستخدام فئة [<bdi dir="ltr" class="odt-ltr-term">FileImpot</bdi>]
+  <li>السطر 14: إنشاء طبقات [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] و [dao]. يتم تنفيذ طبقة [dao] باستخدام فئة [<bdi dir="ltr" class="odt-ltr-term">FileImpot</bdi>]
   </li>
   <li>الأسطر 21-24: استدعاءات متكررة للطريقة الوحيدة <i><bdi dir="ltr" class="odt-ltr-term">CalculerImpot</bdi></i> في واجهة [<bdi dir="ltr" class="odt-ltr-term">IImpotMetier</bdi>] مع التحقق من النتائج.
   </li>
@@ -2444,28 +2444,28 @@
 </ul>
 
 <p><a id="refheading10401071168783983"></a></p>
-<h3 id="645-ui">6.4.5. <span style="color: #4f81bd">طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>]</span></h3>
+<h3 id="645-ui">6.4.5. <span style="color: #4f81bd">طبقة [ui]</span></h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000697000001E0E6A9F6BE.png" width="506" height="144" style="display:inline-block; margin:4px;width:13.39cm;height:3.81cm;" class="odt-zoomable" data-zoom-src="images/1000000000000697000001E0E6A9F6BE.png" /></td></tr></table>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000606000001B91FDC5F1F.png" width="463" height="132" style="display:inline-block; margin:4px;width:12.24cm;height:3.501cm;" class="odt-zoomable" data-zoom-src="images/1000000000000606000001B91FDC5F1F.png" /></td></tr></table>
 
 <ul>
-  <li>في [1]، أصبح مشروع [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] هو المشروع النشط للحل
+  <li>في [1]، أصبح مشروع [ui] هو المشروع النشط للحل
   </li>
   <li>في [2]: مراجع المشروع
   </li>
-  <li>في [3]: طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>]
+  <li>في [3]: طبقة [ui]
   </li>
   <li>في [4]: ملف فئة الضرائب [<bdi dir="ltr" class="odt-ltr-term">DataImpot.txt</bdi>]، تم تكوينه [5] ليتم نسخه تلقائيًا إلى مجلد تنفيذ المشروع [6]
   </li>
 </ul>
 
 <p><u><strong>مراجع المشروع</strong> </u>(انظر [2] في المشروع)</p>
-<p>تحتاج طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] إلى طبقتي [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] لإجراء حسابات الضرائب الخاصة بها. ولذلك، فهي تحتاج إلى مرجع إلى مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> لهاتين الطبقتين. تابع كما هو موضح بالنسبة لطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]</p>
+<p>تحتاج طبقة [ui] إلى طبقتي [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] و[dao] لإجراء حسابات الضرائب الخاصة بها. ولذلك، فهي تحتاج إلى مرجع إلى مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> لهاتين الطبقتين. تابع كما هو موضح بالنسبة لطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]</p>
 <p><u><strong>الفئة الرئيسية [<bdi dir="ltr" class="odt-ltr-term">Dialogue.cs</bdi>]</strong> </u>(انظر [3] في المشروع)</p>
 <p>الفئة [<bdi dir="ltr" class="odt-ltr-term">Dialogue.cs</bdi>] هي نفسها الموجودة في الإصدار السابق.</p>
 <p><u><strong>الاختبارات</strong></u></p>
-<p>تم تكوين مشروع [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] على النحو التالي:</p>
+<p>تم تكوين مشروع [ui] على النحو التالي:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000475000001A89F7EBBA3.png" width="342" height="127" style="display:inline-block; margin:4px;width:9.059cm;height:3.366cm;" class="odt-zoomable" data-zoom-src="images/1000000000000475000001A89F7EBBA3.png" /></td></tr></table>
 
 <ul>
@@ -2484,7 +2484,7 @@
 <p><a id="refheading10401091168783983"></a>
 <a id="spring"></a></p>
 <h3 id="646-spring">6.4.6. <span style="color: #4f81bd">الطبقة [ <bdi dir="ltr" class="odt-ltr-term">Spring</bdi>]</span></h3>
-<p>لنعد إلى الكود في [<bdi dir="ltr" class="odt-ltr-term">Dialogue.cs</bdi>] الذي ينشئ طبقتي [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]:</p>
+<p>لنعد إلى الكود في [<bdi dir="ltr" class="odt-ltr-term">Dialogue.cs</bdi>] الذي ينشئ طبقتي [dao] و [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">// on crée les couches [metier et dao]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#2b91af">IImpotMetier</span> metier = <span style="color:#0000ff">null</span>;</span></span>
@@ -2499,7 +2499,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">            }</span></span>
 </code></pre></div>
 
-<p>يُنشئ السطر 5 طبقتي [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]، مع تسمية فئات التنفيذ لكلتا الطبقتين بشكل صريح: <bdi dir="ltr" class="odt-ltr-term">FileImpot</bdi> لطبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]، و<bdi dir="ltr" class="odt-ltr-term">ImpotMetier</bdi> لطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]. إذا تم تنفيذ إحدى الطبقتين بفئة جديدة، فسيتم تغيير السطر 5. على سبيل المثال:</p>
+<p>يُنشئ السطر 5 طبقتي [dao] و[<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]، مع تسمية فئات التنفيذ لكلتا الطبقتين بشكل صريح: <bdi dir="ltr" class="odt-ltr-term">FileImpot</bdi> لطبقة [dao]، و<bdi dir="ltr" class="odt-ltr-term">ImpotMetier</bdi> لطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]. إذا تم تنفيذ إحدى الطبقتين بفئة جديدة، فسيتم تغيير السطر 5. على سبيل المثال:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vbscript">
 <span class="odt-code-line"><span class="odt-code-line-content">                metier = <span style="color:#0000ff">new</span> <span style="color:#2b91af">ImpotMetier</span>(<span style="color:#0000ff">new</span> HardwiredImpot());</span></span>
 </code></pre></div>
@@ -2507,7 +2507,7 @@
 <p>بصرف النظر عن هذا التغيير، لن يتغير شيء في التطبيق، حيث تتواصل كل طبقة مع الطبقة التالية عبر واجهة. طالما بقيت الواجهة دون تغيير، يبقى التواصل بين الطبقات دون تغيير. يسمح لنا إطار العمل <strong><bdi dir="ltr" class="odt-ltr-term">Spring</bdi></strong> بالارتقاء باستقلالية الطبقات خطوة إلى الأمام، من خلال نقل أسماء الفئات التي تنفذ الطبقات المختلفة إلى ملف تكوين. إن تغيير تنفيذ طبقة ما يعادل تغيير ملف تكوين. ولا يوجد أي تأثير على كود التطبيق.</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006BF000001EEF645BF0E.png" width="518" height="148" style="display:inline-block; margin:4px;width:13.711cm;height:3.921cm;" class="odt-zoomable" data-zoom-src="images/10000000000006BF000001EEF645BF0E.png" /></td></tr></table>
 
-<p>فيما سبق، ستطلب طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] من <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> [0] إنشاء مثيلات لطبقتي [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] [1] و[<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] [2] وفقًا للمعلومات الواردة في ملف التكوين. ستطلب طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] بعد ذلك من <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> [3] مرجعًا لطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]:</p>
+<p>فيما سبق، ستطلب طبقة [ui] من <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> [0] إنشاء مثيلات لطبقتي [dao] [1] و[<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] [2] وفقًا للمعلومات الواردة في ملف التكوين. ستطلب طبقة [ui] بعد ذلك من <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> [3] مرجعًا لطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content">             <span style="color:#008000">// we create the layers [metier and dao]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            IImpotMetier metier = <span style="color:#0000ff">null</span>;</span></span>
@@ -2522,9 +2522,9 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 5: إنشاء مثيلات للطبقات [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring</bdi>
+  <li>السطر 5: إنشاء مثيلات للطبقات [dao] و [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring</bdi>
   </li>
-  <li>السطر 7: يتم استرداد مرجع إلى طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]. لاحظ أن طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] حصلت على هذا المرجع دون ذكر اسم الفئة التي تنفذ طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>].
+  <li>السطر 7: يتم استرداد مرجع إلى طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]. لاحظ أن طبقة [ui] حصلت على هذا المرجع دون ذكر اسم الفئة التي تنفذ طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>].
   </li>
 </ul>
 
@@ -2548,7 +2548,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000082F0000040D67EE309A.png" width="629" height="311" style="display:inline-block; margin:4px;width:16.63cm;height:8.232cm;" class="odt-zoomable" data-zoom-src="images/100000000000082F0000040D67EE309A.png" /></td></tr></table>
 
 <ul>
-  <li><bdi dir="ltr" class="odt-ltr-term">en</bdi> [4]: قم بتنزيل وتثبيت الإصدار .<bdi dir="ltr" class="odt-ltr-term">exe</bdi>
+  <li>en [4]: قم بتنزيل وتثبيت الإصدار .exe
   </li>
   <li>في [5]: المجلد الذي تم إنشاؤه بواسطة التثبيت
   </li>
@@ -2558,13 +2558,13 @@
   </li>
 </ul>
 
-<p>نقوم بتخزين ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الثلاثة هذه في مجلد [<bdi dir="ltr" class="odt-ltr-term">lib</bdi>] في مشروعنا:</p>
+<p>نقوم بتخزين ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الثلاثة هذه في مجلد [lib] في مشروعنا:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007DB0000027D371F3434.png" width="603" height="191" style="display:inline-block; margin:4px;width:15.96cm;height:5.055cm;" class="odt-zoomable" data-zoom-src="images/10000000000007DB0000027D371F3434.png" /></td></tr></table>
 
 <ul>
-  <li>[1]: يتم وضع ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الثلاثة في مجلد [<bdi dir="ltr" class="odt-ltr-term">lib</bdi>] باستخدام مستكشف <bdi dir="ltr" class="odt-ltr-term">Windows</bdi>
+  <li>[1]: يتم وضع ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الثلاثة في مجلد [lib] باستخدام مستكشف <bdi dir="ltr" class="odt-ltr-term">Windows</bdi>
   </li>
-  <li>[2]: في مشروع [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>]، اعرض جميع الملفات
+  <li>[2]: في مشروع [ui]، اعرض جميع الملفات
   </li>
   <li>[3]: أصبح المجلد [<bdi dir="ltr" class="odt-ltr-term">ui/lib</bdi>] مرئيًا الآن. نقوم بتضمينه في
   </li>
@@ -2572,12 +2572,12 @@
   </li>
 </ul>
 
-<p>عملية إنشاء مجلد [<bdi dir="ltr" class="odt-ltr-term">lib</bdi>] ليست ضرورية على الإطلاق. يمكن إنشاء المراجع مباشرة على ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الثلاثة الموجودة في مجلد [<bdi dir="ltr" class="odt-ltr-term">bin/net/2.0/release</bdi>] في [<bdi dir="ltr" class="odt-ltr-term">Spring.net</bdi>]. ومع ذلك، من خلال إنشاء مجلد [<bdi dir="ltr" class="odt-ltr-term">lib</bdi>]، يمكن تطوير التطبيق على محطة عمل بدون [<bdi dir="ltr" class="odt-ltr-term">Spring.net</bdi>]، مما يجعله أقل اعتمادًا على بيئة التطوير المتاحة.</p>
-<p>نقوم بإضافة مراجع إلى ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الثلاثة الجديدة إلى مشروع [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>]:</p>
+<p>عملية إنشاء مجلد [lib] ليست ضرورية على الإطلاق. يمكن إنشاء المراجع مباشرة على ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الثلاثة الموجودة في مجلد [<bdi dir="ltr" class="odt-ltr-term">bin/net/2.0/release</bdi>] في [<bdi dir="ltr" class="odt-ltr-term">Spring.net</bdi>]. ومع ذلك، من خلال إنشاء مجلد [lib]، يمكن تطوير التطبيق على محطة عمل بدون [<bdi dir="ltr" class="odt-ltr-term">Spring.net</bdi>]، مما يجعله أقل اعتمادًا على بيئة التطوير المتاحة.</p>
+<p>نقوم بإضافة مراجع إلى ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الثلاثة الجديدة إلى مشروع [ui]:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E8000002E7FF4AD111.png" width="377" height="223" style="display:inline-block; margin:4px;width:9.97cm;height:5.898cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E8000002E7FF4AD111.png" /></td></tr></table>
 
 <ul>
-  <li>[1]: إنشاء مراجع إلى ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الثلاثة الموجودة في المجلد [<bdi dir="ltr" class="odt-ltr-term">lib</bdi>] [2]
+  <li>[1]: إنشاء مراجع إلى ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الثلاثة الموجودة في المجلد [lib] [2]
   </li>
   <li>[3]: ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الثلاثة هي جزء من مراجع المشروع
   </li>
@@ -2586,7 +2586,7 @@
 <p>لنعد إلى نظرة عامة على بنية التطبيق:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006C70000021EA354603D.png" width="520" height="163" style="display:inline-block; margin:4px;width:13.771cm;height:4.302cm;" class="odt-zoomable" data-zoom-src="images/10000000000006C70000021EA354603D.png" /></td></tr></table>
 
-<p>في الأعلى، ستطلب طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] من <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> [0] إنشاء مثيلات لطبقتي [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] [1] و[<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] [2] وفقًا للمعلومات الواردة في ملف التكوين. ثم ستطلب طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] من <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> [3] مرجعًا لطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]. سيؤدي ذلك إلى ظهور الكود التالي في طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>]:</p>
+<p>في الأعلى، ستطلب طبقة [ui] من <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> [0] إنشاء مثيلات لطبقتي [dao] [1] و[<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] [2] وفقًا للمعلومات الواردة في ملف التكوين. ثم ستطلب طبقة [ui] من <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> [3] مرجعًا لطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]. سيؤدي ذلك إلى ظهور الكود التالي في طبقة [ui]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content">             <span style="color:#008000">// we create the layers [metier and dao]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            IImpotMetier metier = <span style="color:#0000ff">null</span>;</span></span>
@@ -2601,7 +2601,7 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 5: إنشاء مثيلات للطبقات [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring</bdi>
+  <li>السطر 5: إنشاء مثيلات للطبقات [dao] و [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring</bdi>
   </li>
   <li>السطر 7: استرداد مرجع على طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>].
   </li>
@@ -2690,7 +2690,7 @@
 <ul>
   <li>الأسطر 12-14: تحدد قسم &lt;<bdi dir="ltr" class="odt-ltr-term">spring/context</bdi>&gt;.
   </li>
-  <li>السطر 13: تشير علامة &lt;<b><bdi dir="ltr" class="odt-ltr-term">tagresource</bdi></b>&gt; إلى موقع الملف الذي يحدد الفئات التي سيقوم <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> بإنشاء مثيلات لها. قد تكون هذه الفئات موجودة في [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] كما هو الحال هنا، ولكنها قد تكون أيضًا في ملف تكوين آخر. يُشار إلى موقع هذه الفئات في سمة <b><bdi dir="ltr" class="odt-ltr-term">uri</bdi></b> لعلامة &lt;<bdi dir="ltr" class="odt-ltr-term">resource</bdi>&gt;:
+  <li>السطر 13: تشير علامة &lt;<b><bdi dir="ltr" class="odt-ltr-term">tagresource</bdi></b>&gt; إلى موقع الملف الذي يحدد الفئات التي سيقوم <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> بإنشاء مثيلات لها. قد تكون هذه الفئات موجودة في [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] كما هو الحال هنا، ولكنها قد تكون أيضًا في ملف تكوين آخر. يُشار إلى موقع هذه الفئات في سمة <b>uri</b> لعلامة &lt;<bdi dir="ltr" class="odt-ltr-term">resource</bdi>&gt;:
     <ul>
       <li><b>&lt;<bdi dir="ltr" class="odt-ltr-term">resource uri</bdi>=&quot;<bdi dir="ltr" class="odt-ltr-term">config://spring/objects</bdi>&gt; </b>يشير إلى أن قائمة الفئات التي سيتم إنشاء مثيل لها موجودة في ملف [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] (<b>التكوين:</b>)، في <b>//<bdi dir="ltr" class="odt-ltr-term">spring/objects</bdi></b>، أي في علامة &lt;<bdi dir="ltr" class="odt-ltr-term">objects</bdi>&gt; التابعة لعلامة &lt;<bdi dir="ltr" class="odt-ltr-term">spring</bdi>&gt;. 
       </li>
@@ -2704,9 +2704,9 @@
 <ul>
   <li>الأسطر 15-22: تعريف الفئات المراد إنشاء مثيلات لها. هنا يتم إجراء التكوين المحدد للتطبيق. تحدد علامة &lt;<b><bdi dir="ltr" class="odt-ltr-term">objects</bdi></b>&gt; قسم تعريف الفئات المراد إنشاء مثيلات لها.
   </li>
-  <li>الأسطر 16-18: تعريف الفئة المراد إنشاء مثيل لها للطبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]
+  <li>الأسطر 16-18: تعريف الفئة المراد إنشاء مثيل لها للطبقة [dao]
     <ul>
-      <li>السطر 16: كل كائن يتم إنشاء مثيل له بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> يخضع لعلامة &lt;<b><bdi dir="ltr" class="odt-ltr-term">tagobject</bdi></b>&gt;. تحتوي هذه العلامة على سمة <b><bdi dir="ltr" class="odt-ltr-term">name</bdi> </b>وهي اسم الكائن الذي تم إنشاء مثيل له. هكذا يطلب التطبيق من <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> مرجعًا: &quot;أعطني مرجعًا للكائن المسمى <bdi dir="ltr" class="odt-ltr-term">dao</bdi>&quot;. يحدد <b>نوع</b> السمة الفئة المراد إنشاء مثيل لها على <i>أنها <bdi dir="ltr" class="odt-ltr-term">NomClasse</bdi>، <bdi dir="ltr" class="odt-ltr-term">NomDLL.</bdi> </i>يحدد السطر 16 كائنًا <b>يسمى <bdi dir="ltr" class="odt-ltr-term">dao</bdi> </b>&quot;مثيل لـ &quot;<b><bdi dir="ltr" class="odt-ltr-term">Dao.FileImpot</bdi></b>&quot; الذي يمكن العثور عليه في <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> &quot;<b><bdi dir="ltr" class="odt-ltr-term">ImpotsV5-dao.dll</bdi></b>&quot;. لاحظ أنه يتم تقديم اسم الفئة الكامل (بما في ذلك مساحة الاسم)، وأن اللاحقة .<bdi dir="ltr" class="odt-ltr-term">dll</bdi> غير محددة في اسم <bdi dir="ltr" class="odt-ltr-term">DLL.</bdi>
+      <li>السطر 16: كل كائن يتم إنشاء مثيل له بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> يخضع لعلامة &lt;<b><bdi dir="ltr" class="odt-ltr-term">tagobject</bdi></b>&gt;. تحتوي هذه العلامة على سمة <b><bdi dir="ltr" class="odt-ltr-term">name</bdi> </b>وهي اسم الكائن الذي تم إنشاء مثيل له. هكذا يطلب التطبيق من <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> مرجعًا: &quot;أعطني مرجعًا للكائن المسمى dao&quot;. يحدد <b>نوع</b> السمة الفئة المراد إنشاء مثيل لها على <i>أنها <bdi dir="ltr" class="odt-ltr-term">NomClasse</bdi>، <bdi dir="ltr" class="odt-ltr-term">NomDLL.</bdi> </i>يحدد السطر 16 كائنًا <b>يسمى dao </b>&quot;مثيل لـ &quot;<b><bdi dir="ltr" class="odt-ltr-term">Dao.FileImpot</bdi></b>&quot; الذي يمكن العثور عليه في <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> &quot;<b><bdi dir="ltr" class="odt-ltr-term">ImpotsV5-dao.dll</bdi></b>&quot;. لاحظ أنه يتم تقديم اسم الفئة الكامل (بما في ذلك مساحة الاسم)، وأن اللاحقة .dll غير محددة في اسم <bdi dir="ltr" class="odt-ltr-term">DLL.</bdi>
       </li>
     </ul>
   </li>
@@ -2735,7 +2735,7 @@
 
 <p>يتم تعريف معلمات المنشئ باستخدام <strong>&lt;<bdi dir="ltr" class="odt-ltr-term">constructor-arg</bdi>&gt;</strong>.</p>
 <ul>
-  <li>السطر 17: يحدد المعلمة الأولى والوحيدة للمنشئ. <b>مؤشر</b> السمة هو رقم معلمة المنشئ، <b>وقيمة</b> السمة هي قيمتها: <b>&lt;<bdi dir="ltr" class="odt-ltr-term">constructor-arg index</bdi>=&quot;<bdi dir="ltr" class="odt-ltr-term">i</bdi>&quot; <bdi dir="ltr" class="odt-ltr-term">value</bdi>=&quot;<bdi dir="ltr" class="odt-ltr-term">valuei</bdi>&quot;/&gt;</b>
+  <li>السطر 17: يحدد المعلمة الأولى والوحيدة للمنشئ. <b>مؤشر</b> السمة هو رقم معلمة المنشئ، <b>وقيمة</b> السمة هي قيمتها: <b>&lt;<bdi dir="ltr" class="odt-ltr-term">constructor-arg index</bdi>=&quot;i&quot; <bdi dir="ltr" class="odt-ltr-term">value</bdi>=&quot;<bdi dir="ltr" class="odt-ltr-term">valuei</bdi>&quot;/&gt;</b>
   </li>
   <li>الأسطر 19-21: تحدد الفئة التي سيتم إنشاء مثيل لها لطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]: <bdi dir="ltr" class="odt-ltr-term">class</bdi> [<bdi dir="ltr" class="odt-ltr-term">Metier.ImpotMetier</bdi>]، الموجودة في <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> [<bdi dir="ltr" class="odt-ltr-term">ImpotsV5-metier.dll</bdi>].
     <ul>
@@ -2752,7 +2752,7 @@
 <ul>
   <li>(تابع)
     <ul>
-      <li>السطر 20: يحدد المعلمة الأولى والوحيدة للمنشئ. أعلاه، المعلمة <i><bdi dir="ltr" class="odt-ltr-term">dao</bdi> </i>للمنشئ هي مرجع كائن. في هذه الحالة، في علامة &lt;<bdi dir="ltr" class="odt-ltr-term">constructor-arg</bdi>&gt;، نستخدم السمة <b><bdi dir="ltr" class="odt-ltr-term">ref</bdi> </b>بدلاً من السمة <b><bdi dir="ltr" class="odt-ltr-term">value</bdi> </b>المستخدمة في الطبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]: <b>&lt;<bdi dir="ltr" class="odt-ltr-term">constructor-arg index</bdi>=&quot;<bdi dir="ltr" class="odt-ltr-term">i</bdi>&quot; <bdi dir="ltr" class="odt-ltr-term">ref</bdi>=&quot;<bdi dir="ltr" class="odt-ltr-term">refi</bdi>&quot;/&gt;</b>. في المنشئ أعلاه، تمثل المعلمة <i><bdi dir="ltr" class="odt-ltr-term">dao</bdi> </i>مثيلًا في الطبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]. تم تعريف هذا المثيل في الأسطر 16-18 من ملف التكوين. وبالتالي، في السطر 20:
+      <li>السطر 20: يحدد المعلمة الأولى والوحيدة للمنشئ. أعلاه، المعلمة <i>dao </i>للمنشئ هي مرجع كائن. في هذه الحالة، في علامة &lt;<bdi dir="ltr" class="odt-ltr-term">constructor-arg</bdi>&gt;، نستخدم السمة <b>ref </b>بدلاً من السمة <b><bdi dir="ltr" class="odt-ltr-term">value</bdi> </b>المستخدمة في الطبقة [dao]: <b>&lt;<bdi dir="ltr" class="odt-ltr-term">constructor-arg index</bdi>=&quot;i&quot; ref=&quot;<bdi dir="ltr" class="odt-ltr-term">refi</bdi>&quot;/&gt;</b>. في المنشئ أعلاه، تمثل المعلمة <i>dao </i>مثيلًا في الطبقة [dao]. تم تعريف هذا المثيل في الأسطر 16-18 من ملف التكوين. وبالتالي، في السطر 20:
       </li>
     </ul>
   </li>
@@ -2762,22 +2762,22 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">                &lt;</span><span style="color:#a31515">constructor-arg</span><span style="color:#0000ff"> </span><span style="color:#ff0000">index</span><span style="color:#0000ff">=</span>&quot;<span style="color:#0000ff">0</span>&quot;<span style="color:#0000ff"> </span><span style="color:#ff0000">ref</span><span style="color:#0000ff">=</span>&quot;<span style="color:#0000ff">dao</span>&quot;<span style="color:#0000ff">/&gt;</span></span></span>
 </code></pre></div>
 
-<p><strong><bdi dir="ltr" class="odt-ltr-term">ref</bdi>=&quot;<bdi dir="ltr" class="odt-ltr-term">dao</bdi>&quot;</strong> تمثل كائن <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> &quot;<bdi dir="ltr" class="odt-ltr-term">dao</bdi>&quot; المحدد في الأسطر 16-18.</p>
+<p><strong>ref=&quot;dao&quot;</strong> تمثل كائن <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> &quot;dao&quot; المحدد في الأسطر 16-18.</p>
 <p>باختصار، ملف [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]:</p>
 <ul>
-  <li>يقوم بإنشاء مثيل لطبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] باستخدام فئة <i><bdi dir="ltr" class="odt-ltr-term">FileImpot</bdi> </i>التي تتلقى <i><bdi dir="ltr" class="odt-ltr-term">DataImpot.txt</bdi> </i>كمعلمة (الأسطر 16-18). يُسمى الكائن الناتج &quot;<bdi dir="ltr" class="odt-ltr-term">dao</bdi>&quot;
+  <li>يقوم بإنشاء مثيل لطبقة [dao] باستخدام فئة <i><bdi dir="ltr" class="odt-ltr-term">FileImpot</bdi> </i>التي تتلقى <i><bdi dir="ltr" class="odt-ltr-term">DataImpot.txt</bdi> </i>كمعلمة (الأسطر 16-18). يُسمى الكائن الناتج &quot;dao&quot;
   </li>
-  <li>يقوم بإنشاء مثيل لطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] باستخدام فئة <i><bdi dir="ltr" class="odt-ltr-term">ImpotMetier</bdi> </i>التي تتلقى الكائن &quot;<bdi dir="ltr" class="odt-ltr-term">dao</bdi>&quot; السابق كمعلمة (الأسطر 19-21).
+  <li>يقوم بإنشاء مثيل لطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] باستخدام فئة <i><bdi dir="ltr" class="odt-ltr-term">ImpotMetier</bdi> </i>التي تتلقى الكائن &quot;dao&quot; السابق كمعلمة (الأسطر 19-21).
   </li>
 </ul>
 
-<p>كل ما تبقى هو استخدام ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> هذا في طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>]. للقيام بذلك، نقوم بنسخ فئة [<bdi dir="ltr" class="odt-ltr-term">Dialogue.cs</bdi>] في [<bdi dir="ltr" class="odt-ltr-term">Dialogue2.cs</bdi>] ونجعل الأخيرة الفئة الرئيسية لمشروع [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>]:</p>
+<p>كل ما تبقى هو استخدام ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> هذا في طبقة [ui]. للقيام بذلك، نقوم بنسخ فئة [<bdi dir="ltr" class="odt-ltr-term">Dialogue.cs</bdi>] في [<bdi dir="ltr" class="odt-ltr-term">Dialogue2.cs</bdi>] ونجعل الأخيرة الفئة الرئيسية لمشروع [ui]:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007F700000203556582B5.png" width="612" height="154" style="display:inline-block; margin:4px;width:16.18cm;height:4.087cm;" class="odt-zoomable" data-zoom-src="images/10000000000007F700000203556582B5.png" /></td></tr></table>
 
 <ul>
   <li>في [1]: نسخة من [<bdi dir="ltr" class="odt-ltr-term">Dialogue.cs</bdi>]
   </li>
-  <li><bdi dir="ltr" class="odt-ltr-term">en</bdi> [2]: لصق
+  <li>en [2]: لصق
   </li>
   <li>في [3]: نسخة من [<bdi dir="ltr" class="odt-ltr-term">Dialogue.cs</bdi>]
   </li>
@@ -2788,7 +2788,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000047900000190711ACB85.png" width="344" height="120" style="display:inline-block; margin:4px;width:9.089cm;height:3.175cm;" class="odt-zoomable" data-zoom-src="images/100000000000047900000190711ACB85.png" /></td></tr></table>
 
 <ul>
-  <li>في [6]: نجعل [<bdi dir="ltr" class="odt-ltr-term">Dialogue2.cs</bdi>] الفئة الرئيسية لمشروع [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>].
+  <li>في [6]: نجعل [<bdi dir="ltr" class="odt-ltr-term">Dialogue2.cs</bdi>] الفئة الرئيسية لمشروع [ui].
   </li>
 </ul>
 
@@ -2838,18 +2838,18 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 2: يتيح <b><bdi dir="ltr" class="odt-ltr-term">IApplicationContext</bdi> </b>الوصول إلى مجموعة الكائنات التي تم إنشاء مثيلاتها بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> نسمي هذا الكائن سياق <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> للتطبيق، أو ببساطة سياق التطبيق. في الوقت الحالي، لم يتم تهيئة هذا السياق. يقوم الأمر <bdi dir="ltr" class="odt-ltr-term">try</bdi> / <bdi dir="ltr" class="odt-ltr-term">catch</bdi> التالي بذلك. 
+  <li>السطر 2: يتيح <b><bdi dir="ltr" class="odt-ltr-term">IApplicationContext</bdi> </b>الوصول إلى مجموعة الكائنات التي تم إنشاء مثيلاتها بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> نسمي هذا الكائن سياق <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> للتطبيق، أو ببساطة سياق التطبيق. في الوقت الحالي، لم يتم تهيئة هذا السياق. يقوم الأمر try / <bdi dir="ltr" class="odt-ltr-term">catch</bdi> التالي بذلك. 
   </li>
   <li>السطر 5: يتم قراءة تكوين <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> في [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] واستخدامه. بعد هذه العملية، إذا لم يتم إثارة أي استثناء، فسيتم قراءة جميع الكائنات في القسم &lt;<bdi dir="ltr" class="odt-ltr-term">objects</bdi>&gt; <b>التي تم إنشاء مثيل لها</b>:
   </li>
-  <li>الكائن <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> &quot;<bdi dir="ltr" class="odt-ltr-term">dao</bdi>&quot; هو مثيل في الطبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]
+  <li>الكائن <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> &quot;dao&quot; هو مثيل في الطبقة [dao]
   </li>
   <li>الكائن <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> &quot;<bdi dir="ltr" class="odt-ltr-term">metier</bdi>&quot; هو مثيل في الطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]
   </li>
 </ul>
 
 <ul>
-  <li>السطر 19: تحتاج فئة [<bdi dir="ltr" class="odt-ltr-term">Dialogue2.cs</bdi>] إلى مرجع إلى طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]. يتم طلب ذلك من سياق التطبيق. يتيح الكائن <b><bdi dir="ltr" class="odt-ltr-term">IApplicationContext</bdi> </b>الوصول إلى كائنات <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> عبر أسمائها (السمة <b><bdi dir="ltr" class="odt-ltr-term">name</bdi> </b><bdi dir="ltr" class="odt-ltr-term">tag</bdi> &lt;<b><bdi dir="ltr" class="odt-ltr-term">object</bdi></b>&gt; في تكوين <bdi dir="ltr" class="odt-ltr-term">Spring</bdi>). الإشارة المعروضة هي إشارة إلى النوع العام <i><bdi dir="ltr" class="odt-ltr-term">Object</bdi></i>. نحتاج إلى تحويل الإشارة المعروضة إلى النوع الصحيح، وهو هنا نوع واجهة طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]: <i><bdi dir="ltr" class="odt-ltr-term">IImpotMetier</bdi></i>.
+  <li>السطر 19: تحتاج فئة [<bdi dir="ltr" class="odt-ltr-term">Dialogue2.cs</bdi>] إلى مرجع إلى طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]. يتم طلب ذلك من سياق التطبيق. يتيح الكائن <b><bdi dir="ltr" class="odt-ltr-term">IApplicationContext</bdi> </b>الوصول إلى كائنات <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> عبر أسمائها (السمة <b><bdi dir="ltr" class="odt-ltr-term">name</bdi> </b>tag &lt;<b><bdi dir="ltr" class="odt-ltr-term">object</bdi></b>&gt; في تكوين <bdi dir="ltr" class="odt-ltr-term">Spring</bdi>). الإشارة المعروضة هي إشارة إلى النوع العام <i><bdi dir="ltr" class="odt-ltr-term">Object</bdi></i>. نحتاج إلى تحويل الإشارة المعروضة إلى النوع الصحيح، وهو هنا نوع واجهة طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]: <i><bdi dir="ltr" class="odt-ltr-term">IImpotMetier</bdi></i>.
   </li>
 </ul>
 
@@ -2868,11 +2868,11 @@
 </ul>
 
 <p>تعرض الحلقة في الأسطر 10-14 جميع الاستثناءات في السلسلة بالشكل التالي: فئة الاستثناء والرسالة المرتبطة به.</p>
-<p>عند تشغيل مشروع [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] بملف تكوين صالح، يتم الحصول على النتائج المعتادة:</p>
+<p>عند تشغيل مشروع [ui] بملف تكوين صالح، يتم الحصول على النتائج المعتادة:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>Paramètres du calcul de l&#39;Impot au format : Marié (o/n) NbEnfants Salaire ou rien pour arrêter :o 2 60000
 <a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>Impot=4282 euros
 </code></pre></div>
-<p>عند تشغيل مشروع [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] بملف [<bdi dir="ltr" class="odt-ltr-term">DataImpotInexistant.txt</bdi>] غير موجود، </p>
+<p>عند تشغيل مشروع [ui] بملف [<bdi dir="ltr" class="odt-ltr-term">DataImpotInexistant.txt</bdi>] غير موجود، </p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">            &lt;</span><span style="color:#a31515">object</span><span style="color:#0000ff"> </span><span style="color:#ff0000">name</span><span style="color:#0000ff">=</span>&quot;<span style="color:#0000ff">dao</span>&quot;<span style="color:#0000ff"> </span><span style="color:#ff0000">type</span><span style="color:#0000ff">=</span>&quot;<span style="color:#0000ff">Dao.FileImpot, ImpotsV5-dao</span>&quot;<span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">                &lt;</span><span style="color:#a31515">constructor-arg</span><span style="color:#0000ff"> </span><span style="color:#ff0000">index</span><span style="color:#0000ff">=</span>&quot;<span style="color:#0000ff">0</span>&quot;<span style="color:#0000ff"> </span><span style="color:#ff0000">value</span><span style="color:#0000ff">=</span>&quot;<span style="color:#0000ff">DataImpotInexistant.txt</span>&quot;<span style="color:#0000ff">/&gt;</span></span></span>
@@ -2917,11 +2917,11 @@
 <ul>
   <li>السطر 17: الاستثناء الأصلي من النوع [<bdi dir="ltr" class="odt-ltr-term">FileNotFoundException</bdi>]
   </li>
-  <li>السطر 15: طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] تغلف هذا الاستثناء في نوع [<bdi dir="ltr" class="odt-ltr-term">Entites.ImpotException</bdi>]
+  <li>السطر 15: طبقة [dao] تغلف هذا الاستثناء في نوع [<bdi dir="ltr" class="odt-ltr-term">Entites.ImpotException</bdi>]
   </li>
-  <li>السطر 9: الاستثناء الذي أطلقه <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> بسبب فشله في إنشاء مثيل للكائن المسمى &quot;<bdi dir="ltr" class="odt-ltr-term">dao</bdi>&quot;. أثناء عملية إنشاء هذا الكائن، حدث استثناءان آخران في وقت سابق: الاستثناءان الموجودان في السطرين 11 و 13.
+  <li>السطر 9: الاستثناء الذي أطلقه <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> بسبب فشله في إنشاء مثيل للكائن المسمى &quot;dao&quot;. أثناء عملية إنشاء هذا الكائن، حدث استثناءان آخران في وقت سابق: الاستثناءان الموجودان في السطرين 11 و 13.
   </li>
-  <li>نظرًا لتعذر إنشاء الكائن &quot;<bdi dir="ltr" class="odt-ltr-term">dao</bdi>&quot;، تعذر إنشاء سياق التطبيق. هذا هو معنى الاستثناء في السطر 5. في السابق، حدث استثناء آخر، وهو الاستثناء الموجود في السطر 7.
+  <li>نظرًا لتعذر إنشاء الكائن &quot;dao&quot;، تعذر إنشاء سياق التطبيق. هذا هو معنى الاستثناء في السطر 5. في السابق، حدث استثناء آخر، وهو الاستثناء الموجود في السطر 7.
   </li>
   <li>السطر 3: الاستثناء الأعلى مستوى، والأخير في السلسلة: تم الإبلاغ عن خطأ في التكوين.
   </li>

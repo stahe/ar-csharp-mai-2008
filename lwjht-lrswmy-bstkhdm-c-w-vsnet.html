@@ -1841,7 +1841,7 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 18: عند عرض النموذج (<bdi dir="ltr" class="odt-ltr-term">evt</bdi> <i><bdi dir="ltr" class="odt-ltr-term">Shown</bdi></i>)، يتم التركيز على حقل الإدخال <i><bdi dir="ltr" class="odt-ltr-term">textBoxLigne</bdi></i>
+  <li>السطر 18: عند عرض النموذج (evt <i><bdi dir="ltr" class="odt-ltr-term">Shown</bdi></i>)، يتم التركيز على حقل الإدخال <i><bdi dir="ltr" class="odt-ltr-term">textBoxLigne</bdi></i>
   </li>
   <li>السطر 10: إدارة النقر على زر [<bdi dir="ltr" class="odt-ltr-term">Add</bdi>]
   </li>
@@ -1880,7 +1880,7 @@
 <p>تتوفر عناصر <bdi dir="ltr" class="odt-ltr-term">ComboBox</bdi> في الخاصية <em><bdi dir="ltr" class="odt-ltr-term">Items</bdi></em> :</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>public ComboBox.ObjectCollection Items {get;}
 </code></pre></div>
-<p>هذه خاصية مفهرسة، حيث تشير <em><bdi dir="ltr" class="odt-ltr-term">Items</bdi>[<bdi dir="ltr" class="odt-ltr-term">i</bdi>]</em> إلى العنصر <bdi dir="ltr" class="odt-ltr-term">i</bdi> في <bdi dir="ltr" class="odt-ltr-term">Combo.</bdi> وهي خاصية للقراءة فقط.</p>
+<p>هذه خاصية مفهرسة، حيث تشير <em><bdi dir="ltr" class="odt-ltr-term">Items</bdi>[i]</em> إلى العنصر i في <bdi dir="ltr" class="odt-ltr-term">Combo.</bdi> وهي خاصية للقراءة فقط.</p>
 <p>أو <em><bdi dir="ltr" class="odt-ltr-term">C</bdi></em> عبارة عن قائمة منسدلة و <em><bdi dir="ltr" class="odt-ltr-term">C.Items</bdi></em> هي قائمة عناصرها. لدينا الخصائص التالية:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>C.Items.Count
@@ -1888,28 +1888,28 @@
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">عدد عناصر القائمة المنسدلة</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>C.Items[i]
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">العنصر <bdi dir="ltr" class="odt-ltr-term">i</bdi> من القائمة المنسدلة</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">العنصر i من القائمة المنسدلة</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>C.Add(object o)
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يضيف الكائن <bdi dir="ltr" class="odt-ltr-term">o</bdi> كآخر عنصر في القائمة المنسدلة</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يضيف الكائن o كآخر عنصر في القائمة المنسدلة</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>C.AddRange(object[] objets)
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يضيف مصفوفة من الكائنات في نهاية القائمة المنسدلة</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>C.Insert(int i, object o)
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يضيف الكائن <bdi dir="ltr" class="odt-ltr-term">o</bdi> إلى الموضع <bdi dir="ltr" class="odt-ltr-term">i</bdi> في القائمة المنسدلة</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يضيف الكائن o إلى الموضع i في القائمة المنسدلة</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>C.RemoveAt(int i)
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يزيل العنصر <bdi dir="ltr" class="odt-ltr-term">i</bdi> من القائمة المنسدلة</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يزيل العنصر i من القائمة المنسدلة</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>C.Remove(object o)
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يزيل الكائن <bdi dir="ltr" class="odt-ltr-term">o</bdi> من القائمة المنسدلة</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يزيل الكائن o من القائمة المنسدلة</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>C.Clear()
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يحذف جميع عناصر القائمة المنسدلة</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>C.IndexOf(object o)
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يعرض الموضع <bdi dir="ltr" class="odt-ltr-term">i</bdi> للكائن <bdi dir="ltr" class="odt-ltr-term">o</bdi> في القائمة المنسدلة</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يعرض الموضع i للكائن o في القائمة المنسدلة</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="k">C</span><span class="p">.</span><span class="n">SelectedIndex</span>
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مؤشر العنصر المحدد</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
@@ -1923,7 +1923,7 @@
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">النص المعروض للعنصر المحدد</div></td></tr></table>
 
-<p>قد يكون من المفاجئ أن يحتوي مربع القائمة المنسدلة على كائنات بينما يعرض سلاسل نصية بصريًا. إذا كان <em>مربع القائمة المنسدلة (<bdi dir="ltr" class="odt-ltr-term">ComboBox</bdi>)</em> يحتوي على <em>كائن</em> <bdi dir="ltr" class="odt-ltr-term">obj</bdi>، فإنه يعرض السلسلة <em><bdi dir="ltr" class="odt-ltr-term">obj.ToString</bdi>()</em>. تذكر أن كل كائن لديه خاصية <em><bdi dir="ltr" class="odt-ltr-term">ToString</bdi></em> موروثة من <em>الكائن</em> والتي تعرض سلسلة أحرف &quot;تمثل&quot; الكائن.</p>
+<p>قد يكون من المفاجئ أن يحتوي مربع القائمة المنسدلة على كائنات بينما يعرض سلاسل نصية بصريًا. إذا كان <em>مربع القائمة المنسدلة (<bdi dir="ltr" class="odt-ltr-term">ComboBox</bdi>)</em> يحتوي على <em>كائن</em> obj، فإنه يعرض السلسلة <em><bdi dir="ltr" class="odt-ltr-term">obj.ToString</bdi>()</em>. تذكر أن كل كائن لديه خاصية <em><bdi dir="ltr" class="odt-ltr-term">ToString</bdi></em> موروثة من <em>الكائن</em> والتي تعرض سلسلة أحرف &quot;تمثل&quot; الكائن.</p>
 <p><em>العنصر</em> المحدد في القائمة المنسدلة <bdi dir="ltr" class="odt-ltr-term">C</bdi> هو <em><bdi dir="ltr" class="odt-ltr-term">C.SelectedItem</bdi></em> أو <em><bdi dir="ltr" class="odt-ltr-term">C.Items</bdi>[<bdi dir="ltr" class="odt-ltr-term">C.SelectedIndex</bdi>]</em> حيث <em><bdi dir="ltr" class="odt-ltr-term">C.SelectedIndex</bdi></em> هو رقم العنصر المحدد، بدءًا من الصفر للعنصر الأول. يمكن الحصول على النص المحدد بعدة طرق:  <em><bdi dir="ltr" class="odt-ltr-term">C.SelectedItem.Text</bdi></em>، <em><bdi dir="ltr" class="odt-ltr-term">C.Text</bdi></em></p>
 <p>عند تحديد عنصر من القائمة المنسدلة، يتم تشغيل الحدث <bdi dir="ltr" class="odt-ltr-term">SelectedIndexChanged</bdi>، والذي يمكن استخدامه لإعلام المستخدم بتغيير في التحديد في القائمة المنسدلة. في التطبيق التالي، نستخدم هذا الحدث لعرض العنصر الذي تم تحديده في القائمة.</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001010000010F67311BAC.png" width="180" height="190" style="display:inline-block; margin:4px;width:4.761cm;height:5.02cm;" class="odt-zoomable" data-zoom-src="images/10000000000001010000010F67311BAC.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -2125,37 +2125,37 @@
 <ul>
   <li>السطر ب: تتلقى طريقة <b><bdi dir="ltr" class="odt-ltr-term">transfer</bdi> </b>ستة معلمات:
   </li>
-  <li>إشارة إلى القائمة التي تحتوي على العناصر المحددة والتي تسمى هنا <b><bdi dir="ltr" class="odt-ltr-term">l1</bdi></b>. عند تشغيل التطبيق، تكون <bdi dir="ltr" class="odt-ltr-term">l1</bdi> إما <i><bdi dir="ltr" class="odt-ltr-term">listBox1</bdi> </i>أو <i><bdi dir="ltr" class="odt-ltr-term">listBox2</bdi></i>. تظهر أمثلة على الاستدعاءات في السطرين 3 و 8 من إجراءات النقل <i><bdi dir="ltr" class="odt-ltr-term">buttonXversY_Click</bdi></i>.
+  <li>إشارة إلى القائمة التي تحتوي على العناصر المحددة والتي تسمى هنا <b>l1</b>. عند تشغيل التطبيق، تكون l1 إما <i><bdi dir="ltr" class="odt-ltr-term">listBox1</bdi> </i>أو <i><bdi dir="ltr" class="odt-ltr-term">listBox2</bdi></i>. تظهر أمثلة على الاستدعاءات في السطرين 3 و 8 من إجراءات النقل <i><bdi dir="ltr" class="odt-ltr-term">buttonXversY_Click</bdi></i>.
   </li>
-  <li>مرجع إلى زر <bdi dir="ltr" class="odt-ltr-term">transfer</bdi> المرتبط بالقائمة <b><bdi dir="ltr" class="odt-ltr-term">l1</bdi></b>. على سبيل المثال، إذا كانت <b><bdi dir="ltr" class="odt-ltr-term">l1</bdi> </b><i>هي </i><bdi dir="ltr" class="odt-ltr-term">listBox2</bdi>، فستكون <i><bdi dir="ltr" class="odt-ltr-term">button2to1</bdi> </i>(انظر استدعاء السطر 8)
+  <li>مرجع إلى زر <bdi dir="ltr" class="odt-ltr-term">transfer</bdi> المرتبط بالقائمة <b>l1</b>. على سبيل المثال، إذا كانت <b>l1 </b><i>هي </i><bdi dir="ltr" class="odt-ltr-term">listBox2</bdi>، فستكون <i><bdi dir="ltr" class="odt-ltr-term">button2to1</bdi> </i>(انظر استدعاء السطر 8)
   </li>
-  <li>إشارة إلى زر حذف القائمة <b><bdi dir="ltr" class="odt-ltr-term">l1</bdi></b>. على سبيل المثال، إذا كانت <b><bdi dir="ltr" class="odt-ltr-term">l1</bdi> </b><i>هي </i><bdi dir="ltr" class="odt-ltr-term">listBox1</bdi>، فستكون <i><bdi dir="ltr" class="odt-ltr-term">buttonEffacer1</bdi> </i>(انظر استدعاء السطر 3)
+  <li>إشارة إلى زر حذف القائمة <b>l1</b>. على سبيل المثال، إذا كانت <b>l1 </b><i>هي </i><bdi dir="ltr" class="odt-ltr-term">listBox1</bdi>، فستكون <i><bdi dir="ltr" class="odt-ltr-term">buttonEffacer1</bdi> </i>(انظر استدعاء السطر 3)
   </li>
-  <li>الإشارات الثلاث الأخرى مشابهة ولكنها تشير إلى <b><bdi dir="ltr" class="odt-ltr-term">l2</bdi></b>.
+  <li>الإشارات الثلاث الأخرى مشابهة ولكنها تشير إلى <b>l2</b>.
   </li>
   <li>السطر <bdi dir="ltr" class="odt-ltr-term">d:</bdi> تمثل مجموعة [<bdi dir="ltr" class="odt-ltr-term">ListBox</bdi>].<b><bdi dir="ltr" class="odt-ltr-term">SelectedIndices</bdi> </b>مؤشرات العناصر المحددة في المكون [<bdi dir="ltr" class="odt-ltr-term">ListBox</bdi>]. هذا هو:
   </li>
   <li>[<bdi dir="ltr" class="odt-ltr-term">ListBox</bdi>].<b><bdi dir="ltr" class="odt-ltr-term">SelectedIndices.Count</bdi> </b>هو عدد العناصر في هذه المجموعة
   </li>
-  <li>[<bdi dir="ltr" class="odt-ltr-term">ListBox</bdi>].<b><bdi dir="ltr" class="odt-ltr-term">SelectedIndices</bdi>[<bdi dir="ltr" class="odt-ltr-term">i</bdi>] </b>هو العنصر رقم <bdi dir="ltr" class="odt-ltr-term">i</bdi> في هذه المجموعة
+  <li>[<bdi dir="ltr" class="odt-ltr-term">ListBox</bdi>].<b><bdi dir="ltr" class="odt-ltr-term">SelectedIndices</bdi>[i] </b>هو العنصر رقم i في هذه المجموعة
   </li>
 </ul>
 
 <p>نستعرض المجموعة بترتيب عكسي، بدءًا من النهاية وانتهاءً بالبداية. سنشرح السبب.</p>
 <ul>
-  <li>السطر <bdi dir="ltr" class="odt-ltr-term">f:</bdi> مؤشر عنصر محدد في القائمة <b><bdi dir="ltr" class="odt-ltr-term">l1</bdi></b>
+  <li>السطر <bdi dir="ltr" class="odt-ltr-term">f:</bdi> مؤشر عنصر محدد في القائمة <b>l1</b>
   </li>
-  <li>السطر <bdi dir="ltr" class="odt-ltr-term">h:</bdi> يتم إضافة هذا العنصر إلى القائمة <b><bdi dir="ltr" class="odt-ltr-term">l2</bdi></b>
+  <li>السطر <bdi dir="ltr" class="odt-ltr-term">h:</bdi> يتم إضافة هذا العنصر إلى القائمة <b>l2</b>
   </li>
-  <li>السطر <bdi dir="ltr" class="odt-ltr-term">j:</bdi> وتم حذفه من القائمة <b><bdi dir="ltr" class="odt-ltr-term">l1</bdi></b>. ونظرًا لحذفه، لم يعد محددًا. سيتم إعادة حساب المجموعة <b><bdi dir="ltr" class="odt-ltr-term">l1.SelectedIndices</bdi> </b>للسطر <bdi dir="ltr" class="odt-ltr-term">d.</bdi> وستفقد العنصر الذي تم حذفه للتو. وستتغير أرقام جميع العناصر اللاحقة من <bdi dir="ltr" class="odt-ltr-term">n</bdi> إلى <bdi dir="ltr" class="odt-ltr-term">n-1.</bdi>
+  <li>السطر <bdi dir="ltr" class="odt-ltr-term">j:</bdi> وتم حذفه من القائمة <b>l1</b>. ونظرًا لحذفه، لم يعد محددًا. سيتم إعادة حساب المجموعة <b><bdi dir="ltr" class="odt-ltr-term">l1.SelectedIndices</bdi> </b>للسطر <bdi dir="ltr" class="odt-ltr-term">d.</bdi> وستفقد العنصر الذي تم حذفه للتو. وستتغير أرقام جميع العناصر اللاحقة من n إلى <bdi dir="ltr" class="odt-ltr-term">n-1.</bdi>
   </li>
-  <li>إذا كانت الحلقة في السطر (<bdi dir="ltr" class="odt-ltr-term">d</bdi>) تصاعدية وقامت للتو بمعالجة العنصر رقم 0، فستقوم بعد ذلك بمعالجة العنصر رقم 1. أو العنصر الذي كان رقم 1 قبل حذف العنصر رقم 0، سيصبح بعد ذلك رقم 0. وسيتم نسيانه بعد ذلك من قبل الحلقة.
+  <li>إذا كانت الحلقة في السطر (d) تصاعدية وقامت للتو بمعالجة العنصر رقم 0، فستقوم بعد ذلك بمعالجة العنصر رقم 1. أو العنصر الذي كان رقم 1 قبل حذف العنصر رقم 0، سيصبح بعد ذلك رقم 0. وسيتم نسيانه بعد ذلك من قبل الحلقة.
   </li>
-  <li>إذا كانت الحلقة في السطر (<bdi dir="ltr" class="odt-ltr-term">d</bdi>) تنازلية وقامت للتو بمعالجة العنصر رقم <bdi dir="ltr" class="odt-ltr-term">n</bdi>، فستقوم بعد ذلك بمعالجة العنصر رقم <bdi dir="ltr" class="odt-ltr-term">n-1.</bdi> بعد حذف العنصر رقم <bdi dir="ltr" class="odt-ltr-term">n</bdi>، لا يتغير رقم العنصر رقم <bdi dir="ltr" class="odt-ltr-term">n-1.</bdi> لذلك تتم معالجته في الحلقة التالية.
+  <li>إذا كانت الحلقة في السطر (d) تنازلية وقامت للتو بمعالجة العنصر رقم n، فستقوم بعد ذلك بمعالجة العنصر رقم <bdi dir="ltr" class="odt-ltr-term">n-1.</bdi> بعد حذف العنصر رقم n، لا يتغير رقم العنصر رقم <bdi dir="ltr" class="odt-ltr-term">n-1.</bdi> لذلك تتم معالجته في الحلقة التالية.
   </li>
   <li>السطور <bdi dir="ltr" class="odt-ltr-term">m-n:</bdi> تعتمد حالة أزرار [حذف] على وجود عناصر في القوائم المرتبطة أم لا
   </li>
-  <li>السطر <bdi dir="ltr" class="odt-ltr-term">p:</bdi> لم تعد القائمة <b><bdi dir="ltr" class="odt-ltr-term">l2</bdi> </b>تحتوي على عناصر محددة: قم بإيقاف تشغيل زر النقل الخاص بها.
+  <li>السطر <bdi dir="ltr" class="odt-ltr-term">p:</bdi> لم تعد القائمة <b>l2 </b>تحتوي على عناصر محددة: قم بإيقاف تشغيل زر النقل الخاص بها.
   </li>
 </ul>
 
@@ -2165,7 +2165,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007EA000002615E8B1F50.png" width="608" height="183" style="display:inline-block; margin:4px;width:16.08cm;height:4.835cm;" class="odt-zoomable" data-zoom-src="images/10000000000007EA000002615E8B1F50.png" /></td></tr></table>
 
 <p>مكونات النافذة هي كما يلي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>رقم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>النوع</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الاسم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">1</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع المجموعة</div><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">cf</bdi> [6]</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">groupBox1</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">حاوية مكونات. يمكن سحب مكونات أخرى إليها.</div><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">Text</bdi>=أزرار الاختيار</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">2</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">زر الاختيار</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">زر الاختيار1</div><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">radioButton2</bdi></div><div style="margin:0 0 0.5em 0">زر الاختيار 3</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">3 أزرار اختيار - <i><bdi dir="ltr" class="odt-ltr-term">radioButton1</bdi> </i>له <bdi dir="ltr" class="odt-ltr-term">Checked</bdi>=<bdi dir="ltr" class="odt-ltr-term">True</bdi> و <bdi dir="ltr" class="odt-ltr-term">Text</bdi>=1 -  <i><bdi dir="ltr" class="odt-ltr-term">radioButton2</bdi> </i>له <bdi dir="ltr" class="odt-ltr-term">Text</bdi>=2 -  <i><bdi dir="ltr" class="odt-ltr-term">radioButton3</bdi> </i>له <bdi dir="ltr" class="odt-ltr-term">Text</bdi>=3</div><div style="margin:0 0 0.5em 0">أزرار الاختيار الموجودة في نفس الحاوية، هنا <i><bdi dir="ltr" class="odt-ltr-term">GroupBox</bdi></i>، <b>حصرية </b>عن بعضها البعض: يتم إضاءة واحد منها فقط.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">3</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">GroupBox</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">groupBox2</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">4</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع الاختيار</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع الاختيار 1</div><div style="margin:0 0 0.5em 0">مربع الاختيار 2</div><div style="margin:0 0 0.5em 0">مربع الاختيار 3</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">3 مربعات اختيار. <i>مربع الاختيار 1 </i>له القيمة <bdi dir="ltr" class="odt-ltr-term">Checked</bdi>=<bdi dir="ltr" class="odt-ltr-term">True</bdi> والنص <bdi dir="ltr" class="odt-ltr-term">Text</bdi>=<bdi dir="ltr" class="odt-ltr-term">A</bdi> -  <i>مربع الاختيار 2 </i>له النص <bdi dir="ltr" class="odt-ltr-term">Text</bdi>=<bdi dir="ltr" class="odt-ltr-term">B</bdi> -  <i>مربع الاختيار 3 </i>له النص <bdi dir="ltr" class="odt-ltr-term">Text</bdi>=<bdi dir="ltr" class="odt-ltr-term">C</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">5</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">ListBox</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">listBoxValeurs</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">قائمة تعرض قيم أزرار الاختيار ومربعات الاختيار كلما حدث تغيير.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">6</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يوضح مكان العثور على الحاوية <i><bdi dir="ltr" class="odt-ltr-term">GroupBox</bdi></i></div></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>رقم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>النوع</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الاسم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">1</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع المجموعة</div><div style="margin:0 0 0.5em 0">cf [6]</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">groupBox1</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">حاوية مكونات. يمكن سحب مكونات أخرى إليها.</div><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">Text</bdi>=أزرار الاختيار</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">2</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">زر الاختيار</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">زر الاختيار1</div><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">radioButton2</bdi></div><div style="margin:0 0 0.5em 0">زر الاختيار 3</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">3 أزرار اختيار - <i><bdi dir="ltr" class="odt-ltr-term">radioButton1</bdi> </i>له <bdi dir="ltr" class="odt-ltr-term">Checked</bdi>=<bdi dir="ltr" class="odt-ltr-term">True</bdi> و <bdi dir="ltr" class="odt-ltr-term">Text</bdi>=1 -  <i><bdi dir="ltr" class="odt-ltr-term">radioButton2</bdi> </i>له <bdi dir="ltr" class="odt-ltr-term">Text</bdi>=2 -  <i><bdi dir="ltr" class="odt-ltr-term">radioButton3</bdi> </i>له <bdi dir="ltr" class="odt-ltr-term">Text</bdi>=3</div><div style="margin:0 0 0.5em 0">أزرار الاختيار الموجودة في نفس الحاوية، هنا <i><bdi dir="ltr" class="odt-ltr-term">GroupBox</bdi></i>، <b>حصرية </b>عن بعضها البعض: يتم إضاءة واحد منها فقط.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">3</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">GroupBox</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">groupBox2</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">4</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع الاختيار</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع الاختيار 1</div><div style="margin:0 0 0.5em 0">مربع الاختيار 2</div><div style="margin:0 0 0.5em 0">مربع الاختيار 3</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">3 مربعات اختيار. <i>مربع الاختيار 1 </i>له القيمة <bdi dir="ltr" class="odt-ltr-term">Checked</bdi>=<bdi dir="ltr" class="odt-ltr-term">True</bdi> والنص <bdi dir="ltr" class="odt-ltr-term">Text</bdi>=<bdi dir="ltr" class="odt-ltr-term">A</bdi> -  <i>مربع الاختيار 2 </i>له النص <bdi dir="ltr" class="odt-ltr-term">Text</bdi>=<bdi dir="ltr" class="odt-ltr-term">B</bdi> -  <i>مربع الاختيار 3 </i>له النص <bdi dir="ltr" class="odt-ltr-term">Text</bdi>=<bdi dir="ltr" class="odt-ltr-term">C</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">5</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">ListBox</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">listBoxValeurs</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">قائمة تعرض قيم أزرار الاختيار ومربعات الاختيار كلما حدث تغيير.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">6</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يوضح مكان العثور على الحاوية <i><bdi dir="ltr" class="odt-ltr-term">GroupBox</bdi></i></div></td></tr></table>
 
 <p>الحدث المهم لهذه العناصر الستة هو <em><bdi dir="ltr" class="odt-ltr-term">CheckChanged</bdi></em> الذي يشير إلى أن حالة مربع الاختيار أو زر الاختيار قد تغيرت. في كلتا الحالتين، يتم تمثيل هذه الحالة بواسطة الخاصية المنطقية <em><bdi dir="ltr" class="odt-ltr-term">Checked</bdi></em> التي تعني <strong>فعليًا</strong> أن العنصر محدد. سنستخدم هنا طريقة واحدة فقط للتعامل مع جميع الأحداث الستة <bdi dir="ltr" class="odt-ltr-term">CheckChanged</bdi>، وهي الطريقة <em><bdi dir="ltr" class="odt-ltr-term">poster</bdi></em>. لضمان إدارة الأحداث الستة <em><bdi dir="ltr" class="odt-ltr-term">CheckChanged</bdi></em> بواسطة نفس الطريقة <bdi dir="ltr" class="odt-ltr-term">poster</bdi>، يمكنك اتباع الخطوات التالية: </p>
 <p><a id="une-methode-pour-plusieurs-evts"></a>حدد المكون <em><bdi dir="ltr" class="odt-ltr-term">radioButton1</bdi></em> وانقر عليه بزر الماوس الأيمن للوصول إلى خصائصه:</p>
@@ -2545,7 +2545,7 @@
 <ul>
   <li>السطر 4: تعيين الملف الأولي (<i><bdi dir="ltr" class="odt-ltr-term">InitialDirectory</bdi></i>) إلى الملف (<i><bdi dir="ltr" class="odt-ltr-term">Application.ExecutablePath</bdi></i>) الذي يحتوي على الملف القابل للتنفيذ للتطبيق.
   </li>
-  <li>السطر 5: تعيين أنواع الملفات المراد عرضها. لاحظ صيغة التصفية: <bdi dir="ltr" class="odt-ltr-term">filter1</bdi>|<bdi dir="ltr" class="odt-ltr-term">filter2</bdi>|..<i>|<bdi dir="ltr" class="odt-ltr-term">filtren</bdi> </i>مع <i>نموذج <bdi dir="ltr" class="odt-ltr-term">filteri</bdi>= <bdi dir="ltr" class="odt-ltr-term">Text</bdi>|<bdi dir="ltr" class="odt-ltr-term">file</bdi></i>. هنا سيتمكن المستخدم من الاختيار بين الملفات التالية <i>*.<bdi dir="ltr" class="odt-ltr-term">txt</bdi> </i>و <i>*.*</i>.
+  <li>السطر 5: تعيين أنواع الملفات المراد عرضها. لاحظ صيغة التصفية: <bdi dir="ltr" class="odt-ltr-term">filter1</bdi>|<bdi dir="ltr" class="odt-ltr-term">filter2</bdi>|..<i>|<bdi dir="ltr" class="odt-ltr-term">filtren</bdi> </i>مع <i>نموذج <bdi dir="ltr" class="odt-ltr-term">filteri</bdi>= <bdi dir="ltr" class="odt-ltr-term">Text</bdi>|<bdi dir="ltr" class="odt-ltr-term">file</bdi></i>. هنا سيتمكن المستخدم من الاختيار بين الملفات التالية <i>*.txt </i>و <i>*.*</i>.
   </li>
   <li>السطر 6: تعيين نوع الملف الذي سيتم عرضه أولاً للمستخدم. هنا يشير المؤشر 0 إلى ملفات *.<bdi dir="ltr" class="odt-ltr-term">txt.</bdi>
   </li>
@@ -2608,7 +2608,7 @@
 <ul>
   <li>السطر 4: تعيين الملف الأولي (<i><bdi dir="ltr" class="odt-ltr-term">InitialDirectory</bdi></i>) إلى الملف (<i><bdi dir="ltr" class="odt-ltr-term">Application.ExecutablePath</bdi></i>) الذي يحتوي على الملف القابل للتنفيذ للتطبيق.
   </li>
-  <li>السطر 5: تعيين أنواع الملفات المراد عرضها. لاحظ صيغة التصفية: <bdi dir="ltr" class="odt-ltr-term">filter1</bdi>|<bdi dir="ltr" class="odt-ltr-term">filter2</bdi>|..<i>|<bdi dir="ltr" class="odt-ltr-term">filtren</bdi> </i>مع <i>نموذج <bdi dir="ltr" class="odt-ltr-term">filteri</bdi>= <bdi dir="ltr" class="odt-ltr-term">Text</bdi>|<bdi dir="ltr" class="odt-ltr-term">file</bdi></i>. هنا سيتمكن المستخدم من الاختيار بين الملفات التالية <i>*.<bdi dir="ltr" class="odt-ltr-term">txt</bdi> </i>و <i>*.*</i>.
+  <li>السطر 5: تعيين أنواع الملفات المراد عرضها. لاحظ صيغة التصفية: <bdi dir="ltr" class="odt-ltr-term">filter1</bdi>|<bdi dir="ltr" class="odt-ltr-term">filter2</bdi>|..<i>|<bdi dir="ltr" class="odt-ltr-term">filtren</bdi> </i>مع <i>نموذج <bdi dir="ltr" class="odt-ltr-term">filteri</bdi>= <bdi dir="ltr" class="odt-ltr-term">Text</bdi>|<bdi dir="ltr" class="odt-ltr-term">file</bdi></i>. هنا سيتمكن المستخدم من الاختيار بين الملفات التالية <i>*.txt </i>و <i>*.*</i>.
   </li>
   <li>السطر 6: تعيين نوع الملف الذي سيتم عرضه أولاً للمستخدم. هنا يشير الرقم 0 إلى ملفات *.<bdi dir="ltr" class="odt-ltr-term">txt.</bdi>
   </li>
@@ -2762,7 +2762,7 @@
   </li>
   <li>السطر 4: حساب الوقت المنقضي منذ وقت بدء ساعة التوقيت. والنتيجة هي كائن من نوع <i><bdi dir="ltr" class="odt-ltr-term">TimeSpan</bdi> </i>يمثل المدة الزمنية.
   </li>
-  <li>السطر 6: يجب عرض هذا في ساعة التوقيت على شكل <i><bdi dir="ltr" class="odt-ltr-term">hh:mm:ss</bdi></i>. للقيام بذلك، نستخدم كائنات <i><bdi dir="ltr" class="odt-ltr-term">Hours</bdi> </i>و <i><bdi dir="ltr" class="odt-ltr-term">Minutes</bdi> </i>و <i><bdi dir="ltr" class="odt-ltr-term">Second</bdi> من نوع <bdi dir="ltr" class="odt-ltr-term">TimeSpan</bdi> </i>التي تمثل على التوالي الساعات والدقائق والثواني للمدة التي نعرضها بتنسيق <i><bdi dir="ltr" class="odt-ltr-term">ToString</bdi>(&quot;<bdi dir="ltr" class="odt-ltr-term">d2</bdi>&quot;) </i>لعرض رقمين.
+  <li>السطر 6: يجب عرض هذا في ساعة التوقيت على شكل <i><bdi dir="ltr" class="odt-ltr-term">hh:mm:ss</bdi></i>. للقيام بذلك، نستخدم كائنات <i><bdi dir="ltr" class="odt-ltr-term">Hours</bdi> </i>و <i><bdi dir="ltr" class="odt-ltr-term">Minutes</bdi> </i>و <i><bdi dir="ltr" class="odt-ltr-term">Second</bdi> من نوع <bdi dir="ltr" class="odt-ltr-term">TimeSpan</bdi> </i>التي تمثل على التوالي الساعات والدقائق والثواني للمدة التي نعرضها بتنسيق <i><bdi dir="ltr" class="odt-ltr-term">ToString</bdi>(&quot;d2&quot;) </i>لعرض رقمين.
   </li>
 </ul>
 
@@ -2773,15 +2773,15 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006B1000001ED067E6A7E.png" width="514" height="148" style="display:inline-block; margin:4px;width:13.6cm;height:3.914cm;" class="odt-zoomable" data-zoom-src="images/10000000000006B1000001ED067E6A7E.png" /></td></tr></table>
 
 <ul>
-  <li>تم تغليف طبقتي [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] في <bdi dir="ltr" class="odt-ltr-term">DLL</bdi>
+  <li>تم تغليف طبقتي [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] و[dao] في <bdi dir="ltr" class="odt-ltr-term">DLL</bdi>
   </li>
-  <li>كانت طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] عبارة عن طبقة [<bdi dir="ltr" class="odt-ltr-term">console</bdi>]
+  <li>كانت طبقة [ui] عبارة عن طبقة [<bdi dir="ltr" class="odt-ltr-term">console</bdi>]
   </li>
   <li>تمت معالجة إنشاء مثيلات الطبقات ودمجها في التطبيق بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi>
   </li>
 </ul>
 
-<p>في هذا الإصدار الجديد، سيتم توفير طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] من خلال الواجهة الرسومية التالية:</p>
+<p>في هذا الإصدار الجديد، سيتم توفير طبقة [ui] من خلال الواجهة الرسومية التالية:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012600000105D7701C54.png" width="206" height="183" style="display:inline-block; margin:4px;width:5.45cm;height:4.838cm;" class="odt-zoomable" data-zoom-src="images/100000000000012600000105D7701C54.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading10401471168783983"></a></p>
@@ -2798,15 +2798,15 @@
   </li>
   <li>[<bdi dir="ltr" class="odt-ltr-term">Form2</bdi>]: فئة النموذج الثاني
   </li>
-  <li>[<bdi dir="ltr" class="odt-ltr-term">lib</bdi>] المفصل في [2]: تم تضمين جميع ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> المطلوبة للمشروع:
+  <li>[lib] المفصل في [2]: تم تضمين جميع ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> المطلوبة للمشروع:
   </li>
-  <li>[<bdi dir="ltr" class="odt-ltr-term">ImpotsV5-dao.dll</bdi>]: مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> لطبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] التي تم إنشاؤها في الفقرة<a href="#impotsv5-dao-dll"><u><span style="color: #0563c1"> 6.4.3</span></u></a>؛
+  <li>[<bdi dir="ltr" class="odt-ltr-term">ImpotsV5-dao.dll</bdi>]: مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> لطبقة [dao] التي تم إنشاؤها في الفقرة<a href="#impotsv5-dao-dll"><u><span style="color: #0563c1"> 6.4.3</span></u></a>؛
   </li>
-  <li>[<bdi dir="ltr" class="odt-ltr-term">ImpotsV5-metier.dll</bdi>]: مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> لطبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] التي تم إنشاؤها في الفقرة<a href="#impotsv5-metier-dll"><u><span style="color: #0563c1"> 6.4.4</span></u></a>؛
+  <li>[<bdi dir="ltr" class="odt-ltr-term">ImpotsV5-metier.dll</bdi>]: مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> لطبقة [dao] التي تم إنشاؤها في الفقرة<a href="#impotsv5-metier-dll"><u><span style="color: #0563c1"> 6.4.4</span></u></a>؛
   </li>
   <li>[<bdi dir="ltr" class="odt-ltr-term">Spring.Core.dll</bdi>]، [<bdi dir="ltr" class="odt-ltr-term">Common.Logging.dll</bdi>]، [<bdi dir="ltr" class="odt-ltr-term">antlr.runtime.dll</bdi>]: مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الخاصة بـ <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> المستخدمة بالفعل في الإصدار السابق (انظر الفقرة<a href="#spring"><u><span style="color: #0563c1"> 6.4.6</span></u></a>).
   </li>
-  <li>[المراجع] المفصلة في [3]: مراجع المشروع. تمت إضافة مرجع لكل مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> في ملف [<bdi dir="ltr" class="odt-ltr-term">lib</bdi>]
+  <li>[المراجع] المفصلة في [3]: مراجع المشروع. تمت إضافة مرجع لكل مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> في ملف [lib]
   </li>
   <li>[<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]: ملف تكوين المشروع. وهو مطابق لملف الإصدار السابق الموصوف في الفقرة<a href="#app-config-v5"><u><span style="color: #0563c1"> 6.4.6</span></u></a>؛
   </li>
@@ -2915,7 +2915,7 @@
 </code></pre></div>
 
 <ul>
-  <li>الأسطر 24-32: استخدام ملف [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] السابق لإنشاء مثيلات لطبقات [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]
+  <li>الأسطر 24-32: استخدام ملف [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] السابق لإنشاء مثيلات لطبقات [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] و[dao]
   </li>
   <li>السطر 26: استخدام ملف [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]
   </li>
@@ -3091,7 +3091,7 @@
 <p>دعونا نلقي نظرة على البنية ثلاثية الطبقات المستخدمة:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006AB000001F9E648F588.png" width="512" height="152" style="display:inline-block; margin:4px;width:13.55cm;height:4.009cm;" class="odt-zoomable" data-zoom-src="images/10000000000006AB000001F9E648F588.png" /></td></tr></table>
 
-<p>مكّنتنا هذه البنية من استبدال طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] الحالية بتنفيذ رسومي، دون تغيير طبقتي [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]. وتمكّنا من التركيز على طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] دون القلق بشأن التأثير المحتمل على الطبقات الأخرى. وهذه هي الميزة الرئيسية للبنى ثلاثية الطبقات. سنرى مثالاً آخر لاحقًا، عندما يتم استبدال طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]، التي تستخدم حاليًا بيانات من ملف نصي، بطبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] تستخدم بيانات من قاعدة بيانات. وكما سنرى، لن يكون لهذا أي تأثير على طبقتي [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">metier</bdi>].</p>
+<p>مكّنتنا هذه البنية من استبدال طبقة [ui] الحالية بتنفيذ رسومي، دون تغيير طبقتي [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] و[dao]. وتمكّنا من التركيز على طبقة [ui] دون القلق بشأن التأثير المحتمل على الطبقات الأخرى. وهذه هي الميزة الرئيسية للبنى ثلاثية الطبقات. سنرى مثالاً آخر لاحقًا، عندما يتم استبدال طبقة [dao]، التي تستخدم حاليًا بيانات من ملف نصي، بطبقة [dao] تستخدم بيانات من قاعدة بيانات. وكما سنرى، لن يكون لهذا أي تأثير على طبقتي [ui] و[<bdi dir="ltr" class="odt-ltr-term">metier</bdi>].</p>
 
 
 

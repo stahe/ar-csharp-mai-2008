@@ -1038,7 +1038,7 @@
   </li>
   <li><i><bdi dir="ltr" class="odt-ltr-term">Join</bdi>() </i>: يتم حظر الخيط <i><bdi dir="ltr" class="odt-ltr-term">T1</bdi> </i>الذي ينفذ <i><bdi dir="ltr" class="odt-ltr-term">T2.Join</bdi> </i>حتى انتهاء <i><bdi dir="ltr" class="odt-ltr-term">T2</bdi></i>. هناك متغيرات لإنهاء الانتظار بعد وقت محدد.
   </li>
-  <li><i><bdi dir="ltr" class="odt-ltr-term">Sleep</bdi>(<bdi dir="ltr" class="odt-ltr-term">int n</bdi>) </i>: طريقة ثابتة - يتم تعليق الخيط الذي ينفذ الطريقة لمدة <i><bdi dir="ltr" class="odt-ltr-term">n</bdi> </i>مللي ثانية. ثم يفقد المعالج، الذي يُعطى لخيط آخر.
+  <li><i><bdi dir="ltr" class="odt-ltr-term">Sleep</bdi>(<bdi dir="ltr" class="odt-ltr-term">int n</bdi>) </i>: طريقة ثابتة - يتم تعليق الخيط الذي ينفذ الطريقة لمدة <i>n </i>مللي ثانية. ثم يفقد المعالج، الذي يُعطى لخيط آخر.
   </li>
 </ul>
 
@@ -1192,7 +1192,7 @@
   </li>
   <li>الأسطر 13-21: يتم إنشاء 5 خيوط وتنفيذها. يتم تخزين مراجع الخيوط في مصفوفة لاسترجاعها لاحقًا. يقوم كل خيط بتنفيذ الأسطر 27-35 <i>من <bdi dir="ltr" class="odt-ltr-term">Poster</bdi></i>.
   </li>
-  <li>السطر 20: يتم بدء تشغيل الخيط رقم <bdi dir="ltr" class="odt-ltr-term">i.</bdi> هذه العملية غير معطلة. سيتم تشغيل الخيط رقم <bdi dir="ltr" class="odt-ltr-term">i</bdi> بالتوازي مع خيط طريقة [<bdi dir="ltr" class="odt-ltr-term">Main</bdi>] الذي أطلقه.
+  <li>السطر 20: يتم بدء تشغيل الخيط رقم <bdi dir="ltr" class="odt-ltr-term">i.</bdi> هذه العملية غير معطلة. سيتم تشغيل الخيط رقم i بالتوازي مع خيط طريقة [<bdi dir="ltr" class="odt-ltr-term">Main</bdi>] الذي أطلقه.
   </li>
   <li>السطر 24: ينتهي الخيط الذي ينفذ طريقة [<bdi dir="ltr" class="odt-ltr-term">Main</bdi>].
   </li>
@@ -1236,7 +1236,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">                tâches[i].Start();</span></span>
 </code></pre></div>
 
-<p>يبدأ تنفيذ الخيط <em><bdi dir="ltr" class="odt-ltr-term">tasks</bdi>[<bdi dir="ltr" class="odt-ltr-term">i</bdi>]</em> ولكن بمجرد الانتهاء من ذلك، يستمر التنفيذ فورًا مع التعليمات التالية، دون انتظار انتهاء الخيط من التنفيذ.</p>
+<p>يبدأ تنفيذ الخيط <em><bdi dir="ltr" class="odt-ltr-term">tasks</bdi>[i]</em> ولكن بمجرد الانتهاء من ذلك، يستمر التنفيذ فورًا مع التعليمات التالية، دون انتظار انتهاء الخيط من التنفيذ.</p>
 <ul>
   <li>يجب أن تنفذ جميع الخيوط التي تم إنشاؤها <i><bdi dir="ltr" class="odt-ltr-term">Affiche</bdi></i>. ترتيب التنفيذ غير متوقع. على الرغم من أن ترتيب التنفيذ في المثال يبدو أنه يتبع ترتيب طلبات التنفيذ، لا يمكن استخلاص أي استنتاجات عامة من هذا. يحتوي نظام التشغيل هنا على 6 خيوط ومعالج واحد. سيقوم بتوزيع المعالج على هذه الخيوط الست وفقًا لقواعده الخاصة.
   </li>
@@ -1345,7 +1345,7 @@
 <p>وهذا يسمح بنقل المعلومات إلى الخيط الذي تم تشغيله. على سبيل المثال،</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>t.Start(obj1);
 </code></pre></div>
-<p>سيطلق <em><bdi dir="ltr" class="odt-ltr-term">t</bdi></em> الذي سيقوم بعد ذلك بتنفيذ <em><bdi dir="ltr" class="odt-ltr-term">Run</bdi></em> المرتبط به حسب التصميم، ويمرر له المعلمة الفعالة <em><bdi dir="ltr" class="odt-ltr-term">obj1</bdi></em>. إليك مثال على ذلك:</p>
+<p>سيطلق <em>t</em> الذي سيقوم بعد ذلك بتنفيذ <em><bdi dir="ltr" class="odt-ltr-term">Run</bdi></em> المرتبط به حسب التصميم، ويمرر له المعلمة الفعالة <em><bdi dir="ltr" class="odt-ltr-term">obj1</bdi></em>. إليك مثال على ذلك:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System.Threading;</span></span>
@@ -1411,7 +1411,7 @@
       </li>
     </ul>
   </li>
-  <li>الأسطر 35-43: الطريقة <i><bdi dir="ltr" class="odt-ltr-term">Sleep</bdi></i> التي تنفذها الخيوط لها التوقيع <i><bdi dir="ltr" class="odt-ltr-term">void Sleep</bdi>(<bdi dir="ltr" class="odt-ltr-term">object obj</bdi>)</i>. سيكون المعلمة الفعالة <i><bdi dir="ltr" class="odt-ltr-term">obj</bdi> </i>من النوع [<bdi dir="ltr" class="odt-ltr-term">Data</bdi>] المحدد في السطر 45.
+  <li>الأسطر 35-43: الطريقة <i><bdi dir="ltr" class="odt-ltr-term">Sleep</bdi></i> التي تنفذها الخيوط لها التوقيع <i><bdi dir="ltr" class="odt-ltr-term">void Sleep</bdi>(<bdi dir="ltr" class="odt-ltr-term">object obj</bdi>)</i>. سيكون المعلمة الفعالة <i>obj </i>من النوع [<bdi dir="ltr" class="odt-ltr-term">Data</bdi>] المحدد في السطر 45.
   </li>
   <li>الأسطر 15-22: إنشاء 5 خيوط
   </li>
@@ -1421,7 +1421,7 @@
   </li>
   <li>الأسطر 24-30: ينتظر مؤشر الترابط [<bdi dir="ltr" class="odt-ltr-term">Main</bdi>] انتهاء جميع مؤشرات الترابط التي بدأها.
   </li>
-  <li>السطران 28-29: يسترد مؤشر الترابط [<bdi dir="ltr" class="odt-ltr-term">Main</bdi>] كائن <bdi dir="ltr" class="odt-ltr-term">data</bdi>[<bdi dir="ltr" class="odt-ltr-term">i</bdi>] من مؤشر الترابط رقم <bdi dir="ltr" class="odt-ltr-term">i</bdi> ويعرض محتوياته.
+  <li>السطران 28-29: يسترد مؤشر الترابط [<bdi dir="ltr" class="odt-ltr-term">Main</bdi>] كائن <bdi dir="ltr" class="odt-ltr-term">data</bdi>[i] من مؤشر الترابط رقم i ويعرض محتوياته.
   </li>
   <li>الأسطر 35-42: الطريقة <i><bdi dir="ltr" class="odt-ltr-term">Sleep</bdi></i> التي تنفذها الخيوط
   </li>
@@ -1469,11 +1469,11 @@
 
 <p>نسمي هذه الحالة «الوصول إلى مورد مشترك»، وهو في هذه الحالة البنية <bdi dir="ltr" class="odt-ltr-term">S</bdi>، وغالبًا ما يكون التعامل معها أمرًا صعبًا للغاية. لنأخذ المثال التالي لتوضيح المشكلات التي قد تنشأ:</p>
 <ul>
-  <li>سيقوم أحد التطبيقات بإنشاء <bdi dir="ltr" class="odt-ltr-term">n</bdi> خيطًا، حيث يتم تمرير <bdi dir="ltr" class="odt-ltr-term">n</bdi> كمعلمة
+  <li>سيقوم أحد التطبيقات بإنشاء n خيطًا، حيث يتم تمرير n كمعلمة
   </li>
   <li>المورد المشترك هو عداد يجب زيادته بواسطة كل مؤشر تسلسل يتم إنشاؤه
   </li>
-  <li>في نهاية التطبيق، يتم عرض قيمة العداد. لذلك يجب أن نجد <i><bdi dir="ltr" class="odt-ltr-term">n</bdi></i>.
+  <li>في نهاية التطبيق، يتم عرض قيمة العداد. لذلك يجب أن نجد <i>n</i>.
   </li>
 </ul>
 
@@ -1624,7 +1624,7 @@
 <p>يُستخدم جملة <strong><bdi dir="ltr" class="odt-ltr-term">lock</bdi></strong> لتعريف قسم حرج على النحو التالي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>lock(obj){section critique}
 </code></pre></div>
-<p>يجب أن يكون <em><bdi dir="ltr" class="odt-ltr-term">obj</bdi></em> مرجع كائن مرئي لجميع الخيوط التي تعمل في القسم الحرج. يضمن <strong>القفل</strong> أن خيطًا واحدًا فقط في كل مرة سيقوم بتنفيذ القسم الحرج. تمت إعادة كتابة المثال السابق على النحو التالي:</p>
+<p>يجب أن يكون <em>obj</em> مرجع كائن مرئي لجميع الخيوط التي تعمل في القسم الحرج. يضمن <strong>القفل</strong> أن خيطًا واحدًا فقط في كل مرة سيقوم بتنفيذ القسم الحرج. تمت إعادة كتابة المثال السابق على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System.Threading;</span></span>
@@ -1805,7 +1805,7 @@
   </li>
   <li>السطر 18: بداية القسم الحرج - يجب أن يدخل خيط واحد فقط. نقوم بالحظر حتى يصبح <i>مزامنة <bdi dir="ltr" class="odt-ltr-term">Mutex</bdi> </i>متاحًا.
   </li>
-  <li>السطر 33: نظرًا لأن <i><bdi dir="ltr" class="odt-ltr-term">Mutex</bdi> </i>يجب أن يتم تحريره دائمًا، سواء حدث استثناء أم لا، فإننا ندير القسم الحرج باستخدام <i><bdi dir="ltr" class="odt-ltr-term">try</bdi> / <bdi dir="ltr" class="odt-ltr-term">finally</bdi> </i>لتحرير <i><bdi dir="ltr" class="odt-ltr-term">Mutex</bdi> </i>في <i><bdi dir="ltr" class="odt-ltr-term">finally</bdi></i>.
+  <li>السطر 33: نظرًا لأن <i><bdi dir="ltr" class="odt-ltr-term">Mutex</bdi> </i>يجب أن يتم تحريره دائمًا، سواء حدث استثناء أم لا، فإننا ندير القسم الحرج باستخدام <i>try / <bdi dir="ltr" class="odt-ltr-term">finally</bdi> </i>لتحرير <i><bdi dir="ltr" class="odt-ltr-term">Mutex</bdi> </i>في <i><bdi dir="ltr" class="odt-ltr-term">finally</bdi></i>.
   </li>
   <li>السطر 23: يتم تحرير <i><bdi dir="ltr" class="odt-ltr-term">Mutex</bdi> </i>بمجرد اجتياز القسم الحرج.
   </li>
@@ -2645,7 +2645,7 @@
 
 <p>لقد رأينا في فصل &quot;قواعد البيانات&quot; أنه مع بعض أنظمة إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">SGBD</bdi>) كان من الممكن الحصول على مجموعات من الاتصالات المفتوحة:</p>
 <ul>
-  <li>يتم فتح <i><bdi dir="ltr" class="odt-ltr-term">n</bdi> </i>اتصال عند بدء تشغيل المجموعة
+  <li>يتم فتح <i>n </i>اتصال عند بدء تشغيل المجموعة
   </li>
   <li>عندما يطلب مؤشر ترابط اتصالاً، يتم منحه أحد الاتصالات المفتوحة في المجموعة
   </li>
@@ -2656,9 +2656,9 @@
 <p>استخدام مجموعة الاتصالات شفاف من حيث الكود. وتكمن الميزة في تحسين الأداء: فتح اتصال مكلف. هنا يمكن لـ 10 اتصالات مفتوحة تلبية مئات الطلبات.</p>
 <p>يوجد نظام مشابه للخيوط:</p>
 <ul>
-  <li>يتم إنشاء <i>عدد أدنى من </i>الخيوط عند بدء تشغيل المجموعة. يتم تعيين قيمة <i><bdi dir="ltr" class="odt-ltr-term">min</bdi> </i>باستخدام <i><bdi dir="ltr" class="odt-ltr-term">ThreadPool.SetMinThreads</bdi>(<bdi dir="ltr" class="odt-ltr-term">min1</bdi>,<bdi dir="ltr" class="odt-ltr-term">min2</bdi>). </i>يمكن استخدام تجمع الخيوط لتنفيذ مهام غير متزامنة معطلة أو غير معطلة. المعلمة الأولى <i><bdi dir="ltr" class="odt-ltr-term">min1</bdi> </i>تحدد عدد الخيوط المعطلة، والثانية <i><bdi dir="ltr" class="odt-ltr-term">min2</bdi></i> تحدد عدد الخيوط غير المتزامنة. يمكن الحصول على القيم الحالية لهاتين المتغيرتين بواسطة <i><bdi dir="ltr" class="odt-ltr-term">ThreadPool.GetMinThreads</bdi>(<bdi dir="ltr" class="odt-ltr-term">out min1</bdi>,<bdi dir="ltr" class="odt-ltr-term">out min2</bdi>).</i>
+  <li>يتم إنشاء <i>عدد أدنى من </i>الخيوط عند بدء تشغيل المجموعة. يتم تعيين قيمة <i>min </i>باستخدام <i><bdi dir="ltr" class="odt-ltr-term">ThreadPool.SetMinThreads</bdi>(<bdi dir="ltr" class="odt-ltr-term">min1</bdi>,<bdi dir="ltr" class="odt-ltr-term">min2</bdi>). </i>يمكن استخدام تجمع الخيوط لتنفيذ مهام غير متزامنة معطلة أو غير معطلة. المعلمة الأولى <i><bdi dir="ltr" class="odt-ltr-term">min1</bdi> </i>تحدد عدد الخيوط المعطلة، والثانية <i><bdi dir="ltr" class="odt-ltr-term">min2</bdi></i> تحدد عدد الخيوط غير المتزامنة. يمكن الحصول على القيم الحالية لهاتين المتغيرتين بواسطة <i><bdi dir="ltr" class="odt-ltr-term">ThreadPool.GetMinThreads</bdi>(<bdi dir="ltr" class="odt-ltr-term">out min1</bdi>,<bdi dir="ltr" class="odt-ltr-term">out min2</bdi>).</i>
   </li>
-  <li>إذا لم يكن هذا العدد كافيًا، فسيقوم المجمع بإنشاء خيوط أخرى للاستجابة للطلبات حتى الحد <i>الأقصى</i> لعدد الخيوط. يتم تعيين قيمة <i><bdi dir="ltr" class="odt-ltr-term">max</bdi> </i>باستخدام <i><bdi dir="ltr" class="odt-ltr-term">ThreadPool.SetMaxThreads</bdi>(<bdi dir="ltr" class="odt-ltr-term">max1</bdi>,<bdi dir="ltr" class="odt-ltr-term">max2</bdi>)</i>. كلا المعلمتين لهما نفس المعنى كما في <i><bdi dir="ltr" class="odt-ltr-term">SetMinThreads</bdi></i>. يمكن الحصول على القيم الحالية لهاتين القيمتين بواسطة <i><bdi dir="ltr" class="odt-ltr-term">ThreadPool.GetMaxThreads</bdi>(<bdi dir="ltr" class="odt-ltr-term">out max1</bdi>,<bdi dir="ltr" class="odt-ltr-term">out max2</bdi>). </i>عند الوصول إلى <i><bdi dir="ltr" class="odt-ltr-term">max1</bdi></i> من الخيوط، سيتم وضع طلبات الخيوط للمهام الحاجزة في قائمة انتظار حتى يتوفر خيط حر في المجموعة.
+  <li>إذا لم يكن هذا العدد كافيًا، فسيقوم المجمع بإنشاء خيوط أخرى للاستجابة للطلبات حتى الحد <i>الأقصى</i> لعدد الخيوط. يتم تعيين قيمة <i>max </i>باستخدام <i><bdi dir="ltr" class="odt-ltr-term">ThreadPool.SetMaxThreads</bdi>(<bdi dir="ltr" class="odt-ltr-term">max1</bdi>,<bdi dir="ltr" class="odt-ltr-term">max2</bdi>)</i>. كلا المعلمتين لهما نفس المعنى كما في <i><bdi dir="ltr" class="odt-ltr-term">SetMinThreads</bdi></i>. يمكن الحصول على القيم الحالية لهاتين القيمتين بواسطة <i><bdi dir="ltr" class="odt-ltr-term">ThreadPool.GetMaxThreads</bdi>(<bdi dir="ltr" class="odt-ltr-term">out max1</bdi>,<bdi dir="ltr" class="odt-ltr-term">out max2</bdi>). </i>عند الوصول إلى <i><bdi dir="ltr" class="odt-ltr-term">max1</bdi></i> من الخيوط، سيتم وضع طلبات الخيوط للمهام الحاجزة في قائمة انتظار حتى يتوفر خيط حر في المجموعة.
   </li>
 </ul>
 
@@ -2963,7 +2963,7 @@
   </li>
   <li>السطر 58: تنتهي الطريقة <i><bdi dir="ltr" class="odt-ltr-term">Main</bdi> </i>بعد أن تنتهي جميع خيوط القراءة من عملها. للقيام بذلك، في السطر 12، يقوم العداد <i><bdi dir="ltr" class="odt-ltr-term">nbReadersTerminated</bdi> </i>بحساب عدد خيوط القراءة التي أكملت عملها. يتم زيادة هذا العداد بواسطة <i><bdi dir="ltr" class="odt-ltr-term">EndLecteur</bdi> </i>في الأسطر 63-65، والذي يتم تنفيذه في كل مرة ينتهي فيها مؤشر ترابط قارئ. هذا الإجراء هو الذي يتحكم في <i><bdi dir="ltr" class="odt-ltr-term">AutoResetEvent finLecteurs</bdi> </i>في السطر 18، والذي يتم مزامنته في السطر 59 مع <i><bdi dir="ltr" class="odt-ltr-term">Hand.</bdi></i>
   </li>
-  <li>السطر 16: نظرًا لأن العديد من خيوط القراءة قد ترغب في زيادة العداد <i><bdi dir="ltr" class="odt-ltr-term">nbReadersTerminated</bdi></i> في نفس الوقت، يتم توفير وصول حصري إليه بواسطة كائن التزامن <i><bdi dir="ltr" class="odt-ltr-term">app</bdi></i>. هذه الحالة غير مرجحة، ولكنها ممكنة نظريًا.
+  <li>السطر 16: نظرًا لأن العديد من خيوط القراءة قد ترغب في زيادة العداد <i><bdi dir="ltr" class="odt-ltr-term">nbReadersTerminated</bdi></i> في نفس الوقت، يتم توفير وصول حصري إليه بواسطة كائن التزامن <i>app</i>. هذه الحالة غير مرجحة، ولكنها ممكنة نظريًا.
   </li>
   <li>الأسطر 35-44: إنشاء خيوط القراءة
   </li>
@@ -3209,13 +3209,13 @@
 <ol>
   <li>يتم إنشاء الخيط أو طلبه من مجموعة الخيوط لتلبية طلب المستخدم
   </li>
-  <li>إذا كان هذا الطلب يتطلب بيانات، فسيقوم الخيط بتنفيذ طريقة من طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>]، والتي ستستدعي طريقة من طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]، والتي بدورها ستستدعي طريقة من طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>].
+  <li>إذا كان هذا الطلب يتطلب بيانات، فسيقوم الخيط بتنفيذ طريقة من طبقة [ui]، والتي ستستدعي طريقة من طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]، والتي بدورها ستستدعي طريقة من طبقة [dao].
   </li>
   <li>يعيد الخيط الاستجابة إلى المستخدم. ثم يختفي أو يتم إعادة تدويره إلى مجموعة الخيوط.
   </li>
 </ol>
 
-<p>في العملية 2، قد يكون من المثير للاهتمام أن يكون للخيط بياناته الخاصة، أي غير مشتركة مع الخيوط الأخرى. يمكن أن تنتمي هذه البيانات، على سبيل المثال، إلى المستخدم المعين الذي يخدمه الخيط. يمكن بعد ذلك استخدام هذه البيانات في الطبقات المختلفة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>، <bdi dir="ltr" class="odt-ltr-term">metier</bdi>، <bdi dir="ltr" class="odt-ltr-term">dao</bdi>].</p>
+<p>في العملية 2، قد يكون من المثير للاهتمام أن يكون للخيط بياناته الخاصة، أي غير مشتركة مع الخيوط الأخرى. يمكن أن تنتمي هذه البيانات، على سبيل المثال، إلى المستخدم المعين الذي يخدمه الخيط. يمكن بعد ذلك استخدام هذه البيانات في الطبقات المختلفة [ui، <bdi dir="ltr" class="odt-ltr-term">metier</bdi>، dao].</p>
 <p>تسمح فئة <em><bdi dir="ltr" class="odt-ltr-term">Thread</bdi></em> بهذا السيناريو بفضل نوع من القاموس الخاص الذي تكون مفاتيحه من نوع <em><bdi dir="ltr" class="odt-ltr-term">LocalDataStoreSlot</bdi></em>:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001680000002E7BDE5E1E.png" width="252" height="32" style="display:inline-block; margin:4px;width:6.669cm;height:0.852cm;" class="odt-zoomable" data-zoom-src="images/10000000000001680000002E7BDE5E1E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">ينشئ إدخالاً في القاموس الخاص للخيط <i>باسم</i> المفتاح.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F00000003FDDE50098.png" width="168" height="44" style="display:inline-block; margin:4px;width:4.45cm;height:1.168cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F00000003FDDE50098.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يربط <i>بيانات</i> القيمة <i>باسم</i> المفتاح من  القاموس الخاص للخيط</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E700000031F1B1D2A6.png" width="162" height="34" style="display:inline-block; margin:4px;width:4.279cm;height:0.908cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E700000031F1B1D2A6.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يسترد القيمة المرتبطة <i>بالاسم </i>من القاموس الخاص للخيط</div></td></tr></table>
 
@@ -3239,7 +3239,7 @@
 <p>لنأخذ التطبيق ذي الطبقات الثلاث التالي:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000668000001133EA847C6.png" width="492" height="83" style="display:inline-block; margin:4px;width:13.019cm;height:2.184cm;" class="odt-zoomable" data-zoom-src="images/1000000000000668000001133EA847C6.png" /></td></tr></table>
 
-<p>لنفترض أن طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] تدير قاعدة بيانات للمقالات وأن واجهتها في البداية كما يلي:</p>
+<p>لنفترض أن طبقة [dao] تدير قاعدة بيانات للمقالات وأن واجهتها في البداية كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System.Collections.Generic;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -3280,25 +3280,25 @@
   </li>
 </ul>
 
-<p>لاحقًا، في تطبيق آخر، تنشأ الحاجة إلى حذف قائمة من المقالات المحفوظة في قائمة، وذلك في إطار معاملة واحدة. وكما نرى، ستتوسع طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] لتلبية احتياجات العمل المختلفة. ويمكننا اتباع مسار آخر:</p>
+<p>لاحقًا، في تطبيق آخر، تنشأ الحاجة إلى حذف قائمة من المقالات المحفوظة في قائمة، وذلك في إطار معاملة واحدة. وكما نرى، ستتوسع طبقة [dao] لتلبية احتياجات العمل المختلفة. ويمكننا اتباع مسار آخر:</p>
 <ul>
-  <li>وضع العمليات الأساسية فقط في طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] <i><bdi dir="ltr" class="odt-ltr-term">InsertArticle</bdi></i>، <i><bdi dir="ltr" class="odt-ltr-term">DeleteArticle</bdi></i>، <i><bdi dir="ltr" class="odt-ltr-term">UpdateArticle</bdi></i>، <i><bdi dir="ltr" class="odt-ltr-term">SelectArticle</bdi></i>، <i><bdi dir="ltr" class="odt-ltr-term">SelectArticles</bdi></i>
+  <li>وضع العمليات الأساسية فقط في طبقة [dao] <i><bdi dir="ltr" class="odt-ltr-term">InsertArticle</bdi></i>، <i><bdi dir="ltr" class="odt-ltr-term">DeleteArticle</bdi></i>، <i><bdi dir="ltr" class="odt-ltr-term">UpdateArticle</bdi></i>، <i><bdi dir="ltr" class="odt-ltr-term">SelectArticle</bdi></i>، <i><bdi dir="ltr" class="odt-ltr-term">SelectArticles</bdi></i>
   </li>
-  <li>نقل التحديث المتزامن لعدة مقالات إلى طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]. ستستخدم هذه العمليات العمليات الأساسية لطبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>].
+  <li>نقل التحديث المتزامن لعدة مقالات إلى طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]. ستستخدم هذه العمليات العمليات الأساسية لطبقة [dao].
   </li>
 </ul>
 
-<p>ميزة هذا الحل هي أنه يمكن استخدام نفس طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] دون تغيير مع طبقات [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] مختلفة. ومع ذلك، فإنه يسبب صعوبة في إدارة المعاملة، التي تجمع التحديثات التي سيتم إجراؤها بشكل متكامل على:</p>
+<p>ميزة هذا الحل هي أنه يمكن استخدام نفس طبقة [dao] دون تغيير مع طبقات [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] مختلفة. ومع ذلك، فإنه يسبب صعوبة في إدارة المعاملة، التي تجمع التحديثات التي سيتم إجراؤها بشكل متكامل على:</p>
 <ul>
-  <li>يجب أن تبدأ المعاملة من طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] قبل أن تستدعي أساليب طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]
+  <li>يجب أن تبدأ المعاملة من طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] قبل أن تستدعي أساليب طبقة [dao]
   </li>
-  <li>يجب أن تكون الطرق في طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] على علم بوجود المعاملة من أجل المشاركة فيها إذا كانت موجودة
+  <li>يجب أن تكون الطرق في طبقة [dao] على علم بوجود المعاملة من أجل المشاركة فيها إذا كانت موجودة
   </li>
   <li>يجب إنهاء المعاملة بواسطة طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>].
   </li>
 </ul>
 
-<p>لضمان أن تكون أساليب طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] على علم بوجود أي معاملة حالية، يمكننا إضافة المعاملة كمعلمة لكل أسلوب في طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]. ستظهر هذه المعلمة بعد ذلك في توقيع أساليب الواجهة، لربطها بمصدر بيانات محدد: قاعدة البيانات. توفر لنا البيانات المحلية للخيط حلاً أكثر أناقة: ستضع طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] المعاملة في البيانات المحلية للخيط، وستقوم طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] بجلبها من هناك. لا يلزم تغيير توقيع طريقة طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>].</p>
+<p>لضمان أن تكون أساليب طبقة [dao] على علم بوجود أي معاملة حالية، يمكننا إضافة المعاملة كمعلمة لكل أسلوب في طبقة [dao]. ستظهر هذه المعلمة بعد ذلك في توقيع أساليب الواجهة، لربطها بمصدر بيانات محدد: قاعدة البيانات. توفر لنا البيانات المحلية للخيط حلاً أكثر أناقة: ستضع طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] المعاملة في البيانات المحلية للخيط، وستقوم طبقة [dao] بجلبها من هناك. لا يلزم تغيير توقيع طريقة طبقة [dao].</p>
 <p>نقوم بتنفيذ هذا الحل باستخدام مشروع <bdi dir="ltr" class="odt-ltr-term">Visual Studio</bdi> التالي:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000669000001080A72351A.png" width="492" height="79" style="display:inline-block; margin:4px;width:13.019cm;height:2.094cm;" class="odt-zoomable" data-zoom-src="images/1000000000000669000001080A72351A.png" /></td></tr></table>
 
@@ -3348,8 +3348,8 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><u><strong>واجهة الطبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</strong></u></p>
-<p>ستكون واجهة <strong><bdi dir="ltr" class="odt-ltr-term">IDao</bdi></strong> لطبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] كما يلي:</p>
+<p><u><strong>واجهة الطبقة [dao]</strong></u></p>
+<p>ستكون واجهة <strong><bdi dir="ltr" class="odt-ltr-term">IDao</bdi></strong> لطبقة [dao] كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System.Collections.Generic;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -3461,7 +3461,7 @@
 
 <p>تحتوي الفئة على الخصائص التالية:</p>
 <ul>
-  <li>السطر 9: مرجع إلى طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]
+  <li>السطر 9: مرجع إلى طبقة [dao]
   </li>
   <li>السطر 11: سلسلة الاتصال المستخدمة للاتصال بقاعدة بيانات المقالات
   </li>
@@ -3477,9 +3477,9 @@
   </li>
   <li>السطر 25: يتم الحفظ في البيانات المحلية للخيط، المرتبطة بمفتاح &quot;<bdi dir="ltr" class="odt-ltr-term">transaction</bdi>&quot;
   </li>
-  <li>الأسطر 27-29: يتم استدعاء طريقة إدراج وحدة طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] لكل عنصر سيتم إدراجه
+  <li>الأسطر 27-29: يتم استدعاء طريقة إدراج وحدة طبقة [dao] لكل عنصر سيتم إدراجه
   </li>
-  <li>السطران 21 و 32: يتم التحكم في عملية إدراج المصفوفة بالكامل بواسطة <bdi dir="ltr" class="odt-ltr-term">try</bdi> / <bdi dir="ltr" class="odt-ltr-term">catch</bdi>
+  <li>السطران 21 و 32: يتم التحكم في عملية إدراج المصفوفة بالكامل بواسطة try / <bdi dir="ltr" class="odt-ltr-term">catch</bdi>
   </li>
   <li>السطر 31: إذا وصلت إلى هذه النقطة، فهذا يعني أنه لم تحدث أي استثناءات. ثم يتم التحقق من صحة المعاملة.
   </li>
@@ -3489,7 +3489,7 @@
   </li>
 </ul>
 
-<p><u><strong>تنفيذ طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</strong></u></p>
+<p><u><strong>تنفيذ طبقة [dao]</strong></u></p>
 <p>سيكون تنفيذ واجهة <strong><bdi dir="ltr" class="odt-ltr-term">Dao IDao</bdi></strong> على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System.Collections.Generic;</span></span>
@@ -3594,7 +3594,7 @@
   </li>
   <li>الأسطر 26-30: خلاف ذلك، يتم إنشاء اتصال جديد وفتحه.
   </li>
-  <li>الأسطر 33-44: إعداد أمر الإدراج. يتم تحديد معالم هذا الأمر (انظر السطر <bdi dir="ltr" class="odt-ltr-term">g</bdi> في <i><bdi dir="ltr" class="odt-ltr-term">App.config</bdi></i>).
+  <li>الأسطر 33-44: إعداد أمر الإدراج. يتم تحديد معالم هذا الأمر (انظر السطر g في <i><bdi dir="ltr" class="odt-ltr-term">App.config</bdi></i>).
   </li>
   <li>السطر 33: يتم إنشاء الكائن <i><bdi dir="ltr" class="odt-ltr-term">Command</bdi></i>.
   </li>
@@ -3602,7 +3602,7 @@
   </li>
   <li>السطر 35: يتم ربط الكائن <i><bdi dir="ltr" class="odt-ltr-term">Command</bdi> </i>بالاتصال الحالي
   </li>
-  <li>السطر 36: يتم تعيين نص <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> المراد تنفيذه. هذا هو الاستعلام المعلم في السطر <bdi dir="ltr" class="odt-ltr-term">g</bdi> من <i><bdi dir="ltr" class="odt-ltr-term">App.config</bdi></i>.
+  <li>السطر 36: يتم تعيين نص <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> المراد تنفيذه. هذا هو الاستعلام المعلم في السطر g من <i><bdi dir="ltr" class="odt-ltr-term">App.config</bdi></i>.
   </li>
   <li>الأسطر 37-44: يتم تهيئة معلمات الاستعلام الأربعة
   </li>
@@ -3725,7 +3725,7 @@
 <ul>
   <li>الأسطر 12-22: يتم استخدام الملف [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>].
   </li>
-  <li>الأسطر 24-28: يتم إنشاء مثيل للطبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] وتهيئتها
+  <li>الأسطر 24-28: يتم إنشاء مثيل للطبقة [dao] وتهيئتها
   </li>
   <li>الأسطر 30-32: ينطبق الأمر نفسه على طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]
   </li>
@@ -3765,7 +3765,7 @@
 
 <p><a id="refheading10402771168783983"></a></p>
 <h3 id="1093">10.9.3. <span style="color: #4f81bd">الخلاصة</span></h3>
-<p>أظهر المثال السابق مزايا البيانات المحلية للخيط (<bdi dir="ltr" class="odt-ltr-term">thread-local</bdi>) في إدارة المعاملات. ولا ينبغي تكراره كما هو. تستخدم أطر العمل مثل <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> و<bdi dir="ltr" class="odt-ltr-term">Nhibernate</bdi> وغيرها هذه التقنية، لكنها تجعلها أكثر شفافية: فمن الممكن لطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] استخدام المعاملات دون الحاجة إلى علم طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]. لا توجد <em>معاملات</em> في كود طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]. يتم تحقيق ذلك باستخدام تقنية وكيل تسمى <bdi dir="ltr" class="odt-ltr-term">AOP</bdi> (البرمجة الموجهة للجوانب). مرة أخرى، نحثك على استخدام هذه الأطر.</p>
+<p>أظهر المثال السابق مزايا البيانات المحلية للخيط (<bdi dir="ltr" class="odt-ltr-term">thread-local</bdi>) في إدارة المعاملات. ولا ينبغي تكراره كما هو. تستخدم أطر العمل مثل <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> و<bdi dir="ltr" class="odt-ltr-term">Nhibernate</bdi> وغيرها هذه التقنية، لكنها تجعلها أكثر شفافية: فمن الممكن لطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] استخدام المعاملات دون الحاجة إلى علم طبقة [dao]. لا توجد <em>معاملات</em> في كود طبقة [dao]. يتم تحقيق ذلك باستخدام تقنية وكيل تسمى <bdi dir="ltr" class="odt-ltr-term">AOP</bdi> (البرمجة الموجهة للجوانب). مرة أخرى، نحثك على استخدام هذه الأطر.</p>
 <p><a id="refheading10402791168783983"></a></p>
 <h2 id="1010">10.10. <span style="color: #4f81bd">لمعرفة المزيد...</span></h2>
 <p>للحصول على نظرة أكثر تعمقًا في مجال تزامن الخيوط الصعب، اقرأ الفصل <em>&quot;<bdi dir="ltr" class="odt-ltr-term">Threading</bdi>&quot;</em> من كتاب <em><bdi dir="ltr" class="odt-ltr-term">C# 3.0</bdi></em> المشار إليه في مقدمة هذا المستند. فهو يعرض العديد من تقنيات التزامن لأنواع مختلفة من المواقف.</p>

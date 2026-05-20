@@ -1936,7 +1936,7 @@
   </li>
   <li>إذا لم يتلق بروتوكول <bdi dir="ltr" class="odt-ltr-term">TCP</bdi> الذي أرسل مقطعًا ما إقرارًا بالاستلام بعد فترة زمنية معينة، فإنه يعيد إرسال المقطع المعني، مما يضمن جودة خدمة توجيه المعلومات.
   </li>
-  <li>الدائرة الافتراضية التي يتم إنشاؤها بين عمليتي الاتصال هي <i>دائرة ثنائية الاتجاه</i>: وهذا يعني أن المعلومات يمكن أن تتدفق في كلا الاتجاهين. وبهذه الطريقة، يمكن لعملية الوجهة إرسال إقرارات بالاستلام بينما تواصل عملية المصدر إرسال المعلومات. وهذا يسمح لبروتوكول <bdi dir="ltr" class="odt-ltr-term">TCP</bdi> المصدر، على سبيل المثال، بإرسال عدة مقاطع دون انتظار إقرار بالاستلام. وإذا أدرك بعد فترة معينة أنه لم يتلق إقرارًا بالاستلام لمقطع معين <i>رقم </i><bdi dir="ltr" class="odt-ltr-term">n</bdi>، فسيستأنف بث المقطع عند هذه النقطة.
+  <li>الدائرة الافتراضية التي يتم إنشاؤها بين عمليتي الاتصال هي <i>دائرة ثنائية الاتجاه</i>: وهذا يعني أن المعلومات يمكن أن تتدفق في كلا الاتجاهين. وبهذه الطريقة، يمكن لعملية الوجهة إرسال إقرارات بالاستلام بينما تواصل عملية المصدر إرسال المعلومات. وهذا يسمح لبروتوكول <bdi dir="ltr" class="odt-ltr-term">TCP</bdi> المصدر، على سبيل المثال، بإرسال عدة مقاطع دون انتظار إقرار بالاستلام. وإذا أدرك بعد فترة معينة أنه لم يتلق إقرارًا بالاستلام لمقطع معين <i>رقم </i>n، فسيستأنف بث المقطع عند هذه النقطة.
   </li>
 </ul>
 <p><a id="refheading10402991168783983"></a></p>
@@ -1958,19 +1958,19 @@
 
 الجهاز &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;DPX2/320&lt;/bdi&gt; من جامعة أنجيه
 
-جهاز &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;sun&lt;/bdi&gt; من &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;ISERPA&lt;/bdi&gt; في أنجيه
+جهاز sun من &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;ISERPA&lt;/bdi&gt; في أنجيه
 
-من الواضح أنه سيكون من الأفضل الإشارة إلى الجهاز بالاسم بدلاً من عنوان &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;IP&lt;/bdi&gt; الخاص به. ثم هناك مشكلة تفرد الاسم: فهناك ملايين الأجهزة المتصلة ببعضها البعض. يمكننا أن نتخيل هيئة مركزية تقوم بتخصيص الأسماء. سيكون هذا بلا شك أمرًا مرهقًا إلى حد ما. في الواقع، تم توزيع التحكم في الأسماء على **مجالات**. يتم إدارة كل مجال من قبل منظمة صغيرة جدًا، والتي لها الحرية في اختيار أسماء أجهزتها. على سبيل المثال، تنتمي الأجهزة في فرنسا إلى المجال **&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;en&lt;/bdi&gt;**، الذي تديره &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Inria&lt;/bdi&gt; في باريس. لتبسيط الأمور ، نقوم بتوزيع التحكم بشكل أكبر: يتم إنشاء النطاقات داخل **&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;en&lt;/bdi&gt;**. تنتمي جامعة أنجيه إلى **&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;univ-Angers&lt;/bdi&gt;**. ويتمتع القسم الذي يدير هذا النطاق بحرية تسمية الأجهزة الموجودة على شبكة &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Université d&lt;/bdi&gt;&amp;#x27;&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Angers.&lt;/bdi&gt; في الوقت الحالي، لم يتم تقسيم هذا النطاق إلى أقسام فرعية. ولكن في جامعة كبيرة بها العديد من الأجهزة المتصلة بالشبكة، قد يتم تقسيمه.
+من الواضح أنه سيكون من الأفضل الإشارة إلى الجهاز بالاسم بدلاً من عنوان &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;IP&lt;/bdi&gt; الخاص به. ثم هناك مشكلة تفرد الاسم: فهناك ملايين الأجهزة المتصلة ببعضها البعض. يمكننا أن نتخيل هيئة مركزية تقوم بتخصيص الأسماء. سيكون هذا بلا شك أمرًا مرهقًا إلى حد ما. في الواقع، تم توزيع التحكم في الأسماء على **مجالات**. يتم إدارة كل مجال من قبل منظمة صغيرة جدًا، والتي لها الحرية في اختيار أسماء أجهزتها. على سبيل المثال، تنتمي الأجهزة في فرنسا إلى المجال **en**، الذي تديره &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Inria&lt;/bdi&gt; في باريس. لتبسيط الأمور ، نقوم بتوزيع التحكم بشكل أكبر: يتم إنشاء النطاقات داخل **en**. تنتمي جامعة أنجيه إلى **&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;univ-Angers&lt;/bdi&gt;**. ويتمتع القسم الذي يدير هذا النطاق بحرية تسمية الأجهزة الموجودة على شبكة &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Université d&lt;/bdi&gt;&amp;#x27;&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Angers.&lt;/bdi&gt; في الوقت الحالي، لم يتم تقسيم هذا النطاق إلى أقسام فرعية. ولكن في جامعة كبيرة بها العديد من الأجهزة المتصلة بالشبكة، قد يتم تقسيمه.
 
 تم تسمية جهاز &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;DPX2/320&lt;/bdi&gt; في جامعة أنجيه *باسم &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Lagaffe&lt;/bdi&gt;* بينما تم تسمية جهاز &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;PC&lt;/bdi&gt; 486DX50 *باسم &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;liny&lt;/bdi&gt;*. كيف يمكنك الإشارة إلى هذه الأجهزة من الخارج؟ عن طريق تحديد التسلسل الهرمي للمجال الذي تنتمي إليه. على سبيل المثال، سيكون الاسم الكامل لجهاز &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Lagaffe&lt;/bdi&gt; هو:
 
     **&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Lagaffe.univ-Angers.fr&lt;/bdi&gt;**
 
-يمكن استخدام الأسماء النسبية داخل المجالات. وبالتالي، داخل المجال **&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;en&lt;/bdi&gt;** وخارج المجال &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;univ-Angers&lt;/bdi&gt;، يمكن الإشارة إلى جهاز &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Lagaffe&lt;/bdi&gt; بواسطة
+يمكن استخدام الأسماء النسبية داخل المجالات. وبالتالي، داخل المجال **en** وخارج المجال &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;univ-Angers&lt;/bdi&gt;، يمكن الإشارة إلى جهاز &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Lagaffe&lt;/bdi&gt; بواسطة
 
     **&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Lagaffe.univ-Angers&lt;/bdi&gt;**
 
-وأخيرًا، داخل *&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;univ&lt;/bdi&gt;*-&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Ang&lt;/bdi&gt;*&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;ers&lt;/bdi&gt;*، يمكن الإشارة إليها ببساطة بـ
+وأخيرًا، داخل *&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;univ&lt;/bdi&gt;*-&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Ang&lt;/bdi&gt;*ers*، يمكن الإشارة إليها ببساطة بـ
 
     **&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Lagaffe&lt;/bdi&gt;**
 
@@ -2174,7 +2174,7 @@
   </li>
 </ul>
 
-<p>لذلك، يجب أن يتفق التطبيقان المتواصلان على نوع الحوار الذي سيتبنيانه. على سبيل المثال، الحوار مع <em>بروتوكول نقل الملفات (<bdi dir="ltr" class="odt-ltr-term">ftp</bdi>)</em> يختلف عن الحوار مع خدمة <em>بوب (<bdi dir="ltr" class="odt-ltr-term">pop</bdi>)</em>: هاتان الخدمتان لا تقبلان نفس الأوامر.  لديهما بروتوكول حوار مختلف.</p>
+<p>لذلك، يجب أن يتفق التطبيقان المتواصلان على نوع الحوار الذي سيتبنيانه. على سبيل المثال، الحوار مع <em>بروتوكول نقل الملفات (ftp)</em> يختلف عن الحوار مع خدمة <em>بوب (pop)</em>: هاتان الخدمتان لا تقبلان نفس الأوامر.  لديهما بروتوكول حوار مختلف.</p>
 <p><a id="refheading10403091168783983"></a></p>
 <h3 id="1132-tcp">11.3.2. <span style="color: #4f81bd">خصائص بروتوكول <bdi dir="ltr" class="odt-ltr-term">TCP</bdi></span></h3>
 <p>سنقوم هنا بدراسة اتصالات الشبكة التي تستخدم بروتوكول النقل <bdi dir="ltr" class="odt-ltr-term">TCP</bdi> فقط. دعونا نستذكر هنا خصائصه: </p>
@@ -2191,7 +2191,7 @@
   </li>
   <li>إذا لم يتلق بروتوكول <bdi dir="ltr" class="odt-ltr-term">TCP</bdi> الذي أرسل المقطع إقرارًا بالاستلام بعد فترة زمنية معينة، فإنه يعيد إرسال المقطع المعني، مما يضمن جودة خدمة توجيه المعلومات.
   </li>
-  <li>الدائرة الافتراضية التي يتم إنشاؤها بين عمليتي الاتصال هي <i>دائرة ثنائية الاتجاه</i>: وهذا يعني أن المعلومات يمكن أن تتدفق في كلا الاتجاهين. وبهذه الطريقة، يمكن لعملية الوجهة إرسال إقرارات بالاستلام بينما تواصل عملية المصدر إرسال المعلومات. وهذا يسمح لبروتوكول <bdi dir="ltr" class="odt-ltr-term">TCP</bdi> المصدر، على سبيل المثال، بإرسال عدة مقاطع دون انتظار إقرار بالاستلام. وإذا أدرك، بعد فترة زمنية معينة، أنه لم يتلق إقرارًا بالاستلام لمقطع معين، <i>رقم </i><bdi dir="ltr" class="odt-ltr-term">n</bdi>، فسيستأنف بث المقطع عند هذه النقطة.
+  <li>الدائرة الافتراضية التي يتم إنشاؤها بين عمليتي الاتصال هي <i>دائرة ثنائية الاتجاه</i>: وهذا يعني أن المعلومات يمكن أن تتدفق في كلا الاتجاهين. وبهذه الطريقة، يمكن لعملية الوجهة إرسال إقرارات بالاستلام بينما تواصل عملية المصدر إرسال المعلومات. وهذا يسمح لبروتوكول <bdi dir="ltr" class="odt-ltr-term">TCP</bdi> المصدر، على سبيل المثال، بإرسال عدة مقاطع دون انتظار إقرار بالاستلام. وإذا أدرك، بعد فترة زمنية معينة، أنه لم يتلق إقرارًا بالاستلام لمقطع معين، <i>رقم </i>n، فسيستأنف بث المقطع عند هذه النقطة.
   </li>
 </ul>
 <p><a id="refheading10403111168783983"></a></p>
@@ -2257,7 +2257,7 @@
 </ul>
 
 <p>فستتمكن من التواصل مع خادم <bdi dir="ltr" class="odt-ltr-term">Tcp</bdi> باستخدام بروتوكول سطر نصي، شريطة أن تكون على دراية بقواعد هذا البروتوكول.</p>
-<p>يعد برنامج <strong><bdi dir="ltr" class="odt-ltr-term">telnet</bdi></strong> الموجود على أجهزة <bdi dir="ltr" class="odt-ltr-term">Unix</bdi> أو <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> أحد هذه البرامج العميلة. على أجهزة <bdi dir="ltr" class="odt-ltr-term">Windows</bdi>، توجد أيضًا أداة تسمى <strong><bdi dir="ltr" class="odt-ltr-term">putty</bdi></strong> وسنستخدمها هنا. يمكن تنزيل <strong><bdi dir="ltr" class="odt-ltr-term">putty</bdi></strong> من [<bdi dir="ltr" class="odt-ltr-term">http://www.putty.org/</bdi>]. وهو ملف قابل للتنفيذ (.<bdi dir="ltr" class="odt-ltr-term">exe</bdi>) يمكن استخدامه مباشرة. سنقوم بتكوينه على النحو التالي:</p>
+<p>يعد برنامج <strong><bdi dir="ltr" class="odt-ltr-term">telnet</bdi></strong> الموجود على أجهزة <bdi dir="ltr" class="odt-ltr-term">Unix</bdi> أو <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> أحد هذه البرامج العميلة. على أجهزة <bdi dir="ltr" class="odt-ltr-term">Windows</bdi>، توجد أيضًا أداة تسمى <strong><bdi dir="ltr" class="odt-ltr-term">putty</bdi></strong> وسنستخدمها هنا. يمكن تنزيل <strong><bdi dir="ltr" class="odt-ltr-term">putty</bdi></strong> من [<bdi dir="ltr" class="odt-ltr-term">http://www.putty.org/</bdi>]. وهو ملف قابل للتنفيذ (.exe) يمكن استخدامه مباشرة. سنقوم بتكوينه على النحو التالي:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007C0000003C1BCB0FAD5.png" width="595" height="288" style="display:inline-block; margin:4px;width:15.75cm;height:7.629cm;" class="odt-zoomable" data-zoom-src="images/10000000000007C0000003C1BCB0FAD5.png" /></td></tr></table>
 
 <ul>
@@ -2642,7 +2642,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="n">TcpClient</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">hostname</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">port</span><span class="p">)</span>
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">C</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">ينشئ رابط <bdi dir="ltr" class="odt-ltr-term">tcp</bdi> مع الخدمة التي تعمل على المنفذ المحدد (<i><bdi dir="ltr" class="odt-ltr-term">port</bdi></i>) للجهاز المشار إليه (<i><bdi dir="ltr" class="odt-ltr-term">hostname</bdi></i>). على سبيل المثال <i><bdi dir="ltr" class="odt-ltr-term">new TcpClient</bdi>(&quot;<bdi dir="ltr" class="odt-ltr-term">istia.univ-angers.fr</bdi>&quot;,80) </i>للاتصال بالمنفذ 80 للجهاز <i><bdi dir="ltr" class="odt-ltr-term">istia.univ-angers.fr</bdi></i></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">C</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">ينشئ رابط tcp مع الخدمة التي تعمل على المنفذ المحدد (<i><bdi dir="ltr" class="odt-ltr-term">port</bdi></i>) للجهاز المشار إليه (<i><bdi dir="ltr" class="odt-ltr-term">hostname</bdi></i>). على سبيل المثال <i><bdi dir="ltr" class="odt-ltr-term">new TcpClient</bdi>(&quot;<bdi dir="ltr" class="odt-ltr-term">istia.univ-angers.fr</bdi>&quot;,80) </i>للاتصال بالمنفذ 80 للجهاز <i><bdi dir="ltr" class="odt-ltr-term">istia.univ-angers.fr</bdi></i></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="err">عميل</span><span class="w"> </span><span class="n">Socket</span>
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">P</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">المقبس الذي يستخدمه العميل للتواصل مع الخادم.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
@@ -2656,7 +2656,7 @@
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">P</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">true</bdi> إذا تم إنشاء الاتصال</div></td></tr></table>
 
-<p>تمثل فئة <strong><bdi dir="ltr" class="odt-ltr-term">NetworkStream</bdi></strong> تدفق الشبكة بين العميل والخادم. وهي مشتقة من فئة <em><bdi dir="ltr" class="odt-ltr-term">Stream</bdi></em>. تتبادل العديد من تطبيقات العميل-الخادم أسطر نصية تنتهي بأحرف نهاية السطر &quot;\<bdi dir="ltr" class="odt-ltr-term">r</bdi>\<bdi dir="ltr" class="odt-ltr-term">n</bdi>&quot;. ولهذا السبب يُنصح باستخدام <em><bdi dir="ltr" class="odt-ltr-term">StreamReader</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">StreamWriter</bdi></em> لقراءة وكتابة هذه الأسطر في تدفق الشبكة. لذا، إذا أقامت آلة <bdi dir="ltr" class="odt-ltr-term">M1</bdi> اتصالاً مع آلة <bdi dir="ltr" class="odt-ltr-term">M2</bdi> باستخدام كائن <bdi dir="ltr" class="odt-ltr-term">TcpClient</bdi> <em><bdi dir="ltr" class="odt-ltr-term">customer1</bdi></em> وتبادلتا أسطر نصية، فيمكنها إنشاء تدفقات القراءة والكتابة على النحو التالي:</p>
+<p>تمثل فئة <strong><bdi dir="ltr" class="odt-ltr-term">NetworkStream</bdi></strong> تدفق الشبكة بين العميل والخادم. وهي مشتقة من فئة <em><bdi dir="ltr" class="odt-ltr-term">Stream</bdi></em>. تتبادل العديد من تطبيقات العميل-الخادم أسطر نصية تنتهي بأحرف نهاية السطر &quot;\r\n&quot;. ولهذا السبب يُنصح باستخدام <em><bdi dir="ltr" class="odt-ltr-term">StreamReader</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">StreamWriter</bdi></em> لقراءة وكتابة هذه الأسطر في تدفق الشبكة. لذا، إذا أقامت آلة <bdi dir="ltr" class="odt-ltr-term">M1</bdi> اتصالاً مع آلة <bdi dir="ltr" class="odt-ltr-term">M2</bdi> باستخدام كائن <bdi dir="ltr" class="odt-ltr-term">TcpClient</bdi> <em><bdi dir="ltr" class="odt-ltr-term">customer1</bdi></em> وتبادلتا أسطر نصية، فيمكنها إنشاء تدفقات القراءة والكتابة على النحو التالي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="n">StreamReader</span><span class="w"> </span><span class="n">in1</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="n">StreamReader</span><span class="p">(</span><span class="n">client1</span><span class="p">.</span><span class="n">GetStream</span><span class="p">());</span>
 <a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a><span class="n">StreamWriter</span><span class="w"> </span><span class="n">out1</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="n">StreamWriter</span><span class="p">(</span><span class="n">client1</span><span class="p">.</span><span class="n">GetStream</span><span class="p">());</span>
 <a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a><span class="n">out1</span><span class="p">.</span><span class="n">AutoFlush</span><span class="o">=</span><span class="k">true</span><span class="p">;</span>
@@ -2739,7 +2739,7 @@
   </li>
   <li>السطر 26: يرسل العميل طلبه إلى الخادم
   </li>
-  <li>السطر 28: ينتظر العميل استجابة الخادم. هذه عملية حجب، مثل القراءة من لوحة المفاتيح. ينتهي الانتظار بوصول سلسلة تنتهي بـ &quot;\<bdi dir="ltr" class="odt-ltr-term">n</bdi>&quot; أو بنهاية التدفق. يحدث هذا الأخير إذا أغلق الخادم الاتصال الذي فتحه مع العميل.
+  <li>السطر 28: ينتظر العميل استجابة الخادم. هذه عملية حجب، مثل القراءة من لوحة المفاتيح. ينتهي الانتظار بوصول سلسلة تنتهي بـ &quot;\n&quot; أو بنهاية التدفق. يحدث هذا الأخير إذا أغلق الخادم الاتصال الذي فتحه مع العميل.
   </li>
 </ul>
 <p><a id="refheading10403351168783983"></a></p>
@@ -3039,7 +3039,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000077E000001B80C2B37CB.png" width="575" height="132" style="display:inline-block; margin:4px;width:15.221cm;height:3.493cm;" class="odt-zoomable" data-zoom-src="images/100000000000077E000001B80C2B37CB.png" /></td></tr></table>
 
 <ul>
-  <li>في [4]: العميل 1 ينفصل باستخدام الأمر <i><bdi dir="ltr" class="odt-ltr-term">bye</bdi></i>.
+  <li>في [4]: العميل 1 ينفصل باستخدام الأمر <i>bye</i>.
   </li>
   <li>في [5]: يكتشف الخادم ذلك
   </li>
@@ -3462,7 +3462,7 @@
     <ul>
       <li>سيعالج العملاء واحدًا تلو الآخر، وليس بشكل متوازٍ.
       </li>
-      <li>الذي سيقرأ الأسطر التي كتبها المستخدم ويرسلها إلى العميل. سيرسل المستخدم الأمر <b><bdi dir="ltr" class="odt-ltr-term">bye</bdi> </b>الذي يغلق الاتصال مع العميل. نظرًا لأن وحدة التحكم لا يمكن استخدامها لعميلين في وقت واحد، فإن خادمنا يتعامل مع عميل واحد فقط في كل مرة.
+      <li>الذي سيقرأ الأسطر التي كتبها المستخدم ويرسلها إلى العميل. سيرسل المستخدم الأمر <b>bye </b>الذي يغلق الاتصال مع العميل. نظرًا لأن وحدة التحكم لا يمكن استخدامها لعميلين في وقت واحد، فإن خادمنا يتعامل مع عميل واحد فقط في كل مرة.
       </li>
     </ul>
   </li>
@@ -3507,7 +3507,7 @@
 <a id="__codelineno-70-9" name="__codelineno-70-9"></a>[Fin du thread de lecture des demandes du client]
 <a id="__codelineno-70-10" name="__codelineno-70-10"></a>bye
 </code></pre></div></td></tr></table></div>
-<p>السطور التي تبدأ بـ &lt;-- هي تلك المرسلة من العميل إلى الخادم، أما البقية فهي تلك المرسلة من الخادم إلى العميل. يشير السطر 9 إلى أن سلسلة قراءة طلبات العميل قد توقفت. لا تزال سلسلة الخادم الرئيسية في انتظار إرسال أوامر لوحة المفاتيح إلى العميل. للقيام بذلك، اكتب الأمر <em><bdi dir="ltr" class="odt-ltr-term">bye</bdi></em> من السطر 10 للانتقال إلى العميل التالي. لا يزال الخادم نشطًا، بينما انتهى العميل 1. نقوم بتشغيل عميل ثانٍ لنفس الخادم:</p>
+<p>السطور التي تبدأ بـ &lt;-- هي تلك المرسلة من العميل إلى الخادم، أما البقية فهي تلك المرسلة من الخادم إلى العميل. يشير السطر 9 إلى أن سلسلة قراءة طلبات العميل قد توقفت. لا تزال سلسلة الخادم الرئيسية في انتظار إرسال أوامر لوحة المفاتيح إلى العميل. للقيام بذلك، اكتب الأمر <em>bye</em> من السطر 10 للانتقال إلى العميل التالي. لا يزال الخادم نشطًا، بينما انتهى العميل 1. نقوم بتشغيل عميل ثانٍ لنفس الخادم:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-71-1">1</a></span>
 <span class="normal"><a href="#__codelineno-71-2">2</a></span>
 <span class="normal"><a href="#__codelineno-71-3">3</a></span>
@@ -3627,7 +3627,7 @@
 <a id="__codelineno-76-11" name="__codelineno-76-11"></a>Flux de lecture des lignes de texte du client : l&#39;erreur suivante s&#39;est produite : Unable to read data from the transport connection: Une opération de blocage a été interrompue par un appel à WSACancelBlockingCall.
 <a id="__codelineno-76-12" name="__codelineno-76-12"></a>[Fin du thread de lecture des demandes du client]
 </code></pre></div></td></tr></table></div>
-<p>في ردنا، اقتصرنا على رؤوس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> في الأسطر 1-4. نحن لا نحدد حجم المستند الذي سنرسله (<em><bdi dir="ltr" class="odt-ltr-term">Content-Length</bdi></em>) بل نكتفي بالقول إننا سنغلق الاتصال (<em><bdi dir="ltr" class="odt-ltr-term">Connection: close</bdi></em>) بعد إرساله. وهذا يكفي للمتصفح. فعندما يرى الاتصال مغلقًا، سيعرف أن رد الخادم قد اكتمل وسيعرض صفحة <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> التي تم إرسالها إليه. وهذه هي الصفحة المعروضة في الأسطر 6-9. ثم يقوم مستخدم لوحة المفاتيح بإغلاق الاتصال بالعميل عن طريق كتابة الأمر <bdi dir="ltr" class="odt-ltr-term">bye</bdi>، السطر 10. عند هذا الأمر من لوحة المفاتيح، يقوم الخيط الرئيسي بإغلاق الاتصال بالعميل. وهذا يتسبب في الاستثناء في السطر 11. فقد تمت مقاطعة الخيط الذي يقرأ سطور نص العميل بشكل مفاجئ بسبب إغلاق الاتصال بالعميل وألقى باستثناء. بعد السطر 12، ينتظر الخادم عميلاً جديداً.</p>
+<p>في ردنا، اقتصرنا على رؤوس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> في الأسطر 1-4. نحن لا نحدد حجم المستند الذي سنرسله (<em><bdi dir="ltr" class="odt-ltr-term">Content-Length</bdi></em>) بل نكتفي بالقول إننا سنغلق الاتصال (<em><bdi dir="ltr" class="odt-ltr-term">Connection: close</bdi></em>) بعد إرساله. وهذا يكفي للمتصفح. فعندما يرى الاتصال مغلقًا، سيعرف أن رد الخادم قد اكتمل وسيعرض صفحة <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> التي تم إرسالها إليه. وهذه هي الصفحة المعروضة في الأسطر 6-9. ثم يقوم مستخدم لوحة المفاتيح بإغلاق الاتصال بالعميل عن طريق كتابة الأمر bye، السطر 10. عند هذا الأمر من لوحة المفاتيح، يقوم الخيط الرئيسي بإغلاق الاتصال بالعميل. وهذا يتسبب في الاستثناء في السطر 11. فقد تمت مقاطعة الخيط الذي يقرأ سطور نص العميل بشكل مفاجئ بسبب إغلاق الاتصال بالعميل وألقى باستثناء. بعد السطر 12، ينتظر الخادم عميلاً جديداً.</p>
 <p>يعرض متصفح العميل الآن ما يلي:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007BE000001D16DBC52BB.png" width="595" height="139" style="display:inline-block; margin:4px;width:15.73cm;height:3.69cm;" class="odt-zoomable" data-zoom-src="images/10000000000007BE000001D16DBC52BB.png" /></td></tr></table>
 
@@ -3810,7 +3810,7 @@
 </ul>
 
 <p>إذا استبدلنا <bdi dir="ltr" class="odt-ltr-term">GET</bdi> بـ <bdi dir="ltr" class="odt-ltr-term">HEAD</bdi> فوق السطر 1، فسيقوم الخادم بإرسال رؤوس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> إلينا فقط وليس المستند المحدد في السطر 1. </p>
-<p>سيُطلق على شبكة الويب الخاصة بالعميل الاسم التالي: <strong><bdi dir="ltr" class="odt-ltr-term">ClientWeb URL</bdi></strong> <bdi dir="ltr" class="odt-ltr-term">cmd</bdi>، حيث يمثل <strong><bdi dir="ltr" class="odt-ltr-term">URL</bdi></strong> عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> المطلوب، ويمثل <strong><bdi dir="ltr" class="odt-ltr-term">cmd</bdi></strong> إحدى الكلمتين الرئيسيتين <bdi dir="ltr" class="odt-ltr-term">GET</bdi> أو <bdi dir="ltr" class="odt-ltr-term">HEAD</bdi> للإشارة إلى ما إذا كان المطلوب هو الرؤوس فقط (<bdi dir="ltr" class="odt-ltr-term">HEAD</bdi>) أم محتوى الصفحة أيضًا (<bdi dir="ltr" class="odt-ltr-term">GET</bdi>). لنلقِ نظرة على المثال الأول:</p>
+<p>سيُطلق على شبكة الويب الخاصة بالعميل الاسم التالي: <strong><bdi dir="ltr" class="odt-ltr-term">ClientWeb URL</bdi></strong> cmd، حيث يمثل <strong><bdi dir="ltr" class="odt-ltr-term">URL</bdi></strong> عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> المطلوب، ويمثل <strong>cmd</strong> إحدى الكلمتين الرئيسيتين <bdi dir="ltr" class="odt-ltr-term">GET</bdi> أو <bdi dir="ltr" class="odt-ltr-term">HEAD</bdi> للإشارة إلى ما إذا كان المطلوب هو الرؤوس فقط (<bdi dir="ltr" class="odt-ltr-term">HEAD</bdi>) أم محتوى الصفحة أيضًا (<bdi dir="ltr" class="odt-ltr-term">GET</bdi>). لنلقِ نظرة على المثال الأول:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-79-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-79-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-79-3"> 3</a></span>
@@ -3915,9 +3915,9 @@
 
 <p>الميزة الجديدة الوحيدة في هذا البرنامج هي استخدام <strong><bdi dir="ltr" class="odt-ltr-term">Uri</bdi></strong>. يتلقى البرنامج عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> (<em>محدد موقع الموارد الموحد</em>) أو <bdi dir="ltr" class="odt-ltr-term">URI</bdi> (<em>مُعرّف الموارد الموحد</em>) بالصيغة <em><bdi dir="ltr" class="odt-ltr-term">http://server:port/cheminPageHTML</bdi>?<bdi dir="ltr" class="odt-ltr-term">param1</bdi>=<bdi dir="ltr" class="odt-ltr-term">val1</bdi>;<bdi dir="ltr" class="odt-ltr-term">param2</bdi>=<bdi dir="ltr" class="odt-ltr-term">val2</bdi>;</em>.... تسمح لنا فئة <strong><bdi dir="ltr" class="odt-ltr-term">Uri</bdi></strong> بتقسيم سلسلة <bdi dir="ltr" class="odt-ltr-term">URL</bdi> إلى عناصرها الفردية.</p>
 <ul>
-  <li>الأسطر 26-33: يتم إنشاء كائن <i><bdi dir="ltr" class="odt-ltr-term">Uri</bdi> </i>من السلسلة <i><bdi dir="ltr" class="odt-ltr-term">stringURI</bdi> </i>المستلمة كمعلمة. إذا كانت سلسلة <bdi dir="ltr" class="odt-ltr-term">URI</bdi> المستلمة كمعلمة ليست <bdi dir="ltr" class="odt-ltr-term">URI</bdi> صالحة (عدم وجود بروتوكول، خادم، إلخ)، يتم إلقاء استثناء. وهذا يسمح لنا بالتحقق من صحة المعلمة المستلمة. بمجرد إنشاء <i><bdi dir="ltr" class="odt-ltr-term">Uri</bdi></i>، يمكننا الوصول إلى العناصر المختلفة لهذا <bdi dir="ltr" class="odt-ltr-term">Uri.</bdi> لذا، إذا تم إنشاء <i><bdi dir="ltr" class="odt-ltr-term">uri</bdi> </i>في الكود السابق من السلسلة<i> <bdi dir="ltr" class="odt-ltr-term">http://server:port/document</bdi>?<bdi dir="ltr" class="odt-ltr-term">param1</bdi>=<bdi dir="ltr" class="odt-ltr-term">val1</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">param2</bdi>=<bdi dir="ltr" class="odt-ltr-term">val2</bdi>;...، </i>فسيكون لدينا: 
+  <li>الأسطر 26-33: يتم إنشاء كائن <i><bdi dir="ltr" class="odt-ltr-term">Uri</bdi> </i>من السلسلة <i><bdi dir="ltr" class="odt-ltr-term">stringURI</bdi> </i>المستلمة كمعلمة. إذا كانت سلسلة <bdi dir="ltr" class="odt-ltr-term">URI</bdi> المستلمة كمعلمة ليست <bdi dir="ltr" class="odt-ltr-term">URI</bdi> صالحة (عدم وجود بروتوكول، خادم، إلخ)، يتم إلقاء استثناء. وهذا يسمح لنا بالتحقق من صحة المعلمة المستلمة. بمجرد إنشاء <i><bdi dir="ltr" class="odt-ltr-term">Uri</bdi></i>، يمكننا الوصول إلى العناصر المختلفة لهذا <bdi dir="ltr" class="odt-ltr-term">Uri.</bdi> لذا، إذا تم إنشاء <i>uri </i>في الكود السابق من السلسلة<i> <bdi dir="ltr" class="odt-ltr-term">http://server:port/document</bdi>?<bdi dir="ltr" class="odt-ltr-term">param1</bdi>=<bdi dir="ltr" class="odt-ltr-term">val1</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">param2</bdi>=<bdi dir="ltr" class="odt-ltr-term">val2</bdi>;...، </i>فسيكون لدينا: 
     <ul>
-      <li><i><bdi dir="ltr" class="odt-ltr-term">uri</bdi></i><b>.</b><bdi dir="ltr" class="odt-ltr-term">Host</bdi>=<bdi dir="ltr" class="odt-ltr-term">server</bdi>، 
+      <li><i>uri</i><b>.</b><bdi dir="ltr" class="odt-ltr-term">Host</bdi>=<bdi dir="ltr" class="odt-ltr-term">server</bdi>، 
       </li>
       <li><b><bdi dir="ltr" class="odt-ltr-term">uri.</bdi></b><i><bdi dir="ltr" class="odt-ltr-term">Port</bdi>=<bdi dir="ltr" class="odt-ltr-term">port</bdi></i>، 
       </li>
@@ -4668,7 +4668,7 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 40: يتم إنشاء كائن من نوع <i><bdi dir="ltr" class="odt-ltr-term">WebRequest</bdi> </i>باستخدام الطريقة الثابتة <i><bdi dir="ltr" class="odt-ltr-term">WebRequest.Create</bdi>(<bdi dir="ltr" class="odt-ltr-term">Uri uri</bdi>)</i>، حيث يمثل <bdi dir="ltr" class="odt-ltr-term">uri</bdi> عنوان <bdi dir="ltr" class="odt-ltr-term">URI</bdi> للوثيقة المراد تنزيلها. ونظرًا لأننا نعلم أن بروتوكول <bdi dir="ltr" class="odt-ltr-term">Uri</bdi> هو <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi>، يتم تغيير نوع النتيجة إلى <i><bdi dir="ltr" class="odt-ltr-term">HttpWebRequest</bdi> </i>للوصول إلى عناصر محددة في بروتوكول <bdi dir="ltr" class="odt-ltr-term">HTTP.</bdi>
+  <li>السطر 40: يتم إنشاء كائن من نوع <i><bdi dir="ltr" class="odt-ltr-term">WebRequest</bdi> </i>باستخدام الطريقة الثابتة <i><bdi dir="ltr" class="odt-ltr-term">WebRequest.Create</bdi>(<bdi dir="ltr" class="odt-ltr-term">Uri uri</bdi>)</i>، حيث يمثل uri عنوان <bdi dir="ltr" class="odt-ltr-term">URI</bdi> للوثيقة المراد تنزيلها. ونظرًا لأننا نعلم أن بروتوكول <bdi dir="ltr" class="odt-ltr-term">Uri</bdi> هو <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi>، يتم تغيير نوع النتيجة إلى <i><bdi dir="ltr" class="odt-ltr-term">HttpWebRequest</bdi> </i>للوصول إلى عناصر محددة في بروتوكول <bdi dir="ltr" class="odt-ltr-term">HTTP.</bdi>
   </li>
   <li>السطر 41: نحدد طريقة <bdi dir="ltr" class="odt-ltr-term">GET</bdi> / <bdi dir="ltr" class="odt-ltr-term">POST</bdi> / <bdi dir="ltr" class="odt-ltr-term">HEAD</bdi> للسطر الأول من رؤوس <bdi dir="ltr" class="odt-ltr-term">HTTP. Ici</bdi> ستكون <bdi dir="ltr" class="odt-ltr-term">GET</bdi> أو <bdi dir="ltr" class="odt-ltr-term">HEAD.</bdi>
   </li>
@@ -4736,7 +4736,7 @@
 <h3 id="1173">11.7.3. <span style="color: #4f81bd">التطبيق: عميل وكيل لخادم ترجمة ويب</span></h3>
 <p>سنوضح الآن كيف تسمح لنا الفئات السابقة باستغلال موارد الويب.</p>
 <h4 id="11731">11.7.3.1. <span style="color: #4f81bd">التطبيق</span></h4>
-<p>هناك العديد من مواقع الترجمة على الويب. الموقع الذي سيتم استخدامه هنا هو <strong><bdi dir="ltr" class="odt-ltr-term">http://trans.voila.fr/traduction</bdi>_voila.<bdi dir="ltr" class="odt-ltr-term">php</bdi></strong> :</p>
+<p>هناك العديد من مواقع الترجمة على الويب. الموقع الذي سيتم استخدامه هنا هو <strong><bdi dir="ltr" class="odt-ltr-term">http://trans.voila.fr/traduction</bdi>_voila.php</strong> :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003CA000001F85CBD50C9.png" width="291" height="151" style="display:inline-block; margin:4px;width:7.699cm;height:4.001cm;" class="odt-zoomable" data-zoom-src="images/10000000000003CA000001F85CBD50C9.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يتم إدخال النص المراد ترجمته في [1]، ويتم اختيار اتجاه الترجمة في [2]. يتم طلب الترجمة في [3] والحصول عليها في [4].</div></td></tr></table>
 
 <p>سنقوم بكتابة تطبيق <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> يكون عميلاً للتطبيق المذكور أعلاه. ولن يقوم بأي شيء أكثر مما يقوم به تطبيق موقع [<bdi dir="ltr" class="odt-ltr-term">trans.voila.fr</bdi>]. وستكون واجهته كما يلي:</p>
@@ -4753,16 +4753,16 @@
 <ul>
   <li>في [1]، يتكون الحل من مشروعين، 
   </li>
-  <li>[2]: أحدهما لطبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] والكيانات التي تستخدمها،
+  <li>[2]: أحدهما لطبقة [dao] والكيانات التي تستخدمها،
   </li>
   <li>[3]: والآخر لواجهة <bdi dir="ltr" class="odt-ltr-term">Windows</bdi>
   </li>
 </ul>
 
-<h4 id="11734-dao">11.7.3.4. <span style="color: #4f81bd">مشروع [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</span></h4>
-<p>يتكون مشروع [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] من العناصر التالية:</p>
+<h4 id="11734-dao">11.7.3.4. <span style="color: #4f81bd">مشروع [dao]</span></h4>
+<p>يتكون مشروع [dao] من العناصر التالية:</p>
 <ul>
-  <li><b><bdi dir="ltr" class="odt-ltr-term">IServiceTraduction.cs</bdi> </b>: الواجهة المعروضة على الطبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>]
+  <li><b><bdi dir="ltr" class="odt-ltr-term">IServiceTraduction.cs</bdi> </b>: الواجهة المعروضة على الطبقة [ui]
   </li>
   <li><b><bdi dir="ltr" class="odt-ltr-term">ServiceTraduction</bdi></b>: تنفيذ هذه الواجهة
   </li>
@@ -4785,7 +4785,7 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 6: تعيد الخاصية <b><bdi dir="ltr" class="odt-ltr-term">LanguesTraduites</bdi> </b>قاموس اللغات التي يقبلها خادم الترجمة. يحتوي هذا القاموس على إدخالات بالصيغة [&quot;<bdi dir="ltr" class="odt-ltr-term">fe</bdi>&quot;, &quot;<bdi dir="ltr" class="odt-ltr-term">French-English</bdi>&quot;] حيث تشير القيمة إلى اتجاه الترجمة، هنا من الفرنسية إلى الإنجليزية، والمفتاح &quot;<bdi dir="ltr" class="odt-ltr-term">fe</bdi>&quot; هو رمز يستخدمه خادم الترجمة <i><bdi dir="ltr" class="odt-ltr-term">trans.voila.fr</bdi></i>.
+  <li>السطر 6: تعيد الخاصية <b><bdi dir="ltr" class="odt-ltr-term">LanguesTraduites</bdi> </b>قاموس اللغات التي يقبلها خادم الترجمة. يحتوي هذا القاموس على إدخالات بالصيغة [&quot;fe&quot;, &quot;<bdi dir="ltr" class="odt-ltr-term">French-English</bdi>&quot;] حيث تشير القيمة إلى اتجاه الترجمة، هنا من الفرنسية إلى الإنجليزية، والمفتاح &quot;fe&quot; هو رمز يستخدمه خادم الترجمة <i><bdi dir="ltr" class="odt-ltr-term">trans.voila.fr</bdi></i>.
   </li>
   <li>السطر 8: الطريقة <i><bdi dir="ltr" class="odt-ltr-term">Translate</bdi> </i>هي طريقة الترجمة:
     <ul>
@@ -4901,13 +4901,13 @@
 <a id="__codelineno-109-18" name="__codelineno-109-18"></a>    <span class="p">&lt;</span><span class="nt">option</span>  <span class="na">value</span><span class="o">=</span><span class="s">&#39;sg&#39;</span><span class="p">&gt;</span>Espagnol vers Allemand
 <a id="__codelineno-109-19" name="__codelineno-109-19"></a><span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
-<p>هذا ليس كود <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> نظيفًا تمامًا، حيث إن كل علامة &lt;<bdi dir="ltr" class="odt-ltr-term">option</bdi>&gt; يجب أن تُغلق عادةً بعلامة &lt;/<bdi dir="ltr" class="odt-ltr-term">option</bdi>&gt;. ومع ذلك، فإن <strong>القيمة</strong> تعطينا قائمة برموز الترجمة التي سيتم إرسالها إلى الخادم. في واجهة <strong><bdi dir="ltr" class="odt-ltr-term">IServiceTraduction</bdi></strong> الخاصة بقاموس <bdi dir="ltr" class="odt-ltr-term">LanguesTraduit</bdi><strong><bdi dir="ltr" class="odt-ltr-term">es</bdi></strong>، ستكون المفاتيح هي <strong>قيم</strong> السمات المذكورة أعلاه والقيم والنصوص المعروضة في القائمة المنسدلة.</p>
+<p>هذا ليس كود <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> نظيفًا تمامًا، حيث إن كل علامة &lt;<bdi dir="ltr" class="odt-ltr-term">option</bdi>&gt; يجب أن تُغلق عادةً بعلامة &lt;/<bdi dir="ltr" class="odt-ltr-term">option</bdi>&gt;. ومع ذلك، فإن <strong>القيمة</strong> تعطينا قائمة برموز الترجمة التي سيتم إرسالها إلى الخادم. في واجهة <strong><bdi dir="ltr" class="odt-ltr-term">IServiceTraduction</bdi></strong> الخاصة بقاموس <bdi dir="ltr" class="odt-ltr-term">LanguesTraduit</bdi><strong>es</strong>، ستكون المفاتيح هي <strong>قيم</strong> السمات المذكورة أعلاه والقيم والنصوص المعروضة في القائمة المنسدلة.</p>
 <p>الآن دعونا نلقي نظرة (عرض / المصدر) على المكان الذي توجد فيه الترجمة التي أعادها خادم الترجمة في صفحة <bdi dir="ltr" class="odt-ltr-term">HTML:</bdi></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-110-1" name="__codelineno-110-1" href="#__codelineno-110-1"></a>...                                                                
 <a id="__codelineno-110-2" name="__codelineno-110-2" href="#__codelineno-110-2"></a><span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Texte traduit : <span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;txtTrad&quot;</span><span class="p">&gt;</span>this dog is sick<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span> 
 <a id="__codelineno-110-3" name="__codelineno-110-3" href="#__codelineno-110-3"></a>...
 </code></pre></div>
-<p>الترجمة موجودة في منتصف صفحة <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> المعروضة. كيف يمكنني العثور عليها؟ يمكنك استخدام تعبير عادي مع التسلسل <em>&lt;<bdi dir="ltr" class="odt-ltr-term">div class</bdi>=&quot;<bdi dir="ltr" class="odt-ltr-term">txtTrad</bdi>&quot;&gt;...&lt;/<bdi dir="ltr" class="odt-ltr-term">div</bdi>&gt;</em> لأن <em>&lt;<bdi dir="ltr" class="odt-ltr-term">div class</bdi>=&quot;<bdi dir="ltr" class="odt-ltr-term">txtTrad</bdi>&quot;&gt;</em> موجود فقط في هذه النقطة من صفحة <bdi dir="ltr" class="odt-ltr-term">HTML.</bdi> التعبير العادي في <bdi dir="ltr" class="odt-ltr-term">C#</bdi> المستخدم لاسترداد النص المترجم هو:</p>
+<p>الترجمة موجودة في منتصف صفحة <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> المعروضة. كيف يمكنني العثور عليها؟ يمكنك استخدام تعبير عادي مع التسلسل <em>&lt;<bdi dir="ltr" class="odt-ltr-term">div class</bdi>=&quot;<bdi dir="ltr" class="odt-ltr-term">txtTrad</bdi>&quot;&gt;...&lt;/div&gt;</em> لأن <em>&lt;<bdi dir="ltr" class="odt-ltr-term">div class</bdi>=&quot;<bdi dir="ltr" class="odt-ltr-term">txtTrad</bdi>&quot;&gt;</em> موجود فقط في هذه النقطة من صفحة <bdi dir="ltr" class="odt-ltr-term">HTML.</bdi> التعبير العادي في <bdi dir="ltr" class="odt-ltr-term">C#</bdi> المستخدم لاسترداد النص المترجم هو:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-111-1" name="__codelineno-111-1" href="#__codelineno-111-1"></a>@&quot;<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="na">txtTrad</span><span class="err">&quot;&quot;</span><span class="p">&gt;</span>(.*?)<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>&quot;
 </code></pre></div>
 <p>لدينا الآن العناصر التي نحتاجها لكتابة فئة التنفيذ <em><bdi dir="ltr" class="odt-ltr-term">ServiceTraduction</bdi></em> لواجهة <em><bdi dir="ltr" class="odt-ltr-term">IServiceTraduction</bdi></em>:</p>
@@ -4992,7 +4992,7 @@
   </li>
   <li>السطر 14: الخاصية <i><bdi dir="ltr" class="odt-ltr-term">ProxyHttp</bdi> </i>هي وكيل <bdi dir="ltr" class="odt-ltr-term">Http</bdi> المراد استخدامه، على سبيل المثال: <i><bdi dir="ltr" class="odt-ltr-term">pproxy.istia.uang:3128</bdi> </i>- يتم تهيئتها خارجيًا
   </li>
-  <li>السطر 15: الخاصية <i><bdi dir="ltr" class="odt-ltr-term">RegexTraduction</bdi> </i>هي التعبير العادي المستخدم لاسترداد الترجمة من دفق <bdi dir="ltr" class="odt-ltr-term">Html</bdi> الذي يعيده خادم الترجمة، على سبيل المثال <i>@&quot;&lt;<bdi dir="ltr" class="odt-ltr-term">div class</bdi>=&quot;&quot;<bdi dir="ltr" class="odt-ltr-term">txtTrad</bdi>&quot;&quot;&gt;(.*?)&lt;/<bdi dir="ltr" class="odt-ltr-term">div</bdi>&gt;&quot; </i>- يتم تهيئتها خارجيًا
+  <li>السطر 15: الخاصية <i><bdi dir="ltr" class="odt-ltr-term">RegexTraduction</bdi> </i>هي التعبير العادي المستخدم لاسترداد الترجمة من دفق <bdi dir="ltr" class="odt-ltr-term">Html</bdi> الذي يعيده خادم الترجمة، على سبيل المثال <i>@&quot;&lt;<bdi dir="ltr" class="odt-ltr-term">div class</bdi>=&quot;&quot;<bdi dir="ltr" class="odt-ltr-term">txtTrad</bdi>&quot;&quot;&gt;(.*?)&lt;/div&gt;&quot; </i>- يتم تهيئتها خارجيًا
   </li>
   <li>في تطبيقنا، سيتم تهيئة هذه الخصائص الأربع بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi>
   </li>
@@ -5007,7 +5007,7 @@
   </li>
   <li>السطر 28: يتم إنشاء نموذج البحث عن الترجمة في استجابة <bdi dir="ltr" class="odt-ltr-term">html</bdi> من خادم الترجمة.
   </li>
-  <li>السطران 33 و60: تتم عملية استعلام خادم الترجمة في وضع <bdi dir="ltr" class="odt-ltr-term">try</bdi> / <bdi dir="ltr" class="odt-ltr-term">catch</bdi>
+  <li>السطران 33 و60: تتم عملية استعلام خادم الترجمة في وضع try / <bdi dir="ltr" class="odt-ltr-term">catch</bdi>
   </li>
   <li>السطر 35: يتم إنشاء الكائن <i><bdi dir="ltr" class="odt-ltr-term">HttpWebRequest</bdi> </i>الذي سيُستخدم للاستعلام عن خادم الترجمة باستخدام عنوان <bdi dir="ltr" class="odt-ltr-term">Uri</bdi> للوثيقة المطلوبة.
   </li>
@@ -5092,21 +5092,21 @@
 <a id="__codelineno-112-3" name="__codelineno-112-3"></a>Traduction [Anglais-Français] de [my tailor is rich] : [mon tailleur est riche]
 <a id="__codelineno-112-4" name="__codelineno-112-4"></a>Traduction [Anglais-Français] de [xx] : [xx]
 </code></pre></div></td></tr></table></div>
-<p>يتم تجميع مشروع الحل [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] في ملف <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> <em><bdi dir="ltr" class="odt-ltr-term">HttpTraductions.dll</bdi></em> :</p>
+<p>يتم تجميع مشروع الحل [dao] في ملف <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> <em><bdi dir="ltr" class="odt-ltr-term">HttpTraductions.dll</bdi></em> :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000292000000B07A574189.png" width="461" height="123" style="display:inline-block; margin:4px;width:12.19cm;height:3.261cm;" class="odt-zoomable" data-zoom-src="images/1000000000000292000000B07A574189.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <h4 id="11736">11.7.3.6. <span style="color: #4f81bd">الواجهة الرسومية للتطبيق</span></h4>
 <p>لنعد إلى بنية تطبيقنا:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000654000001B4A3A5D22F.png" width="486" height="131" style="display:inline-block; margin:4px;width:12.861cm;height:3.461cm;" class="odt-zoomable" data-zoom-src="images/1000000000000654000001B4A3A5D22F.png" /></td></tr></table>
 
-<p>نكتب الآن طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>]. هذا هو موضوع مشروع [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] في الحل قيد الإنشاء:</p>
+<p>نكتب الآن طبقة [ui]. هذا هو موضوع مشروع [ui] في الحل قيد الإنشاء:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007510000017807555F01.png" width="562" height="113" style="display:inline-block; margin:4px;width:14.87cm;height:2.985cm;" class="odt-zoomable" data-zoom-src="images/10000000000007510000017807555F01.png" /></td></tr></table>
 
-<p>يحتوي المجلد [<bdi dir="ltr" class="odt-ltr-term">lib</bdi>] [3] على بعض ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> التي يشير إليها مشروع [4]:</p>
+<p>يحتوي المجلد [lib] [3] على بعض ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> التي يشير إليها مشروع [4]:</p>
 <ul>
   <li>تلك المطلوبة لـ <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> : <i><bdi dir="ltr" class="odt-ltr-term">Spring.Core</bdi></i>، <i><bdi dir="ltr" class="odt-ltr-term">Common.Logging</bdi>، <bdi dir="ltr" class="odt-ltr-term">antlr.runtime</bdi></i>
   </li>
-  <li>الطبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]: <i><bdi dir="ltr" class="odt-ltr-term">HttpTraductions</bdi></i>
+  <li>الطبقة [dao]: <i><bdi dir="ltr" class="odt-ltr-term">HttpTraductions</bdi></i>
   </li>
 </ul>
 
@@ -5153,7 +5153,7 @@
 <ul>
   <li>السطر 15: الكائنات التي سيتم إنشاء مثيل لها بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> سيكون هناك كائن واحد فقط، وهو الموجود في السطر 18، الذي ينشئ مثيل خدمة الترجمة باستخدام فئة <i><bdi dir="ltr" class="odt-ltr-term">ServiceTraduction</bdi> </i>الموجودة في مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> <i><bdi dir="ltr" class="odt-ltr-term">HttpTraductions</bdi></i>.
   </li>
-  <li>السطر 19: خاصية <i><bdi dir="ltr" class="odt-ltr-term">UrlServeurTraduction</bdi> في </i>فئة <i><bdi dir="ltr" class="odt-ltr-term">ServiceTraduction.</bdi></i> هناك مشكلة في الحرف &amp; في <bdi dir="ltr" class="odt-ltr-term">Url.</bdi> هذا الحرف له معنى في ملف <bdi dir="ltr" class="odt-ltr-term">Xml.</bdi> لذلك يجب حمايته. وينطبق هذا أيضًا على الأحرف الأخرى التي سنصادفها في بقية الملف. يجب استبدالها بتسلسل [<i>&amp;<bdi dir="ltr" class="odt-ltr-term">code</bdi>;]</i>: &amp; بـ [<i>&amp;<bdi dir="ltr" class="odt-ltr-term">amp</bdi>;]</i>، و&lt; بـ [<i>&amp;<bdi dir="ltr" class="odt-ltr-term">lt</bdi>;]</i>، و&gt; بـ [<i>&amp;<bdi dir="ltr" class="odt-ltr-term">gt</bdi></i>;]، و&quot; بـ [<i>&amp;<bdi dir="ltr" class="odt-ltr-term">quot</bdi>;].</i>
+  <li>السطر 19: خاصية <i><bdi dir="ltr" class="odt-ltr-term">UrlServeurTraduction</bdi> في </i>فئة <i><bdi dir="ltr" class="odt-ltr-term">ServiceTraduction.</bdi></i> هناك مشكلة في الحرف &amp; في <bdi dir="ltr" class="odt-ltr-term">Url.</bdi> هذا الحرف له معنى في ملف <bdi dir="ltr" class="odt-ltr-term">Xml.</bdi> لذلك يجب حمايته. وينطبق هذا أيضًا على الأحرف الأخرى التي سنصادفها في بقية الملف. يجب استبدالها بتسلسل [<i>&amp;<bdi dir="ltr" class="odt-ltr-term">code</bdi>;]</i>: &amp; بـ [<i>&amp;amp;]</i>، و&lt; بـ [<i>&amp;lt;]</i>، و&gt; بـ [<i>&amp;gt</i>;]، و&quot; بـ [<i>&amp;<bdi dir="ltr" class="odt-ltr-term">quot</bdi>;].</i>
   </li>
   <li>السطر 21: الخاصية <i><bdi dir="ltr" class="odt-ltr-term">ProxyHttp</bdi> </i>في فئة <i><bdi dir="ltr" class="odt-ltr-term">ServiceTraduction.</bdi> </i>تظل الخاصية غير المُهيأة <i>قيمةً فارغة</i>. عدم تعيين هذه الخاصية يعني عدم وجود وكيل <bdi dir="ltr" class="odt-ltr-term">Http.</bdi>
   </li>
@@ -5299,11 +5299,11 @@
 <ul>
   <li>السطر 10: إشارة إلى خدمة الترجمة. تم تهيئة هذه الخاصية العامة بواسطة [<bdi dir="ltr" class="odt-ltr-term">Program.cs</bdi>]، السطر 53. عند تنفيذ <i><bdi dir="ltr" class="odt-ltr-term">Form1_Load</bdi> </i>(السطر 20) أو <i><bdi dir="ltr" class="odt-ltr-term">buttonTraduire_Click</bdi> </i>(السطر 40)، يكون هذا الحقل قد تم تهيئته بالفعل.
   </li>
-  <li>السطر 12: قاموس اللغات المترجمة مع إدخالات من النوع [&quot;<bdi dir="ltr" class="odt-ltr-term">French-English</bdi>&quot;, &quot;<bdi dir="ltr" class="odt-ltr-term">fe</bdi>&quot;], أي عكس قاموس <i><bdi dir="ltr" class="odt-ltr-term">LanguesTraduites</bdi></i> الذي تقدمه خدمة الترجمة.
+  <li>السطر 12: قاموس اللغات المترجمة مع إدخالات من النوع [&quot;<bdi dir="ltr" class="odt-ltr-term">French-English</bdi>&quot;, &quot;fe&quot;], أي عكس قاموس <i><bdi dir="ltr" class="odt-ltr-term">LanguesTraduites</bdi></i> الذي تقدمه خدمة الترجمة.
   </li>
   <li>السطر 20: يتم تنفيذ الأسلوب <i><bdi dir="ltr" class="odt-ltr-term">Form1_Load</bdi> </i>عند تحميل النموذج.
   </li>
-  <li>الأسطر 22-27: استخدام خدمة القاموس <i><bdi dir="ltr" class="odt-ltr-term">serviceTraduction.LanguesTraduites</bdi> </i>[&quot;<bdi dir="ltr" class="odt-ltr-term">fe</bdi>&quot;, &quot;<bdi dir="ltr" class="odt-ltr-term">Français-Anglais</bdi>&quot;] لإنشاء قاموس <i><bdi dir="ltr" class="odt-ltr-term">languagesInversées</bdi> </i>[&quot;<bdi dir="ltr" class="odt-ltr-term">French-English</bdi>&quot;, &quot;<bdi dir="ltr" class="odt-ltr-term">fe</bdi>&quot;].
+  <li>الأسطر 22-27: استخدام خدمة القاموس <i><bdi dir="ltr" class="odt-ltr-term">serviceTraduction.LanguesTraduites</bdi> </i>[&quot;fe&quot;, &quot;<bdi dir="ltr" class="odt-ltr-term">Français-Anglais</bdi>&quot;] لإنشاء قاموس <i><bdi dir="ltr" class="odt-ltr-term">languagesInversées</bdi> </i>[&quot;<bdi dir="ltr" class="odt-ltr-term">French-English</bdi>&quot;, &quot;fe&quot;].
   </li>
   <li>السطر 29: <i><bdi dir="ltr" class="odt-ltr-term">languesCombo</bdi> </i>هو مصفوفة مفاتيح القاموس <i><bdi dir="ltr" class="odt-ltr-term">languagesInversées</bdi></i>، أي مصفوفة من العناصر [&quot;<bdi dir="ltr" class="odt-ltr-term">French-English</bdi>&quot;]
   </li>
@@ -5584,7 +5584,7 @@
 <p>[<bdi dir="ltr" class="odt-ltr-term">ClientTcpAsynchrone.cs</bdi>] هو الواجهة الرسومية. وهو كما يلي:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004CB000003C9B97E97DF.png" width="368" height="291" style="display:inline-block; margin:4px;width:9.74cm;height:7.692cm;" class="odt-zoomable" data-zoom-src="images/10000000000004CB000003C9B97E97DF.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>رقم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>النوع</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الاسم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">1</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع النص</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">textBoxNomServeur</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">اسم الخادم <bdi dir="ltr" class="odt-ltr-term">Tcp</bdi> للاتصال به</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">2</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">NumericUpDown</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">رقم_أعلى_أسفل_منفذ_الخادم</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">المنفذ المراد الاتصال به</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">3</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">زر الاختيار</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">زر الاختيار</div><div style="margin:0 0 0.5em 0">زر الاختيار <bdi dir="ltr" class="odt-ltr-term">RCLF</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">للإشارة إلى علامة نهاية السطر التي سيستخدمها العميل: <bdi dir="ltr" class="odt-ltr-term">LF</bdi> &quot;\<bdi dir="ltr" class="odt-ltr-term">n</bdi>&quot; أو <bdi dir="ltr" class="odt-ltr-term">RCLF</bdi> &quot;\<bdi dir="ltr" class="odt-ltr-term">r</bdi>\<bdi dir="ltr" class="odt-ltr-term">n</bdi>&quot;</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">4</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">زر</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">buttonConnexion</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">للاتصال بالمنفذ [2] للخادم [1]. يتم تسمية الزر [<bdi dir="ltr" class="odt-ltr-term">Connect</bdi>] عندما لا يكون العميل متصلاً بخادم، و[<bdi dir="ltr" class="odt-ltr-term">Disconnect</bdi>] عندما يكون متصلاً.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">5</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">TextBox</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">textBoxMsgToServeur</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الرسالة المراد إرسالها إلى الخادم بمجرد إتمام الاتصال. عندما يضغط المستخدم على [<bdi dir="ltr" class="odt-ltr-term">Enter</bdi>]، يتم إرسال الرسالة مع علامة نهاية السطر المحددة في [3]</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">6</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">ListBox</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">listBoxEvts</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">قائمة تعرض أحداث الارتباط الرئيسية بين العميل والخادم: الاتصال، قطع الاتصال، إغلاق التدفق، أخطاء الاتصال، إلخ</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">7</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">ListBox</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">listBoxDialogue</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">قائمة تعرض رسائل حوار العميل/الخادم</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">8</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">زر</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">buttonRazEvts</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">لمسح القائمة [6]</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">4</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">زر</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">زر <bdi dir="ltr" class="odt-ltr-term">RazDialogue</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">لمسح القائمة [7]</div></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>رقم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>النوع</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الاسم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">1</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع النص</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">textBoxNomServeur</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">اسم الخادم <bdi dir="ltr" class="odt-ltr-term">Tcp</bdi> للاتصال به</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">2</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">NumericUpDown</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">رقم_أعلى_أسفل_منفذ_الخادم</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">المنفذ المراد الاتصال به</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">3</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">زر الاختيار</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">زر الاختيار</div><div style="margin:0 0 0.5em 0">زر الاختيار <bdi dir="ltr" class="odt-ltr-term">RCLF</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">للإشارة إلى علامة نهاية السطر التي سيستخدمها العميل: <bdi dir="ltr" class="odt-ltr-term">LF</bdi> &quot;\n&quot; أو <bdi dir="ltr" class="odt-ltr-term">RCLF</bdi> &quot;\r\n&quot;</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">4</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">زر</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">buttonConnexion</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">للاتصال بالمنفذ [2] للخادم [1]. يتم تسمية الزر [<bdi dir="ltr" class="odt-ltr-term">Connect</bdi>] عندما لا يكون العميل متصلاً بخادم، و[<bdi dir="ltr" class="odt-ltr-term">Disconnect</bdi>] عندما يكون متصلاً.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">5</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">TextBox</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">textBoxMsgToServeur</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الرسالة المراد إرسالها إلى الخادم بمجرد إتمام الاتصال. عندما يضغط المستخدم على [<bdi dir="ltr" class="odt-ltr-term">Enter</bdi>]، يتم إرسال الرسالة مع علامة نهاية السطر المحددة في [3]</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">6</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">ListBox</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">listBoxEvts</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">قائمة تعرض أحداث الارتباط الرئيسية بين العميل والخادم: الاتصال، قطع الاتصال، إغلاق التدفق، أخطاء الاتصال، إلخ</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">7</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">ListBox</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">listBoxDialogue</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">قائمة تعرض رسائل حوار العميل/الخادم</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">8</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">زر</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">buttonRazEvts</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">لمسح القائمة [6]</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">4</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">زر</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">زر <bdi dir="ltr" class="odt-ltr-term">RazDialogue</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">لمسح القائمة [7]</div></td></tr></table>
 
 <p>مبادئ تشغيل هذه الواجهة هي كما يلي:</p>
 <ul>
@@ -5744,7 +5744,7 @@
 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-114-1" name="__codelineno-114-1" href="#__codelineno-114-1"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">AsyncCallBack</span><span class="p">(</span><span class="n">IAsyncResult</span><span class="w"> </span><span class="n">ar</span><span class="p">);</span>
 </code></pre></div>
-<p>يجب أن تكون الطريقة <em><bdi dir="ltr" class="odt-ltr-term">asyncCallBack</bdi></em> التي تم تمريرها كمعلمة ثالثة لـ <em><bdi dir="ltr" class="odt-ltr-term">BeginConnect</bdi></em> طريقة تقبل <em><bdi dir="ltr" class="odt-ltr-term">IAsyncCallBack</bdi></em> ولا تُرجع أي نتائج. هذه هي الطريقة التي سيتم استدعاؤها عند إتمام الاتصال. نمرر <bdi dir="ltr" class="odt-ltr-term">ici</bdi> كمعلمة ثالثة، وهي الطريقة <em>المتصلة</em> في السطر 41.</p>
+<p>يجب أن تكون الطريقة <em><bdi dir="ltr" class="odt-ltr-term">asyncCallBack</bdi></em> التي تم تمريرها كمعلمة ثالثة لـ <em><bdi dir="ltr" class="odt-ltr-term">BeginConnect</bdi></em> طريقة تقبل <em><bdi dir="ltr" class="odt-ltr-term">IAsyncCallBack</bdi></em> ولا تُرجع أي نتائج. هذه هي الطريقة التي سيتم استدعاؤها عند إتمام الاتصال. نمرر ici كمعلمة ثالثة، وهي الطريقة <em>المتصلة</em> في السطر 41.</p>
 <ul>
   <li>(تابع)
     <ul>
@@ -5802,9 +5802,9 @@
     <ul>
       <li><b><bdi dir="ltr" class="odt-ltr-term">byte</bdi>[] </b><i><bdi dir="ltr" class="odt-ltr-term">buffer</bdi></i>: المخزن المؤقت الذي توضع فيه البيانات المراد استلامها - هنا المخزن المؤقت هو <i><bdi dir="ltr" class="odt-ltr-term">data</bdi></i>
       </li>
-      <li><b><bdi dir="ltr" class="odt-ltr-term">int</bdi> </b><i><bdi dir="ltr" class="odt-ltr-term">offset</bdi> </i>: من أي موضع في المخزن المؤقت يتم وضع البيانات المراد استلامها - هنا الإزاحة هي 0، أي أن البيانات توضع من البايت الأول من المخزن المؤقت.
+      <li><b>int </b><i><bdi dir="ltr" class="odt-ltr-term">offset</bdi> </i>: من أي موضع في المخزن المؤقت يتم وضع البيانات المراد استلامها - هنا الإزاحة هي 0، أي أن البيانات توضع من البايت الأول من المخزن المؤقت.
       </li>
-      <li><b><bdi dir="ltr" class="odt-ltr-term">int</bdi> </b><i><bdi dir="ltr" class="odt-ltr-term">size</bdi></i>: حجم المخزن المؤقت بالبايت - هنا الحجم هو <i><bdi dir="ltr" class="odt-ltr-term">tailleBuffer</bdi></i>.
+      <li><b>int </b><i><bdi dir="ltr" class="odt-ltr-term">size</bdi></i>: حجم المخزن المؤقت بالبايت - هنا الحجم هو <i><bdi dir="ltr" class="odt-ltr-term">tailleBuffer</bdi></i>.
       </li>
       <li><b><bdi dir="ltr" class="odt-ltr-term">SocketFlags</bdi> </b><i><bdi dir="ltr" class="odt-ltr-term">socketFlags</bdi></i>: تكوين المأخذ - هنا لا يوجد تكوين
       </li>
@@ -6080,7 +6080,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>المعلمة الأولى هي الرسالة المراد عرضها. يمكن أن تكون هذه الرسالة عبارة عن سلسلة من الأسطر. في الواقع، يقرأ العميل البيانات من الخادم في كتل بحجم <em><bdi dir="ltr" class="odt-ltr-term">tailleBuffer</bdi></em> (1024) بايت. ضمن هذه الـ 1024 بايت، يمكن العثور على أسطر مختلفة، يتم تحديدها بعلامة نهاية السطر &quot;\<bdi dir="ltr" class="odt-ltr-term">n</bdi>&quot;. قد يكون السطر الأخير غير مكتمل، حيث تكون علامة نهاية السطر الخاصة به موجودة في الـ 1024 بايت التالية. تبحث الطريقة عن الأسطر التي تنتهي بـ &quot;\<bdi dir="ltr" class="odt-ltr-term">n</bdi>&quot; في الرسالة ثم تطلب من <em><bdi dir="ltr" class="odt-ltr-term">logDialogue</bdi></em> عرضها. تشير المعلمة الثانية للطريقة إلى ما إذا كان يجب عرض السطر الأخير الذي تم العثور عليه أو تركه في المخزن المؤقت ليتم استكماله بالرسالة التالية. الكود معقد إلى حد ما ولا يهمنا هنا. لذلك لن يتم التعليق عليه.</p>
+<p>المعلمة الأولى هي الرسالة المراد عرضها. يمكن أن تكون هذه الرسالة عبارة عن سلسلة من الأسطر. في الواقع، يقرأ العميل البيانات من الخادم في كتل بحجم <em><bdi dir="ltr" class="odt-ltr-term">tailleBuffer</bdi></em> (1024) بايت. ضمن هذه الـ 1024 بايت، يمكن العثور على أسطر مختلفة، يتم تحديدها بعلامة نهاية السطر &quot;\n&quot;. قد يكون السطر الأخير غير مكتمل، حيث تكون علامة نهاية السطر الخاصة به موجودة في الـ 1024 بايت التالية. تبحث الطريقة عن الأسطر التي تنتهي بـ &quot;\n&quot; في الرسالة ثم تطلب من <em><bdi dir="ltr" class="odt-ltr-term">logDialogue</bdi></em> عرضها. تشير المعلمة الثانية للطريقة إلى ما إذا كان يجب عرض السطر الأخير الذي تم العثور عليه أو تركه في المخزن المؤقت ليتم استكماله بالرسالة التالية. الكود معقد إلى حد ما ولا يهمنا هنا. لذلك لن يتم التعليق عليه.</p>
 <p><a id="refheading10403751168783983"></a></p>
 <h3 id="1187">11.8.7. <span style="color: #4f81bd">الخلاصة</span></h3>
 <p>يمكن معالجة المثال نفسه بعمليات متزامنة. هنا، لا يقدم الجانب غير المتزامن للواجهة الرسومية فائدة تذكر للمستخدم. ومع ذلك، إذا قام المستخدم بتسجيل الدخول ثم أدرك أن الخادم &quot;لم يعد يستجيب&quot;، فإن لديه خيار قطع الاتصال، وذلك بفضل حقيقة أن واجهة المستخدم الرسومية تستمر في الاستجابة للأحداث أثناء تنفيذ العمليات غير المتزامنة. وقد مكننا هذا المثال المعقد إلى حد ما من تقديم بعض المفاهيم الجديدة:</p>
@@ -6102,16 +6102,16 @@
 <p>نعود إلى تطبيق حساب الضرائب الذي تمت تغطيته بالفعل بأشكال مختلفة. دعونا نستذكر أحدث إصدار له، الإصدار 7 من الفقرة<a href="#impots-v7"><u><span style="color: #0563c1"> 9.8</span></u></a>.</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000669000001B9CC0FCEF2.png" width="492" height="132" style="display:inline-block; margin:4px;width:13.019cm;height:3.5cm;" class="odt-zoomable" data-zoom-src="images/1000000000000669000001B9CC0FCEF2.png" /></td></tr></table>
 
-<p>كانت البيانات موجودة في قاعدة بيانات وكانت طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] عبارة عن واجهة مستخدم رسومية:</p>
+<p>كانت البيانات موجودة في قاعدة بيانات وكانت طبقة [ui] عبارة عن واجهة مستخدم رسومية:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012600000105D7701C54.png" width="206" height="183" style="display:inline-block; margin:4px;width:5.45cm;height:4.838cm;" class="odt-zoomable" data-zoom-src="images/100000000000012600000105D7701C54.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>سنقوم بإعادة إنتاج هذه البنية وتوزيعها على جهازين:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000756000001C800E382B5.png" width="564" height="137" style="display:inline-block; margin:4px;width:14.91cm;height:3.62cm;" class="odt-zoomable" data-zoom-src="images/1000000000000756000001C800E382B5.png" /></td></tr></table>
 
 <ul>
-  <li>ستستضيف آلة [الخادم] طبقتي [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] من الإصدار 7. وسيتم إنشاء طبقة [خادم] <bdi dir="ltr" class="odt-ltr-term">Tcp/Ip</bdi> [1] للسماح لعملاء الإنترنت بالاستعلام عن خدمة حساب الضرائب.
+  <li>ستستضيف آلة [الخادم] طبقتي [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] و[dao] من الإصدار 7. وسيتم إنشاء طبقة [خادم] <bdi dir="ltr" class="odt-ltr-term">Tcp/Ip</bdi> [1] للسماح لعملاء الإنترنت بالاستعلام عن خدمة حساب الضرائب.
   </li>
-  <li>ستستضيف آلة [<bdi dir="ltr" class="odt-ltr-term">client</bdi>] طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] من الإصدار 7. سيتم إنشاء طبقة <bdi dir="ltr" class="odt-ltr-term">Tcp/Ip</bdi> [<bdi dir="ltr" class="odt-ltr-term">client</bdi>] [2] لتمكين طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] من الاستعلام عن خدمة حساب الضرائب.
+  <li>ستستضيف آلة [<bdi dir="ltr" class="odt-ltr-term">client</bdi>] طبقة [ui] من الإصدار 7. سيتم إنشاء طبقة <bdi dir="ltr" class="odt-ltr-term">Tcp/Ip</bdi> [<bdi dir="ltr" class="odt-ltr-term">client</bdi>] [2] لتمكين طبقة [ui] من الاستعلام عن خدمة حساب الضرائب.
   </li>
 </ul>
 
@@ -6134,9 +6134,9 @@
   </li>
   <li>[<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]: ملف تكوين التطبيق.
   </li>
-  <li>في [2]، يحتوي المجلد [<bdi dir="ltr" class="odt-ltr-term">lib</bdi>] على مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> اللازمة للمشروع:
+  <li>في [2]، يحتوي المجلد [lib] على مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> اللازمة للمشروع:
     <ul>
-      <li>[<bdi dir="ltr" class="odt-ltr-term">ImpotsV7-dao</bdi>]: طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] في الإصدار 7
+      <li>[<bdi dir="ltr" class="odt-ltr-term">ImpotsV7-dao</bdi>]: طبقة [dao] في الإصدار 7
       </li>
       <li>[<bdi dir="ltr" class="odt-ltr-term">ImpotsV7-metier</bdi>]: طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] في الإصدار 7
       </li>
@@ -6180,15 +6180,15 @@
 </code></pre></div>
 
 <ul>
-  <li>الأسطر 16-20: تكوين طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] المرتبطة بقاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi> المدمجة
+  <li>الأسطر 16-20: تكوين طبقة [dao] المرتبطة بقاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi> المدمجة
   </li>
   <li>الأسطر 21-23: تكوين طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>].
   </li>
 </ul>
 
-<p>هذا هو ملف التكوين المستخدم في طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] في الإصدار 7. وقد تم عرضه في الفقرة<a href="#impots-v7-ui"><u><span style="color: #0563c1"> 9.8.4</span></u></a>.</p>
+<p>هذا هو ملف التكوين المستخدم في طبقة [ui] في الإصدار 7. وقد تم عرضه في الفقرة<a href="#impots-v7-ui"><u><span style="color: #0563c1"> 9.8.4</span></u></a>.</p>
 <h4 id="11923">11.9.2.3. <span style="color: #4f81bd">تشغيل الخادم</span></h4>
-<p>عند بدء تشغيل الخادم، يقوم تطبيق الخادم بإنشاء مثيلات لطبقتي [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]، ثم يعرض واجهة وحدة التحكم الإدارية:</p>
+<p>عند بدء تشغيل الخادم، يقوم تطبيق الخادم بإنشاء مثيلات لطبقتي [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] و[dao]، ثم يعرض واجهة وحدة التحكم الإدارية:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010800000041CA1F47C7.png" width="185" height="46" style="display:inline-block; margin:4px;width:4.89cm;height:1.205cm;" class="odt-zoomable" data-zoom-src="images/100000000000010800000041CA1F47C7.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>تقبل وحدة التحكم الإدارية الأوامر التالية:</p>
@@ -6228,7 +6228,7 @@
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">للحصول على قائمة بالأوامر المصرح بها</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-123-1" name="__codelineno-123-1" href="#__codelineno-123-1"></a>impot marié nbEnfants salaireAnnuel
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">لحساب الالتزام الضريبي لشخص لديه <i><bdi dir="ltr" class="odt-ltr-term">nbEnfants</bdi> </i>أطفال وراتب قدره  <i><bdi dir="ltr" class="odt-ltr-term">salaireAnnuel</bdi> </i>يورو. <i><bdi dir="ltr" class="odt-ltr-term">married</bdi> </i>يساوي <b><bdi dir="ltr" class="odt-ltr-term">o</bdi> </b>إذا كان متزوجًا، و <b><bdi dir="ltr" class="odt-ltr-term">n</bdi> </b>في الحالات الأخرى.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">لحساب الالتزام الضريبي لشخص لديه <i><bdi dir="ltr" class="odt-ltr-term">nbEnfants</bdi> </i>أطفال وراتب قدره  <i><bdi dir="ltr" class="odt-ltr-term">salaireAnnuel</bdi> </i>يورو. <i><bdi dir="ltr" class="odt-ltr-term">married</bdi> </i>يساوي <b>o </b>إذا كان متزوجًا، و <b>n </b>في الحالات الأخرى.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-124-1" name="__codelineno-124-1" href="#__codelineno-124-1"></a>aurevoir
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">لإغلاق الاتصال بالخادم</div></td></tr></table>
@@ -6404,7 +6404,7 @@
 </code></pre></div>
 
 <ul>
-  <li>الأسطر 18-21: يتم إنشاء مثيلات طبقات [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> الذي تم تكوينه بواسطة [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]. ثم يتم تهيئة المتغير العام <i><bdi dir="ltr" class="odt-ltr-term">job</bdi> </i>في السطر 6.
+  <li>الأسطر 18-21: يتم إنشاء مثيلات طبقات [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] و [dao] بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> الذي تم تكوينه بواسطة [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]. ثم يتم تهيئة المتغير العام <i>job </i>في السطر 6.
   </li>
   <li>الأسطر 24-25: تكوين تجمع مؤشرات الترابط للتطبيق بحد أدنى وأقصى يبلغ 10 مؤشرات ترابط.
   </li>
@@ -6626,7 +6626,7 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 1: تستقبل الطريقة مصفوفة حقول الأوامر كمعلمة ثالثة <i><bdi dir="ltr" class="odt-ltr-term">tax</bdi></i>. إذا تمت صياغتها بشكل صحيح، فإنها تكون على الشكل <i><bdi dir="ltr" class="odt-ltr-term">married tax nbEnfants salaireAnnuel</bdi></i>. نتيجة الطريقة هي الاستجابة التي سيتم إرسالها إلى العميل.
+  <li>السطر 1: تستقبل الطريقة مصفوفة حقول الأوامر كمعلمة ثالثة <i>tax</i>. إذا تمت صياغتها بشكل صحيح، فإنها تكون على الشكل <i><bdi dir="ltr" class="odt-ltr-term">married tax nbEnfants salaireAnnuel</bdi></i>. نتيجة الطريقة هي الاستجابة التي سيتم إرسالها إلى العميل.
   </li>
   <li>السطر 4: تحقق من أن الأمر يحتوي على 4 حقول
   </li>
@@ -6656,9 +6656,9 @@
 <ul>
   <li>في [1]، مشروعا الحلين، واحد لكل من طبقتي التطبيق
   </li>
-  <li>في [2]، عميل <bdi dir="ltr" class="odt-ltr-term">Tcp</bdi>، الذي يعمل كطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] لطبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>]. سنستخدم كلا المصطلحين هنا.
+  <li>في [2]، عميل <bdi dir="ltr" class="odt-ltr-term">Tcp</bdi>، الذي يعمل كطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] لطبقة [ui]. سنستخدم كلا المصطلحين هنا.
   </li>
-  <li>الطبقة في [3]، طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] في الإصدار 7، مع تفصيل واحد سنناقشه لاحقًا
+  <li>الطبقة في [3]، طبقة [ui] في الإصدار 7، مع تفصيل واحد سنناقشه لاحقًا
   </li>
 </ul>
 
@@ -6734,10 +6734,10 @@
 
 <p>يتم ترجمة طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] في ملف <bdi dir="ltr" class="odt-ltr-term">DLL ImpotsV8-metier.dll</bdi> :</p>
 <p><img src="images/1000000000000177000000699E38D319.png" width="262" height="73" style="width:6.939cm;height:1.944cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000177000000699E38D319.png" /></p>
-<h4 id="11943-ui">11.9.4.3. <span style="color: #4f81bd">طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>]</span></h4>
+<h4 id="11943-ui">11.9.4.3. <span style="color: #4f81bd">طبقة [ui]</span></h4>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006D8000001A84D3E7A62.png" width="526" height="127" style="display:inline-block; margin:4px;width:13.91cm;height:3.366cm;" class="odt-zoomable" data-zoom-src="images/10000000000006D8000001A84D3E7A62.png" /></td></tr></table>
 
-<p>طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] [1,3] هي الطبقة التي تمت دراستها في الإصدار 7 في الفقرة<a href="#impots-v7-ui"><u><span style="color: #0563c1"> 9.8.4</span></u></a>، باستثناء ثلاثة تفاصيل:</p>
+<p>طبقة [ui] [1,3] هي الطبقة التي تمت دراستها في الإصدار 7 في الفقرة<a href="#impots-v7-ui"><u><span style="color: #0563c1"> 9.8.4</span></u></a>، باستثناء ثلاثة تفاصيل:</p>
 <ul>
   <li>يختلف تكوين طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] في [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] لأن تنفيذها قد تغير
   </li>
@@ -6810,8 +6810,8 @@
 <p>لقطة شاشة العميل [2] تتوافق مع الأسطر الخاصة بالعميل 9 أعلاه.</p>
 <p><a id="refheading10403871168783983"></a></p>
 <h3 id="1195">11.9.5. <span style="color: #4f81bd">الخلاصة</span></h3>
-<p>مرة أخرى، تمكنا من إعادة استخدام الكود الموجود، إما دون تعديل (طبقات الخادم [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]، [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]) أو مع تعديل بسيط جدًا (طبقة العميل [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>]). وقد أصبح ذلك ممكنًا بفضل استخدامنا المنهجي للواجهات وتجسيدها باستخدام <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> لو كنا، في الإصدار 7، قد وضعنا كود الأعمال مباشرةً في معالجات أحداث واجهة المستخدم الرسومية، لما كان هذا الكود قابلاً لإعادة الاستخدام. وهذا هو العيب الرئيسي للبنى ذات الطبقة الواحدة.</p>
-<p>أخيرًا، لاحظ أن طبقة [<bdi dir="ltr" class="odt-ltr-term">ui</bdi>] لا تعلم أن خادمًا بعيدًا يقوم بحساب مبلغ الضريبة نيابة عنها. </p>
+<p>مرة أخرى، تمكنا من إعادة استخدام الكود الموجود، إما دون تعديل (طبقات الخادم [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]، [dao]) أو مع تعديل بسيط جدًا (طبقة العميل [ui]). وقد أصبح ذلك ممكنًا بفضل استخدامنا المنهجي للواجهات وتجسيدها باستخدام <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> لو كنا، في الإصدار 7، قد وضعنا كود الأعمال مباشرةً في معالجات أحداث واجهة المستخدم الرسومية، لما كان هذا الكود قابلاً لإعادة الاستخدام. وهذا هو العيب الرئيسي للبنى ذات الطبقة الواحدة.</p>
+<p>أخيرًا، لاحظ أن طبقة [ui] لا تعلم أن خادمًا بعيدًا يقوم بحساب مبلغ الضريبة نيابة عنها. </p>
 
 
 
