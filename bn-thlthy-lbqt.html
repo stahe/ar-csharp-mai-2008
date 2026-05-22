@@ -984,7 +984,7 @@
 </ol>
 
 <p>أثبتت التجربة العملية أن عزل هذه العمليات المختلفة في فئات منفصلة يحسن قابلية صيانة التطبيقات. وتكون بنية التطبيق المنظم بهذه الطريقة كما يلي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006B200000183A0AF0EE9.png" width="600" height="135" style="display:inline-block; margin:4px;width:15.87cm;height:3.582cm;" class="odt-zoomable" data-zoom-src="images/10000000000006B200000183A0AF0EE9.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006B200000183A0AF0EE9.png" width="600" height="135" style="display:inline-block; margin:4px;width:15.87cm;height:3.582cm;" class="odt-zoomable" data-zoom-src="images/10000000000006B200000183A0AF0EE9.png" /></td></tr></table>
 
 <p>تسمى هذه <strong>البنية</strong> &quot;البنية ثلاثية الطبقات&quot;. يشير مصطلح &quot;ثلاثية الطبقات&quot; عادةً إلى بنية يكون فيها كل طبقة على جهاز مختلف. وعندما تكون الطبقات على نفس الجهاز، تصبح البنية &quot;<strong>بنية</strong> ثلاثية <strong>الطبقات</strong>&quot;.</p>
 <ul>
@@ -1019,7 +1019,7 @@
 <h2 id="62-impots">6.2. <span style="color: #4f81bd">واجهات التطبيق [<bdi dir="ltr" class="odt-ltr-term">Impots</bdi>]</span></h2>
 <p>تذكر أن الواجهة تحدد مجموعة من توقيعات الطرق. وتقوم الفئات التي تنفذ الواجهة بتزويد هذه الطرق بالمحتوى.</p>
 <p>لنعد إلى بنية التطبيق المكونة من 3 طبقات:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006CB0000016CA61EA86C.png" width="609" height="127" style="display:inline-block; margin:4px;width:16.101cm;height:3.371cm;" class="odt-zoomable" data-zoom-src="images/10000000000006CB0000016CA61EA86C.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006CB0000016CA61EA86C.png" width="609" height="127" style="display:inline-block; margin:4px;width:16.101cm;height:3.371cm;" class="odt-zoomable" data-zoom-src="images/10000000000006CB0000016CA61EA86C.png" /></td></tr></table>
 
 <p>في هذا النوع من البنية، غالبًا ما يكون المستخدم هو من يبادر. فهو يقدم طلبًا في [1] ويتلقى استجابة في [8]. ويُعرف هذا بدورة الطلب والاستجابة. لنأخذ مثال حساب الضريبة على دافع الضرائب. سيتطلب هذا عدة خطوات:</p>
 <ol>
@@ -1040,7 +1040,7 @@
 </ol>
 
 <p>يوضح هذا الوصف أن الطبقة ستستخدم موارد الطبقة الموجودة على يمينها، ولكنها لن تستخدم أبدًا موارد الطبقة الموجودة على يسارها. لنفكر في طبقتين متجاورتين:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000342000000FAFBA4418D.png" width="292" height="87" style="display:inline-block; margin:4px;width:7.721cm;height:2.314cm;" class="odt-zoomable" data-zoom-src="images/1000000000000342000000FAFBA4418D.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000342000000FAFBA4418D.png" width="292" height="87" style="display:inline-block; margin:4px;width:7.721cm;height:2.314cm;" class="odt-zoomable" data-zoom-src="images/1000000000000342000000FAFBA4418D.png" /></td></tr></table>
 
 <p>الطبقة [<bdi dir="ltr" class="odt-ltr-term">A</bdi>] ترسل طلبات إلى الطبقة [<bdi dir="ltr" class="odt-ltr-term">B</bdi>]. في أبسط الحالات، يتم تنفيذ الطبقة بواسطة فئة واحدة. يتطور التطبيق بمرور الوقت. لذلك قد تحتوي الطبقة [<bdi dir="ltr" class="odt-ltr-term">B</bdi>] على فئات تنفيذ مختلفة [<bdi dir="ltr" class="odt-ltr-term">B1</bdi>، <bdi dir="ltr" class="odt-ltr-term">B2</bdi>، ...]. إذا كانت الطبقة [<bdi dir="ltr" class="odt-ltr-term">B</bdi>] هي الطبقة [dao]، فقد يكون لها تنفيذ أول [<bdi dir="ltr" class="odt-ltr-term">B1</bdi>] يسترد البيانات من ملف. بعد بضع سنوات، قد ترغب في وضع البيانات في قاعدة بيانات.  ثم نقوم بإنشاء فئة تنفيذ ثانية [<bdi dir="ltr" class="odt-ltr-term">B2</bdi>]. إذا كانت الطبقة [<bdi dir="ltr" class="odt-ltr-term">A</bdi>] في التطبيق الأولي تعمل مباشرة مع الفئة [<bdi dir="ltr" class="odt-ltr-term">B1</bdi>]، فإننا نضطر إلى إعادة كتابة جزء من كود الطبقة [<bdi dir="ltr" class="odt-ltr-term">A</bdi>]. على سبيل المثال، لنفترض أن الطبقة [<bdi dir="ltr" class="odt-ltr-term">A</bdi>] قد كُتبت على النحو التالي:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
@@ -1058,7 +1058,7 @@
 
 <p>إذا افترضنا أن فئة التنفيذ الجديدة [<bdi dir="ltr" class="odt-ltr-term">B2</bdi>] تستخدم طرقًا لها نفس توقيع طرق فئة [<bdi dir="ltr" class="odt-ltr-term">B1</bdi>]، فسيتعين علينا تغيير جميع [<bdi dir="ltr" class="odt-ltr-term">B1s</bdi>] إلى [<bdi dir="ltr" class="odt-ltr-term">B2s</bdi>]. هذه حالة مواتية للغاية، ومن غير المرجح حدوثها إذا لم تكن قد انتبهت إلى توقيعات الطرق هذه. في الممارسة العملية، غالبًا ما لا تحتوي الفئتان [<bdi dir="ltr" class="odt-ltr-term">B1</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">B2</bdi>] على نفس توقيعات الطرق، لذا يتعين إعادة كتابة جزء كبير من الطبقة [<bdi dir="ltr" class="odt-ltr-term">A</bdi>] بالكامل.</p>
 <p>يمكن تحسين هذا عن طريق إنشاء واجهة بين الطبقتين [<bdi dir="ltr" class="odt-ltr-term">A</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">B</bdi>]. وهذا يعني تجميد توقيعات الطرق التي تقدمها الطبقة [<bdi dir="ltr" class="odt-ltr-term">B</bdi>] إلى الطبقة [<bdi dir="ltr" class="odt-ltr-term">A</bdi>] في واجهة. يصبح الرسم البياني السابق عندئذ كما يلي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004D400000105FC2991C3.png" width="433" height="91" style="display:inline-block; margin:4px;width:11.449cm;height:2.418cm;" class="odt-zoomable" data-zoom-src="images/10000000000004D400000105FC2991C3.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004D400000105FC2991C3.png" width="433" height="91" style="display:inline-block; margin:4px;width:11.449cm;height:2.418cm;" class="odt-zoomable" data-zoom-src="images/10000000000004D400000105FC2991C3.png" /></td></tr></table>
 
 <p>لم تعد الطبقة [<bdi dir="ltr" class="odt-ltr-term">A</bdi>] تتعامل مع الطبقة [<bdi dir="ltr" class="odt-ltr-term">B</bdi>] مباشرةً، بل مع واجهتها [<bdi dir="ltr" class="odt-ltr-term">IB</bdi>]. وبالتالي، في كود الطبقة [<bdi dir="ltr" class="odt-ltr-term">A</bdi>]، لا تظهر فئة التنفيذ [<bdi dir="ltr" class="odt-ltr-term">Bi</bdi>] الخاصة بالطبقة [<bdi dir="ltr" class="odt-ltr-term">B</bdi>] سوى مرة واحدة، وذلك عند تنفيذ الواجهة [<bdi dir="ltr" class="odt-ltr-term">IB</bdi>]. وبمجرد الانتهاء من ذلك، يتم استخدام واجهة [<bdi dir="ltr" class="odt-ltr-term">IB</bdi>] في الكود، وليس فئة التنفيذ الخاصة بها. ويصبح الكود السابق كما يلي:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
@@ -1077,7 +1077,7 @@
 <p>الآن، إذا استبدلنا تنفيذ [<bdi dir="ltr" class="odt-ltr-term">B1</bdi>] للطبقة [<bdi dir="ltr" class="odt-ltr-term">B</bdi>] بتنفيذ [<bdi dir="ltr" class="odt-ltr-term">B2</bdi>]، وكان كلا التنفيذين يتوافقان مع نفس واجهة [<bdi dir="ltr" class="odt-ltr-term">IB</bdi>]، فإن السطر 1 فقط من الطبقة [<bdi dir="ltr" class="odt-ltr-term">A</bdi>] هو الذي يحتاج إلى تعديل دون غيره. هذه ميزة كبيرة، وهي بحد ذاتها تبرر الاستخدام المنهجي للواجهات بين طبقتين.</p>
 <p>يمكننا الذهاب إلى أبعد من ذلك وجعل الطبقة [<bdi dir="ltr" class="odt-ltr-term">A</bdi>] مستقلة تمامًا عن الطبقة [<bdi dir="ltr" class="odt-ltr-term">B</bdi>]. في الكود أعلاه، يمثل السطر 1 مشكلة لأنه يشير إلى فئة [<bdi dir="ltr" class="odt-ltr-term">B1</bdi>]. من الناحية المثالية، يجب أن تحتوي الطبقة [<bdi dir="ltr" class="odt-ltr-term">A</bdi>] على تنفيذ لواجهة [<bdi dir="ltr" class="odt-ltr-term">IB</bdi>] دون الحاجة إلى تسمية فئة. سيكون هذا متسقًا مع الرسم التخطيطي أعلاه. يمكننا أن نرى أن الطبقة [<bdi dir="ltr" class="odt-ltr-term">A</bdi>] تتعامل مع الواجهة [<bdi dir="ltr" class="odt-ltr-term">IB</bdi>]، ولا نرى سببًا يدعوها إلى معرفة اسم الفئة التي تنفذ هذه الواجهة. هذه التفاصيل لا فائدة منها للطبقة [<bdi dir="ltr" class="odt-ltr-term">A</bdi>].</p>
 <p>يحقق إطار عمل <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> (<bdi dir="ltr" class="odt-ltr-term">http://www.springframework.org</bdi>) ذلك. تتطور البنية السابقة على النحو التالي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E80000015E83E13F00.png" width="440" height="122" style="display:inline-block; margin:4px;width:11.629cm;height:3.24cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E80000015E83E13F00.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004E80000015E83E13F00.png" width="440" height="122" style="display:inline-block; margin:4px;width:11.629cm;height:3.24cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E80000015E83E13F00.png" /></td></tr></table>
 
 <p>ستسمح الطبقة العرضية [<bdi dir="ltr" class="odt-ltr-term">Spring</bdi>] لطبقة ما بالحصول على مرجع للطبقة الموجودة على يمينها عن طريق التكوين، دون الحاجة إلى معرفة اسم فئة تنفيذ الطبقة. سيكون هذا الاسم موجودًا في ملفات التكوين وليس في كود <bdi dir="ltr" class="odt-ltr-term">C#.</bdi> ثم يأخذ كود <bdi dir="ltr" class="odt-ltr-term">C#</bdi> للطبقة [<bdi dir="ltr" class="odt-ltr-term">A</bdi>] الشكل التالي:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
@@ -1102,7 +1102,7 @@
 <p>يمكننا الآن أن نرى أن فئة التنفيذ [<bdi dir="ltr" class="odt-ltr-term">B1</bdi>] للطبقة <bdi dir="ltr" class="odt-ltr-term">B</bdi> لا تظهر في أي مكان في كود الطبقة [<bdi dir="ltr" class="odt-ltr-term">A</bdi>]. عندما يتم استبدال التنفيذ [<bdi dir="ltr" class="odt-ltr-term">B1</bdi>] بتنفيذ جديد [<bdi dir="ltr" class="odt-ltr-term">B2</bdi>]، لن يتغير شيء في كود الفئة [<bdi dir="ltr" class="odt-ltr-term">A</bdi>]. نحن ببساطة نغير ملفات تكوين <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> لإنشاء مثيل [<bdi dir="ltr" class="odt-ltr-term">B2</bdi>] بدلاً من [<bdi dir="ltr" class="odt-ltr-term">B1</bdi>].</p>
 <p>يقدم الثنائي <strong><bdi dir="ltr" class="odt-ltr-term">Spring</bdi> وواجهات <bdi dir="ltr" class="odt-ltr-term">C#</bdi></strong> تحسينًا حاسمًا في صيانة التطبيق من خلال جعل طبقات التطبيق محكمة الإغلاق. هذا هو الحل الذي سنستخدمه لإصدار جديد من تطبيق [<bdi dir="ltr" class="odt-ltr-term">Impots</bdi>].</p>
 <p>لنعد إلى بنية التطبيق المكونة من ثلاث طبقات:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006C50000016787D48548.png" width="607" height="126" style="display:inline-block; margin:4px;width:16.05cm;height:3.325cm;" class="odt-zoomable" data-zoom-src="images/10000000000006C50000016787D48548.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006C50000016787D48548.png" width="607" height="126" style="display:inline-block; margin:4px;width:16.05cm;height:3.325cm;" class="odt-zoomable" data-zoom-src="images/10000000000006C50000016787D48548.png" /></td></tr></table>
 
 <p>في الحالات البسيطة، يمكننا البدء من طبقة [الأعمال] لاكتشاف واجهات التطبيق. لكي يعمل، يحتاج إلى:</p>
 <ul>
@@ -1151,7 +1151,7 @@
 </code></pre></div>
 
 <p>لنعد إلى بنية التطبيق المكونة من ثلاث طبقات:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006C40000016B73280BE4.png" width="606" height="127" style="display:inline-block; margin:4px;width:16.041cm;height:3.362cm;" class="odt-zoomable" data-zoom-src="images/10000000000006C40000016B73280BE4.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006C40000016B73280BE4.png" width="606" height="127" style="display:inline-block; margin:4px;width:16.041cm;height:3.362cm;" class="odt-zoomable" data-zoom-src="images/10000000000006C40000016B73280BE4.png" /></td></tr></table>
 
 <p>ما هي الواجهة التي يجب أن تقدمها طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] إلى طبقة [ui]؟ دعونا نستذكر التفاعلات بين هاتين الطبقتين:</p>
 <ol>
@@ -1183,7 +1183,7 @@
 <p><a id="refheading10400851168783983"></a></p>
 <h3 id="631-visual-studio">6.3.1. <span style="color: #4f81bd">مشروع <bdi dir="ltr" class="odt-ltr-term">Visual Studio</bdi></span></h3>
 <p>سيكون مشروع <bdi dir="ltr" class="odt-ltr-term">Visual Studio</bdi> كما يلي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000620000002A7A3628E03.png" width="549" height="238" style="display:inline-block; margin:4px;width:14.52cm;height:6.288cm;" class="odt-zoomable" data-zoom-src="images/1000000000000620000002A7A3628E03.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000620000002A7A3628E03.png" width="549" height="238" style="display:inline-block; margin:4px;width:14.52cm;height:6.288cm;" class="odt-zoomable" data-zoom-src="images/1000000000000620000002A7A3628E03.png" /></td></tr></table>
 
 <ul>
   <li>[1]: يحتوي المجلد [<bdi dir="ltr" class="odt-ltr-term">Entites</bdi>] على كائنات تشمل طبقات [ui، <bdi dir="ltr" class="odt-ltr-term">metier</bdi>، dao]: البنية <i><bdi dir="ltr" class="odt-ltr-term">TrancheImpot</bdi></i>، والاستثناء <i><bdi dir="ltr" class="odt-ltr-term">FileImpotException</bdi></i>.
@@ -1200,7 +1200,7 @@
 <p><a id="refheading10400871168783983"></a></p>
 <h3 id="632">6.3.2. <span style="color: #4f81bd">كيانات التطبيق</span></h3>
 <p>لنعد إلى بنية التطبيق المكونة من 3 طبقات:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006CF0000019F730C355B.png" width="610" height="145" style="display:inline-block; margin:4px;width:16.14cm;height:3.844cm;" class="odt-zoomable" data-zoom-src="images/10000000000006CF0000019F730C355B.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006CF0000019F730C355B.png" width="610" height="145" style="display:inline-block; margin:4px;width:16.14cm;height:3.844cm;" class="odt-zoomable" data-zoom-src="images/10000000000006CF0000019F730C355B.png" /></td></tr></table>
 
 <p>نسميها «فئات <em>الكيانات</em> عبر الطبقات». وينطبق هذا عمومًا على الفئات والهياكل التي تغلف البيانات الواردة من طبقة [dao]. وعادةً ما تمتد هذه الكيانات حتى طبقة [ui].</p>
 <p>كيانات التطبيق هي كما يلي:</p>
@@ -1245,7 +1245,7 @@
 <p>ملاحظة: لا تكون استثناء <em><bdi dir="ltr" class="odt-ltr-term">FileImportException</bdi></em> مفيدة إلا إذا تم تنفيذ طبقة [dao] بواسطة <em><bdi dir="ltr" class="odt-ltr-term">FileImport</bdi></em>.</p>
 <p><a id="refheading10400891168783983"></a></p>
 <h3 id="633-dao">6.3.3. <span style="color: #4f81bd">طبقة [dao]</span></h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006B6000001683D85C8FF.png" width="601" height="126" style="display:inline-block; margin:4px;width:15.91cm;height:3.334cm;" class="odt-zoomable" data-zoom-src="images/10000000000006B6000001683D85C8FF.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006B6000001683D85C8FF.png" width="601" height="126" style="display:inline-block; margin:4px;width:15.91cm;height:3.334cm;" class="odt-zoomable" data-zoom-src="images/10000000000006B6000001683D85C8FF.png" /></td></tr></table>
 
 <p>تذكر واجهة طبقة [dao]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
@@ -1390,7 +1390,7 @@
 
 <p><a id="refheading10400911168783983"></a></p>
 <h3 id="634-metier">6.3.4. <span style="color: #4f81bd">الحفاض [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]</span></h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006D30000017C8124682C.png" width="612" height="133" style="display:inline-block; margin:4px;width:16.18cm;height:3.519cm;" class="odt-zoomable" data-zoom-src="images/10000000000006D30000017C8124682C.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006D30000017C8124682C.png" width="612" height="133" style="display:inline-block; margin:4px;width:16.18cm;height:3.519cm;" class="odt-zoomable" data-zoom-src="images/10000000000006D30000017C8124682C.png" /></td></tr></table>
 
 <p>دعونا نستعرض واجهة هذه الطبقة:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
@@ -1464,7 +1464,7 @@
 
 <p><a id="refheading10400931168783983"></a></p>
 <h3 id="635-ui">6.3.5. <span style="color: #4f81bd">طبقة [ui]</span></h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006B700000180F1F14DF5.png" width="602" height="134" style="display:inline-block; margin:4px;width:15.921cm;height:3.558cm;" class="odt-zoomable" data-zoom-src="images/10000000000006B700000180F1F14DF5.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006B700000180F1F14DF5.png" width="602" height="134" style="display:inline-block; margin:4px;width:15.921cm;height:3.558cm;" class="odt-zoomable" data-zoom-src="images/10000000000006B700000180F1F14DF5.png" /></td></tr></table>
 
 <p>كانت فئات حوار المستخدم في الإصدارين 2 و 3 متشابهة جدًا. وكانت فئة الإصدار 2 كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
@@ -1654,7 +1654,7 @@
 <p><a id="refheading10400971168783983"></a>
 <a id="impots-v5"></a></p>
 <h2 id="64-5">6.4. <span style="color: #4f81bd">مثال على التطبيق - الإصدار 5 من</span></h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006BC000001C4AA25F7B2.png" width="603" height="158" style="display:inline-block; margin:4px;width:15.96cm;height:4.184cm;" class="odt-zoomable" data-zoom-src="images/10000000000006BC000001C4AA25F7B2.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006BC000001C4AA25F7B2.png" width="603" height="158" style="display:inline-block; margin:4px;width:15.96cm;height:4.184cm;" class="odt-zoomable" data-zoom-src="images/10000000000006BC000001C4AA25F7B2.png" /></td></tr></table>
 
 <p>يعتمد هذا الإصدار الجديد على الإصدار السابق ويتضمن التغييرات التالية: </p>
 <ul>
@@ -1672,21 +1672,21 @@
 <p>حتى الآن، كانت الاختبارات التي أجريت على تطبيقاتنا المختلفة تعتمد على التحقق البصري. كنا نتحقق من أننا نحصل على ما هو متوقع على الشاشة. هذه الطريقة غير قابلة للاستخدام عندما يكون هناك العديد من الاختبارات التي يجب إجراؤها. البشر عرضة للإرهاق، وقدرتهم على التحقق من الاختبارات تتضاءل مع مرور اليوم. لذلك يجب أتمتة الاختبارات، والسعي إلى عدم تدخل الإنسان مطلقًا.</p>
 <p>يتطور التطبيق بمرور الوقت. وفي كل مرة يتطور فيها، نحتاج إلى التحقق من أن التطبيق لا &quot;يتراجع&quot;، أي أنه يستمر في اجتياز الاختبارات الوظيفية التي تم إجراؤها عند كتابته لأول مرة. وتسمى هذه الاختبارات &quot;اختبارات عدم التراجع&quot;. وقد يتطلب التطبيق الكبير إجراء مئات الاختبارات. يتم اختبار كل طريقة في كل فئة في التطبيق. وتسمى هذه <strong>الاختبارات اختبارات الوحدة</strong>. وقد يتطلب ذلك مشاركة العديد من المطورين إذا لم تكن هذه الاختبارات آلية.</p>
 <p>تم تطوير أدوات لأتمتة الاختبار. إحدى هذه الأدوات تسمى <strong><bdi dir="ltr" class="odt-ltr-term">NUnit</bdi></strong>. وهي متوفرة على [<bdi dir="ltr" class="odt-ltr-term">http://www.nunit.org</bdi>] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002180000008CAA9830BB.png" width="325" height="85" style="display:inline-block; margin:4px;width:8.601cm;height:2.247cm;" class="odt-zoomable" data-zoom-src="images/10000000000002180000008CAA9830BB.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000017900000098B0F80AAB.png" width="264" height="106" style="display:inline-block; margin:4px;width:6.98cm;height:2.813cm;" class="odt-zoomable" data-zoom-src="images/100000000000017900000098B0F80AAB.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002180000008CAA9830BB.png" width="325" height="85" style="display:inline-block; margin:4px;width:8.601cm;height:2.247cm;" class="odt-zoomable" data-zoom-src="images/10000000000002180000008CAA9830BB.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000017900000098B0F80AAB.png" width="264" height="106" style="display:inline-block; margin:4px;width:6.98cm;height:2.813cm;" class="odt-zoomable" data-zoom-src="images/100000000000017900000098B0F80AAB.png" /></td></tr></table>
 
 <p>تم استخدام الإصدار 2.4.6 أعلاه في هذا المستند (مارس 2008). يؤدي التثبيت إلى وضع رمز [1] على سطح المكتب:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006A5000001A6B460531F.png" width="510" height="127" style="display:inline-block; margin:4px;width:13.501cm;height:3.35cm;" class="odt-zoomable" data-zoom-src="images/10000000000006A5000001A6B460531F.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006A5000001A6B460531F.png" width="510" height="127" style="display:inline-block; margin:4px;width:13.501cm;height:3.35cm;" class="odt-zoomable" data-zoom-src="images/10000000000006A5000001A6B460531F.png" /></td></tr></table>
 
 <p>يؤدي النقر المزدوج على الرمز [1] إلى تشغيل واجهة المستخدم الرسومية لـ <bdi dir="ltr" class="odt-ltr-term">NUnit</bdi> [2]. ولا يساعد هذا في أتمتة الاختبار، حيث نعود مرة أخرى إلى التحقق البصري: يقوم المختبر بمراجعة نتائج الاختبار المعروضة في واجهة المستخدم الرسومية. ومع ذلك، يمكن أيضًا تشغيل الاختبارات باستخدام أدوات التشغيل الدفعي وحفظ نتائجها في ملفات <bdi dir="ltr" class="odt-ltr-term">XML.</bdi> وهذه هي الطريقة التي تتبعها فرق التطوير: حيث يتم تشغيل الاختبارات ليلاً، ويحصل المطورون على النتائج في صباح اليوم التالي.</p>
 <p>دعونا نلقي نظرة على مثال لاختبار <bdi dir="ltr" class="odt-ltr-term">NUnit.</bdi> أولاً، لنقم بإنشاء مشروع <bdi dir="ltr" class="odt-ltr-term">C#</bdi> جديد من نوع <em><bdi dir="ltr" class="odt-ltr-term">Application Console</bdi></em> : </p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000681000001ACE37D94D3.png" width="500" height="128" style="display:inline-block; margin:4px;width:13.22cm;height:3.397cm;" class="odt-zoomable" data-zoom-src="images/1000000000000681000001ACE37D94D3.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000681000001ACE37D94D3.png" width="500" height="128" style="display:inline-block; margin:4px;width:13.22cm;height:3.397cm;" class="odt-zoomable" data-zoom-src="images/1000000000000681000001ACE37D94D3.png" /></td></tr></table>
 
 <p>في [1]، نرى <em>مراجع</em> المشروع. هذه المراجع هي مكتبات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> تحتوي على الفئات والواجهات التي يستخدمها المشروع. تلك المعروضة في [1] مضمنة بشكل افتراضي في كل مشروع <bdi dir="ltr" class="odt-ltr-term">C#</bdi> جديد. لكي نتمكن من استخدام فئات وواجهات إطار عمل <bdi dir="ltr" class="odt-ltr-term">NUnit</bdi>، نحتاج إلى إضافة [2] مرجع جديد إلى المشروع.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007F2000001C61546E370.png" width="610" height="136" style="display:inline-block; margin:4px;width:16.14cm;height:3.604cm;" class="odt-zoomable" data-zoom-src="images/10000000000007F2000001C61546E370.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000007F2000001C61546E370.png" width="610" height="136" style="display:inline-block; margin:4px;width:16.14cm;height:3.604cm;" class="odt-zoomable" data-zoom-src="images/10000000000007F2000001C61546E370.png" /></td></tr></table>
 
 <p>في علامة التبويب .<bdi dir="ltr" class="odt-ltr-term">NET</bdi> أعلاه، نختار المكون [<bdi dir="ltr" class="odt-ltr-term">nunit.framework</bdi>]. المكونات [<bdi dir="ltr" class="odt-ltr-term">nunit.</bdi>*] أعلاه ليست مكونات موجودة بشكل افتراضي في بيئة .<bdi dir="ltr" class="odt-ltr-term">NET.</bdi> تم إضافتها إلى هناك بواسطة التثبيت السابق لإطار عمل <bdi dir="ltr" class="odt-ltr-term">NUnit.</bdi> بمجرد إضافة المرجع، يظهر [4] في قائمة مراجع المشروع.</p>
 <p>قبل إنشاء التطبيق، يكون مجلد [<bdi dir="ltr" class="odt-ltr-term">bin/Release</bdi>] الخاص بالمشروع فارغًا. بعد الإنشاء (<bdi dir="ltr" class="odt-ltr-term">F6</bdi>)، لم يعد مجلد [<bdi dir="ltr" class="odt-ltr-term">bin/Release</bdi>] فارغًا:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003E50000012424F81D68.png" width="349" height="102" style="display:inline-block; margin:4px;width:9.23cm;height:2.702cm;" class="odt-zoomable" data-zoom-src="images/10000000000003E50000012424F81D68.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000003E50000012424F81D68.png" width="349" height="102" style="display:inline-block; margin:4px;width:9.23cm;height:2.702cm;" class="odt-zoomable" data-zoom-src="images/10000000000003E50000012424F81D68.png" /></td></tr></table>
 
 <p>في [6]، نرى وجود ملف <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> [<bdi dir="ltr" class="odt-ltr-term">nunit.framework.dll</bdi>]. كانت إضافة المرجع [<bdi dir="ltr" class="odt-ltr-term">nunit.framework</bdi>] هي التي تسببت في نسخ ملف <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> هذا إلى مجلد التنفيذ. هذا في الواقع أحد المجلدات التي سيستكشفها <bdi dir="ltr" class="odt-ltr-term">CLR</bdi> (<bdi dir="ltr" class="odt-ltr-term">Common Language Runtime</bdi>) .<bdi dir="ltr" class="odt-ltr-term">NET</bdi> للعثور على الفئات والواجهات التي يشير إليها المشروع.</p>
 <p>لنقم بإنشاء أول فئة اختبار <bdi dir="ltr" class="odt-ltr-term">NUnit.</bdi> للقيام بذلك، نقوم بحذف الفئة الافتراضية [<bdi dir="ltr" class="odt-ltr-term">Program.cs</bdi>] وإضافة فئة جديدة [<bdi dir="ltr" class="odt-ltr-term">Nunit1.cs</bdi>] إلى المشروع. كما نقوم بحذف المراجع غير الضرورية [7].</p>
@@ -1738,23 +1738,23 @@
   </li>
   <li>السطر 21: أحد [<i><bdi dir="ltr" class="odt-ltr-term">Assert.</bdi>*</i>]<i> </i>المحددة بواسطة إطار عمل <bdi dir="ltr" class="odt-ltr-term">NUnit.</bdi> تتوفر طرق [<bdi dir="ltr" class="odt-ltr-term">Assert</bdi>] التالية:
     <ul>
-      <li><b>[</b><i><bdi dir="ltr" class="odt-ltr-term">Assert.AreEqual</bdi>(<bdi dir="ltr" class="odt-ltr-term">expression1</bdi>, <bdi dir="ltr" class="odt-ltr-term">expression2</bdi>)</i><b>] </b>: يتحقق من أن قيم التعبيرين متساوية. يتم دعم العديد من أنواع التعبيرات (int، <bdi dir="ltr" class="odt-ltr-term">string</bdi>، <bdi dir="ltr" class="odt-ltr-term">float</bdi>، <bdi dir="ltr" class="odt-ltr-term">double</bdi>، <bdi dir="ltr" class="odt-ltr-term">decimal</bdi>، ...). إذا لم يكن التعبيران متساويين، يتم إلقاء استثناء.
+      <li><b>[</b><i><bdi dir="ltr" class="odt-ltr-term">Assert.AreEqual</bdi>(<bdi dir="ltr" class="odt-ltr-term">expression1, expression2</bdi>)</i><b>] </b>: يتحقق من أن قيم التعبيرين متساوية. يتم دعم العديد من أنواع التعبيرات (int، <bdi dir="ltr" class="odt-ltr-term">string</bdi>، <bdi dir="ltr" class="odt-ltr-term">float</bdi>، <bdi dir="ltr" class="odt-ltr-term">double</bdi>، <bdi dir="ltr" class="odt-ltr-term">decimal</bdi>، ...). إذا لم يكن التعبيران متساويين، يتم إلقاء استثناء.
       </li>
-      <li><b>[</b><i><bdi dir="ltr" class="odt-ltr-term">Assert.AreEqual</bdi>(<bdi dir="ltr" class="odt-ltr-term">real1</bdi>, <bdi dir="ltr" class="odt-ltr-term">real2</bdi>, <bdi dir="ltr" class="odt-ltr-term">delta</bdi>)</i><b>] </b>: يتحقق من أن رقمين حقيقيين متساويان تقريبًا بقيمة <b><bdi dir="ltr" class="odt-ltr-term">delta</bdi></b>، أي abs(<bdi dir="ltr" class="odt-ltr-term">real1-real2</bdi>)&lt;=<bdi dir="ltr" class="odt-ltr-term">delta.</bdi> على سبيل المثال، يمكننا كتابة [<i><bdi dir="ltr" class="odt-ltr-term">Assert.AreEqual</bdi>(<bdi dir="ltr" class="odt-ltr-term">real1</bdi>, <bdi dir="ltr" class="odt-ltr-term">real2</bdi>, 1E-6)</i><b>] </b>للتحقق من أن القيمتين متساويتان تقريبًا بقيمة 10-6.
+      <li><b>[</b><i><bdi dir="ltr" class="odt-ltr-term">Assert.AreEqual</bdi>(<bdi dir="ltr" class="odt-ltr-term">real1, real2, delta</bdi>)</i><b>] </b>: يتحقق من أن رقمين حقيقيين متساويان تقريبًا بقيمة <b><bdi dir="ltr" class="odt-ltr-term">delta</bdi></b>، أي abs(<bdi dir="ltr" class="odt-ltr-term">real1-real2</bdi>)&lt;=<bdi dir="ltr" class="odt-ltr-term">delta.</bdi> على سبيل المثال، يمكننا كتابة [<i><bdi dir="ltr" class="odt-ltr-term">Assert.AreEqual</bdi>(<bdi dir="ltr" class="odt-ltr-term">real1, real2</bdi>, 1E-6)</i><b>] </b>للتحقق من أن القيمتين متساويتان تقريبًا بقيمة 10-6.
       </li>
-      <li><b>[</b><i><bdi dir="ltr" class="odt-ltr-term">Assert.AreEqual</bdi>(<bdi dir="ltr" class="odt-ltr-term">expression1</bdi>, <bdi dir="ltr" class="odt-ltr-term">expression2</bdi>, <bdi dir="ltr" class="odt-ltr-term">message</bdi>)</i><b>] </b>و [<i><bdi dir="ltr" class="odt-ltr-term">Assert.AreEqual</bdi>(<bdi dir="ltr" class="odt-ltr-term">real1</bdi>, <bdi dir="ltr" class="odt-ltr-term">real2</bdi>, <bdi dir="ltr" class="odt-ltr-term">delta</bdi>, <bdi dir="ltr" class="odt-ltr-term">message</bdi>)</i><b>] </b>هما متغيران يستخدمان لتحديد رسالة الخطأ المرتبطة بالاستثناء الذي يتم إلقائه عند فشل [<i><bdi dir="ltr" class="odt-ltr-term">Assert.AreEqual</bdi></i>].
+      <li><b>[</b><i><bdi dir="ltr" class="odt-ltr-term">Assert.AreEqual</bdi>(<bdi dir="ltr" class="odt-ltr-term">expression1, expression2, message</bdi>)</i><b>] </b>و [<i><bdi dir="ltr" class="odt-ltr-term">Assert.AreEqual</bdi>(<bdi dir="ltr" class="odt-ltr-term">real1, real2, delta, message</bdi>)</i><b>] </b>هما متغيران يستخدمان لتحديد رسالة الخطأ المرتبطة بالاستثناء الذي يتم إلقائه عند فشل [<i><bdi dir="ltr" class="odt-ltr-term">Assert.AreEqual</bdi></i>].
       </li>
-      <li><b>[</b><i><bdi dir="ltr" class="odt-ltr-term">Assert.IsNotNull</bdi>(<bdi dir="ltr" class="odt-ltr-term">object</bdi>)</i><b>] </b>و [<i><bdi dir="ltr" class="odt-ltr-term">Assert.IsNotNull</bdi>(<bdi dir="ltr" class="odt-ltr-term">object</bdi>, <bdi dir="ltr" class="odt-ltr-term">message</bdi>)</i><b>] </b> : يتحقق من أن <b>الكائن </b>لا يساوي <b><bdi dir="ltr" class="odt-ltr-term">null</bdi></b>.
+      <li><b>[</b><i><bdi dir="ltr" class="odt-ltr-term">Assert.IsNotNull</bdi>(<bdi dir="ltr" class="odt-ltr-term">object</bdi>)</i><b>] </b>و [<i><bdi dir="ltr" class="odt-ltr-term">Assert.IsNotNull</bdi>(<bdi dir="ltr" class="odt-ltr-term">object, message</bdi>)</i><b>] </b> : يتحقق من أن <b>الكائن </b>لا يساوي <b><bdi dir="ltr" class="odt-ltr-term">null</bdi></b>.
       </li>
-      <li><b>[</b><i><bdi dir="ltr" class="odt-ltr-term">Assert.IsNull</bdi>(<bdi dir="ltr" class="odt-ltr-term">object</bdi>)</i><b>] </b>و [<i><bdi dir="ltr" class="odt-ltr-term">Assert.IsNull</bdi>(<bdi dir="ltr" class="odt-ltr-term">object</bdi>, <bdi dir="ltr" class="odt-ltr-term">message</bdi>)</i><b>] </b> : يتحقق من أن <b>الكائن </b>يساوي <b><bdi dir="ltr" class="odt-ltr-term">null</bdi></b>.
+      <li><b>[</b><i><bdi dir="ltr" class="odt-ltr-term">Assert.IsNull</bdi>(<bdi dir="ltr" class="odt-ltr-term">object</bdi>)</i><b>] </b>و [<i><bdi dir="ltr" class="odt-ltr-term">Assert.IsNull</bdi>(<bdi dir="ltr" class="odt-ltr-term">object, message</bdi>)</i><b>] </b> : يتحقق من أن <b>الكائن </b>يساوي <b><bdi dir="ltr" class="odt-ltr-term">null</bdi></b>.
       </li>
-      <li><b>[</b><i><bdi dir="ltr" class="odt-ltr-term">Assert.IsTrue</bdi>(<bdi dir="ltr" class="odt-ltr-term">expression</bdi>)</i><b>] </b>و [<i><bdi dir="ltr" class="odt-ltr-term">Assert.IsTrue</bdi>(<bdi dir="ltr" class="odt-ltr-term">expression</bdi>, <bdi dir="ltr" class="odt-ltr-term">message</bdi>)</i><b>]</b>: يتحقق من أن <b>التعبير </b>يساوي <b><bdi dir="ltr" class="odt-ltr-term">true</bdi></b>.
+      <li><b>[</b><i><bdi dir="ltr" class="odt-ltr-term">Assert.IsTrue</bdi>(<bdi dir="ltr" class="odt-ltr-term">expression</bdi>)</i><b>] </b>و [<i><bdi dir="ltr" class="odt-ltr-term">Assert.IsTrue</bdi>(<bdi dir="ltr" class="odt-ltr-term">expression, message</bdi>)</i><b>]</b>: يتحقق من أن <b>التعبير </b>يساوي <b><bdi dir="ltr" class="odt-ltr-term">true</bdi></b>.
       </li>
-      <li><b>[</b><i><bdi dir="ltr" class="odt-ltr-term">Assert.IsFalse</bdi>(<bdi dir="ltr" class="odt-ltr-term">expression</bdi>)</i><b>] </b>و [<i><bdi dir="ltr" class="odt-ltr-term">Assert.IsFalse</bdi>(<bdi dir="ltr" class="odt-ltr-term">expression</bdi>, <bdi dir="ltr" class="odt-ltr-term">message</bdi>)</i><b>] </b> : يتحقق من أن <b>التعبير </b>يساوي <b><bdi dir="ltr" class="odt-ltr-term">false</bdi></b>.
+      <li><b>[</b><i><bdi dir="ltr" class="odt-ltr-term">Assert.IsFalse</bdi>(<bdi dir="ltr" class="odt-ltr-term">expression</bdi>)</i><b>] </b>و [<i><bdi dir="ltr" class="odt-ltr-term">Assert.IsFalse</bdi>(<bdi dir="ltr" class="odt-ltr-term">expression, message</bdi>)</i><b>] </b> : يتحقق من أن <b>التعبير </b>يساوي <b><bdi dir="ltr" class="odt-ltr-term">false</bdi></b>.
       </li>
-      <li><b>[</b><i><bdi dir="ltr" class="odt-ltr-term">Assert.AreSame</bdi>(<bdi dir="ltr" class="odt-ltr-term">object1</bdi>, <bdi dir="ltr" class="odt-ltr-term">object2</bdi>)</i><b>] </b>و [<i><bdi dir="ltr" class="odt-ltr-term">Assert.AreSame</bdi>(<bdi dir="ltr" class="odt-ltr-term">object1</bdi>, <bdi dir="ltr" class="odt-ltr-term">object2</bdi>, <bdi dir="ltr" class="odt-ltr-term">message</bdi>)</i><b>] </b>: يتحقق من أن المراجع <b><bdi dir="ltr" class="odt-ltr-term">object1</bdi> </b>و <b><bdi dir="ltr" class="odt-ltr-term">object2</bdi> </b>تشير إلى نفس الكائن.
+      <li><b>[</b><i><bdi dir="ltr" class="odt-ltr-term">Assert.AreSame</bdi>(<bdi dir="ltr" class="odt-ltr-term">object1, object2</bdi>)</i><b>] </b>و [<i><bdi dir="ltr" class="odt-ltr-term">Assert.AreSame</bdi>(<bdi dir="ltr" class="odt-ltr-term">object1, object2, message</bdi>)</i><b>] </b>: يتحقق من أن المراجع <b><bdi dir="ltr" class="odt-ltr-term">object1</bdi> </b>و <b><bdi dir="ltr" class="odt-ltr-term">object2</bdi> </b>تشير إلى نفس الكائن.
       </li>
-      <li><b>[</b><i><bdi dir="ltr" class="odt-ltr-term">Assert.AreNotSame</bdi>(<bdi dir="ltr" class="odt-ltr-term">object1</bdi>, <bdi dir="ltr" class="odt-ltr-term">object2</bdi>)</i><b>] </b>و [<i><bdi dir="ltr" class="odt-ltr-term">Assert.AreNotSame</bdi>(<bdi dir="ltr" class="odt-ltr-term">object1</bdi>, <bdi dir="ltr" class="odt-ltr-term">object2</bdi>, <bdi dir="ltr" class="odt-ltr-term">message</bdi>)</i><b>] </b>: يتحقق من أن المراجع <b><bdi dir="ltr" class="odt-ltr-term">object1</bdi> </b>و <b><bdi dir="ltr" class="odt-ltr-term">object2</bdi> </b>لا تشيران إلى نفس الكائن.
+      <li><b>[</b><i><bdi dir="ltr" class="odt-ltr-term">Assert.AreNotSame</bdi>(<bdi dir="ltr" class="odt-ltr-term">object1, object2</bdi>)</i><b>] </b>و [<i><bdi dir="ltr" class="odt-ltr-term">Assert.AreNotSame</bdi>(<bdi dir="ltr" class="odt-ltr-term">object1, object2, message</bdi>)</i><b>] </b>: يتحقق من أن المراجع <b><bdi dir="ltr" class="odt-ltr-term">object1</bdi> </b>و <b><bdi dir="ltr" class="odt-ltr-term">object2</bdi> </b>لا تشيران إلى نفس الكائن.
       </li>
     </ul>
   </li>
@@ -1768,7 +1768,7 @@
 </ul>
 
 <p>دعونا نُهيئ المشروع بحيث ينتج عنه ملف <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> بدلاً من ملف .exe قابل للتنفيذ:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000081700000334AE742D3D.png" width="621" height="246" style="display:inline-block; margin:4px;width:16.439cm;height:6.509cm;" class="odt-zoomable" data-zoom-src="images/100000000000081700000334AE742D3D.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000081700000334AE742D3D.png" width="621" height="246" style="display:inline-block; margin:4px;width:16.439cm;height:6.509cm;" class="odt-zoomable" data-zoom-src="images/100000000000081700000334AE742D3D.png" /></td></tr></table>
 
 <ul>
   <li>في [1]: خصائص المشروع
@@ -1780,7 +1780,7 @@
 </ul>
 
 <p>الآن دعونا نستخدم <bdi dir="ltr" class="odt-ltr-term">NUnit</bdi> لتنفيذ فئة الاختبار:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000080F00000187B129520D.png" width="619" height="117" style="display:inline-block; margin:4px;width:16.371cm;height:3.103cm;" class="odt-zoomable" data-zoom-src="images/100000000000080F00000187B129520D.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000080F00000187B129520D.png" width="619" height="117" style="display:inline-block; margin:4px;width:16.371cm;height:3.103cm;" class="odt-zoomable" data-zoom-src="images/100000000000080F00000187B129520D.png" /></td></tr></table>
 
 <ul>
   <li>في [1]: افتح مشروع <bdi dir="ltr" class="odt-ltr-term">NUnit</bdi>
@@ -1795,7 +1795,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000838000002DAC020B66E.png" width="631" height="219" style="display:inline-block; margin:4px;width:16.701cm;height:5.794cm;" class="odt-zoomable" data-zoom-src="images/1000000000000838000002DAC020B66E.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000838000002DAC020B66E.png" width="631" height="219" style="display:inline-block; margin:4px;width:16.701cm;height:5.794cm;" class="odt-zoomable" data-zoom-src="images/1000000000000838000002DAC020B66E.png" /></td></tr></table>
 
 <ul>
   <li>في [7]: النتائج: نجح t1، وفشل t2
@@ -1806,7 +1806,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005760000012CBD1B437D.png" width="489" height="105" style="display:inline-block; margin:4px;width:12.95cm;height:2.778cm;" class="odt-zoomable" data-zoom-src="images/10000000000005760000012CBD1B437D.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005760000012CBD1B437D.png" width="489" height="105" style="display:inline-block; margin:4px;width:12.95cm;height:2.778cm;" class="odt-zoomable" data-zoom-src="images/10000000000005760000012CBD1B437D.png" /></td></tr></table>
 
 <ul>
   <li>في [11]: علامات التبويب المختلفة في نافذة النتائج
@@ -1824,7 +1824,7 @@
 </ul>
 
 <p>يمكنك تحديد الطرق المراد اختبارها:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C80000015AB5B9E078.png" width="428" height="121" style="display:inline-block; margin:4px;width:11.329cm;height:3.201cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C80000015AB5B9E078.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004C80000015AB5B9E078.png" width="428" height="121" style="display:inline-block; margin:4px;width:11.329cm;height:3.201cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C80000015AB5B9E078.png" /></td></tr></table>
 
 <ul>
   <li>في [1]: يتم عرض مربع اختيار بجوار كل اختبار
@@ -1871,54 +1871,54 @@
 
 <p>بدءًا من الإصدار 2.4 من <bdi dir="ltr" class="odt-ltr-term">NUnit</bdi>، أصبحت صيغة جديدة متاحة، وهي تلك الموجودة في السطرين 21 و26. ولهذا، يجب أن تكون فئة الاختبار مشتقة من <strong><bdi dir="ltr" class="odt-ltr-term">AssertionHelper</bdi></strong> (السطر 6).</p>
 <p>فيما يلي التوافق (غير الشامل) بين الصيغة القديمة والجديدة:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Assert.AreEqual(expression1, expression2,
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>message)
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Expect(التعبير1,EqualTo(التعبير2),الرسالة)
 </code></pre></div>
-</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Assert.AreEqual(réel1, réel2, delta, message)
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Expect(التعبير1,EqualTo(التعبير2).Within(دلتا),
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>رسالة)
 </code></pre></div>
-</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Assert.AreSame(objet1, objet2, message)
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Expect(objet1,SameAs(objet2),message)
 </code></pre></div>
-</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Assert.AreNotSame(objet1, objet2, message)
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>توقع(objet1،Not.SameAs(objet2)،message)
 </code></pre></div>
-</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Assert.IsNull(objet,message)
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>توقع(كائن،Null،رسالة)
 </code></pre></div>
-</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>تأكيد.ليس_فارغًا(كائن، رسالة)
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Expect(objet, Not.Null, message)
 </code></pre></div>
-</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>تأكيد.صحيح(التعبير، الرسالة)
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>توقع(التعبير، صحيح، الرسالة)
 </code></pre></div>
-</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>تأكيد.غير_صحيح(التعبير، الرسالة)
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>توقع(التعبير، False، الرسالة)
 </code></pre></div>
 </div></td></tr></table>
@@ -1941,7 +1941,7 @@
 </code></pre></div>
 
 <p>إذا قمنا بإنشاء (<bdi dir="ltr" class="odt-ltr-term">F6</bdi>) مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الجديدة لمشروع <bdi dir="ltr" class="odt-ltr-term">C#</bdi>، يصبح مشروع <bdi dir="ltr" class="odt-ltr-term">NUnit</bdi> كما يلي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007BD000001C0063A20E2.png" width="594" height="134" style="display:inline-block; margin:4px;width:15.72cm;height:3.554cm;" class="odt-zoomable" data-zoom-src="images/10000000000007BD000001C0063A20E2.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000007BD000001C0063A20E2.png" width="594" height="134" style="display:inline-block; margin:4px;width:15.72cm;height:3.554cm;" class="odt-zoomable" data-zoom-src="images/10000000000007BD000001C0063A20E2.png" /></td></tr></table>
 
 <ul>
   <li>في [1]: تم الكشف تلقائيًا عن فئة الاختبار الجديدة [<bdi dir="ltr" class="odt-ltr-term">NUnit2</bdi>]
@@ -1953,14 +1953,14 @@
 </ul>
 
 <p>لمعرفة المزيد عن <bdi dir="ltr" class="odt-ltr-term">NUnit</bdi>، اقرأ دليل المساعدة الخاص بـ <bdi dir="ltr" class="odt-ltr-term">NUnit</bdi> :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000011B0000006BB378F215.png" width="198" height="75" style="display:inline-block; margin:4px;width:5.241cm;height:1.983cm;" class="odt-zoomable" data-zoom-src="images/100000000000011B0000006BB378F215.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E9000000E7A082B620.png" width="163" height="161" style="display:inline-block; margin:4px;width:4.309cm;height:4.272cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E9000000E7A082B620.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000011B0000006BB378F215.png" width="198" height="75" style="display:inline-block; margin:4px;width:5.241cm;height:1.983cm;" class="odt-zoomable" data-zoom-src="images/100000000000011B0000006BB378F215.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000E9000000E7A082B620.png" width="163" height="161" style="display:inline-block; margin:4px;width:4.309cm;height:4.272cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E9000000E7A082B620.png" /></td></tr></table>
 
 <p><a id="refheading10401011168783983"></a></p>
 <h3 id="642-visual-studio">6.4.2. <span style="color: #4f81bd">حل <bdi dir="ltr" class="odt-ltr-term">Visual Studio</bdi></span></h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006BB000001D6AE9C5A7E.png" width="517" height="141" style="display:inline-block; margin:4px;width:13.681cm;height:3.732cm;" class="odt-zoomable" data-zoom-src="images/10000000000006BB000001D6AE9C5A7E.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006BB000001D6AE9C5A7E.png" width="517" height="141" style="display:inline-block; margin:4px;width:13.681cm;height:3.732cm;" class="odt-zoomable" data-zoom-src="images/10000000000006BB000001D6AE9C5A7E.png" /></td></tr></table>
 
 <p>سنقوم تدريجياً بإنشاء حل <bdi dir="ltr" class="odt-ltr-term">Visual Studio</bdi> التالي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007CB000002AFFEABEF4C.png" width="598" height="206" style="display:inline-block; margin:4px;width:15.829cm;height:5.45cm;" class="odt-zoomable" data-zoom-src="images/10000000000007CB000002AFFEABEF4C.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000007CB000002AFFEABEF4C.png" width="598" height="206" style="display:inline-block; margin:4px;width:15.829cm;height:5.45cm;" class="odt-zoomable" data-zoom-src="images/10000000000007CB000002AFFEABEF4C.png" /></td></tr></table>
 
 <ul>
   <li>في [1]: يتكون الحل <i><bdi dir="ltr" class="odt-ltr-term">ImpotsV5</bdi> </i>من ثلاثة مشاريع، واحد لكل طبقة من الطبقات الثلاث للتطبيق
@@ -1974,7 +1974,7 @@
 </ul>
 
 <p>يمكن بناء الحل <em><bdi dir="ltr" class="odt-ltr-term">ImpotsV5</bdi></em> على النحو التالي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>1</b></div><img src="images/100000000000007000000049B2484001.png" width="78" height="51" style="display:inline-block; margin:4px;width:2.071cm;height:1.349cm;" class="odt-zoomable" data-zoom-src="images/100000000000007000000049B2484001.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>234</b></div><img src="images/10000000000001BF000000CFA8CC9870.png" width="313" height="145" style="display:inline-block; margin:4px;width:8.28cm;height:3.835cm;" class="odt-zoomable" data-zoom-src="images/10000000000001BF000000CFA8CC9870.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>5</b></div><img src="images/10000000000000D1000000F0CAF13A2C.png" width="146" height="168" style="display:inline-block; margin:4px;width:3.87cm;height:4.443cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D1000000F0CAF13A2C.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><b>1</b></div><img src="images/100000000000007000000049B2484001.png" width="78" height="51" style="display:inline-block; margin:4px;width:2.071cm;height:1.349cm;" class="odt-zoomable" data-zoom-src="images/100000000000007000000049B2484001.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><b>234</b></div><img src="images/10000000000001BF000000CFA8CC9870.png" width="313" height="145" style="display:inline-block; margin:4px;width:8.28cm;height:3.835cm;" class="odt-zoomable" data-zoom-src="images/10000000000001BF000000CFA8CC9870.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><b>5</b></div><img src="images/10000000000000D1000000F0CAF13A2C.png" width="146" height="168" style="display:inline-block; margin:4px;width:3.87cm;height:4.443cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D1000000F0CAF13A2C.png" /></td></tr></table>
 
 <ul>
   <li>en [1]: إنشاء مشروع جديد
@@ -1989,7 +1989,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000075400000166A95016E6.png" width="563" height="107" style="display:inline-block; margin:4px;width:14.891cm;height:2.842cm;" class="odt-zoomable" data-zoom-src="images/100000000000075400000166A95016E6.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000075400000166A95016E6.png" width="563" height="107" style="display:inline-block; margin:4px;width:14.891cm;height:2.842cm;" class="odt-zoomable" data-zoom-src="images/100000000000075400000166A95016E6.png" /></td></tr></table>
 
 <ul>
   <li>في [6]: احتفظ باسم [dao] للمشروع
@@ -2006,7 +2006,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006090000019D120F31A1.png" width="463" height="124" style="display:inline-block; margin:4px;width:12.261cm;height:3.277cm;" class="odt-zoomable" data-zoom-src="images/10000000000006090000019D120F31A1.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006090000019D120F31A1.png" width="463" height="124" style="display:inline-block; margin:4px;width:12.261cm;height:3.277cm;" class="odt-zoomable" data-zoom-src="images/10000000000006090000019D120F31A1.png" /></td></tr></table>
 
 <ul>
   <li>في [12]: ملف الحل <i><bdi dir="ltr" class="odt-ltr-term">ImpotsV5</bdi></i>. يحتوي على المجلد [dao] من المجلد [dao].
@@ -2017,7 +2017,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000008020000028A89258476.png" width="513" height="163" style="display:inline-block; margin:4px;width:13.561cm;height:4.3cm;" class="odt-zoomable" data-zoom-src="images/10000000000008020000028A89258476.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000008020000028A89258476.png" width="513" height="163" style="display:inline-block; margin:4px;width:13.561cm;height:4.3cm;" class="odt-zoomable" data-zoom-src="images/10000000000008020000028A89258476.png" /></td></tr></table>
 
 <ul>
   <li>في [15]: يُسمى المشروع الجديد [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]
@@ -2028,7 +2028,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000748000002F00644FDE4.png" width="466" height="188" style="display:inline-block; margin:4px;width:12.33cm;height:4.974cm;" class="odt-zoomable" data-zoom-src="images/1000000000000748000002F00644FDE4.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000748000002F00644FDE4.png" width="466" height="188" style="display:inline-block; margin:4px;width:12.33cm;height:4.974cm;" class="odt-zoomable" data-zoom-src="images/1000000000000748000002F00644FDE4.png" /></td></tr></table>
 
 <ul>
   <li>في [18]: ملف الحل وملفات المشاريع الثلاثة
@@ -2044,9 +2044,9 @@
 <p><a id="refheading10401031168783983"></a>
 <a id="impotsv5-dao"></a></p>
 <h3 id="643-dao">6.4.3. <span style="color: #4f81bd">[الطبقة dao]</span></h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006C3000001D83B9E6292.png" width="519" height="142" style="display:inline-block; margin:4px;width:13.741cm;height:3.747cm;" class="odt-zoomable" data-zoom-src="images/10000000000006C3000001D83B9E6292.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006C3000001D83B9E6292.png" width="519" height="142" style="display:inline-block; margin:4px;width:13.741cm;height:3.747cm;" class="odt-zoomable" data-zoom-src="images/10000000000006C3000001D83B9E6292.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E9000002A26E2681CE.png" width="377" height="202" style="display:inline-block; margin:4px;width:9.98cm;height:5.352cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E9000002A26E2681CE.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004E9000002A26E2681CE.png" width="377" height="202" style="display:inline-block; margin:4px;width:9.98cm;height:5.352cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E9000002A26E2681CE.png" /></td></tr></table>
 
 <p><u><strong>مراجع المشروع</strong> </u>(انظر [1] في المشروع)</p>
 <p>نضيف مرجع [<bdi dir="ltr" class="odt-ltr-term">nunit.framework</bdi>] المطلوب لاختبارات [<bdi dir="ltr" class="odt-ltr-term">NUnit</bdi>]</p>
@@ -2167,7 +2167,7 @@
 </ul>
 
 <p>يتم نسخ ملف [<bdi dir="ltr" class="odt-ltr-term">DataImpot.txt</bdi>] المطلوب للاختبار تلقائيًا إلى مجلد تنفيذ المشروع (انظر [5] في المشروع). سيحتوي مشروع [dao] على عدة فئات تحتوي على طريقة [<bdi dir="ltr" class="odt-ltr-term">Main</bdi>]. في هذه الحالة، يجب أن تشير صراحةً إلى الفئة المراد تنفيذها عندما يطلب المستخدم تنفيذ المشروع بالضغط على <bdi dir="ltr" class="odt-ltr-term">Ctrl-F5</bdi> :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007F50000034F9073383D.png" width="611" height="254" style="display:inline-block; margin:4px;width:16.17cm;height:6.724cm;" class="odt-zoomable" data-zoom-src="images/10000000000007F50000034F9073383D.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000007F50000034F9073383D.png" width="611" height="254" style="display:inline-block; margin:4px;width:16.17cm;height:6.724cm;" class="odt-zoomable" data-zoom-src="images/10000000000007F50000034F9073383D.png" /></td></tr></table>
 
 <ul>
   <li>en [1]: الوصول إلى خصائص المشروع
@@ -2194,7 +2194,7 @@
 </code></pre></div>
 
 <p>تم تعديل المشروع لتشغيل فئة [<bdi dir="ltr" class="odt-ltr-term">Test2</bdi>]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000476000001977C4FC780.png" width="342" height="122" style="display:inline-block; margin:4px;width:9.059cm;height:3.23cm;" class="odt-zoomable" data-zoom-src="images/1000000000000476000001977C4FC780.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000476000001977C4FC780.png" width="342" height="122" style="display:inline-block; margin:4px;width:9.059cm;height:3.23cm;" class="odt-zoomable" data-zoom-src="images/1000000000000476000001977C4FC780.png" /></td></tr></table>
 
 <p>نتائج الشاشة هي نفسها كما كانت من قبل.</p>
 <p><u><strong>اختبار <bdi dir="ltr" class="odt-ltr-term">NUnit</bdi> [<bdi dir="ltr" class="odt-ltr-term">NUnit1</bdi>]</strong> </u>(انظر [4] في المشروع)</p>
@@ -2255,7 +2255,7 @@
 </ul>
 
 <p>لتشغيل اختبار الوحدة هذا، يجب أن يكون المشروع من النوع [مكتبة الفئات] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007E0000001A95E5A90E3.png" width="605" height="127" style="display:inline-block; margin:4px;width:16cm;height:3.373cm;" class="odt-zoomable" data-zoom-src="images/10000000000007E0000001A95E5A90E3.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000007E0000001A95E5A90E3.png" width="605" height="127" style="display:inline-block; margin:4px;width:16cm;height:3.373cm;" class="odt-zoomable" data-zoom-src="images/10000000000007E0000001A95E5A90E3.png" /></td></tr></table>
 
 <ul>
   <li>في [1]: تم تغيير طبيعة المشروع
@@ -2267,7 +2267,7 @@
 </ul>
 
 <p>ثم يتم تحميل ملف <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> [<bdi dir="ltr" class="odt-ltr-term">ImpotsV5-dao.dll</bdi>] في إطار عمل <em><bdi dir="ltr" class="odt-ltr-term">NUnit</bdi></em> وتنفيذه:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000082C000001C62429FC1A.png" width="628" height="136" style="display:inline-block; margin:4px;width:16.611cm;height:3.605cm;" class="odt-zoomable" data-zoom-src="images/100000000000082C000001C62429FC1A.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000082C000001C62429FC1A.png" width="628" height="136" style="display:inline-block; margin:4px;width:16.611cm;height:3.605cm;" class="odt-zoomable" data-zoom-src="images/100000000000082C000001C62429FC1A.png" /></td></tr></table>
 
 <ul>
   <li>في [1]: اجتازت الاختبارات. نعتبر الآن طبقة [dao] جاهزة للعمل. تحتوي مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الخاصة بها على جميع فئات المشروع، بما في ذلك فئات الاختبار. لم تعد هناك حاجة لهذه الفئات. نعيد بناء مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> لاستبعاد فئات الاختبار.
@@ -2281,9 +2281,9 @@
 <p><a id="refheading10401051168783983"></a>
 <a id="impots-v5-metier"></a></p>
 <h3 id="644">6.4.4. <span style="color: #4f81bd">مهمة [ ]</span></h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006AA000001CD0522B461.png" width="512" height="138" style="display:inline-block; margin:4px;width:13.54cm;height:3.658cm;" class="odt-zoomable" data-zoom-src="images/10000000000006AA000001CD0522B461.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006AA000001CD0522B461.png" width="512" height="138" style="display:inline-block; margin:4px;width:13.54cm;height:3.658cm;" class="odt-zoomable" data-zoom-src="images/10000000000006AA000001CD0522B461.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006100000022CA914C583.png" width="466" height="167" style="display:inline-block; margin:4px;width:12.321cm;height:4.413cm;" class="odt-zoomable" data-zoom-src="images/10000000000006100000022CA914C583.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006100000022CA914C583.png" width="466" height="167" style="display:inline-block; margin:4px;width:12.321cm;height:4.413cm;" class="odt-zoomable" data-zoom-src="images/10000000000006100000022CA914C583.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، أصبح مشروع [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] هو المشروع النشط للحل
@@ -2300,7 +2300,7 @@
 
 <p><u><strong>مراجع المشروع</strong> </u>(انظر [2] في المشروع)</p>
 <p>كما هو الحال مع مشروع [dao]، نضيف مرجع [<bdi dir="ltr" class="odt-ltr-term">nunit.framework</bdi>] المطلوب لاختبارات [<bdi dir="ltr" class="odt-ltr-term">NUnit</bdi>]. تحتاج طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] إلى طبقة [dao]. ولذلك فهي تحتاج إلى مرجع إلى مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> لهذه الطبقة. اتبع الخطوات التالية:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000077A000001A324F2BD2E.png" width="574" height="126" style="display:inline-block; margin:4px;width:15.191cm;height:3.327cm;" class="odt-zoomable" data-zoom-src="images/100000000000077A000001A324F2BD2E.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000077A000001A324F2BD2E.png" width="574" height="126" style="display:inline-block; margin:4px;width:15.191cm;height:3.327cm;" class="odt-zoomable" data-zoom-src="images/100000000000077A000001A324F2BD2E.png" /></td></tr></table>
 
 <ul>
   <li>في [1]: تمت إضافة مرجع جديد إلى مراجع المشروع [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]
@@ -2361,7 +2361,7 @@
 </ul>
 
 <p>يتم تكوين مشروع [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] على النحو التالي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000472000001A1394014DA.png" width="341" height="125" style="display:inline-block; margin:4px;width:9.029cm;height:3.309cm;" class="odt-zoomable" data-zoom-src="images/1000000000000472000001A1394014DA.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000472000001A1394014DA.png" width="341" height="125" style="display:inline-block; margin:4px;width:9.029cm;height:3.309cm;" class="odt-zoomable" data-zoom-src="images/1000000000000472000001A1394014DA.png" /></td></tr></table>
 
 <ul>
   <li>[1]: المشروع عبارة عن تطبيق وحدة تحكم
@@ -2421,7 +2421,7 @@
 </ul>
 
 <p>تم تكوين مشروع [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] الآن على النحو التالي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000429000001AC7D6D377B.png" width="319" height="128" style="display:inline-block; margin:4px;width:8.451cm;height:3.395cm;" class="odt-zoomable" data-zoom-src="images/1000000000000429000001AC7D6D377B.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000429000001AC7D6D377B.png" width="319" height="128" style="display:inline-block; margin:4px;width:8.451cm;height:3.395cm;" class="odt-zoomable" data-zoom-src="images/1000000000000429000001AC7D6D377B.png" /></td></tr></table>
 
 <ul>
   <li>[1]: المشروع من نوع &quot;مكتبة الفئات&quot;
@@ -2431,10 +2431,10 @@
 </ul>
 
 <p>يتم إنشاء المشروع (<bdi dir="ltr" class="odt-ltr-term">F6</bdi>). ثم يتم تحميل ملف <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> [<a id="impotsv5-metier-dll"></a> <bdi dir="ltr" class="odt-ltr-term">ImpotsV5-metier.dll</bdi> الذي تم إنشاؤه في <em><bdi dir="ltr" class="odt-ltr-term">NUnit</bdi></em> واختباره:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000028C00000085FF4D6587.png" width="456" height="93" style="display:inline-block; margin:4px;width:12.06cm;height:2.461cm;" class="odt-zoomable" data-zoom-src="images/100000000000028C00000085FF4D6587.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000028C00000085FF4D6587.png" width="456" height="93" style="display:inline-block; margin:4px;width:12.06cm;height:2.461cm;" class="odt-zoomable" data-zoom-src="images/100000000000028C00000085FF4D6587.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
 
 <p>نجحت الاختبارات المذكورة أعلاه. نعتبر الآن طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] جاهزة للعمل. تحتوي مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الخاصة بها على جميع فئات المشروع، بما في ذلك فئات الاختبار. لم تعد هناك حاجة لهذه الفئات. نقوم بإعادة بناء مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> لاستبعاد فئات الاختبار.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003CB000001B2CEB0A607.png" width="291" height="130" style="display:inline-block; margin:4px;width:7.71cm;height:3.447cm;" class="odt-zoomable" data-zoom-src="images/10000000000003CB000001B2CEB0A607.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000003CB000001B2CEB0A607.png" width="291" height="130" style="display:inline-block; margin:4px;width:7.71cm;height:3.447cm;" class="odt-zoomable" data-zoom-src="images/10000000000003CB000001B2CEB0A607.png" /></td></tr></table>
 
 <ul>
   <li>في [1]: تم استبعاد مجلد [<bdi dir="ltr" class="odt-ltr-term">tests</bdi>] من المشروع
@@ -2445,9 +2445,9 @@
 
 <p><a id="refheading10401071168783983"></a></p>
 <h3 id="645-ui">6.4.5. <span style="color: #4f81bd">طبقة [ui]</span></h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000697000001E0E6A9F6BE.png" width="506" height="144" style="display:inline-block; margin:4px;width:13.39cm;height:3.81cm;" class="odt-zoomable" data-zoom-src="images/1000000000000697000001E0E6A9F6BE.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000697000001E0E6A9F6BE.png" width="506" height="144" style="display:inline-block; margin:4px;width:13.39cm;height:3.81cm;" class="odt-zoomable" data-zoom-src="images/1000000000000697000001E0E6A9F6BE.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000606000001B91FDC5F1F.png" width="463" height="132" style="display:inline-block; margin:4px;width:12.24cm;height:3.501cm;" class="odt-zoomable" data-zoom-src="images/1000000000000606000001B91FDC5F1F.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000606000001B91FDC5F1F.png" width="463" height="132" style="display:inline-block; margin:4px;width:12.24cm;height:3.501cm;" class="odt-zoomable" data-zoom-src="images/1000000000000606000001B91FDC5F1F.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، أصبح مشروع [ui] هو المشروع النشط للحل
@@ -2466,7 +2466,7 @@
 <p>الفئة [<bdi dir="ltr" class="odt-ltr-term">Dialogue.cs</bdi>] هي نفسها الموجودة في الإصدار السابق.</p>
 <p><u><strong>الاختبارات</strong></u></p>
 <p>تم تكوين مشروع [ui] على النحو التالي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000475000001A89F7EBBA3.png" width="342" height="127" style="display:inline-block; margin:4px;width:9.059cm;height:3.366cm;" class="odt-zoomable" data-zoom-src="images/1000000000000475000001A89F7EBBA3.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000475000001A89F7EBBA3.png" width="342" height="127" style="display:inline-block; margin:4px;width:9.059cm;height:3.366cm;" class="odt-zoomable" data-zoom-src="images/1000000000000475000001A89F7EBBA3.png" /></td></tr></table>
 
 <ul>
   <li>[1]: المشروع من نوع &quot;وحدة تحكم التطبيق&quot;
@@ -2505,7 +2505,7 @@
 </code></pre></div>
 
 <p>بصرف النظر عن هذا التغيير، لن يتغير شيء في التطبيق، حيث تتواصل كل طبقة مع الطبقة التالية عبر واجهة. طالما بقيت الواجهة دون تغيير، يبقى التواصل بين الطبقات دون تغيير. يسمح لنا إطار العمل <strong><bdi dir="ltr" class="odt-ltr-term">Spring</bdi></strong> بالارتقاء باستقلالية الطبقات خطوة إلى الأمام، من خلال نقل أسماء الفئات التي تنفذ الطبقات المختلفة إلى ملف تكوين. إن تغيير تنفيذ طبقة ما يعادل تغيير ملف تكوين. ولا يوجد أي تأثير على كود التطبيق.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006BF000001EEF645BF0E.png" width="518" height="148" style="display:inline-block; margin:4px;width:13.711cm;height:3.921cm;" class="odt-zoomable" data-zoom-src="images/10000000000006BF000001EEF645BF0E.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006BF000001EEF645BF0E.png" width="518" height="148" style="display:inline-block; margin:4px;width:13.711cm;height:3.921cm;" class="odt-zoomable" data-zoom-src="images/10000000000006BF000001EEF645BF0E.png" /></td></tr></table>
 
 <p>فيما سبق، ستطلب طبقة [ui] من <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> [0] إنشاء مثيلات لطبقتي [dao] [1] و[<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] [2] وفقًا للمعلومات الواردة في ملف التكوين. ستطلب طبقة [ui] بعد ذلك من <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> [3] مرجعًا لطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
@@ -2529,7 +2529,7 @@
 </ul>
 
 <p>يوجد إطار عمل <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> في نسختين: <bdi dir="ltr" class="odt-ltr-term">Java</bdi> و .<bdi dir="ltr" class="odt-ltr-term">NET.</bdi> النسخة .<bdi dir="ltr" class="odt-ltr-term">NET</bdi> متاحة على الرابط (مارس 2008) [<bdi dir="ltr" class="odt-ltr-term">http://www.springframework.net/</bdi>]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000081700000283F402F7EB.png" width="621" height="193" style="display:inline-block; margin:4px;width:16.439cm;height:5.105cm;" class="odt-zoomable" data-zoom-src="images/100000000000081700000283F402F7EB.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000081700000283F402F7EB.png" width="621" height="193" style="display:inline-block; margin:4px;width:16.439cm;height:5.105cm;" class="odt-zoomable" data-zoom-src="images/100000000000081700000283F402F7EB.png" /></td></tr></table>
 
 <ul>
   <li>في [1]: موقع [<bdi dir="ltr" class="odt-ltr-term">Spring.net</bdi>]
@@ -2538,28 +2538,28 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007AB000002D74B02C2D9.png" width="491" height="182" style="display:inline-block; margin:4px;width:12.98cm;height:4.807cm;" class="odt-zoomable" data-zoom-src="images/10000000000007AB000002D74B02C2D9.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000007AB000002D74B02C2D9.png" width="491" height="182" style="display:inline-block; margin:4px;width:12.98cm;height:4.807cm;" class="odt-zoomable" data-zoom-src="images/10000000000007AB000002D74B02C2D9.png" /></td></tr></table>
 
 <ul>
   <li>في [3]: تنزيل <bdi dir="ltr" class="odt-ltr-term">Spring 1.1</bdi> (مارس 2008)
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000082F0000040D67EE309A.png" width="629" height="311" style="display:inline-block; margin:4px;width:16.63cm;height:8.232cm;" class="odt-zoomable" data-zoom-src="images/100000000000082F0000040D67EE309A.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000082F0000040D67EE309A.png" width="629" height="311" style="display:inline-block; margin:4px;width:16.63cm;height:8.232cm;" class="odt-zoomable" data-zoom-src="images/100000000000082F0000040D67EE309A.png" /></td></tr></table>
 
 <ul>
   <li>en [4]: قم بتنزيل وتثبيت الإصدار .exe
   </li>
   <li>في [5]: المجلد الذي تم إنشاؤه بواسطة التثبيت
   </li>
-  <li>في [6]: يحتوي المجلد [<bdi dir="ltr" class="odt-ltr-term">bin/net/2.0/release</bdi>] على مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> من <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> لمشاريع <bdi dir="ltr" class="odt-ltr-term">Visual Studio</bdi> .<bdi dir="ltr" class="odt-ltr-term">NET 2.0</bdi> أو أعلى. <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> هو إطار عمل غني. الجانب من <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> الذي سنستخدمه هنا لإدارة تكامل الطبقات في التطبيق يُسمى <b><bdi dir="ltr" class="odt-ltr-term">IoC</bdi></b>: <i>انعكاس </i>التحكم أو <b><bdi dir="ltr" class="odt-ltr-term">DI</bdi></b>: <i>حقن التبعية</i>. يوفر <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> مكتبات للوصول إلى قاعدة البيانات باستخدام <i><bdi dir="ltr" class="odt-ltr-term">NHibernate</bdi></i>، وإنشاء وتشغيل خدمات الويب، وتطبيقات الويب، ...
+  <li>في [6]: يحتوي المجلد [<bdi dir="ltr" class="odt-ltr-term">bin/net/2.0/release</bdi>] على مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> من <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> لمشاريع <bdi dir="ltr" class="odt-ltr-term">Visual Studio .NET 2.0</bdi> أو أعلى. <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> هو إطار عمل غني. الجانب من <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> الذي سنستخدمه هنا لإدارة تكامل الطبقات في التطبيق يُسمى <b><bdi dir="ltr" class="odt-ltr-term">IoC</bdi></b>: <i>انعكاس </i>التحكم أو <b><bdi dir="ltr" class="odt-ltr-term">DI</bdi></b>: <i>حقن التبعية</i>. يوفر <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> مكتبات للوصول إلى قاعدة البيانات باستخدام <i><bdi dir="ltr" class="odt-ltr-term">NHibernate</bdi></i>، وإنشاء وتشغيل خدمات الويب، وتطبيقات الويب، ...
   </li>
   <li>ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> اللازمة لإدارة تكامل الطبقات في التطبيق هي ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> [7] و[8].
   </li>
 </ul>
 
 <p>نقوم بتخزين ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الثلاثة هذه في مجلد [lib] في مشروعنا:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007DB0000027D371F3434.png" width="603" height="191" style="display:inline-block; margin:4px;width:15.96cm;height:5.055cm;" class="odt-zoomable" data-zoom-src="images/10000000000007DB0000027D371F3434.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000007DB0000027D371F3434.png" width="603" height="191" style="display:inline-block; margin:4px;width:15.96cm;height:5.055cm;" class="odt-zoomable" data-zoom-src="images/10000000000007DB0000027D371F3434.png" /></td></tr></table>
 
 <ul>
   <li>[1]: يتم وضع ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الثلاثة في مجلد [lib] باستخدام مستكشف <bdi dir="ltr" class="odt-ltr-term">Windows</bdi>
@@ -2574,7 +2574,7 @@
 
 <p>عملية إنشاء مجلد [lib] ليست ضرورية على الإطلاق. يمكن إنشاء المراجع مباشرة على ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الثلاثة الموجودة في مجلد [<bdi dir="ltr" class="odt-ltr-term">bin/net/2.0/release</bdi>] في [<bdi dir="ltr" class="odt-ltr-term">Spring.net</bdi>]. ومع ذلك، من خلال إنشاء مجلد [lib]، يمكن تطوير التطبيق على محطة عمل بدون [<bdi dir="ltr" class="odt-ltr-term">Spring.net</bdi>]، مما يجعله أقل اعتمادًا على بيئة التطوير المتاحة.</p>
 <p>نقوم بإضافة مراجع إلى ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الثلاثة الجديدة إلى مشروع [ui]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E8000002E7FF4AD111.png" width="377" height="223" style="display:inline-block; margin:4px;width:9.97cm;height:5.898cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E8000002E7FF4AD111.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004E8000002E7FF4AD111.png" width="377" height="223" style="display:inline-block; margin:4px;width:9.97cm;height:5.898cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E8000002E7FF4AD111.png" /></td></tr></table>
 
 <ul>
   <li>[1]: إنشاء مراجع إلى ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الثلاثة الموجودة في المجلد [lib] [2]
@@ -2584,7 +2584,7 @@
 </ul>
 
 <p>لنعد إلى نظرة عامة على بنية التطبيق:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006C70000021EA354603D.png" width="520" height="163" style="display:inline-block; margin:4px;width:13.771cm;height:4.302cm;" class="odt-zoomable" data-zoom-src="images/10000000000006C70000021EA354603D.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006C70000021EA354603D.png" width="520" height="163" style="display:inline-block; margin:4px;width:13.771cm;height:4.302cm;" class="odt-zoomable" data-zoom-src="images/10000000000006C70000021EA354603D.png" /></td></tr></table>
 
 <p>في الأعلى، ستطلب طبقة [ui] من <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> [0] إنشاء مثيلات لطبقتي [dao] [1] و[<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] [2] وفقًا للمعلومات الواردة في ملف التكوين. ثم ستطلب طبقة [ui] من <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> [3] مرجعًا لطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]. سيؤدي ذلك إلى ظهور الكود التالي في طبقة [ui]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
@@ -2609,7 +2609,7 @@
 
 <p>يستخدم السطر [5] أعلاه ملف التكوين [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] في مشروع <bdi dir="ltr" class="odt-ltr-term">Visual Studio.</bdi> في مشروع <bdi dir="ltr" class="odt-ltr-term">C#</bdi>، يُستخدم هذا الملف لتكوين التطبيق. وبالتالي، فإن [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] ليس مفهومًا خاصًا بـ <bdi dir="ltr" class="odt-ltr-term">Spring</bdi>، بل مفهومًا خاصًا بـ <bdi dir="ltr" class="odt-ltr-term">Visual Studio</bdi> يستفيد منه <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> يعرف <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> كيفية استخدام ملفات التكوين بخلاف [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]. وبالتالي، فإن الحل المقدم هنا ليس الحل الوحيد المتاح.</p>
 <p>لنقم بإنشاء ملف [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] باستخدام معالج <bdi dir="ltr" class="odt-ltr-term">Visual Studio:</bdi></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000081A0000029BD827EDB2.png" width="622" height="200" style="display:inline-block; margin:4px;width:16.461cm;height:5.293cm;" class="odt-zoomable" data-zoom-src="images/100000000000081A0000029BD827EDB2.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000081A0000029BD827EDB2.png" width="622" height="200" style="display:inline-block; margin:4px;width:16.461cm;height:5.293cm;" class="odt-zoomable" data-zoom-src="images/100000000000081A0000029BD827EDB2.png" /></td></tr></table>
 
 <ul>
   <li>في [1]: أضف عنصرًا جديدًا إلى المشروع
@@ -2772,7 +2772,7 @@
 </ul>
 
 <p>كل ما تبقى هو استخدام ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> هذا في طبقة [ui]. للقيام بذلك، نقوم بنسخ فئة [<bdi dir="ltr" class="odt-ltr-term">Dialogue.cs</bdi>] في [<bdi dir="ltr" class="odt-ltr-term">Dialogue2.cs</bdi>] ونجعل الأخيرة الفئة الرئيسية لمشروع [ui]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007F700000203556582B5.png" width="612" height="154" style="display:inline-block; margin:4px;width:16.18cm;height:4.087cm;" class="odt-zoomable" data-zoom-src="images/10000000000007F700000203556582B5.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000007F700000203556582B5.png" width="612" height="154" style="display:inline-block; margin:4px;width:16.18cm;height:4.087cm;" class="odt-zoomable" data-zoom-src="images/10000000000007F700000203556582B5.png" /></td></tr></table>
 
 <ul>
   <li>في [1]: نسخة من [<bdi dir="ltr" class="odt-ltr-term">Dialogue.cs</bdi>]
@@ -2785,7 +2785,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000047900000190711ACB85.png" width="344" height="120" style="display:inline-block; margin:4px;width:9.089cm;height:3.175cm;" class="odt-zoomable" data-zoom-src="images/100000000000047900000190711ACB85.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000047900000190711ACB85.png" width="344" height="120" style="display:inline-block; margin:4px;width:9.089cm;height:3.175cm;" class="odt-zoomable" data-zoom-src="images/100000000000047900000190711ACB85.png" /></td></tr></table>
 
 <ul>
   <li>في [6]: نجعل [<bdi dir="ltr" class="odt-ltr-term">Dialogue2.cs</bdi>] الفئة الرئيسية لمشروع [ui].
@@ -2838,7 +2838,7 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 2: يتيح <b><bdi dir="ltr" class="odt-ltr-term">IApplicationContext</bdi> </b>الوصول إلى مجموعة الكائنات التي تم إنشاء مثيلاتها بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> نسمي هذا الكائن سياق <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> للتطبيق، أو ببساطة سياق التطبيق. في الوقت الحالي، لم يتم تهيئة هذا السياق. يقوم الأمر try / <bdi dir="ltr" class="odt-ltr-term">catch</bdi> التالي بذلك. 
+  <li>السطر 2: يتيح <b><bdi dir="ltr" class="odt-ltr-term">IApplicationContext</bdi> </b>الوصول إلى مجموعة الكائنات التي تم إنشاء مثيلاتها بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> نسمي هذا الكائن سياق <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> للتطبيق، أو ببساطة سياق التطبيق. في الوقت الحالي، لم يتم تهيئة هذا السياق. يقوم الأمر <bdi dir="ltr" class="odt-ltr-term">try / catch</bdi> التالي بذلك. 
   </li>
   <li>السطر 5: يتم قراءة تكوين <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> في [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] واستخدامه. بعد هذه العملية، إذا لم يتم إثارة أي استثناء، فسيتم قراءة جميع الكائنات في القسم &lt;<bdi dir="ltr" class="odt-ltr-term">objects</bdi>&gt; <b>التي تم إنشاء مثيل لها</b>:
   </li>
@@ -2929,7 +2929,7 @@
 
 <p>من كل هذا، سنتذكر أن الاستثناء الأعمق، هنا هو الذي في السطر 17، هو غالبًا الأكثر أهمية. لاحظ، مع ذلك، أن <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> احتفظ برسالة الخطأ من السطر 17، وقام بتمريرها إلى الاستثناء الأعلى مستوى في السطر 3، من أجل الحصول على السبب الأصلي للخطأ في المستوى الأعلى.</p>
 <p>يستحق <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> وحده كتابًا كاملًا. لم نتطرق هنا إلا إلى جزء بسيط منه. يمكن استكشافه بعمق أكبر من خلال الوثيقة [<bdi dir="ltr" class="odt-ltr-term">spring-net-reference.pdf</bdi>] الموجودة في مجلد تثبيت <bdi dir="ltr" class="odt-ltr-term">Spring:</bdi></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000BC0000005316B6DB0D.png" width="132" height="58" style="display:inline-block; margin:4px;width:3.48cm;height:1.536cm;" class="odt-zoomable" data-zoom-src="images/10000000000000BC0000005316B6DB0D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000BC0000005316B6DB0D.png" width="132" height="58" style="display:inline-block; margin:4px;width:3.48cm;height:1.536cm;" class="odt-zoomable" data-zoom-src="images/10000000000000BC0000005316B6DB0D.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
 
 <p>انظر أيضًا [<bdi dir="ltr" class="odt-ltr-term">http://tahe.developpez.com/dotnet/springioc</bdi>]، وهو درس تعليمي عن <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> مقدم في سياق <bdi dir="ltr" class="odt-ltr-term">VB.NET.</bdi></p>
 

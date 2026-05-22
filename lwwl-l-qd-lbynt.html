@@ -1141,7 +1141,7 @@
 <p><a id="refheading10401691168783983"></a></p>
 <h2 id="91-adonet">9.1. <span style="color: #4f81bd">موصل <bdi dir="ltr" class="odt-ltr-term">ADO.NET</bdi></span></h2>
 <p>دعونا نلقي نظرة أخرى على البنية الطبقية المستخدمة في مناسبات مختلفة </p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006BC000001858C87E1E8.png" width="517" height="117" style="display:inline-block; margin:4px;width:13.681cm;height:3.087cm;" class="odt-zoomable" data-zoom-src="images/10000000000006BC000001858C87E1E8.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006BC000001858C87E1E8.png" width="517" height="117" style="display:inline-block; margin:4px;width:13.681cm;height:3.087cm;" class="odt-zoomable" data-zoom-src="images/10000000000006BC000001858C87E1E8.png" /></td></tr></table>
 
 <p>في الأمثلة التي درسناها، استغلت طبقة [dao] حتى الآن نوعين من مصادر البيانات:</p>
 <ul>
@@ -1152,7 +1152,7 @@
 </ul>
 
 <p>في هذا الفصل، ندرس الحالة التي تأتي فيها البيانات من قاعدة بيانات. ثم تتطور بنية الطبقات الثلاث إلى بنية متعددة الطبقات. هناك أنواع مختلفة من البنية متعددة الطبقات. سندرس المفاهيم الأساسية باستخدام ما يلي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007C200000186560F4615.png" width="596" height="117" style="display:inline-block; margin:4px;width:15.76cm;height:3.096cm;" class="odt-zoomable" data-zoom-src="images/10000000000007C200000186560F4615.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000007C200000186560F4615.png" width="596" height="117" style="display:inline-block; margin:4px;width:15.76cm;height:3.096cm;" class="odt-zoomable" data-zoom-src="images/10000000000007C200000186560F4615.png" /></td></tr></table>
 
 <p>في الرسم التوضيحي أعلاه، تتفاعل طبقة [dao] [1] مع نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">SGBD</bdi>) [3] من خلال مكتبة فئات خاصة بنظام إدارة قواعد البيانات المستخدم وتُرفق معه. وتنفذ هذه الطبقة وظائف قياسية تُعرف باسم <bdi dir="ltr" class="odt-ltr-term">ADO</bdi> (<bdi dir="ltr" class="odt-ltr-term">Active X Data Objects</bdi>). وتُسمى هذه الطبقة <strong>«مزود</strong>» (مزود الوصول إلى قاعدة البيانات في هذه الحالة) أو حتى <strong>«موصل</strong>». تتميز معظم <bdi dir="ltr" class="odt-ltr-term">SGBD</bdi> الآن بموصل <bdi dir="ltr" class="odt-ltr-term">ADO.NET</bdi>، وهو ما لم يكن الحال في الأيام الأولى لمنصة .<bdi dir="ltr" class="odt-ltr-term">NET.</bdi> لا توفر موصلات .<bdi dir="ltr" class="odt-ltr-term">NET</bdi> واجهة قياسية لطبقة [dao]، لذا تحتوي الأخيرة على أسماء فئات الموصل في كودها. إذا قمت بتغيير <bdi dir="ltr" class="odt-ltr-term">SGBD</bdi>، فإنك تغير الموصل والفئات، ويجب عليك تغيير طبقة [dao] . وهذا الأمر <strong>فعال</strong> لأن موصل .<bdi dir="ltr" class="odt-ltr-term">NET</bdi>، الذي تمت كتابته لنظام <bdi dir="ltr" class="odt-ltr-term">SGBD</bdi> معين، يعرف أفضل طريقة لاستخدامه، ولكنه <strong>صارم</strong> أيضًا لأن تغيير نظام <bdi dir="ltr" class="odt-ltr-term">SGBD</bdi> يعني تغيير طبقة [dao]. يجب وضع هذه الحجة الثانية في نصابها الصحيح: لا تقوم الشركات بتغيير نظام <bdi dir="ltr" class="odt-ltr-term">SGBD</bdi> الخاص بها كثيرًا. سنرى لاحقًا أنه منذ الإصدار 2.0 من .<bdi dir="ltr" class="odt-ltr-term">NET</bdi>، أصبح هناك موصل عام يوفر المرونة دون التضحية بالأداء.</p>
 <p><a id="refheading10401711168783983"></a></p>
@@ -1194,14 +1194,14 @@
 <h2 id="93">9.3. <span style="color: #4f81bd">المفاهيم الأساسية لتشغيل قاعدة البيانات</span></h2>
 <p>سنقوم بشرح المفاهيم الرئيسية لاستخدام قاعدة البيانات باستخدام قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">SQL Server Compact 3.5</bdi>. يتم توفير نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">SGBD</bdi>) هذا مع <bdi dir="ltr" class="odt-ltr-term">Visual Studio Express.</bdi> إنه نظام إدارة قواعد بيانات خفيف الوزن لا يمكنه إدارة سوى مستخدم واحد في كل مرة. ومع ذلك، فهو كافٍ لتقديم برمجة قواعد البيانات. في وقت لاحق، سنقدم أنظمة إدارة قواعد بيانات أخرى.</p>
 <p>وستكون البنية المستخدمة كما يلي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006880000011E7C514492.png" width="502" height="86" style="display:inline-block; margin:4px;width:13.27cm;height:2.27cm;" class="odt-zoomable" data-zoom-src="images/10000000000006880000011E7C514492.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006880000011E7C514492.png" width="502" height="86" style="display:inline-block; margin:4px;width:13.27cm;height:2.27cm;" class="odt-zoomable" data-zoom-src="images/10000000000006880000011E7C514492.png" /></td></tr></table>
 
 <p>سيعمل تطبيق وحدة التحكم [1] على تشغيل قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">SqlServer Compact</bdi> [3،4] عبر موصل <bdi dir="ltr" class="odt-ltr-term">Ado.Net</bdi> الخاص بقاعدة البيانات هذه [2].</p>
 <p><a id="refheading10401751168783983"></a>
 <a id="sqlce-dbarticles"></a></p>
 <h3 id="931">9.3.1. <span style="color: #4f81bd">قم بزيارة قاعدة البيانات النموذجية</span></h3>
 <p>سنقوم بإنشاء قاعدة البيانات مباشرةً في <bdi dir="ltr" class="odt-ltr-term">Visual Studio Express.</bdi> للقيام بذلك، نقوم بإنشاء مشروع جديد من نوع وحدة التحكم.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000082C0000024F683DD123.png" width="628" height="177" style="display:inline-block; margin:4px;width:16.611cm;height:4.694cm;" class="odt-zoomable" data-zoom-src="images/100000000000082C0000024F683DD123.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000082C0000024F683DD123.png" width="628" height="177" style="display:inline-block; margin:4px;width:16.611cm;height:4.694cm;" class="odt-zoomable" data-zoom-src="images/100000000000082C0000024F683DD123.png" /></td></tr></table>
 
 <ul>
   <li>[1]: المشروع
@@ -1212,7 +1212,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000733000004C2CE5905AB.png" width="553" height="365" style="display:inline-block; margin:4px;width:14.63cm;height:9.67cm;" class="odt-zoomable" data-zoom-src="images/1000000000000733000004C2CE5905AB.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000733000004C2CE5905AB.png" width="553" height="365" style="display:inline-block; margin:4px;width:14.63cm;height:9.67cm;" class="odt-zoomable" data-zoom-src="images/1000000000000733000004C2CE5905AB.png" /></td></tr></table>
 
 <ul>
   <li>[4]: يحدد نوع نظام إدارة قواعد البيانات
@@ -1233,7 +1233,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006EB000003D9F2653DB1.png" width="531" height="296" style="display:inline-block; margin:4px;width:14.06cm;height:7.819cm;" class="odt-zoomable" data-zoom-src="images/10000000000006EB000003D9F2653DB1.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006EB000003D9F2653DB1.png" width="531" height="296" style="display:inline-block; margin:4px;width:14.06cm;height:7.819cm;" class="odt-zoomable" data-zoom-src="images/10000000000006EB000003D9F2653DB1.png" /></td></tr></table>
 
 <ul>
   <li>[14]: اسم قاعدة البيانات التي تم إنشاؤها للتو
@@ -1264,7 +1264,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000738000000EE0CECDDA0.png" width="554" height="71" style="display:inline-block; margin:4px;width:14.67cm;height:1.889cm;" class="odt-zoomable" data-zoom-src="images/1000000000000738000000EE0CECDDA0.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000738000000EE0CECDDA0.png" width="554" height="71" style="display:inline-block; margin:4px;width:14.67cm;height:1.889cm;" class="odt-zoomable" data-zoom-src="images/1000000000000738000000EE0CECDDA0.png" /></td></tr></table>
 
 <ul>
   <li>[21]: حقل [id] من النوع الصحيح وهو المفتاح الأساسي للجدول [22].
@@ -1273,7 +1273,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006FD00000217A571D54E.png" width="537" height="160" style="display:inline-block; margin:4px;width:14.199cm;height:4.246cm;" class="odt-zoomable" data-zoom-src="images/10000000000006FD00000217A571D54E.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006FD00000217A571D54E.png" width="537" height="160" style="display:inline-block; margin:4px;width:14.199cm;height:4.246cm;" class="odt-zoomable" data-zoom-src="images/10000000000006FD00000217A571D54E.png" /></td></tr></table>
 
 <ul>
   <li>[24]: يتم إنشاء الحقول الأخرى. لاحظ أن حقل [<bdi dir="ltr" class="odt-ltr-term">name</bdi>] له قيد تفرد من نوع &quot;<a id="sqlce-dbarticles-nom-unique"></a> &quot; [25].
@@ -1284,7 +1284,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000076B000002258C76CAA8.png" width="570" height="165" style="display:inline-block; margin:4px;width:15.071cm;height:4.357cm;" class="odt-zoomable" data-zoom-src="images/100000000000076B000002258C76CAA8.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000076B000002258C76CAA8.png" width="570" height="165" style="display:inline-block; margin:4px;width:15.071cm;height:4.357cm;" class="odt-zoomable" data-zoom-src="images/100000000000076B000002258C76CAA8.png" /></td></tr></table>
 
 <ul>
   <li>[28]: طلب عرض محتويات الجدول
@@ -1296,7 +1296,7 @@
 </ul>
 
 <p>نحتاج الآن إلى تكوين المشروع بحيث يتم نسخ قاعدة البيانات هذه، الموجودة حاليًا في جذر المشروع، تلقائيًا إلى مجلد تنفيذ المشروع:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005570000015FFB5295D5.png" width="410" height="105" style="display:inline-block; margin:4px;width:10.85cm;height:2.785cm;" class="odt-zoomable" data-zoom-src="images/10000000000005570000015FFB5295D5.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005570000015FFB5295D5.png" width="410" height="105" style="display:inline-block; margin:4px;width:10.85cm;height:2.785cm;" class="odt-zoomable" data-zoom-src="images/10000000000005570000015FFB5295D5.png" /></td></tr></table>
 
 <ul>
   <li>[1]: طلب عرض جميع الملفات
@@ -1307,7 +1307,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007CA00000325C4D47E79.png" width="598" height="242" style="display:inline-block; margin:4px;width:15.829cm;height:6.391cm;" class="odt-zoomable" data-zoom-src="images/10000000000007CA00000325C4D47E79.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000007CA00000325C4D47E79.png" width="598" height="242" style="display:inline-block; margin:4px;width:15.829cm;height:6.391cm;" class="odt-zoomable" data-zoom-src="images/10000000000007CA00000325C4D47E79.png" /></td></tr></table>
 
 <ul>
   <li>[4]: تؤدي عملية إضافة مصدر بيانات إلى مشروع إلى تشغيل معالج لا نحتاج إليه هنا [5].
@@ -1325,14 +1325,14 @@
 <h3 id="932-sql">9.3.2. <span style="color: #4f81bd">الأوامر الأربعة الأساسية للغة <bdi dir="ltr" class="odt-ltr-term">SQL</bdi></span></h3>
 <p><bdi dir="ltr" class="odt-ltr-term">SQL</bdi> (لغة الاستعلام الهيكلية) هي لغة موحدة جزئيًا للاستعلام عن قواعد البيانات وتحديثها. تحترم جميع أنظمة إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">SGBD</bdi>) الجزء الموحد من <bdi dir="ltr" class="odt-ltr-term">SQL</bdi>، ولكنها تضيف امتدادات خاصة باللغة تستفيد من ميزات معينة في <bdi dir="ltr" class="odt-ltr-term">SGBD.</bdi> لقد رأينا بالفعل مثالين: غالبًا ما يعتمد الإنشاء التلقائي للمفاتيح الأساسية والأنواع المسموح بها لأعمدة الجدول على <bdi dir="ltr" class="odt-ltr-term">SGBD.</bdi></p>
 <p>الأوامر الأربعة الأساسية للغة <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> التي نقدمها موحدة ومقبولة من قبل جميع أنظمة إدارة قواعد البيانات العلائقية (<bdi dir="ltr" class="odt-ltr-term">SGBD</bdi>):</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">select</span><span class="w"> </span><span class="n">col1</span><span class="p">,</span><span class="w"> </span><span class="n">col2</span><span class="p">,...</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">from</span><span class="w"> </span><span class="n">table1</span><span class="p">,</span><span class="w"> </span><span class="n">table2</span><span class="p">,...</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="err">حيث</span><span class="w"> </span><span class="err">الشرط</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">expression</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">...</span>
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الاستعلام الذي يسترد البيانات الموجودة في قاعدة البيانات. الكلمات الرئيسية في السطر الأول هي فقط الإلزامية، أما البقية فهي اختيارية. توجد هنا كلمات رئيسية أخرى غير معروضة.</div><ol>
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">الاستعلام الذي يسترد البيانات الموجودة في قاعدة البيانات. الكلمات الرئيسية في السطر الأول هي فقط الإلزامية، أما البقية فهي اختيارية. توجد هنا كلمات رئيسية أخرى غير معروضة.</div><ol>
   <li>يتم إجراء ربط مع جميع الجداول الموجودة خلف الكلمة الرئيسية <b><bdi dir="ltr" class="odt-ltr-term">from</bdi></b>
   </li>
   <li>يتم الاحتفاظ فقط بالأعمدة الموجودة خلف الكلمة الرئيسية <b><bdi dir="ltr" class="odt-ltr-term">select</bdi></b>
@@ -1341,20 +1341,20 @@
   </li>
   <li>تشكل الصفوف الناتجة المرتبة حسب تعبير الكلمة الرئيسية <b><bdi dir="ltr" class="odt-ltr-term">order by</bdi> </b>نتيجة الاستعلام. هذه النتيجة عبارة عن جدول.
   </li>
-</ol></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</ol></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="k">table</span><span class="p">(</span><span class="n">col1</span><span class="p">,</span><span class="n">col2</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="err">القيم</span><span class="w"> </span><span class="p">(</span><span class="err">القيمة</span><span class="mi">1</span><span class="err">،</span><span class="w"> </span><span class="err">القيمة</span><span class="mi">2</span><span class="err">،</span><span class="w"> </span><span class="p">...)</span>
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يُدرج سطراً في <b>الجدول</b>. (<b><bdi dir="ltr" class="odt-ltr-term">col1</bdi></b>, <b><bdi dir="ltr" class="odt-ltr-term">col2</bdi></b>, ...) تحدد أعمدة الصف التي سيتم تهيئتها بالقيم (<b><bdi dir="ltr" class="odt-ltr-term">val1</bdi></b>, <b><bdi dir="ltr" class="odt-ltr-term">val2</bdi></b>, ...).</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">يُدرج سطراً في <b>الجدول</b>. (<b><bdi dir="ltr" class="odt-ltr-term">col1</bdi></b>, <b><bdi dir="ltr" class="odt-ltr-term">col2</bdi></b>, ...) تحدد أعمدة الصف التي سيتم تهيئتها بالقيم (<b><bdi dir="ltr" class="odt-ltr-term">val1</bdi></b>, <b><bdi dir="ltr" class="odt-ltr-term">val2</bdi></b>, ...).</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>تحديث الجدول
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>تعيين col1=val1، col2=val2
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>حيث الشرط
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يُحدّث <b>الجدول</b> مع التحقق <b>من الشرط </b>(جميع الأسطر في حالة عدم وجود <b><bdi dir="ltr" class="odt-ltr-term">where</bdi></b>). بالنسبة لهذه الأسطر، يتلقى <b><bdi dir="ltr" class="odt-ltr-term">col1</bdi> </b>القيمة <b><bdi dir="ltr" class="odt-ltr-term">val1</bdi></b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">يُحدّث <b>الجدول</b> مع التحقق <b>من الشرط </b>(جميع الأسطر في حالة عدم وجود <b><bdi dir="ltr" class="odt-ltr-term">where</bdi></b>). بالنسبة لهذه الأسطر، يتلقى <b><bdi dir="ltr" class="odt-ltr-term">col1</bdi> </b>القيمة <b><bdi dir="ltr" class="odt-ltr-term">val1</bdi></b></div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>حذف من الجدول
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>حيث الشرط
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">حذف جميع <b>شروط</b> التحقق <b>الخاصة بالجدول</b></div></td></tr></table>
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">حذف جميع <b>شروط</b> التحقق <b>الخاصة بالجدول</b></div></td></tr></table>
 
 <p>سنقوم بكتابة تطبيق وحدة تحكم لإصدار أوامر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> إلى قاعدة البيانات [<bdi dir="ltr" class="odt-ltr-term">dbarticles</bdi>] التي أنشأناها سابقًا. فيما يلي مثال على تنفيذ الأمر<a id="bd-execution-1"></a> . ندعو القارئ إلى فهم أوامر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> الصادرة ونتائجها.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
@@ -1493,7 +1493,7 @@
 <p><a id="refheading10401791168783983"></a></p>
 <h3 id="933-adonet">9.3.3. <span style="color: #4f81bd">واجهات <bdi dir="ltr" class="odt-ltr-term">ADO.NET</bdi> الأساسية للوضع المتصل</span></h3>
 <p>لنعد إلى الرسم التخطيطي لتطبيق يستخدم قاعدة بيانات من خلال موصل <bdi dir="ltr" class="odt-ltr-term">ADO.NET:</bdi></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007650000011A50B5371B.png" width="568" height="85" style="display:inline-block; margin:4px;width:15.02cm;height:2.238cm;" class="odt-zoomable" data-zoom-src="images/10000000000007650000011A50B5371B.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000007650000011A50B5371B.png" width="568" height="85" style="display:inline-block; margin:4px;width:15.02cm;height:2.238cm;" class="odt-zoomable" data-zoom-src="images/10000000000007650000011A50B5371B.png" /></td></tr></table>
 
 <p>في <strong>الوضع المتصل</strong>، يقوم :</p>
 <ol>
@@ -1517,22 +1517,22 @@
 
 <p><u><strong>الواجهة</strong></u><a id="idbconnection"></a><u> <strong><bdi dir="ltr" class="odt-ltr-term">IDbConnection</bdi></strong></u></p>
 <p>تُستخدم لإدارة اتصال قاعدة البيانات. ستكون الطرق <strong><bdi dir="ltr" class="odt-ltr-term">M</bdi></strong> والخصائص <strong><bdi dir="ltr" class="odt-ltr-term">P</bdi></strong> لهذه الواجهة كما يلي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الاسم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>النوع</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><b>الاسم</b></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><b>النوع</b></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ConnectionString
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">P</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>سلسلة الاتصال </b>بالقاعدة. تحدد جميع المعلمات المطلوبة لإنشاء اتصال بقاعدة معينة.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">P</bdi></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><b>سلسلة الاتصال </b>بالقاعدة. تحدد جميع المعلمات المطلوبة لإنشاء اتصال بقاعدة معينة.</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>فتح
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يفتح الاتصال بالقاعدة المحددة بواسطة <i><bdi dir="ltr" class="odt-ltr-term">ConnectionString</bdi></i></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">يفتح الاتصال بالقاعدة المحددة بواسطة <i><bdi dir="ltr" class="odt-ltr-term">ConnectionString</bdi></i></div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>إغلاق
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يغلق الاتصال</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">يغلق الاتصال</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>BeginTransaction
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يبدأ معاملة.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">يبدأ معاملة.</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>الحالة
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">P</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">حالة الاتصال: <i><bdi dir="ltr" class="odt-ltr-term">ConnectionState.Closed</bdi></i>،  <i><bdi dir="ltr" class="odt-ltr-term">ConnectionState.</bdi></i><bdi dir="ltr" class="odt-ltr-term">Open</bdi>،  <i><bdi dir="ltr" class="odt-ltr-term">ConnectionState.</bdi></i><bdi dir="ltr" class="odt-ltr-term">Connecting</bdi>،  <i><bdi dir="ltr" class="odt-ltr-term">ConnectionState.Executing</bdi></i>،  <i><bdi dir="ltr" class="odt-ltr-term">ConnectionState.</bdi></i><bdi dir="ltr" class="odt-ltr-term">Fet</bdi><i><bdi dir="ltr" class="odt-ltr-term">ching</bdi></i>،  <i><bdi dir="ltr" class="odt-ltr-term">ConnectionState.Broken</bdi></i></div></td></tr></table>
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">P</bdi></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">حالة الاتصال: <i><bdi dir="ltr" class="odt-ltr-term">ConnectionState.Closed</bdi></i>،  <i><bdi dir="ltr" class="odt-ltr-term">ConnectionState.</bdi></i><bdi dir="ltr" class="odt-ltr-term">Open</bdi>،  <i><bdi dir="ltr" class="odt-ltr-term">ConnectionState.</bdi></i><bdi dir="ltr" class="odt-ltr-term">Connecting</bdi>،  <i><bdi dir="ltr" class="odt-ltr-term">ConnectionState.Executing</bdi></i>،  <i><bdi dir="ltr" class="odt-ltr-term">ConnectionState.</bdi></i><bdi dir="ltr" class="odt-ltr-term">Fet</bdi><i><bdi dir="ltr" class="odt-ltr-term">ching</bdi></i>،  <i><bdi dir="ltr" class="odt-ltr-term">ConnectionState.Broken</bdi></i></div></td></tr></table>
 
 <p>إذا كانت <em><bdi dir="ltr" class="odt-ltr-term">Connection</bdi></em> فئة تنفذ <bdi dir="ltr" class="odt-ltr-term">IDbConnection</bdi>، فيمكن فتح الاتصال على النحو التالي:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
@@ -1543,37 +1543,37 @@
 </code></pre></div></td></tr></table></div>
 <p><u><strong>الواجهة</strong></u><a id="idbcommand"></a><u> <strong><bdi dir="ltr" class="odt-ltr-term">IDbCommand</bdi></strong></u></p>
 <p>تُستخدم لتنفيذ أمر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> أو إجراء مخزّن. ستكون الطرق <strong><bdi dir="ltr" class="odt-ltr-term">M</bdi></strong> والخصائص <strong><bdi dir="ltr" class="odt-ltr-term">P</bdi></strong> لهذه الواجهة كما يلي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الاسم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>النوع</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><b>الاسم</b></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><b>النوع</b></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>نوع_الأمر
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">P</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يشير إلى ما سيتم تنفيذه -  يأخذ قيمه من قائمة:</div><div style="margin:0 0 0.5em 0">- <i><bdi dir="ltr" class="odt-ltr-term">CommandType.Text</bdi> </i>: ينفذ الأمر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> المحدد في <i><bdi dir="ltr" class="odt-ltr-term">CommandText</bdi></i>. هذه هي القيمة الافتراضية.</div><div style="margin:0 0 0.5em 0">- <i><bdi dir="ltr" class="odt-ltr-term">CommandType.StoredProcedure</bdi> </i>: ينفذ إجراءً مخزّنًا في</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">P</bdi></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">يشير إلى ما سيتم تنفيذه -  يأخذ قيمه من قائمة:</div><div style="margin:0 0 0.5em 0">- <i><bdi dir="ltr" class="odt-ltr-term">CommandType.Text</bdi> </i>: ينفذ الأمر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> المحدد في <i><bdi dir="ltr" class="odt-ltr-term">CommandText</bdi></i>. هذه هي القيمة الافتراضية.</div><div style="margin:0 0 0.5em 0">- <i><bdi dir="ltr" class="odt-ltr-term">CommandType.StoredProcedure</bdi> </i>: ينفذ إجراءً مخزّنًا في</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>CommandText
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">P</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">- نص أمر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> المراد تنفيذه إذا كان <bdi dir="ltr" class="odt-ltr-term">CommandType</bdi>= <i><bdi dir="ltr" class="odt-ltr-term">CommandType.Text</bdi></i></div><div style="margin:0 0 0.5em 0">- اسم الإجراء المخزن المراد تنفيذه إذا كان <bdi dir="ltr" class="odt-ltr-term">CommandType</bdi>= <i><bdi dir="ltr" class="odt-ltr-term">CommandType.StoredProcedure</bdi></i></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">P</bdi></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">- نص أمر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> المراد تنفيذه إذا كان <bdi dir="ltr" class="odt-ltr-term">CommandType</bdi>= <i><bdi dir="ltr" class="odt-ltr-term">CommandType.Text</bdi></i></div><div style="margin:0 0 0.5em 0">- اسم الإجراء المخزن المراد تنفيذه إذا كان <bdi dir="ltr" class="odt-ltr-term">CommandType</bdi>= <i><bdi dir="ltr" class="odt-ltr-term">CommandType.StoredProcedure</bdi></i></div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Connection
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">P</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">معرف الاتصال <i><bdi dir="ltr" class="odt-ltr-term">idbConnection</bdi> </i>الذي سيتم استخدامه لتنفيذ أمر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">P</bdi></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">معرف الاتصال <i><bdi dir="ltr" class="odt-ltr-term">idbConnection</bdi> </i>الذي سيتم استخدامه لتنفيذ أمر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi></div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>المعاملة
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">P</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">معرف المعاملة <i><bdi dir="ltr" class="odt-ltr-term">IDbTransaction</bdi> </i>التي سيتم تنفيذ أمر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> فيها</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">P</bdi></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">معرف المعاملة <i><bdi dir="ltr" class="odt-ltr-term">IDbTransaction</bdi> </i>التي سيتم تنفيذ أمر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> فيها</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>المعلمات
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">P</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">قائمة معلمات أمر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> المعلم. يحتوي الأمر <i><bdi dir="ltr" class="odt-ltr-term">update articles set price</bdi>=<bdi dir="ltr" class="odt-ltr-term">price</bdi>*<bdi dir="ltr" class="odt-ltr-term">1.1 where id</bdi>=@id </i>على المعلمة @<bdi dir="ltr" class="odt-ltr-term">id.</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">P</bdi></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">قائمة معلمات أمر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> المعلم. يحتوي الأمر <i><bdi dir="ltr" class="odt-ltr-term">update articles set price</bdi>=<bdi dir="ltr" class="odt-ltr-term">price</bdi>*<bdi dir="ltr" class="odt-ltr-term">1.1 where id</bdi>=@id </i>على المعلمة @<bdi dir="ltr" class="odt-ltr-term">id.</bdi></div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">ExecuteReader</span>
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">لتنفيذ أمر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> من <i>نوع <bdi dir="ltr" class="odt-ltr-term">Select</bdi></i>. والنتيجة هي كائن <i><bdi dir="ltr" class="odt-ltr-term">IDataReader</bdi> </i>يمثل نتيجة أمر <i><bdi dir="ltr" class="odt-ltr-term">Select</bdi></i>.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">لتنفيذ أمر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> من <i>نوع <bdi dir="ltr" class="odt-ltr-term">Select</bdi></i>. والنتيجة هي كائن <i><bdi dir="ltr" class="odt-ltr-term">IDataReader</bdi> </i>يمثل نتيجة أمر <i><bdi dir="ltr" class="odt-ltr-term">Select</bdi></i>.</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>ExecuteNonQuery
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">لتنفيذ أمر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> <i><bdi dir="ltr" class="odt-ltr-term">Update</bdi> أو <bdi dir="ltr" class="odt-ltr-term">Insert</bdi> أو <bdi dir="ltr" class="odt-ltr-term">Delete</bdi></i>. يعطي هذا عدد الأسطر التي تأثرت بالعملية (تم تحديثها أو إدراجها أو حذفها).</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">لتنفيذ أمر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> <i><bdi dir="ltr" class="odt-ltr-term">Update</bdi> أو <bdi dir="ltr" class="odt-ltr-term">Insert</bdi> أو <bdi dir="ltr" class="odt-ltr-term">Delete</bdi></i>. يعطي هذا عدد الأسطر التي تأثرت بالعملية (تم تحديثها أو إدراجها أو حذفها).</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>ExecuteScalar
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">لتنفيذ أمر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> <i><bdi dir="ltr" class="odt-ltr-term">Select</bdi> </i>يعرض نتيجة واحدة كما في: <i><bdi dir="ltr" class="odt-ltr-term">select count</bdi>(*) <bdi dir="ltr" class="odt-ltr-term">from articles</bdi></i>.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">لتنفيذ أمر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> <i><bdi dir="ltr" class="odt-ltr-term">Select</bdi> </i>يعرض نتيجة واحدة كما في: <i><bdi dir="ltr" class="odt-ltr-term">select count</bdi>(*) <bdi dir="ltr" class="odt-ltr-term">from articles</bdi></i>.</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>CreateParameter
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">لإنشاء معلمات أمر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> <i><bdi dir="ltr" class="odt-ltr-term">IDbParameter</bdi></i>.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">لإنشاء معلمات أمر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> <i><bdi dir="ltr" class="odt-ltr-term">IDbParameter</bdi></i>.</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Prepare
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تحسين تنفيذ استعلام معلمات عند تنفيذه عدة مرات بمعلمات مختلفة.</div></td></tr></table>
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">تحسين تنفيذ استعلام معلمات عند تنفيذه عدة مرات بمعلمات مختلفة.</div></td></tr></table>
 
 <p>إذا كانت <em><bdi dir="ltr" class="odt-ltr-term">Command</bdi></em> فئة تنفذ <bdi dir="ltr" class="odt-ltr-term">IDbCommand</bdi>، فسيتخذ تنفيذ أمر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> بدون معاملة الشكل التالي:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1"> 1</a></span>
@@ -1610,31 +1610,31 @@
 </code></pre></div></td></tr></table></div>
 <p><u><strong>الواجهة</strong></u><a id="idatareader"></a><u> <strong><bdi dir="ltr" class="odt-ltr-term">IDataReader</bdi></strong></u></p>
 <p>تُستخدم لتغليف نتائج أمر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> <em><bdi dir="ltr" class="odt-ltr-term">Select</bdi></em>. يمثل كائن <em><bdi dir="ltr" class="odt-ltr-term">IDataReader</bdi></em> جدولاً يحتوي على صفوف وأعمدة، يتم معالجتها بالتسلسل: أولاً الصف الأول، ثم الثاني، ... ستكون الطرق <strong><bdi dir="ltr" class="odt-ltr-term">M</bdi></strong> والخصائص <strong><bdi dir="ltr" class="odt-ltr-term">P</bdi></strong> لهذه الواجهة كما يلي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الاسم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>النوع</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><b>الاسم</b></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><b>النوع</b></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>FieldCount
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">P</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">عدد الأعمدة في الجدول <i><bdi dir="ltr" class="odt-ltr-term">IDataReader</bdi></i></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">P</bdi></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">عدد الأعمدة في الجدول <i><bdi dir="ltr" class="odt-ltr-term">IDataReader</bdi></i></div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>GetName
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تُرجع <i><bdi dir="ltr" class="odt-ltr-term">GetName</bdi>(i) </i>اسم العمود رقم i في الجدول <i><bdi dir="ltr" class="odt-ltr-term">IDataReader</bdi></i>.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">تُرجع <i><bdi dir="ltr" class="odt-ltr-term">GetName</bdi>(i) </i>اسم العمود رقم i في الجدول <i><bdi dir="ltr" class="odt-ltr-term">IDataReader</bdi></i>.</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>Item
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">P</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يمثل <i><bdi dir="ltr" class="odt-ltr-term">Item</bdi>[i] </i>العمود رقم i في الصف الحالي من الجدول <i><bdi dir="ltr" class="odt-ltr-term">IDataReader</bdi></i>.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">P</bdi></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">يمثل <i><bdi dir="ltr" class="odt-ltr-term">Item</bdi>[i] </i>العمود رقم i في الصف الحالي من الجدول <i><bdi dir="ltr" class="odt-ltr-term">IDataReader</bdi></i>.</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>قراءة
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">ينتقل إلى السطر التالي في الجدول <i><bdi dir="ltr" class="odt-ltr-term">IDataReader</bdi></i>. <bdi dir="ltr" class="odt-ltr-term">Render</bdi> قيمة منطقية <i><bdi dir="ltr" class="odt-ltr-term">True</bdi> </i>إذا كانت القراءة ممكنة، و <i><bdi dir="ltr" class="odt-ltr-term">False</bdi> </i>في الحالات الأخرى.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">ينتقل إلى السطر التالي في الجدول <i><bdi dir="ltr" class="odt-ltr-term">IDataReader</bdi></i>. <bdi dir="ltr" class="odt-ltr-term">Render</bdi> قيمة منطقية <i><bdi dir="ltr" class="odt-ltr-term">True</bdi> </i>إذا كانت القراءة ممكنة، و <i><bdi dir="ltr" class="odt-ltr-term">False</bdi> </i>في الحالات الأخرى.</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>إغلاق
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">إغلاق الجدول <i><bdi dir="ltr" class="odt-ltr-term">IDataReader</bdi></i>.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">إغلاق الجدول <i><bdi dir="ltr" class="odt-ltr-term">IDataReader</bdi></i>.</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>GetBoolean
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">GetBoolean</bdi></i>(i): تُرجع القيمة المنطقية للعمود رقم i في الصف الحالي من الجدول <i><bdi dir="ltr" class="odt-ltr-term">IDataReader</bdi></i>. ومن بين الطرق المماثلة الأخرى: <bdi dir="ltr" class="odt-ltr-term">GetDateTime</bdi>، <bdi dir="ltr" class="odt-ltr-term">GetDecimal</bdi>، <bdi dir="ltr" class="odt-ltr-term">GetDouble</bdi>، <bdi dir="ltr" class="odt-ltr-term">GetFloat</bdi>، <i><bdi dir="ltr" class="odt-ltr-term">GetInt16</bdi></i>، <bdi dir="ltr" class="odt-ltr-term">GetInt32</bdi>، <i><bdi dir="ltr" class="odt-ltr-term">GetInt64</bdi></i>، <i><bdi dir="ltr" class="odt-ltr-term">GetString</bdi></i>.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">GetBoolean</bdi></i>(i): تُرجع القيمة المنطقية للعمود رقم i في الصف الحالي من الجدول <i><bdi dir="ltr" class="odt-ltr-term">IDataReader</bdi></i>. ومن بين الطرق المماثلة الأخرى: <bdi dir="ltr" class="odt-ltr-term">GetDateTime</bdi>، <bdi dir="ltr" class="odt-ltr-term">GetDecimal</bdi>، <bdi dir="ltr" class="odt-ltr-term">GetDouble</bdi>، <bdi dir="ltr" class="odt-ltr-term">GetFloat</bdi>، <i><bdi dir="ltr" class="odt-ltr-term">GetInt16</bdi></i>، <bdi dir="ltr" class="odt-ltr-term">GetInt32</bdi>، <i><bdi dir="ltr" class="odt-ltr-term">GetInt64</bdi></i>، <i><bdi dir="ltr" class="odt-ltr-term">GetString</bdi></i>.</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>Getvalue
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">Getvalue</bdi></i>(i): تُرجع قيمة العمود رقم i في صف الجدول الحالي <i><bdi dir="ltr" class="odt-ltr-term">IDataReader</bdi> ككائن</i> من النوع.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">Getvalue</bdi></i>(i): تُرجع قيمة العمود رقم i في صف الجدول الحالي <i><bdi dir="ltr" class="odt-ltr-term">IDataReader</bdi> ككائن</i> من النوع.</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>IsDBNull
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">IsDBNull</bdi>(i) </i>تعطي <i><bdi dir="ltr" class="odt-ltr-term">True</bdi> </i>إذا كان العمود رقم i في الصف الحالي لـ <i><bdi dir="ltr" class="odt-ltr-term">IDataReader</bdi> </i>لا يحتوي على قيمة، وهو ما يرمز له بـ <bdi dir="ltr" class="odt-ltr-term">SQL NULL.</bdi></div></td></tr></table>
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">IsDBNull</bdi>(i) </i>تعطي <i><bdi dir="ltr" class="odt-ltr-term">True</bdi> </i>إذا كان العمود رقم i في الصف الحالي لـ <i><bdi dir="ltr" class="odt-ltr-term">IDataReader</bdi> </i>لا يحتوي على قيمة، وهو ما يرمز له بـ <bdi dir="ltr" class="odt-ltr-term">SQL NULL.</bdi></div></td></tr></table>
 
 <p>غالبًا ما يبدو استخدام كائن <em><bdi dir="ltr" class="odt-ltr-term">IDataReader</bdi></em> كما يلي:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1"> 1</a></span>
@@ -1676,9 +1676,9 @@
 <p><a id="refheading10401811168783983"></a></p>
 <h3 id="934">9.3.4. <span style="color: #4f81bd">إدارة الأخطاء</span></h3>
 <p>دعونا نستعرض بنية تطبيق قاعدة البيانات:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000075E00000120C7A17B43.png" width="566" height="86" style="display:inline-block; margin:4px;width:14.97cm;height:2.286cm;" class="odt-zoomable" data-zoom-src="images/100000000000075E00000120C7A17B43.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000075E00000120C7A17B43.png" width="566" height="86" style="display:inline-block; margin:4px;width:14.97cm;height:2.286cm;" class="odt-zoomable" data-zoom-src="images/100000000000075E00000120C7A17B43.png" /></td></tr></table>
 
-<p>قد تواجه طبقة [dao] العديد من الأخطاء أثناء تشغيل قاعدة البيانات. سيتم رفع هذه الأخطاء كاستثناءات بواسطة موصل <bdi dir="ltr" class="odt-ltr-term">ADO.NET.</bdi> يجب أن يتعامل كود طبقة [dao] معها. يجب تنفيذ أي عملية مع قاعدة البيانات في وضع try / <bdi dir="ltr" class="odt-ltr-term">catch</bdi> / <bdi dir="ltr" class="odt-ltr-term">finally</bdi>، من أجل اعتراض أي استثناء والتعامل معه وتحرير الموارد التي تحتاج إلى التحرير. على سبيل المثال، يصبح الكود الموضح أعلاه لاستغلال نتيجة أمر <em><bdi dir="ltr" class="odt-ltr-term">Select</bdi></em> كما يلي:</p>
+<p>قد تواجه طبقة [dao] العديد من الأخطاء أثناء تشغيل قاعدة البيانات. سيتم رفع هذه الأخطاء كاستثناءات بواسطة موصل <bdi dir="ltr" class="odt-ltr-term">ADO.NET.</bdi> يجب أن يتعامل كود طبقة [dao] معها. يجب تنفيذ أي عملية مع قاعدة البيانات في وضع <bdi dir="ltr" class="odt-ltr-term">try / catch / finally</bdi>، من أجل اعتراض أي استثناء والتعامل معه وتحرير الموارد التي تحتاج إلى التحرير. على سبيل المثال، يصبح الكود الموضح أعلاه لاستغلال نتيجة أمر <em><bdi dir="ltr" class="odt-ltr-term">Select</bdi></em> كما يلي:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-31-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-31-3"> 3</a></span>
@@ -1792,7 +1792,7 @@
 <p><a id="refheading10401831168783983"></a></p>
 <h3 id="935">9.3.5. <span style="color: #4f81bd">مثال على تكوين المشروع</span></h3>
 <p>سيكون المشروع النهائي كما يلي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000077000000324F1455C23.png" width="571" height="241" style="display:inline-block; margin:4px;width:15.109cm;height:6.38cm;" class="odt-zoomable" data-zoom-src="images/100000000000077000000324F1455C23.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000077000000324F1455C23.png" width="571" height="241" style="display:inline-block; margin:4px;width:15.109cm;height:6.38cm;" class="odt-zoomable" data-zoom-src="images/100000000000077000000324F1455C23.png" /></td></tr></table>
 
 <ul>
   <li>[1]: سيحتوي المشروع على ملف تكوين [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]
@@ -1823,7 +1823,7 @@
 
 <p><span style="color: #0000ff"> </span></p>
 <ul>
-  <li>الأسطر 3-5: تحدد علامة &lt;<b><bdi dir="ltr" class="odt-ltr-term">connectionStrings</bdi></b>&gt; سلاسل اتصال قاعدة البيانات. تتخذ سلسلة الاتصال الشكل &quot;<bdi dir="ltr" class="odt-ltr-term">parameter1</bdi>=<bdi dir="ltr" class="odt-ltr-term">value1</bdi>;<bdi dir="ltr" class="odt-ltr-term">parameter2</bdi>=<bdi dir="ltr" class="odt-ltr-term">value2</bdi>;...&quot;. وهي تحدد جميع المعلمات المطلوبة لإنشاء اتصال بقاعدة بيانات معينة. تتغير سلاسل الاتصال هذه مع كل <bdi dir="ltr" class="odt-ltr-term">SGBD.</bdi> يقدم [<b><bdi dir="ltr" class="odt-ltr-term">http://www.connectionstrings.com/</bdi></b>] شكل هذه السلاسل بالنسبة لـ <bdi dir="ltr" class="odt-ltr-term">SGBD</bdi> الرئيسي.
+  <li>الأسطر 3-5: تحدد علامة &lt;<b><bdi dir="ltr" class="odt-ltr-term">connectionStrings</bdi></b>&gt; سلاسل اتصال قاعدة البيانات. تتخذ سلسلة الاتصال الشكل &quot;<bdi dir="ltr" class="odt-ltr-term">parameter1</bdi>=<bdi dir="ltr" class="odt-ltr-term">value1;parameter2</bdi>=<bdi dir="ltr" class="odt-ltr-term">value2</bdi>;...&quot;. وهي تحدد جميع المعلمات المطلوبة لإنشاء اتصال بقاعدة بيانات معينة. تتغير سلاسل الاتصال هذه مع كل <bdi dir="ltr" class="odt-ltr-term">SGBD.</bdi> يقدم [<b><bdi dir="ltr" class="odt-ltr-term">http://www.connectionstrings.com/</bdi></b>] شكل هذه السلاسل بالنسبة لـ <bdi dir="ltr" class="odt-ltr-term">SGBD</bdi> الرئيسي.
   </li>
   <li>السطر 4: يحدد سلسلة اتصال محددة، هنا لقاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">SQL Server Compact</bdi> <i><bdi dir="ltr" class="odt-ltr-term">dbarticles.sdf</bdi> </i>التي أنشأناها سابقًا:
     <ul>
@@ -2006,7 +2006,7 @@
       </li>
     </ul>
   </li>
-  <li>السطر 4: قد تؤدي أي عملية مع قاعدة البيانات إلى حدوث استثناء قد ترغب في معالجته. وهذا أمر مهم للغاية هنا لأن أوامر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> التي يقدمها المستخدم قد تكون خاطئة من الناحية النحوية. وعلينا أن نكون قادرين على إخباره بذلك. ولذلك، فإن كل الكود موجود داخل <i>try / <bdi dir="ltr" class="odt-ltr-term">catch</bdi></i>.
+  <li>السطر 4: قد تؤدي أي عملية مع قاعدة البيانات إلى حدوث استثناء قد ترغب في معالجته. وهذا أمر مهم للغاية هنا لأن أوامر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> التي يقدمها المستخدم قد تكون خاطئة من الناحية النحوية. وعلينا أن نكون قادرين على إخباره بذلك. ولذلك، فإن كل الكود موجود داخل <i><bdi dir="ltr" class="odt-ltr-term">try / catch</bdi></i>.
   </li>
   <li>السطر 5: هناك عدة أمور هنا:
     <ul>
@@ -2059,7 +2059,7 @@
   </li>
   <li>السطر 3: تُستخدم عبارة <i><bdi dir="ltr" class="odt-ltr-term">using</bdi> </i>لإدارة إغلاق كائن <i><bdi dir="ltr" class="odt-ltr-term">IDataReader</bdi></i> تلقائيًا.
   </li>
-  <li>الأسطر 8-10: أسماء أعمدة جدول النتائج لـ <i><bdi dir="ltr" class="odt-ltr-term">Select</bdi></i>. هذه هي أعمدة <i><bdi dir="ltr" class="odt-ltr-term">coli</bdi> </i>لطلب <i><bdi dir="ltr" class="odt-ltr-term">select col1</bdi>, <bdi dir="ltr" class="odt-ltr-term">col2</bdi>, ... <bdi dir="ltr" class="odt-ltr-term">from table</bdi> ...</i>
+  <li>الأسطر 8-10: أسماء أعمدة جدول النتائج لـ <i><bdi dir="ltr" class="odt-ltr-term">Select</bdi></i>. هذه هي أعمدة <i><bdi dir="ltr" class="odt-ltr-term">coli</bdi> </i>لطلب <i><bdi dir="ltr" class="odt-ltr-term">select col1, col2</bdi>, ... <bdi dir="ltr" class="odt-ltr-term">from table</bdi> ...</i>
   </li>
   <li>الأسطر 14-21: تصفح جدول النتائج وعرض القيم لكل سطر في الجدول.
   </li>
@@ -2107,11 +2107,11 @@
 <a id="refheading10401931168783983"></a></p>
 <h3 id="941-sql-server-2005">9.4.1. <span style="color: #4f81bd">موصل <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi> 2005</span></h3>
 <p>ستكون البنية المستخدمة كما يلي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000063B00000102F01B0F3E.png" width="478" height="77" style="display:inline-block; margin:4px;width:12.659cm;height:2.048cm;" class="odt-zoomable" data-zoom-src="images/100000000000063B00000102F01B0F3E.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000063B00000102F01B0F3E.png" width="478" height="77" style="display:inline-block; margin:4px;width:12.659cm;height:2.048cm;" class="odt-zoomable" data-zoom-src="images/100000000000063B00000102F01B0F3E.png" /></td></tr></table>
 
 <p>يتم وصف تثبيت <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi> 2005 في الملاحق في الفقرة<a href="#sqlserver2005"><u><span style="color: #0563c1"> 1.1</span></u></a>.</p>
 <p>نقوم بإنشاء مشروع ثانٍ في نفس الحل كما في السابق، ثم ننشئ قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi> 2005. يجب تشغيل  نظام إدارة قواعد البيانات <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi> 2005 قبل القيام بالعمليات التالية:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006F70000018EEBC02A28.png" width="535" height="119" style="display:inline-block; margin:4px;width:14.15cm;height:3.159cm;" class="odt-zoomable" data-zoom-src="images/10000000000006F70000018EEBC02A28.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006F70000018EEBC02A28.png" width="535" height="119" style="display:inline-block; margin:4px;width:14.15cm;height:3.159cm;" class="odt-zoomable" data-zoom-src="images/10000000000006F70000018EEBC02A28.png" /></td></tr></table>
 
 <ul>
   <li>[1]: إنشاء مشروع جديد في الحل الحالي وجعله المشروع الحالي.
@@ -2122,7 +2122,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000078D00000370DF05DB00.png" width="580" height="264" style="display:inline-block; margin:4px;width:15.341cm;height:6.983cm;" class="odt-zoomable" data-zoom-src="images/100000000000078D00000370DF05DB00.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000078D00000370DF05DB00.png" width="580" height="264" style="display:inline-block; margin:4px;width:15.341cm;height:6.983cm;" class="odt-zoomable" data-zoom-src="images/100000000000078D00000370DF05DB00.png" /></td></tr></table>
 
 <ul>
   <li>[4]: حدد <bdi dir="ltr" class="odt-ltr-term">SGBD SQL Server</bdi>
@@ -2139,7 +2139,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000076E0000027E6B7981CA.png" width="571" height="191" style="display:inline-block; margin:4px;width:15.101cm;height:5.064cm;" class="odt-zoomable" data-zoom-src="images/100000000000076E0000027E6B7981CA.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000076E0000027E6B7981CA.png" width="571" height="191" style="display:inline-block; margin:4px;width:15.101cm;height:5.064cm;" class="odt-zoomable" data-zoom-src="images/100000000000076E0000027E6B7981CA.png" /></td></tr></table>
 
 <ul>
   <li>[11]: قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi>
@@ -2154,7 +2154,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000050000000190FF9E17D9.png" width="384" height="120" style="display:inline-block; margin:4px;width:10.16cm;height:3.175cm;" class="odt-zoomable" data-zoom-src="images/100000000000050000000190FF9E17D9.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000050000000190FF9E17D9.png" width="384" height="120" style="display:inline-block; margin:4px;width:10.16cm;height:3.175cm;" class="odt-zoomable" data-zoom-src="images/100000000000050000000190FF9E17D9.png" /></td></tr></table>
 
 <ul>
   <li>[17]: حقول الجدول الأخرى
@@ -2164,13 +2164,13 @@
 </ul>
 
 <p>لا يزال يتعين علينا إدخال البيانات في:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F600000098214790EF.png" width="172" height="107" style="display:inline-block; margin:4px;width:4.56cm;height:2.819cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F600000098214790EF.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000191000000AC89FF5946.png" width="281" height="120" style="display:inline-block; margin:4px;width:7.43cm;height:3.187cm;" class="odt-zoomable" data-zoom-src="images/1000000000000191000000AC89FF5946.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000F600000098214790EF.png" width="172" height="107" style="display:inline-block; margin:4px;width:4.56cm;height:2.819cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F600000098214790EF.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000191000000AC89FF5946.png" width="281" height="120" style="display:inline-block; margin:4px;width:7.43cm;height:3.187cm;" class="odt-zoomable" data-zoom-src="images/1000000000000191000000AC89FF5946.png" /></td></tr></table>
 
 <p>نقوم بتضمين قاعدة البيانات في:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006CF000001CAF5B15CEC.png" width="523" height="137" style="display:inline-block; margin:4px;width:13.831cm;height:3.634cm;" class="odt-zoomable" data-zoom-src="images/10000000000006CF000001CAF5B15CEC.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006CF000001CAF5B15CEC.png" width="523" height="137" style="display:inline-block; margin:4px;width:13.831cm;height:3.634cm;" class="odt-zoomable" data-zoom-src="images/10000000000006CF000001CAF5B15CEC.png" /></td></tr></table>
 
 <p>مراجع المشروع هي كما يلي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002060000018E5079993B.png" width="155" height="119" style="display:inline-block; margin:4px;width:4.11cm;height:3.157cm;" class="odt-zoomable" data-zoom-src="images/10000000000002060000018E5079993B.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002060000018E5079993B.png" width="155" height="119" style="display:inline-block; margin:4px;width:4.11cm;height:3.157cm;" class="odt-zoomable" data-zoom-src="images/10000000000002060000018E5079993B.png" /></td></tr></table>
 
 <p>ملف التكوين [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] هو كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
@@ -2186,7 +2186,7 @@
 <ul>
   <li>السطر 4: سلسلة اتصال قاعدة البيانات [<bdi dir="ltr" class="odt-ltr-term">dbarticles.mdf</bdi>] مع مصادقة <bdi dir="ltr" class="odt-ltr-term">Windows</bdi>
   </li>
-  <li>السطر 5: سلسلة اتصال قاعدة البيانات [<bdi dir="ltr" class="odt-ltr-term">dbarticles.mdf</bdi>] مع مصادقة <bdi dir="ltr" class="odt-ltr-term">SQL Server.</bdi> [sa,<bdi dir="ltr" class="odt-ltr-term">msde</bdi>] هو الزوج (تسجيل الدخول، كلمة المرور) لمسؤول <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi> كما هو محدد في الفقرة<a href="#sqlserver2005"><u><span style="color: #0563c1"> 1.1</span></u></a>.
+  <li>السطر 5: سلسلة اتصال قاعدة البيانات [<bdi dir="ltr" class="odt-ltr-term">dbarticles.mdf</bdi>] مع مصادقة <bdi dir="ltr" class="odt-ltr-term">SQL Server.</bdi> [<bdi dir="ltr" class="odt-ltr-term">sa,msde</bdi>] هو الزوج (تسجيل الدخول، كلمة المرور) لمسؤول <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi> كما هو محدد في الفقرة<a href="#sqlserver2005"><u><span style="color: #0563c1"> 1.1</span></u></a>.
   </li>
 </ul>
 
@@ -2266,11 +2266,11 @@
 <a id="refheading10401951168783983"></a></p>
 <h3 id="942-mysql5">9.4.2. <span style="color: #4f81bd">الموصل <bdi dir="ltr" class="odt-ltr-term">MySQL5</bdi></span></h3>
 <p>ستكون البنية المستخدمة كما يلي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000062C00000116C1F40819.png" width="474" height="83" style="display:inline-block; margin:4px;width:12.539cm;height:2.207cm;" class="odt-zoomable" data-zoom-src="images/100000000000062C00000116C1F40819.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000062C00000116C1F40819.png" width="474" height="83" style="display:inline-block; margin:4px;width:12.539cm;height:2.207cm;" class="odt-zoomable" data-zoom-src="images/100000000000062C00000116C1F40819.png" /></td></tr></table>
 
 <p>يتم وصف تثبيت <bdi dir="ltr" class="odt-ltr-term">MySQL5</bdi> في الملاحق في الفقرة<a href="#mysql5"><u><span style="color: #0563c1"> 1.2</span></u></a> الموصل وموصل <bdi dir="ltr" class="odt-ltr-term">Ado.Net</bdi> في الفقرة<a href="#mysql5-adonet"><u><span style="color: #0563c1"> 1.2.5</span></u></a>.</p>
 <p>نقوم بإنشاء مشروع ثالث في نفس الحل كما في السابق ونضيف المراجع التي يحتاجها:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000075E000001AB49040587.png" width="566" height="128" style="display:inline-block; margin:4px;width:14.97cm;height:3.388cm;" class="odt-zoomable" data-zoom-src="images/100000000000075E000001AB49040587.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000075E000001AB49040587.png" width="566" height="128" style="display:inline-block; margin:4px;width:14.97cm;height:3.388cm;" class="odt-zoomable" data-zoom-src="images/100000000000075E000001AB49040587.png" /></td></tr></table>
 
 <ul>
   <li>[1]: المشروع الجديد
@@ -2282,7 +2282,7 @@
 </ul>
 
 <p>نقوم الآن بإنشاء قاعدة البيانات [<bdi dir="ltr" class="odt-ltr-term">dbarticles</bdi>] وجدولها [<bdi dir="ltr" class="odt-ltr-term">articles</bdi>]. يجب تشغيل نظام إدارة قواعد البيانات <bdi dir="ltr" class="odt-ltr-term">MySQL5.</bdi> بالإضافة إلى ذلك، نقوم بتشغيل عميل [<bdi dir="ltr" class="odt-ltr-term">Query Browser</bdi>] (انظر الفقرة<a href="#mysql5-clients-gui"><u><span style="color: #0563c1"> 1.2.3</span></u></a>).</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000077A000001C9D4749933.png" width="574" height="137" style="display:inline-block; margin:4px;width:15.191cm;height:3.627cm;" class="odt-zoomable" data-zoom-src="images/100000000000077A000001C9D4749933.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000077A000001C9D4749933.png" width="574" height="137" style="display:inline-block; margin:4px;width:15.191cm;height:3.627cm;" class="odt-zoomable" data-zoom-src="images/100000000000077A000001C9D4749933.png" /></td></tr></table>
 
 <ul>
   <li>[1]: في [<bdi dir="ltr" class="odt-ltr-term">Query Browser</bdi>]، انقر بزر الماوس الأيمن في منطقة [<bdi dir="ltr" class="odt-ltr-term">Schemata</bdi>] [2] لإنشاء [3] مخطط جديد، وهو المصطلح المستخدم لوصف قاعدة البيانات.
@@ -2345,14 +2345,14 @@
 </ul>
 
 <p>يتم تنفيذ هذا البرنامج النصي في [<bdi dir="ltr" class="odt-ltr-term">MySQL Query Browser</bdi>]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007D10000033CE414F5A1.png" width="600" height="248" style="display:inline-block; margin:4px;width:15.88cm;height:6.57cm;" class="odt-zoomable" data-zoom-src="images/10000000000007D10000033CE414F5A1.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000007D10000033CE414F5A1.png" width="600" height="248" style="display:inline-block; margin:4px;width:15.88cm;height:6.57cm;" class="odt-zoomable" data-zoom-src="images/10000000000007D10000033CE414F5A1.png" /></td></tr></table>
 
 <ul>
   <li>في [<bdi dir="ltr" class="odt-ltr-term">MySQL Query Browser</bdi>] [6]، نقوم بتحميل البرنامج النصي [7]. يمكنك رؤيته في [8]. في [9]، يتم تنفيذه.
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000079F00000242EF4C59C3.png" width="585" height="173" style="display:inline-block; margin:4px;width:15.49cm;height:4.59cm;" class="odt-zoomable" data-zoom-src="images/100000000000079F00000242EF4C59C3.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000079F00000242EF4C59C3.png" width="585" height="173" style="display:inline-block; margin:4px;width:15.49cm;height:4.59cm;" class="odt-zoomable" data-zoom-src="images/100000000000079F00000242EF4C59C3.png" /></td></tr></table>
 
 <ul>
   <li>في [10]، تم إنشاء الجدول [<bdi dir="ltr" class="odt-ltr-term">articles</bdi>]. انقر عليه مرتين. سيؤدي ذلك إلى ظهور النافذة [11] التي تحتوي على الاستعلام [12]، جاهزًا للتنفيذ بواسطة [13]. في [14]، نتيجة التنفيذ. لدينا الأسطر الثلاثة المتوقعة. لاحظ أن القيم في الحقل [<bdi dir="ltr" class="odt-ltr-term">ID</bdi>] تم إنشاؤها تلقائيًا (سمة الحقل <bdi dir="ltr" class="odt-ltr-term">AUTO_INCREMENT</bdi>).
@@ -2360,7 +2360,7 @@
 </ul>
 
 <p>الآن بعد أن أصبحت قاعدة البيانات جاهزة، يمكننا العودة إلى تطوير التطبيق في <bdi dir="ltr" class="odt-ltr-term">Visual Studio.</bdi></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001EB0000019A6A963D9B.png" width="147" height="123" style="display:inline-block; margin:4px;width:3.9cm;height:3.256cm;" class="odt-zoomable" data-zoom-src="images/10000000000001EB0000019A6A963D9B.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001EB0000019A6A963D9B.png" width="147" height="123" style="display:inline-block; margin:4px;width:3.9cm;height:3.256cm;" class="odt-zoomable" data-zoom-src="images/10000000000001EB0000019A6A963D9B.png" /></td></tr></table>
 
 <p>في [1]، يوجد البرنامج [<bdi dir="ltr" class="odt-ltr-term">Program.cs</bdi>] وملف التكوين [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]. وفيما يلي نص الملف الأخير:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
@@ -2385,19 +2385,19 @@
 </ul>
 
 <p>برنامج [<bdi dir="ltr" class="odt-ltr-term">Program.cs</bdi>] مطابق لبرنامج الإصدارات السابقة، باستثناء التفاصيل التالية:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>مساحة الأسماء
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">MySql.Data.MySqlClient</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">MySql.Data.MySqlClient</bdi></div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>فئة Connection
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">MySqlConnection</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">MySqlConnection</bdi></div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>فئة Command
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">MySqlCommand</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">MySqlCommand</bdi></div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>فئة DataReader
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">MySqlDataReader</bdi></div></td></tr></table>
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">MySqlDataReader</bdi></div></td></tr></table>
 
 <p>يستخدم البرنامج سلسلة الاتصال المسماة <em><bdi dir="ltr" class="odt-ltr-term">dbArticlesMySql5</bdi></em> الموجودة في الملف [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]. ويؤدي التنفيذ إلى النتائج التالية:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1"> 1</a></span>
@@ -2425,7 +2425,7 @@
 <p><a id="refheading10401971168783983"></a></p>
 <h3 id="943-odbc">9.4.3. <span style="color: #4f81bd">موصل <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi></span></h3>
 <p>ستكون البنية المستخدمة على النحو التالي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000062D000001145EBED070.png" width="474" height="83" style="display:inline-block; margin:4px;width:12.55cm;height:2.191cm;" class="odt-zoomable" data-zoom-src="images/100000000000062D000001145EBED070.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000062D000001145EBED070.png" width="474" height="83" style="display:inline-block; margin:4px;width:12.55cm;height:2.191cm;" class="odt-zoomable" data-zoom-src="images/100000000000062D000001145EBED070.png" /></td></tr></table>
 
 <p>تتمثل ميزة موصلات <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> في أنها توفر واجهة قياسية للتطبيقات التي تستخدمها. وبالتالي، باستخدام رمز واحد، سيتمكن التطبيق الجديد من التواصل مع أي نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">SGBD</bdi>) باستخدام موصل <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> أو <bdi dir="ltr" class="odt-ltr-term">CAD</bdi> أو <bdi dir="ltr" class="odt-ltr-term">SGBD.</bdi> أداء موصلات <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> ليس جيدًا مثل أداء الموصلات &quot;المملوكة&quot;، التي يمكنها استغلال جميع ميزات نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">SGBD</bdi>) معين. من ناحية أخرى، تحصل على مرونة كبيرة في التطبيق: يمكنك تغيير نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">SGBD</bdi>) دون تغيير الكود.</p>
 <p>سنلقي نظرة على مثال يستخدم فيه التطبيق قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL5</bdi> أو قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">SQL Server Express</bdi>، اعتمادًا على سلسلة الاتصال التي تحددها. في ما يلي، نفترض أن:</p>
@@ -2439,7 +2439,7 @@
 </ul>
 
 <p>مشروع <bdi dir="ltr" class="odt-ltr-term">Visual Studio</bdi> الجديد هو كما يلي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001AF0000015FF7977D37.png" width="129" height="105" style="display:inline-block; margin:4px;width:3.42cm;height:2.785cm;" class="odt-zoomable" data-zoom-src="images/10000000000001AF0000015FF7977D37.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001AF0000015FF7977D37.png" width="129" height="105" style="display:inline-block; margin:4px;width:3.42cm;height:2.785cm;" class="odt-zoomable" data-zoom-src="images/10000000000001AF0000015FF7977D37.png" /></td></tr></table>
 
 <p>أعلاه، تم نسخ قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi> [<bdi dir="ltr" class="odt-ltr-term">dbarticles.mdf</bdi>] التي تم إنشاؤها في الفقرة<a href="#sqlserver2005-connecteur-adonet"><u><span style="color: #0563c1"> 9.4.1</span></u></a> إلى ملف المشروع.</p>
 <p>ملف التكوين [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] هو كما يلي:</p>
@@ -2461,19 +2461,19 @@
 </ul>
 
 <p>برنامج [<bdi dir="ltr" class="odt-ltr-term">Program.cs</bdi>] مطابق لبرنامج الإصدارات السابقة، باستثناء التفاصيل التالية:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>مساحة الأسماء
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">System.Data.Odbc</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">System.Data.Odbc</bdi></div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>فئة Connection
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">OdbcConnection</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">OdbcConnection</bdi></div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>فئة Command
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">OdbcCommand</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">OdbcCommand</bdi></div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>فئة DataReader
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">OdbcDataReader</bdi></div></td></tr></table>
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">OdbcDataReader</bdi></div></td></tr></table>
 
 <p>يستخدم البرنامج أحد سلسلتي الاتصال المحددتين في الملف [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]. ويؤدي التنفيذ إلى النتائج التالية:</p>
 <p>مع سلسلة الاتصال [<bdi dir="ltr" class="odt-ltr-term">dbArticlesOdbcSqlServer2005</bdi>] :</p>
@@ -2531,12 +2531,12 @@
 <p><a id="refheading10401991168783983"></a></p>
 <h3 id="944-ole-db">9.4.4. <span style="color: #4f81bd">موصل <bdi dir="ltr" class="odt-ltr-term">OLE DB</bdi></span></h3>
 <p>ستكون البنية المستخدمة على النحو التالي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006220000011D0704AB46.png" width="471" height="85" style="display:inline-block; margin:4px;width:12.46cm;height:2.261cm;" class="odt-zoomable" data-zoom-src="images/10000000000006220000011D0704AB46.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006220000011D0704AB46.png" width="471" height="85" style="display:inline-block; margin:4px;width:12.46cm;height:2.261cm;" class="odt-zoomable" data-zoom-src="images/10000000000006220000011D0704AB46.png" /></td></tr></table>
 
 <p>كما هو الحال مع موصلات <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi>، تتوفر أيضًا موصلات <bdi dir="ltr" class="odt-ltr-term">OLE DB</bdi> (<bdi dir="ltr" class="odt-ltr-term">Object Linking and Embedding DataBase</bdi>) التي توفر واجهة قياسية للتطبيقات التي تستخدمها. تتيح برامج تشغيل <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> الوصول إلى قواعد البيانات. أما برامج تشغيل مصادر البيانات لـ <bdi dir="ltr" class="odt-ltr-term">OLE DB</bdi> فهي أكثر تنوعًا: قواعد البيانات، وأنظمة المراسلة، والدلائل، وما إلى ذلك. يمكن لأي مصدر بيانات أن يكون موضوعًا لبرنامج تشغيل <bdi dir="ltr" class="odt-ltr-term">OLE DB</bdi>، إذا قرر المحرر ذلك. وهذا يوفر وصولًا قياسيًا إلى مجموعة واسعة من البيانات.</p>
 <p>سنلقي نظرة على مثال يستخدم فيه التطبيق قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">ACCESS</bdi> أو <bdi dir="ltr" class="odt-ltr-term">SQL Server Express</bdi>، اعتمادًا على سلسلة الاتصال التي تحددها. في ما يلي، نفترض أن <bdi dir="ltr" class="odt-ltr-term">SGBD SQL Server Express</bdi> قد تم تشغيله وأن قاعدة البيانات المستخدمة هي تلك الموجودة في المثال السابق.</p>
 <p>مشروع <bdi dir="ltr" class="odt-ltr-term">Visual Studio</bdi> الجديد هو كما يلي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004AA000001D0D69ECE30.png" width="358" height="139" style="display:inline-block; margin:4px;width:9.479cm;height:3.685cm;" class="odt-zoomable" data-zoom-src="images/10000000000004AA000001D0D69ECE30.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004AA000001D0D69ECE30.png" width="358" height="139" style="display:inline-block; margin:4px;width:9.479cm;height:3.685cm;" class="odt-zoomable" data-zoom-src="images/10000000000004AA000001D0D69ECE30.png" /></td></tr></table>
 
 <ul>
   <li>في [1]: مساحة الاسم المطلوبة لموصلات <bdi dir="ltr" class="odt-ltr-term">OLE DB</bdi> هي [<bdi dir="ltr" class="odt-ltr-term">System.Data.OleDb</bdi>] الموجودة في المرجع [<bdi dir="ltr" class="odt-ltr-term">System.Data</bdi>] أعلاه. تم نسخ قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi> [<bdi dir="ltr" class="odt-ltr-term">dbarticles.mdf</bdi>] من المشروع السابق. تم إنشاء قاعدة [<bdi dir="ltr" class="odt-ltr-term">dbarticles.mdb</bdi>] باستخدام <bdi dir="ltr" class="odt-ltr-term">Access.</bdi>
@@ -2546,7 +2546,7 @@
 </ul>
 
 <p>قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">ACCESS</bdi> [<bdi dir="ltr" class="odt-ltr-term">dbarticles.mdb</bdi>] هي كما يلي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006E8000001D97627E735.png" width="530" height="142" style="display:inline-block; margin:4px;width:14.03cm;height:3.754cm;" class="odt-zoomable" data-zoom-src="images/10000000000006E8000001D97627E735.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006E8000001D97627E735.png" width="530" height="142" style="display:inline-block; margin:4px;width:14.03cm;height:3.754cm;" class="odt-zoomable" data-zoom-src="images/10000000000006E8000001D97627E735.png" /></td></tr></table>
 
 <p>في [1]، هيكل الجدول [<bdi dir="ltr" class="odt-ltr-term">articles</bdi>] وفي [2] محتوياته.</p>
 <p>ملف التكوين [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] هو كما يلي:</p>
@@ -2568,19 +2568,19 @@
 </ul>
 
 <p>برنامج [<bdi dir="ltr" class="odt-ltr-term">Program.cs</bdi>] مطابق لبرنامج الإصدارات السابقة، باستثناء التفاصيل التالية:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>مساحة الأسماء
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">System.Data.OleDb</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">System.Data.OleDb</bdi></div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>فئة Connection
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">OleDbConnection</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">OleDbConnection</bdi></div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>فئة Command
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">OleDbCommand</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">OleDbCommand</bdi></div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>فئة DataReader
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">OleDbDataReader</bdi></div></td></tr></table>
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">OleDbDataReader</bdi></div></td></tr></table>
 
 <p>يستخدم البرنامج أحد سلسلتي الاتصال المحددتين في الملف [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]. يعطي التنفيذ النتائج التالية باستخدام سلسلة الاتصال [<bdi dir="ltr" class="odt-ltr-term">dbArticlesOleDbAccess</bdi>]:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-49-1"> 1</a></span>
@@ -2621,7 +2621,7 @@
 <a id="refheading10402011168783983"></a></p>
 <h3 id="945">9.4.5. <span style="color: #4f81bd">موصل عام</span></h3>
 <p>ستكون البنية المستخدمة على النحو التالي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000075C0000011FB0E76D4C.png" width="565" height="86" style="display:inline-block; margin:4px;width:14.951cm;height:2.277cm;" class="odt-zoomable" data-zoom-src="images/100000000000075C0000011FB0E76D4C.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000075C0000011FB0E76D4C.png" width="565" height="86" style="display:inline-block; margin:4px;width:14.951cm;height:2.277cm;" class="odt-zoomable" data-zoom-src="images/100000000000075C0000011FB0E76D4C.png" /></td></tr></table>
 
 <p>مثل موصلات <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> و <bdi dir="ltr" class="odt-ltr-term">OLE DB</bdi>، يقدم الموصل العام واجهة قياسية للتطبيقات التي تستخدمه، ولكنه يحسن الأداء دون التضحية بالمرونة. يعتمد الموصل العام على موصلات <bdi dir="ltr" class="odt-ltr-term">SGBD</bdi> الخاصة. يستخدم التطبيق فئات من الموصل العام. تعمل هذه الفئات كوسطاء بين التطبيق والموصل الخاص.</p>
 <p>في المثال أعلاه، عندما يطلب التطبيق اتصالاً بالموصل العام، يعيد هذا الأخير <strong><bdi dir="ltr" class="odt-ltr-term">IDbConnection</bdi></strong>، وهي واجهة الاتصال الموصوفة في <a href="#idbconnection"><u><span style="color: #0563c1">الفقرة 9.3.3</span></u></a>، والتي يتم تنفيذها بواسطة <strong><bdi dir="ltr" class="odt-ltr-term">MySQLConnection</bdi></strong> أو <strong><bdi dir="ltr" class="odt-ltr-term">SQLConnection</bdi></strong> وفقاً لطبيعة الطلب المقدم إليه. يُقال إن الموصل العام يحتوي على فئات من نوع <strong>المصنع</strong>: نستخدم <strong>مصنعًا</strong> لنطلب منه إنشاء كائنات وإعطاء مراجع لها (مؤشرات). ومن هنا جاء اسمه (مصنع = مصنع، مصنع إنتاج الكائنات). </p>
@@ -2704,25 +2704,25 @@
 </ul>
 
 <p>يُظهر العرض التالي أن الموصلات العامة التالية متاحة:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الاسم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>المعرف</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><b>الاسم</b></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><b>المعرف</b></div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>مزود بيانات Odbc
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">System.Data.Odbc</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">System.Data.Odbc</bdi></div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>مزود بيانات OleDb
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">System.Data.OleDb</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">System.Data.OleDb</bdi></div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>موفر بيانات OracleClient
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">System.Data.OracleClient</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">System.Data.OracleClient</bdi></div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>مزود بيانات SqlClient
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">System.Data.SqlClient</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">System.Data.SqlClient</bdi></div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>مزود بيانات Microsoft SQL Server Compact
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">System.Data.SqlServerCe.3.5</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">System.Data.SqlServerCe.3.5</bdi></div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a>مزود بيانات MySQL
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">MySql.Data.MySqlClient</bdi></div></td></tr></table>
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">MySql.Data.MySqlClient</bdi></div></td></tr></table>
 
 <p>يمكن الوصول إلى الموصل العام في برنامج <bdi dir="ltr" class="odt-ltr-term">C#</bdi> عبر معرفه.</p>
 <p>سنلقي نظرة على مثال يستفيد فيه التطبيق من قواعد البيانات المختلفة التي أنشأناها حتى الآن. سيتلقى التطبيق معلمتين:</p>
@@ -2734,7 +2734,7 @@
 </ul>
 
 <p>مشروع <bdi dir="ltr" class="odt-ltr-term">Visual Studio</bdi> الجديد هو كما يلي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001CF000001AABBF4E241.png" width="139" height="128" style="display:inline-block; margin:4px;width:3.671cm;height:3.378cm;" class="odt-zoomable" data-zoom-src="images/10000000000001CF000001AABBF4E241.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001CF000001AABBF4E241.png" width="139" height="128" style="display:inline-block; margin:4px;width:3.671cm;height:3.378cm;" class="odt-zoomable" data-zoom-src="images/10000000000001CF000001AABBF4E241.png" /></td></tr></table>
 
 <ul>
   <li>في [1]: مساحة الاسم المطلوبة للموصلات العامة هي [<bdi dir="ltr" class="odt-ltr-term">System.Data.common</bdi>]، الموجودة في المرجع [<bdi dir="ltr" class="odt-ltr-term">System.Data</bdi>].
@@ -2898,7 +2898,7 @@
 
 <p>فيما يلي بعض الأمثلة.</p>
 <p>باستخدام <bdi dir="ltr" class="odt-ltr-term">MySQL5</bdi> الأساسي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003E60000019463E0D5CE.png" width="299" height="121" style="display:inline-block; margin:4px;width:7.92cm;height:3.207cm;" class="odt-zoomable" data-zoom-src="images/10000000000003E60000019463E0D5CE.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000003E60000019463E0D5CE.png" width="299" height="121" style="display:inline-block; margin:4px;width:7.92cm;height:3.207cm;" class="odt-zoomable" data-zoom-src="images/10000000000003E60000019463E0D5CE.png" /></td></tr></table>
 
 <p>افتح صفحة خصائص المشروع [1] واختر علامة التبويب [<bdi dir="ltr" class="odt-ltr-term">Debug</bdi>] [2]. في [3]، مفتاح الموصل للسطر 14 من [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]. في [4]، مفتاح سلسلة الاتصال في السطر 6 من [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]. النتائج هي كما يلي:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-57-1"> 1</a></span>
@@ -2926,7 +2926,7 @@
 <a id="__codelineno-57-12" name="__codelineno-57-12"></a><span class="mi">3</span><span class="w"> </span><span class="n">article3</span><span class="w"> </span><span class="mi">300</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="mi">3</span>
 </code></pre></div></td></tr></table></div>
 <p>باستخدام <bdi dir="ltr" class="odt-ltr-term">SQL Server Compact</bdi> :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004520000018863A12D07.png" width="332" height="118" style="display:inline-block; margin:4px;width:8.781cm;height:3.112cm;" class="odt-zoomable" data-zoom-src="images/10000000000004520000018863A12D07.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004520000018863A12D07.png" width="332" height="118" style="display:inline-block; margin:4px;width:8.781cm;height:3.112cm;" class="odt-zoomable" data-zoom-src="images/10000000000004520000018863A12D07.png" /></td></tr></table>
 
 <p>في [1]، مفتاح الموصل للسطر 13 من [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]. في [2]، مفتاح سلسلة الاتصال في السطر 4 من [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]. النتائج هي كما يلي:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-58-1"> 1</a></span>
@@ -2963,7 +2963,7 @@
 <p><a id="refheading10402031168783983"></a></p>
 <h3 id="946">9.4.6. <span style="color: #4f81bd">أي موصل تختار؟</span></h3>
 <p>لنعد إلى بنية تطبيق قاعدة البيانات:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000075F0000011FAEC46B60.png" width="566" height="86" style="display:inline-block; margin:4px;width:14.981cm;height:2.279cm;" class="odt-zoomable" data-zoom-src="images/100000000000075F0000011FAEC46B60.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000075F0000011FAEC46B60.png" width="566" height="86" style="display:inline-block; margin:4px;width:14.981cm;height:2.279cm;" class="odt-zoomable" data-zoom-src="images/100000000000075F0000011FAEC46B60.png" /></td></tr></table>
 
 <p>لقد رأينا أنواعًا مختلفة من موصلات <bdi dir="ltr" class="odt-ltr-term">ADO.NET:</bdi></p>
 <ul>
@@ -2982,10 +2982,10 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">articles</span><span class="p">(</span><span class="n">nom</span><span class="p">,</span><span class="n">prix</span><span class="p">,</span><span class="n">stockactuel</span><span class="p">,</span><span class="n">stockminimum</span><span class="p">)</span><span class="w"> </span><span class="k">values</span><span class="p">(</span><span class="o">?</span><span class="p">,</span><span class="o">?</span><span class="p">,</span><span class="o">?</span><span class="p">,</span><span class="o">?</span><span class="p">)</span>
 </code></pre></div>
 <p>وبالتالي، هناك اختلاف في الصيغة. خاصية الواجهة <strong><bdi dir="ltr" class="odt-ltr-term">IDbCommand</bdi></strong> الموصوفة في الفقرة<a href="#idbcommand"><u><span style="color: #0563c1"> 9.3.3</span></u></a> هي كما يلي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a>المعلمات
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">قائمة المعلمات لأمر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> معلم. يحتوي الأمر <i><bdi dir="ltr" class="odt-ltr-term">update articles set price</bdi>=<bdi dir="ltr" class="odt-ltr-term">price</bdi>*<bdi dir="ltr" class="odt-ltr-term">1.1 where id</bdi>=@id </i>على المعلمة @<bdi dir="ltr" class="odt-ltr-term">id.</bdi></div></td></tr></table>
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">قائمة المعلمات لأمر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> معلم. يحتوي الأمر <i><bdi dir="ltr" class="odt-ltr-term">update articles set price</bdi>=<bdi dir="ltr" class="odt-ltr-term">price</bdi>*<bdi dir="ltr" class="odt-ltr-term">1.1 where id</bdi>=@id </i>على المعلمة @<bdi dir="ltr" class="odt-ltr-term">id.</bdi></div></td></tr></table>
 
 <p>نوع الخاصية <em><bdi dir="ltr" class="odt-ltr-term">Parameters</bdi></em> هو <bdi dir="ltr" class="odt-ltr-term">IDataParameterCollection</bdi>، وهي واجهة. وهي تمثل جميع معلمات الأمر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> <em><bdi dir="ltr" class="odt-ltr-term">CommandText</bdi></em>. تحتوي الخاصية <em><bdi dir="ltr" class="odt-ltr-term">Parameters</bdi></em> على طريقة <em><bdi dir="ltr" class="odt-ltr-term">Add</bdi></em> لإضافة <bdi dir="ltr" class="odt-ltr-term">IDataParameter</bdi>، وهي واجهة أيضًا. ولها الخصائص التالية:</p>
 <ul>
@@ -3008,7 +3008,7 @@
 </code></pre></div>
 <p>لأن المعلمات غير مسماة. يتم عندئذٍ أخذ الترتيب الذي تضاف به المعلمات إلى مجموعة [<bdi dir="ltr" class="odt-ltr-term">IDbCommand.Parameters</bdi>] في الاعتبار. في هذا المثال، يجب إدراج المعلمات الأربع بالترتيب التالي: <em><bdi dir="ltr" class="odt-ltr-term">name</bdi></em>، <em><bdi dir="ltr" class="odt-ltr-term">price</bdi></em>، <em><bdi dir="ltr" class="odt-ltr-term">stockactuel</bdi></em>، <em><bdi dir="ltr" class="odt-ltr-term">stockminimum</bdi></em>. في استعلام يحتوي على معلمات مسماة، لا يهم الترتيب الذي تضاف به المعلمات. في النهاية، لا يمكن للمطور تجاهل نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">SGBD</bdi>) الذي يستخدمه تمامًا عند تهيئة معلمات استعلام معلم. هذا هو أحد القيود الحالية للموصل العام.</p>
 <p>هناك <em>أطر</em> عمل تتغلب على هذه القيود وتضيف وظائف جديدة إلى طبقة [dao]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000074F0000011B491736C7.png" width="561" height="85" style="display:inline-block; margin:4px;width:14.85cm;height:2.245cm;" class="odt-zoomable" data-zoom-src="images/100000000000074F0000011B491736C7.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000074F0000011B491736C7.png" width="561" height="85" style="display:inline-block; margin:4px;width:14.85cm;height:2.245cm;" class="odt-zoomable" data-zoom-src="images/100000000000074F0000011B491736C7.png" /></td></tr></table>
 
 <p>الإطار هو مجموعة من مكتبات الفئات المصممة لتسهيل طريقة معينة لتصميم التطبيق. هناك عدد من هذه الأطر، مما يسمح لك بكتابة طبقات [dao] عالية الأداء وغير حساسة للتغييرات في <bdi dir="ltr" class="odt-ltr-term">SGBD</bdi> :</p>
 <ul>
@@ -3034,7 +3034,7 @@
 <p><a id="refheading10402051168783983"></a></p>
 <h2 id="95">9.5. <span style="color: #4f81bd">الاستعلامات البارامترية</span></h2>
 <p>في الفقرة السابقة، ناقشنا الاستعلامات المعلمة. ونقدمها هنا مع مثال على نظام إدارة قواعد البيانات <bdi dir="ltr" class="odt-ltr-term">SGBD SQL Server Compact.</bdi> والمشروع كالتالي</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000073600000180ADFE79A7.png" width="554" height="115" style="display:inline-block; margin:4px;width:14.651cm;height:3.048cm;" class="odt-zoomable" data-zoom-src="images/100000000000073600000180ADFE79A7.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000073600000180ADFE79A7.png" width="554" height="115" style="display:inline-block; margin:4px;width:14.651cm;height:3.048cm;" class="odt-zoomable" data-zoom-src="images/100000000000073600000180ADFE79A7.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، المشروع. يتم استخدام [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">Article.cs</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">Parametres.cs</bdi>] فقط. لاحظ أيضًا قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">SQL Server Ce</bdi> [<bdi dir="ltr" class="odt-ltr-term">dbarticles.sdf</bdi>].
@@ -3211,38 +3211,38 @@
 </ul>
 
 <p>نستخدم هنا الطريقة <strong>[<bdi dir="ltr" class="odt-ltr-term">SqlCeCommand</bdi>].<bdi dir="ltr" class="odt-ltr-term">Parameters.Add</bdi></strong> التي تحتوي على ستة توقيعات. نستخدم كلاهما  أدناه:</p>
-<p><strong><bdi dir="ltr" class="odt-ltr-term">Add</bdi>(<bdi dir="ltr" class="odt-ltr-term">string parameterName</bdi>, <bdi dir="ltr" class="odt-ltr-term">SQLDbType type</bdi>)</strong></p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">Add</bdi>(<bdi dir="ltr" class="odt-ltr-term">string parameterName, SQLDbType type</bdi>)</strong></p>
 <p>تضيف وتُهيئ المعلمة المسماة <em><bdi dir="ltr" class="odt-ltr-term">parameterName</bdi></em>. يجب أن يكون هذا الاسم أحد الأسماء الموجودة في معلمة الاستعلام المُهيأة: (@<bdi dir="ltr" class="odt-ltr-term">name</bdi>, ...). يُحدد <em><bdi dir="ltr" class="odt-ltr-term">type</bdi></em> نوع <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> للعمود المعني بالمعلمة. تتوفر أنواع عديدة، بما في ذلك:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">type SQL</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>نوع <bdi dir="ltr" class="odt-ltr-term">c#</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>تعليق</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">type SQL</bdi></b></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><b>نوع <bdi dir="ltr" class="odt-ltr-term">c#</bdi></b></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><b>تعليق</b></div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a>BigInt
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">Int64</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">Int64</bdi></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a>DateTime
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تاريخ ووقت</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">تاريخ ووقت</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a>عشري
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">رقم عشري</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">رقم عشري</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a>عدد عائم
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مزدوج</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">مزدوج</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a>صحيح
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">32 بت</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">32 بت</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a>نقدي
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">عشري</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">عشري</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a>NChar
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سلسلة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سلسلة ذات طول ثابت</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">سلسلة</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">سلسلة ذات طول ثابت</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a>NVarChar
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سلسلة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سلسلة متغيرة الطول</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">سلسلة</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">سلسلة متغيرة الطول</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-73-1" name="__codelineno-73-1" href="#__codelineno-73-1"></a>رقم حقيقي
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">عدد</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">عدد</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
 
-<p><strong><bdi dir="ltr" class="odt-ltr-term">Add</bdi>(<bdi dir="ltr" class="odt-ltr-term">string parameterName</bdi>, <bdi dir="ltr" class="odt-ltr-term">SQLDbType type</bdi>, <bdi dir="ltr" class="odt-ltr-term">int size</bdi>)</strong></p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">Add</bdi>(<bdi dir="ltr" class="odt-ltr-term">string parameterName, SQLDbType type, int size</bdi>)</strong></p>
 <p>تحدد المعلمة الثالثة <strong><bdi dir="ltr" class="odt-ltr-term">size</bdi></strong> حجم العمود. هذه المعلومات مفيدة فقط لأنواع معينة من <bdi dir="ltr" class="odt-ltr-term">SQL</bdi>، مثل النوع <em><bdi dir="ltr" class="odt-ltr-term">NVarChar</bdi></em> على سبيل المثال.</p>
 <ul>
   <li>السطر 63: يتم ترجمة الاستعلام المعلم. نقول أيضًا أننا <b>نقوم </b>بإعداده، ومن هنا جاء اسم الأسلوب. هذه العملية ليست ضرورية. إنها موجودة لتحسين الأداء. عندما ينفذ نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">SGBD</bdi>) استعلام <bdi dir="ltr" class="odt-ltr-term">SQL</bdi>، فإنه يقوم ببعض أعمال التحسين قبل تنفيذه. يُقصد بالاستعلام المعلم أن يتم تنفيذه عدة مرات بمعلمات مختلفة. ومع ذلك، يظل نص الاستعلام دون تغيير. وبالتالي، يمكن تنفيذ أعمال التحسين مرة واحدة فقط. يمكن لبعض برامج <bdi dir="ltr" class="odt-ltr-term">SGBD</bdi> &quot;تحضير&quot; أو &quot;ترجمة&quot; الاستعلامات المعلمة. ثم يتم تحديد خطة تنفيذ لهذا الاستعلام. هذه هي مرحلة التحسين التي كنا نتحدث عنها. بمجرد الترجمة، يتم تنفيذ الاستعلام بشكل متكرر، في كل مرة بمعلمات فعالة جديدة ولكن بنفس خطة التنفيذ.
@@ -3255,10 +3255,10 @@
 <p>قد نرغب في إنشاء نص الاستعلام برمجياً:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1" href="#__codelineno-75-1"></a><span class="n">string</span><span class="w"> </span><span class="n">requête</span><span class="o">=</span><span class="ss">&quot;insert into articles(nom,prix,stockactuel,stockminimum) values(&#39;&quot;</span><span class="o">+</span><span class="n">nom</span><span class="o">+</span><span class="ss">&quot;&#39;,&quot;</span><span class="o">+</span><span class="n">prix</span><span class="o">+</span><span class="ss">&quot;,&quot;</span><span class="o">+</span><span class="n">sa</span><span class="o">+</span><span class="ss">&quot;,&quot;</span><span class="o">+</span><span class="n">sm</span><span class="o">+</span><span class="ss">&quot;)&quot;</span><span class="p">;</span>
 </code></pre></div>
-<p>في المثال أعلاه، إذا كانت (<bdi dir="ltr" class="odt-ltr-term">name</bdi>,<bdi dir="ltr" class="odt-ltr-term">price</bdi>,sa,sm) هي (&quot;<bdi dir="ltr" class="odt-ltr-term">item1</bdi>&quot;,100,10,1)، فإن الاستعلام السابق يصبح:</p>
+<p>في المثال أعلاه، إذا كانت (<bdi dir="ltr" class="odt-ltr-term">name,price,sa,sm</bdi>) هي (&quot;<bdi dir="ltr" class="odt-ltr-term">item1</bdi>&quot;,100,10,1)، فإن الاستعلام السابق يصبح:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a><span class="n">string</span><span class="w"> </span><span class="n">requête</span><span class="o">=</span><span class="ss">&quot;insert into articles(nom,prix,stockactuel,stockminimum) values(&#39;article1&#39;,100,10,1)&quot;</span><span class="p">;</span>
 </code></pre></div>
-<p>الآن إذا كان (<bdi dir="ltr" class="odt-ltr-term">name</bdi>,<bdi dir="ltr" class="odt-ltr-term">price</bdi>,sa,sm) هو (&quot;<bdi dir="ltr" class="odt-ltr-term">item1</bdi>&quot;,100,10,1)، يصبح الاستعلام السابق:</p>
+<p>الآن إذا كان (<bdi dir="ltr" class="odt-ltr-term">name,price,sa,sm</bdi>) هو (&quot;<bdi dir="ltr" class="odt-ltr-term">item1</bdi>&quot;,100,10,1)، يصبح الاستعلام السابق:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-77-1" name="__codelineno-77-1" href="#__codelineno-77-1"></a><span class="n">string</span><span class="w"> </span><span class="n">requête</span><span class="o">=</span><span class="ss">&quot;insert into articles(nom,prix,stockactuel,stockminimum) values(&#39;l&#39;article1&#39;,100,10,1)&quot;</span><span class="p">;</span>
 </code></pre></div>
 <p>ويصبح غير صحيح من الناحية النحوية بسبب وجود علامة الفصل في الاسم <em><bdi dir="ltr" class="odt-ltr-term">article1</bdi></em>. وإذا كان <em>الاسم</em> مستمدًا من إدخال المستخدم، فهذا يعني أنه يتعين علينا التحقق من خلو الإدخال من علامات الفصل، وفي حال وجودها، يجب إزالتها. وتعتمد عملية الإزالة هذه على نظام قواعد البيانات العلائقية (<bdi dir="ltr" class="odt-ltr-term">SGBD</bdi>). وتكمن ميزة الاستعلام المُعد مسبقًا في أنه يقوم بهذه المهمة بنفسه. وهذه الميزة وحدها تبرر استخدام الاستعلام المُعد مسبقًا.</p>
@@ -3394,10 +3394,10 @@
 <p><a id="refheading10402111168783983"></a></p>
 <h3 id="962-api">9.6.2. <span style="color: #4f81bd">نظام إدارة المعاملات <bdi dir="ltr" class="odt-ltr-term">API</bdi></span></h3>
 <p>يقوم الاتصال بتنفيذ <em><bdi dir="ltr" class="odt-ltr-term">IDbConnection</bdi></em> المقدم في الفقرة<a href="#idbconnection"><u><span style="color: #0563c1"> 9.3.3</span></u></a>. تحتوي هذه الواجهة على الطريقة التالية:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-79-1" name="__codelineno-79-1" href="#__codelineno-79-1"></a>BeginTransaction
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تبدأ معاملة.</div></td></tr></table>
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">تبدأ معاملة.</div></td></tr></table>
 
 <p>هذه الطريقة لها توقيعان:</p>
 <ol>
@@ -3407,39 +3407,39 @@
   </li>
 </ol>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-80-1" name="__codelineno-80-1" href="#__codelineno-80-1"></a>ReadUncommitted
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يمكن للمعاملة قراءة البيانات التي كتبتها معاملة أخرى ولم تقم هذه الأخيرة بالتحقق من صحتها بعد - تجنب هذا</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">يمكن للمعاملة قراءة البيانات التي كتبتها معاملة أخرى ولم تقم هذه الأخيرة بالتحقق من صحتها بعد - تجنب هذا</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-81-1" name="__codelineno-81-1" href="#__codelineno-81-1"></a>ReadCommitted
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">لا يمكن للمعاملة قراءة البيانات التي كتبتها معاملة أخرى ولم يتم التحقق من صحتها بعد. ومع ذلك، قد تتغير البيانات التي تقرأها المعاملة مرتين متتاليتين (قراءات غير قابلة للتكرار) لأن معاملة أخرى قد تكون قامت بتعديلها في غضون ذلك (السطور المقروءة غير مقفلة - فقط السطور المحدثة هي المقفلة). علاوة على ذلك، قد تكون معاملة أخرى قد أضافت سطورًا (سطور شبحية) سيتم تضمينها في القراءة الثانية.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">لا يمكن للمعاملة قراءة البيانات التي كتبتها معاملة أخرى ولم يتم التحقق من صحتها بعد. ومع ذلك، قد تتغير البيانات التي تقرأها المعاملة مرتين متتاليتين (قراءات غير قابلة للتكرار) لأن معاملة أخرى قد تكون قامت بتعديلها في غضون ذلك (السطور المقروءة غير مقفلة - فقط السطور المحدثة هي المقفلة). علاوة على ذلك، قد تكون معاملة أخرى قد أضافت سطورًا (سطور شبحية) سيتم تضمينها في القراءة الثانية.</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-82-1" name="__codelineno-82-1" href="#__codelineno-82-1"></a>RepeatableRead
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يتم قفل الأسطر التي تقرأها المعاملة بنفس طريقة قفل الأسطر المحدثة. وهذا يمنع معاملة أخرى من تعديلها. ولا يمنع إضافة صفوف.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">يتم قفل الأسطر التي تقرأها المعاملة بنفس طريقة قفل الأسطر المحدثة. وهذا يمنع معاملة أخرى من تعديلها. ولا يمنع إضافة صفوف.</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-83-1" name="__codelineno-83-1" href="#__codelineno-83-1"></a><span class="n">Serializable</span>
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يتم قفل الجداول المستخدمة من قبل المعاملة، مما يمنع إضافة صفوف جديدة بواسطة معاملة أخرى. كل شيء يحدث كما لو كانت المعاملة بمفردها. يقلل من الأداء لأن المعاملات لم تعد تعمل بالتوازي.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">يتم قفل الجداول المستخدمة من قبل المعاملة، مما يمنع إضافة صفوف جديدة بواسطة معاملة أخرى. كل شيء يحدث كما لو كانت المعاملة بمفردها. يقلل من الأداء لأن المعاملات لم تعد تعمل بالتوازي.</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-84-1" name="__codelineno-84-1" href="#__codelineno-84-1"></a>Snapshot
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تعمل المعاملة على نسخة من البيانات تم إنشاؤها في الوقت <bdi dir="ltr" class="odt-ltr-term">T.</bdi> تُستخدم عندما تكون المعاملة للقراءة فقط. تعطي نفس نتيجة <i><bdi dir="ltr" class="odt-ltr-term">Serializable</bdi></i> مع تجنب تكلفتها.</div></td></tr></table>
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">تعمل المعاملة على نسخة من البيانات تم إنشاؤها في الوقت <bdi dir="ltr" class="odt-ltr-term">T.</bdi> تُستخدم عندما تكون المعاملة للقراءة فقط. تعطي نفس نتيجة <i><bdi dir="ltr" class="odt-ltr-term">Serializable</bdi></i> مع تجنب تكلفتها.</div></td></tr></table>
 
 <p>بمجرد بدء المعاملة، يتم التحكم فيها بواسطة <bdi dir="ltr" class="odt-ltr-term">IDbTransaction</bdi>، وهي واجهة تحتوي على الخصائص <bdi dir="ltr" class="odt-ltr-term">P</bdi> التالية والطرق <bdi dir="ltr" class="odt-ltr-term">M:</bdi></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الاسم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>النوع</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><b>الاسم</b></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><b>النوع</b></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-85-1" name="__codelineno-85-1" href="#__codelineno-85-1"></a>الاتصال
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">P</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">معرف الاتصال <i><bdi dir="ltr" class="odt-ltr-term">bConnection</bdi> </i>الذي يدعم المعاملة</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">P</bdi></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">معرف الاتصال <i><bdi dir="ltr" class="odt-ltr-term">bConnection</bdi> </i>الذي يدعم المعاملة</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-86-1" name="__codelineno-86-1" href="#__codelineno-86-1"></a>التأكيد
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يؤكد المعاملة - يتم نسخ نتائج أوامر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> الصادرة في المعاملة إلى قاعدة بيانات .</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">يؤكد المعاملة - يتم نسخ نتائج أوامر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> الصادرة في المعاملة إلى قاعدة بيانات .</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-87-1" name="__codelineno-87-1" href="#__codelineno-87-1"></a>التراجع
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تبطل المعاملة - لا يتم نسخ نتائج أوامر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> الصادرة في المعاملة إلى قاعدة البيانات.</div></td></tr></table>
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">تبطل المعاملة - لا يتم نسخ نتائج أوامر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> الصادرة في المعاملة إلى قاعدة البيانات.</div></td></tr></table>
 
 <p><a id="refheading10402131168783983"></a></p>
 <h3 id="963">9.6.3. <span style="color: #4f81bd">البرنامج النموذجي</span></h3>
 <p>لنعد إلى المشروع السابق ونلقي نظرة على البرنامج [<bdi dir="ltr" class="odt-ltr-term">Transactions.cs</bdi>] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C400000193828A8B95.png" width="366" height="121" style="display:inline-block; margin:4px;width:9.68cm;height:3.198cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C400000193828A8B95.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004C400000193828A8B95.png" width="366" height="121" style="display:inline-block; margin:4px;width:9.68cm;height:3.198cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C400000193828A8B95.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، المشروع.
@@ -3544,7 +3544,7 @@
   </li>
   <li>السطر 33: يتم إفراغ الجدول <i><bdi dir="ltr" class="odt-ltr-term">articles</bdi></i>
   </li>
-  <li>السطر 35: إدراج المقالتين بدون معاملة صريحة. ولأننا نعلم أن الإدراج الثاني سيؤدي إلى استثناء، يتم التعامل مع هذا بواسطة try / <bdi dir="ltr" class="odt-ltr-term">catch</bdi>
+  <li>السطر 35: إدراج المقالتين بدون معاملة صريحة. ولأننا نعلم أن الإدراج الثاني سيؤدي إلى استثناء، يتم التعامل مع هذا بواسطة <bdi dir="ltr" class="odt-ltr-term">try / catch</bdi>
   </li>
   <li>السطر 46: عرض الجدول <i><bdi dir="ltr" class="odt-ltr-term">articles</bdi></i>
   </li>
@@ -3607,7 +3607,7 @@
 <ul>
   <li>السطر 16: تم إعلان معاملة <i><bdi dir="ltr" class="odt-ltr-term">SqlCeTransaction</bdi></i>.
   </li>
-  <li>السطران 17 و 35: try / <bdi dir="ltr" class="odt-ltr-term">catch</bdi> لمعالجة الاستثناء الذي سيظهر في نهاية الإدراج الثاني
+  <li>السطران 17 و 35: <bdi dir="ltr" class="odt-ltr-term">try / catch</bdi> لمعالجة الاستثناء الذي سيظهر في نهاية الإدراج الثاني
   </li>
   <li>السطر 19: يتم إنشاء المعاملة. وهي تنتمي إلى الاتصال الحالي.
   </li>
@@ -3669,7 +3669,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000072C00000243F1B19707.png" width="551" height="174" style="display:inline-block; margin:4px;width:14.57cm;height:4.595cm;" class="odt-zoomable" data-zoom-src="images/100000000000072C00000243F1B19707.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000072C00000243F1B19707.png" width="551" height="174" style="display:inline-block; margin:4px;width:14.57cm;height:4.595cm;" class="odt-zoomable" data-zoom-src="images/100000000000072C00000243F1B19707.png" /></td></tr></table>
 
 <ul>
   <li>في [1] في عرض [<bdi dir="ltr" class="odt-ltr-term">Database Explorer</bdi>] في <bdi dir="ltr" class="odt-ltr-term">Visual Studio</bdi>، أنشأنا اتصالاً [2] بقاعدة البيانات [<bdi dir="ltr" class="odt-ltr-term">dbarticles.sdf</bdi>]. تحتوي هذه القاعدة على فهرس  <i><bdi dir="ltr" class="odt-ltr-term">UQ__ARTICLES__0000000000000010</bdi></i>. انقر بزر الماوس الأيمن على الفهرس للوصول إلى خصائصه
@@ -3693,13 +3693,13 @@
 <h2 id="97-executescalar">9.7. <span style="color: #4f81bd">طريقة <bdi dir="ltr" class="odt-ltr-term">ExecuteScalar</bdi></span></h2>
 <p><a id="refheading10402171168783983"></a></p>
 <h3 id="971-idbcommand-933">9.7.1. <span style="color: #4f81bd">من بين طرق <em><bdi dir="ltr" class="odt-ltr-term">IDbCommand</bdi></em> الموضحة في الفقرة<a href="#idbcommand"><u><span style="color: #0563c1"> 9.3.3</span></u></a>، كانت هناك الطريقة التالية:</span></h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-89-1" name="__codelineno-89-1" href="#__codelineno-89-1"></a>ExecuteScalar
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">لتنفيذ أمر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> <i><bdi dir="ltr" class="odt-ltr-term">Select</bdi></i> الذي يُرجع نتيجة واحدة كما في: <i><bdi dir="ltr" class="odt-ltr-term">select count</bdi>(*) <bdi dir="ltr" class="odt-ltr-term">from articles</bdi></i>.</div></td></tr></table>
+</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">لتنفيذ أمر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> <i><bdi dir="ltr" class="odt-ltr-term">Select</bdi></i> الذي يُرجع نتيجة واحدة كما في: <i><bdi dir="ltr" class="odt-ltr-term">select count</bdi>(*) <bdi dir="ltr" class="odt-ltr-term">from articles</bdi></i>.</div></td></tr></table>
 
 <p>نعرض هنا مثالاً على كيفية استخدام هذه الطريقة. العودة إلى:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E1000001D679DE5DB6.png" width="375" height="141" style="display:inline-block; margin:4px;width:9.91cm;height:3.729cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E1000001D679DE5DB6.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004E1000001D679DE5DB6.png" width="375" height="141" style="display:inline-block; margin:4px;width:9.91cm;height:3.729cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E1000001D679DE5DB6.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، المشروع.
@@ -3835,7 +3835,7 @@
 <a id="refheading10402191168783983"></a></p>
 <h2 id="98-7">9.8. <span style="color: #4f81bd">تطبيق نموذجي - الإصدار 7</span></h2>
 <p>نأخذ تطبيق <bdi dir="ltr" class="odt-ltr-term">IMPOTS</bdi> كمثال. تمت دراسة أحدث إصدار في الفقرة<a href="#impots-v6"><u><span style="color: #0563c1"> 7.6</span></u></a>. وكان التطبيق المكون من ثلاث طبقات كما يلي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000065E000001DA0CCAD1CC.png" width="489" height="142" style="display:inline-block; margin:4px;width:12.94cm;height:3.762cm;" class="odt-zoomable" data-zoom-src="images/100000000000065E000001DA0CCAD1CC.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000065E000001DA0CCAD1CC.png" width="489" height="142" style="display:inline-block; margin:4px;width:12.94cm;height:3.762cm;" class="odt-zoomable" data-zoom-src="images/100000000000065E000001DA0CCAD1CC.png" /></td></tr></table>
 
 <ul>
   <li>كانت طبقة [ui] عبارة عن واجهة رسومية [<bdi dir="ltr" class="odt-ltr-term">A</bdi>] وكانت طبقة [dao] عبارة عن ملف نصي [<bdi dir="ltr" class="odt-ltr-term">B</bdi>].
@@ -3844,14 +3844,14 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000066100000243B19E5688.png" width="490" height="174" style="display:inline-block; margin:4px;width:12.959cm;height:4.595cm;" class="odt-zoomable" data-zoom-src="images/100000000000066100000243B19E5688.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000066100000243B19E5688.png" width="490" height="174" style="display:inline-block; margin:4px;width:12.959cm;height:4.595cm;" class="odt-zoomable" data-zoom-src="images/100000000000066100000243B19E5688.png" /></td></tr></table>
 
 <p>نقوم بتعديل طبقة [dao] بحيث تستقي بياناتها من قاعدة بيانات.</p>
 <p><a id="refheading10402211168783983"></a>
 <a id="impotsv7-bd-mysql5"></a></p>
 <h3 id="981">9.8.1. <span style="color: #4f81bd">قم بزيارة قاعدة بيانات</span></h3>
 <p>يتم إدخال محتويات الملف النصي السابق [<bdi dir="ltr" class="odt-ltr-term">B</bdi>] في قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL5.</bdi> سنوضح لك كيفية القيام بذلك:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007AE000001B322732668.png" width="590" height="131" style="display:inline-block; margin:4px;width:15.61cm;height:3.454cm;" class="odt-zoomable" data-zoom-src="images/10000000000007AE000001B322732668.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000007AE000001B322732668.png" width="590" height="131" style="display:inline-block; margin:4px;width:15.61cm;height:3.454cm;" class="odt-zoomable" data-zoom-src="images/10000000000007AE000001B322732668.png" /></td></tr></table>
 
 <ul>
   <li>[1] :تم تشغيل <bdi dir="ltr" class="odt-ltr-term">MySQL Administrator</bdi>
@@ -3864,12 +3864,12 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007A7000001C51E42D166.png" width="588" height="136" style="display:inline-block; margin:4px;width:15.55cm;height:3.597cm;" class="odt-zoomable" data-zoom-src="images/10000000000007A7000001C51E42D166.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000007A7000001C51E42D166.png" width="588" height="136" style="display:inline-block; margin:4px;width:15.55cm;height:3.597cm;" class="odt-zoomable" data-zoom-src="images/10000000000007A7000001C51E42D166.png" /></td></tr></table>
 
 <ul>
   <li>[6،7]: انقر بزر الماوس الأيمن على الجدول واختر الخيار [إنشاء جدول جديد] لإنشاء جدول
   </li>
-  <li>[8]: سيُسمى الجدول [<bdi dir="ltr" class="odt-ltr-term">slices</bdi>]. وسيحتوي على الأعمدة [id, <bdi dir="ltr" class="odt-ltr-term">limit</bdi>, <bdi dir="ltr" class="odt-ltr-term">coeffR</bdi>, <bdi dir="ltr" class="odt-ltr-term">coeffN</bdi>].
+  <li>[8]: سيُسمى الجدول [<bdi dir="ltr" class="odt-ltr-term">slices</bdi>]. وسيحتوي على الأعمدة [<bdi dir="ltr" class="odt-ltr-term">id, limit, coeffR, coeffN</bdi>].
   </li>
   <li>[9،10]: [id] هو مفتاح أساسي من النوع <bdi dir="ltr" class="odt-ltr-term">INTEGER</bdi> وله السمة <bdi dir="ltr" class="odt-ltr-term">AUTO_INCREMENT</bdi> [10]: سيقوم <bdi dir="ltr" class="odt-ltr-term">SGBD</bdi> بملء هذا العمود عند إضافة الصفوف.
   </li>
@@ -3879,7 +3879,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000681000002AA860B53A1.png" width="500" height="205" style="display:inline-block; margin:4px;width:13.22cm;height:5.415cm;" class="odt-zoomable" data-zoom-src="images/1000000000000681000002AA860B53A1.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000681000002AA860B53A1.png" width="500" height="205" style="display:inline-block; margin:4px;width:13.22cm;height:5.415cm;" class="odt-zoomable" data-zoom-src="images/1000000000000681000002AA860B53A1.png" /></td></tr></table>
 
 <ul>
   <li>[13،14]: لإضافة بيانات إلى الجدول
@@ -3890,7 +3890,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007CF000000E1CB915ADF.png" width="600" height="68" style="display:inline-block; margin:4px;width:15.87cm;height:1.787cm;" class="odt-zoomable" data-zoom-src="images/10000000000007CF000000E1CB915ADF.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000007CF000000E1CB915ADF.png" width="600" height="68" style="display:inline-block; margin:4px;width:15.87cm;height:1.787cm;" class="odt-zoomable" data-zoom-src="images/10000000000007CF000000E1CB915ADF.png" /></td></tr></table>
 
 <ul>
   <li>ونحن لا نزال في [<bdi dir="ltr" class="odt-ltr-term">Query Browser</bdi>] [18]، نقوم بتشغيل [20] الاستعلام [19]. يؤدي هذا إلى إنشاء مستخدم &#x27;<bdi dir="ltr" class="odt-ltr-term">admimpots</bdi>&#x27; وكلمة مرور &#x27;<bdi dir="ltr" class="odt-ltr-term">mdpimpots</bdi>&#x27; ومنحه جميع الامتيازات (<i>منح جميع الامتيازات</i>) على جميع الكائنات في قاعدة البيانات <i><bdi dir="ltr" class="odt-ltr-term">bdimpots</bdi> </i>(<i>على <bdi dir="ltr" class="odt-ltr-term">bdimpots.</bdi>*</i>). سيسمح لنا هذا بالعمل على قاعدة البيانات [<bdi dir="ltr" class="odt-ltr-term">bdimpots</bdi>] باستخدام المستخدم [<bdi dir="ltr" class="odt-ltr-term">admimpots</bdi>] بدلاً من المسؤول [<bdi dir="ltr" class="odt-ltr-term">root</bdi>].
@@ -3899,10 +3899,10 @@
 
 <p><a id="refheading10402231168783983"></a></p>
 <h3 id="982-visual-studio">9.8.2. <span style="color: #4f81bd">حل <bdi dir="ltr" class="odt-ltr-term">Visual Studio</bdi></span></h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000066F000001B0C3D47A8B.png" width="494" height="130" style="display:inline-block; margin:4px;width:13.07cm;height:3.427cm;" class="odt-zoomable" data-zoom-src="images/100000000000066F000001B0C3D47A8B.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000066F000001B0C3D47A8B.png" width="494" height="130" style="display:inline-block; margin:4px;width:13.07cm;height:3.427cm;" class="odt-zoomable" data-zoom-src="images/100000000000066F000001B0C3D47A8B.png" /></td></tr></table>
 
 <p>سنتبع نفس النهج المتبع في الإصدار 5 من التطبيق النموذجي (انظر الفقرة<a href="#impots-v5"><u><span style="color: #0563c1"> 6.4</span></u></a>). سنقوم تدريجيًا بإنشاء حل <bdi dir="ltr" class="odt-ltr-term">Visual Studio</bdi> التالي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000782000002CBE17DFBBB.png" width="577" height="215" style="display:inline-block; margin:4px;width:15.259cm;height:5.676cm;" class="odt-zoomable" data-zoom-src="images/1000000000000782000002CBE17DFBBB.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000782000002CBE17DFBBB.png" width="577" height="215" style="display:inline-block; margin:4px;width:15.259cm;height:5.676cm;" class="odt-zoomable" data-zoom-src="images/1000000000000782000002CBE17DFBBB.png" /></td></tr></table>
 
 <ul>
   <li>في [1]: يتكون الحل <i><bdi dir="ltr" class="odt-ltr-term">ImpotsV7</bdi> </i>من ثلاثة مشاريع، واحد لكل طبقة من الطبقات الثلاث للتطبيق
@@ -3918,9 +3918,9 @@
 <p>نحن نعتمد على ما تعلمناه لاسترداد طبقتين تمت كتابتهما بالفعل، وهما طبقتا [ui] و[<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]. وقد أصبح هذا ممكنًا بفضل البنية الطبقية التي اخترناها. ومع ذلك، سنحتاج إلى شفرة المصدر لطبقتي [ui] و[<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]. ولا يمكن الاكتفاء بملف <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الخاص بالطبقتين. عندما تم إنشاء مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> لطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] في الإصدار 5، كانت تعتمد على مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> لطبقة [dao]. تم ترميز هذه التبعية بشكل ثابت في مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> لطبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] (اسم مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> لطبقة [dao]، والإصدار، ورمز الهوية، وما إلى ذلك). على سبيل المثال، لن تعمل مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الخاصة بالإصدار 5 [<bdi dir="ltr" class="odt-ltr-term">ImpotsV5-metier.dll</bdi>] إلا مع مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> [<bdi dir="ltr" class="odt-ltr-term">ImpotsV5-dao.dll</bdi>] التي تم تجميعها معها. إذا تم تغيير مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الخاصة بطبقة [dao]، فيجب إعادة تجميع طبقة [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] لإنشاء مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> جديدة. وينطبق الأمر نفسه على طبقة [ui]. وبالتالي، لن يتم تعديل طبقتي [ui] و[<bdi dir="ltr" class="odt-ltr-term">metier</bdi>]، ولكن سيتم إعادة تجميعهما للعمل مع مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> لطبقة [dao] الجديدة.</p>
 <p><a id="refheading10402251168783983"></a></p>
 <h3 id="983-dao">9.8.3. <span style="color: #4f81bd">طبقة [dao]</span></h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000066C000001BAB7565ABE.png" width="493" height="133" style="display:inline-block; margin:4px;width:13.049cm;height:3.508cm;" class="odt-zoomable" data-zoom-src="images/100000000000066C000001BAB7565ABE.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000066C000001BAB7565ABE.png" width="493" height="133" style="display:inline-block; margin:4px;width:13.049cm;height:3.508cm;" class="odt-zoomable" data-zoom-src="images/100000000000066C000001BAB7565ABE.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000223000002B87DC3A046.png" width="164" height="209" style="display:inline-block; margin:4px;width:4.339cm;height:5.521cm;" class="odt-zoomable" data-zoom-src="images/1000000000000223000002B87DC3A046.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000223000002B87DC3A046.png" width="164" height="209" style="display:inline-block; margin:4px;width:4.339cm;height:5.521cm;" class="odt-zoomable" data-zoom-src="images/1000000000000223000002B87DC3A046.png" /></td></tr></table>
 
 <p><u><strong>مراجع المشروع</strong> </u>(انظر [1] في المشروع)</p>
 <ul>
@@ -4153,7 +4153,7 @@
 </code></pre></div>
 
 <p>لتشغيل اختبار الوحدة هذا، يجب أن يكون المشروع من النوع [مكتبة الفئات] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000076E000001773D913024.png" width="571" height="113" style="display:inline-block; margin:4px;width:15.101cm;height:2.977cm;" class="odt-zoomable" data-zoom-src="images/100000000000076E000001773D913024.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000076E000001773D913024.png" width="571" height="113" style="display:inline-block; margin:4px;width:15.101cm;height:2.977cm;" class="odt-zoomable" data-zoom-src="images/100000000000076E000001773D913024.png" /></td></tr></table>
 
 <ul>
   <li>في [1]: تم تغيير طبيعة المشروع
@@ -4165,7 +4165,7 @@
 </ul>
 
 <p>ثم يتم تحميل ملف <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> [<bdi dir="ltr" class="odt-ltr-term">ImpotsV7-dao.dll</bdi>] في إطار عمل <em><bdi dir="ltr" class="odt-ltr-term">NUnit</bdi></em> وتنفيذه:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007BF0000018C95FC42E1.png" width="595" height="119" style="display:inline-block; margin:4px;width:15.739cm;height:3.143cm;" class="odt-zoomable" data-zoom-src="images/10000000000007BF0000018C95FC42E1.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000007BF0000018C95FC42E1.png" width="595" height="119" style="display:inline-block; margin:4px;width:15.739cm;height:3.143cm;" class="odt-zoomable" data-zoom-src="images/10000000000007BF0000018C95FC42E1.png" /></td></tr></table>
 
 <ul>
   <li>في [1]: اجتازت الاختبارات. نعتبر الآن طبقة [dao] جاهزة للعمل. تحتوي مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الخاصة بها على جميع فئات المشروع، بما في ذلك فئات الاختبار. لم تعد هناك حاجة لهذه الفئات. نعيد بناء مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> لاستبعاد فئات الاختبار.
@@ -4179,9 +4179,9 @@
 <p><a id="refheading10402271168783983"></a>
 <a id="impots-v5-metier1"></a></p>
 <h3 id="984">9.8.4. <span style="color: #4f81bd">مهمة [ ]</span></h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000064E000001C01B23331C.png" width="484" height="134" style="display:inline-block; margin:4px;width:12.809cm;height:3.554cm;" class="odt-zoomable" data-zoom-src="images/100000000000064E000001C01B23331C.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000064E000001C01B23331C.png" width="484" height="134" style="display:inline-block; margin:4px;width:12.809cm;height:3.554cm;" class="odt-zoomable" data-zoom-src="images/100000000000064E000001C01B23331C.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000046F0000016892BC20C5.png" width="341" height="108" style="display:inline-block; margin:4px;width:9.01cm;height:2.858cm;" class="odt-zoomable" data-zoom-src="images/100000000000046F0000016892BC20C5.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000046F0000016892BC20C5.png" width="341" height="108" style="display:inline-block; margin:4px;width:9.01cm;height:2.858cm;" class="odt-zoomable" data-zoom-src="images/100000000000046F0000016892BC20C5.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، أصبح مشروع [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] هو المشروع النشط للحل
@@ -4193,7 +4193,7 @@
 </ul>
 
 <p>تم تكوين مشروع [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] لإنشاء مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL:</bdi></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007010000017D5303E8A4.png" width="538" height="114" style="display:inline-block; margin:4px;width:14.229cm;height:3.023cm;" class="odt-zoomable" data-zoom-src="images/10000000000007010000017D5303E8A4.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000007010000017D5303E8A4.png" width="538" height="114" style="display:inline-block; margin:4px;width:14.229cm;height:3.023cm;" class="odt-zoomable" data-zoom-src="images/10000000000007010000017D5303E8A4.png" /></td></tr></table>
 
 <ul>
   <li>[1]: المشروع من نوع &quot;مكتبة الفئات&quot;
@@ -4206,9 +4206,9 @@
 <p><a id="impots-v7-ui"></a>
 <a id="refheading10402291168783983"></a></p>
 <h3 id="985-ui">9.8.5. <span style="color: #4f81bd">طبقة [ui]</span></h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000661000001C44A9F15D3.png" width="490" height="136" style="display:inline-block; margin:4px;width:12.959cm;height:3.588cm;" class="odt-zoomable" data-zoom-src="images/1000000000000661000001C44A9F15D3.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000661000001C44A9F15D3.png" width="490" height="136" style="display:inline-block; margin:4px;width:12.959cm;height:3.588cm;" class="odt-zoomable" data-zoom-src="images/1000000000000661000001C44A9F15D3.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003960000027F6838F611.png" width="276" height="192" style="display:inline-block; margin:4px;width:7.29cm;height:5.075cm;" class="odt-zoomable" data-zoom-src="images/10000000000003960000027F6838F611.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000003960000027F6838F611.png" width="276" height="192" style="display:inline-block; margin:4px;width:7.29cm;height:5.075cm;" class="odt-zoomable" data-zoom-src="images/10000000000003960000027F6838F611.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، أصبح مشروع [ui] هو المشروع النشط للحل
@@ -4267,7 +4267,7 @@
 
 <p><u><strong>الاختبارات</strong></u></p>
 <p>تم تكوين مشروع [ui] على النحو التالي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000074F0000024136074EF7.png" width="561" height="173" style="display:inline-block; margin:4px;width:14.85cm;height:4.581cm;" class="odt-zoomable" data-zoom-src="images/100000000000074F0000024136074EF7.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000074F0000024136074EF7.png" width="561" height="173" style="display:inline-block; margin:4px;width:14.85cm;height:4.581cm;" class="odt-zoomable" data-zoom-src="images/100000000000074F0000024136074EF7.png" /></td></tr></table>
 
 <ul>
   <li>[1]: المشروع من نوع &quot;تطبيق <bdi dir="ltr" class="odt-ltr-term">Windows</bdi>&quot;
@@ -4279,11 +4279,11 @@
 <p>يوجد مثال في [3].</p>
 <p><a id="refheading10402311168783983"></a></p>
 <h3 id="986">9.8.6. <span style="color: #4f81bd">تغيير قاعدة البيانات</span></h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000065D000001C2E404BC95.png" width="489" height="135" style="display:inline-block; margin:4px;width:12.929cm;height:3.572cm;" class="odt-zoomable" data-zoom-src="images/100000000000065D000001C2E404BC95.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000065D000001C2E404BC95.png" width="489" height="135" style="display:inline-block; margin:4px;width:12.929cm;height:3.572cm;" class="odt-zoomable" data-zoom-src="images/100000000000065D000001C2E404BC95.png" /></td></tr></table>
 
 <p>تمت كتابة طبقة [dao] أعلاه باستخدام موصل عام وقاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL5.</bdi> نقترح هنا التبديل إلى قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">SQL Server Compact</bdi> لإظهار أن التغيير سيقتصر على التكوين فقط.</p>
 <p>ستكون قاعدة<a id="impotsv7-bd-sqlserverce"></a> <bdi dir="ltr" class="odt-ltr-term">SQL Server Compact</bdi> كما يلي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000748000002199D3BC638.png" width="559" height="161" style="display:inline-block; margin:4px;width:14.801cm;height:4.263cm;" class="odt-zoomable" data-zoom-src="images/1000000000000748000002199D3BC638.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000748000002199D3BC638.png" width="559" height="161" style="display:inline-block; margin:4px;width:14.801cm;height:4.263cm;" class="odt-zoomable" data-zoom-src="images/1000000000000748000002199D3BC638.png" /></td></tr></table>
 
 <ul>
   <li>[1]: قاعدة البيانات [<bdi dir="ltr" class="odt-ltr-term">dbimpots.sdf</bdi>] في عرض [<bdi dir="ltr" class="odt-ltr-term">DataBase Explorer</bdi>] في <bdi dir="ltr" class="odt-ltr-term">Visual Studio</bdi> [2]. تم إنشاؤها بدون كلمة مرور.
@@ -4296,7 +4296,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004BB0000021A2C659376.png" width="363" height="161" style="display:inline-block; margin:4px;width:9.61cm;height:4.269cm;" class="odt-zoomable" data-zoom-src="images/10000000000004BB0000021A2C659376.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004BB0000021A2C659376.png" width="363" height="161" style="display:inline-block; margin:4px;width:9.61cm;height:4.269cm;" class="odt-zoomable" data-zoom-src="images/10000000000004BB0000021A2C659376.png" /></td></tr></table>
 
 <ul>
   <li>[6]: تم وضع قاعدة البيانات [<bdi dir="ltr" class="odt-ltr-term">dbimpots.sdf</bdi>] في مجلد المشروع [ui] ودمجها في هذا المشروع.
